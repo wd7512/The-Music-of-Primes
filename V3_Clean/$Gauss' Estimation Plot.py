@@ -1,19 +1,20 @@
 import math
-import time
-n=int(input('Gauss Estimate of how many primes there are up to\nn:'))
-a=2#First Prime
-b=0#Counter
-ty=input('Do you want to see the addition?\ny/n')
-if ty!='y' and ty!='n':
-        print('invalid input')
-elif ty=='y':
-    while a!=n:
-        b=b+1/math.log(a)#Log Function
-        a=a+1
-        print(b)
-elif ty=='n':
-    while a!=n:
-        b=b+1/math.log(a)#Log Function
-        a=a+1
-print(str(b)+'which means there is a '+str(n/b)+'%\nof a prime number up to '+str(n))
-time.sleep(20)
+import matplotlib.pyplot as plt
+n=int(input('Gauss Estimate of how many primes, graph up to\nn:'))
+def g(z):
+        a=2
+        b=0
+        while a!=z:
+                b=b+1/math.log(a)#Log Function
+                a=a+1
+        return(b)
+x=[]
+for i in range(n):
+        x.append(i)
+y=[0,0]
+for i in range(n-2):
+        y.append(g(2+i))
+plt.plot(x, y)
+plt.xlabel('Number of Primes')
+plt.ylabel('Total Numbers')
+plt.show()
