@@ -15,6 +15,6 @@ y=[0,0]
 for i in range(n-2):
         y.append(g(2+i))
 plt.plot(x, y)
-plt.xlabel('Number of Primes')
-plt.ylabel('Total Numbers')
+plt.xlabel('Total Numbers')
+plt.ylabel('Number of Primes')
 plt.show()
