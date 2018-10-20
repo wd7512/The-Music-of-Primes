@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 import time
 import random
 runs=int(input('How many run throughs?\n:'))
+runt=runs
 while runs>0:
-    print('run'+str(runs))
+    print('run '+str(runt-runs+1))
     per=1
     f=open('Factors.txt','r')
     y=f.readline()
@@ -15,7 +16,7 @@ while runs>0:
     f.close()
     y=ast.literal_eval(y)
     yc=len(y)
-    n=random.randint(1000, 10000)
+    n=random.randint(3000, 10000)#Random Limits
     tim=[n]
     print('Calculating '+str(n)+' points...')
     for i in range(len(primelist)):
