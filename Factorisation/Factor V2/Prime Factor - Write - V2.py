@@ -1,8 +1,8 @@
 import math
 import ast
 import matplotlib.pyplot as plt
-global per
-per=0
+import time
+per=1
 f=open('Factors.txt','r')
 y=f.readline()
 f.close()
@@ -12,9 +12,11 @@ f.close()
 y=ast.literal_eval(y)
 yc=len(y)
 n=int(input('How many to calculate?'))
+tim=[n]
 print('Calculating...')
 for i in range(len(primelist)):
     primelist[i]=int(primelist[i])
+dif=time.time()
 for i in range(n+1):
     a=0
     b=0
@@ -34,5 +36,9 @@ print('Completed\nWriting...Do not exit')
 f=open('Factors.txt','w')
 f.write(str(y))
 f.close()
-print('Completed')
+print('Completed\nWriting Time Data')
+tim.append(time.time()-dif)
+f=open('TimeData - GamingPC.txt', 'a')
+f.write('\n'+str(tim))
+f.close()
 nxt=input('Total='+str(len(y))+'\nPress enter to finish')
