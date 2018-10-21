@@ -31,11 +31,11 @@ def y2(s):
     return(y2)
 x=[]
 for i in range(len(y2(0))):
-    x.append(100*(i-1))
+    x.append(acc*(i))
 for i in range(len(axi)):
-    plt.plot(y2(axi[i]), label=str(axi[i])+' Factors')
+    plt.plot(x, y2(axi[i]), label=str(axi[i])+' Factors')
     plt.fill_between(x, y2(axi[i]-1), y2(axi[i]))
-plt.xlabel('Number of Ranges')
+plt.xlabel('Number')
 plt.ylabel('Percent')
 plt.grid(True)
 plt.legend()
