@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 x=[]
 y=[]
-with open('TimeData - GamingPC.txt', 'r') as f:
+with open('TimeData.txt', 'r') as f:
     for line in f:
         line=ast.literal_eval(line)
-        x.append(line[0])
-        y.append(line[1])
+        x.append(line[2])
+        y.append(line[3])
 plt.scatter(sorted(x), sorted(y))
 q=input('Line of best fit?y/n\n:')
 if q=='y':
