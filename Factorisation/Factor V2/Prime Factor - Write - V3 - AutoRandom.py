@@ -1,8 +1,8 @@
 import math
 import ast
-import matplotlib.pyplot as plt
 import time
 import random
+import socket
 runs=int(input('How many run throughs?\n:'))
 runt=runs
 while runs>0:
@@ -16,10 +16,10 @@ while runs>0:
     f.close()
     y=ast.literal_eval(y)
     yc=len(y)
-    n=random.randint(3000, 10000)#Random Limits
-    tim=[n]
+    n=random.randint(100, 200)#Random Limits
+    tim=[yc,socket.gethostname(),n]
     print('Calculating '+str(n)+' points...')
-    for i in range(len(primelist)):
+    for i in range(len(primelist)):#turns all strings in prime list to useable integers
         primelist[i]=int(primelist[i])
     dif=time.time()
     for i in range(n+1):
@@ -43,7 +43,7 @@ while runs>0:
     f.close()
     print('Completed\nWriting Time Data')
     tim.append(time.time()-dif)
-    f=open('TimeData - GamingPC.txt', 'a')
+    f=open('TimeData.txt', 'a')
     f.write('\n'+str(tim))
     f.close()
     runs=runs-1
