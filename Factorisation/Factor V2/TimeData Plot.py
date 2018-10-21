@@ -20,5 +20,7 @@ q=input('Lines of best fit?y/n\n:')
 if q=='y':
     plt.plot(np.unique(x1), np.poly1d(np.polyfit(x1, y1, 1))(np.unique(x1)))
     plt.plot(np.unique(x2), np.poly1d(np.polyfit(x2, y2, 1))(np.unique(x2)))
+plt.xlabel('Number of Calculations')
+plt.ylabel('Time Taken (s)')
 plt.legend()
 plt.show()

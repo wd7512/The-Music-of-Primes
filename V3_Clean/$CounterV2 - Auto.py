@@ -1,7 +1,7 @@
 import sys
 import math
 import time
-f=open('PlistV2.txt','r')
+f=open('PlistV3.txt','r')
 linelist=f.readlines()
 f.close()
 print(linelist[-1])#prints last line of txt file
@@ -23,7 +23,7 @@ def abc(count, more, divc, div, new, linelist, lastlist, tim):
                 if div>math.sqrt(int(linelist[-1])):
                     count=count+1
                     print(new)
-                    f=open('PlistV2.txt','a')
+                    f=open('PlistV3.txt','a')
                     f.write(str(new)+'\n')
                     f.close()
                     linelist.append(str(new)+'\n')
@@ -48,7 +48,7 @@ def abcd(count, more, divc, div, new, linelist, lastlist, tim):
                 if div>math.sqrt(int(linelist[-1])):
                     count=count+1
                     print(new)
-                    f=open('PlistV2.txt','a')
+                    f=open('PlistV3.txt','a')
                     f.write(str(new)+'\n')
                     f.close()
                     linelist.append(str(new)+'\n')
