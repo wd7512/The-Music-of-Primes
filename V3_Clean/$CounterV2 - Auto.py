@@ -9,8 +9,8 @@ new=int(linelist[-1])#first number to test
 count=0#a counter for the var more
 divc=0
 div=int(linelist[divc])# the prime divisor
-more=500
-sys.setrecursionlimit(more**2+2000)
+more=1000
+sys.setrecursionlimit(more**3+2000)
 lastlist=[]
 typ='n'
 tim='n'
