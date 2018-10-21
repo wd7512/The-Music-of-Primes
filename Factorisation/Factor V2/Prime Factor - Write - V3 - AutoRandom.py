@@ -17,7 +17,7 @@ while runs>0:
     f.close()
     y=ast.literal_eval(y)
     yc=len(y)
-    n=random.randint(100, 2500)#Random Limits
+    n=random.randint(100, 500)#Random Limits
     tim=[yc,socket.gethostname(),n]
     print('Calculating '+str(n)+' points...')
     for i in range(len(primelist)):#turns all strings in prime list to useable integers
@@ -45,7 +45,9 @@ while runs>0:
     print('Completed\nWriting Time Data')
     tim.append(time.time()-dif)
     battery=psutil.sensors_battery()
-    tim.append(battery.percent)
+    print(battery)
+    if type(battery)==int:
+        tim.append(battery.percent)
     f=open('TimeData.txt', 'a')
     f.write('\n'+str(tim))
     f.close()
