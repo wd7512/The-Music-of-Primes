@@ -3,6 +3,7 @@ import ast
 import time
 import random
 import socket
+import psutil
 runs=int(input('How many run throughs?\n:'))
 runt=runs
 while runs>0:
@@ -43,6 +44,8 @@ while runs>0:
     f.close()
     print('Completed\nWriting Time Data')
     tim.append(time.time()-dif)
+    battery=psutil.sensors_battery()
+    tim.append(battery.percent)
     f=open('TimeData.txt', 'a')
     f.write('\n'+str(tim))
     f.close()
