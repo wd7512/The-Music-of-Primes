@@ -45,8 +45,7 @@ while runs>0:
     print('Completed\nWriting Time Data')
     tim.append(time.time()-dif)
     battery=psutil.sensors_battery()
-    print(battery)
-    if type(battery)==int:
+    if type(battery.percent)==int:
         tim.append(battery.percent)
     f=open('TimeData.txt', 'a')
     f.write('\n'+str(tim))
