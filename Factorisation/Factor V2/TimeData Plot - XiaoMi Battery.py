@@ -11,7 +11,9 @@ with open('TimeData.txt', 'r') as f:
         if line[1]=='XIAOMI' and len(line)==5:
             x1.append(line[2]/line[3])#calculations a second
             y1.append(line[4])#battery
-plt.scatter(sorted(x1), sorted(y1), label='XIAOMI')
+x1=sorted(x1)
+y1=sorted(y1)
+plt.scatter(x1, y1, label='XIAOMI')
 q=input('Lines of best fit?y/n\n:')
 if q=='y':
     plt.plot(np.unique(x1), np.poly1d(np.polyfit(x1, y1, 1))(np.unique(x1)))
