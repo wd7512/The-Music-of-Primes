@@ -1,3 +1,4 @@
+#to use this create the file 'Add spaces.txt' and deposit text wanting to be converted
 f=open('Add spaces.txt','r')
 a=f.readlines()
 f.close()
