@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import math
 num=2*int(input('How many lines?'))
 angle=math.pi/4
-print(angle)
 x=[]
 y=[]
 for i in range(num):
@@ -13,6 +12,7 @@ for i in range(num):
     else:
         x.append((i+1)/2)
         y.append(0)
+
 x1=[]
 y1=[]
 for i in range(num):
@@ -20,5 +20,11 @@ for i in range(num):
     y1.append(x[i]*math.sin(angle)+y[i]*math.cos(angle))
 for i in range(0, len(x), 1):
     plt.plot(x1[i:i+2], y1[i:i+2], 'r')
+def poly(a, root, mid):
+    F=mid*math.sin(angle)+mid*math.cos(angle)
+    return(F*(a**2)/(root)**2+F)#max y is max(x1)+max(x1)/num
+x2=np.arange(min(x1),max(x1),.1)
+plt.plot(x2,poly(x2,max(y1),(num/4)/(1+(num/4)/(num/4+1))))
+#min(x1) is the "roots" and mid is the non rotated minimun
 plt.axis('equal')
 plt.show()
