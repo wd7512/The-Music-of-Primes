@@ -1,7 +1,7 @@
 import smtplib
-server = smtplib.SMTP('smtp.gmail.com', 587)
+server = smtplib.SMTP('smtp.office365.com', 587)
 server.starttls()
-server.login("band.mishaps@gmail.com", "Ipad10thbday")
+server.login("python7512@outlook.com", "Baobab7512")
 msg = "YOUR MESSAGE!"
-server.sendmail("band.mishaps", "wwdennis.home@gmail.com", msg)
+server.sendmail("python7512@outlook.com", "python7512@outlook.com", msg)
 server.quit()
