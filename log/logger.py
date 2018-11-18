@@ -14,7 +14,7 @@ global servercon
 global sender
 
 maildata=[]
-sendfreq=1 #in minutes
+sendfreq=10 #in minutes
 sent=False
 mins=-sendfreq
 word=''
@@ -25,14 +25,14 @@ def url_ok(url):
     return r.status_code == 200
 
 
-if url_ok('https://www.google.com/gmail/')==True:#can improv
-    print('Sending Via Gmail')
-    servercon='smtp.gmail.com'
-    sender='band.mishaps@gmail.com'
-else:
-    print('Sending Via Outlook')
-    servercon='smtp.office365.com'
-    sender='python7512@outlook.com'
+#if url_ok('https://www.google.com/gmail/')==True:#can improv
+print('Sending Via Gmail')
+servercon='smtp.gmail.com'
+sender='band.mishaps@gmail.com'
+#else:
+    #print('Sending Via Outlook')
+    #servercon='smtp.office365.com'
+    #sender='python7512@outlook.com'
 
 log_dir = ""
 

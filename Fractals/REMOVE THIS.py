@@ -1,4 +1,4 @@
-import Image, ImageDraw, math, colorsys
+import image, imagedraw, math, colorsys
 
 dimensions = (800, 800)
 scale = 1.0/(dimensions[0]/3)
@@ -7,8 +7,8 @@ center = (2.2, 1.5)       # Use this for Mandelbrot set
 iterate_max = 100
 colors_max = 50
 
-img = Image.new("RGB", dimensions)
-d = ImageDraw.Draw(img)
+img = image.new("RGB", dimensions)
+d = imagedraw.Draw(img)
 
 # Calculate a tolerable palette
 palette = [0] * colors_max
