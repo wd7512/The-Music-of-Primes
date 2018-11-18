@@ -17,4 +17,4 @@ def tree(length,n):
     return
 turtle.left(90)
 turtle.backward(30)
-tree(234,19)
+tree(100,2)
