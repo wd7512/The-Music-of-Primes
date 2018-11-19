@@ -1,20 +1,13 @@
 import turtle
 def tree(length,n):
-    
-    if length < (length/n):
-           return
+    if length>0:
+        turtle.left(69)
     turtle.forward(length)
-    turtle.left(45)
-    tree(length * 0.5,length/n)
-    turtle.left(20)
-    tree(length * 0.5,length/n)
-    turtle.right(75)
-    tree(length * 0.5,length/n)
-    turtle.right(20)
-    tree(length * 0.5,length/n)
-    turtle.left(30)
-    turtle.backward(length)
+
+    if n%2==0:
+        tree(-length,n+1)
+    tree(length/(1), n+1)
+    
+    
     return
-turtle.left(90)
-turtle.backward(30)
-tree(100,2)
+tree(200,2)
