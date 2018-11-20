@@ -3,7 +3,7 @@ import time
 count=time.time()
 times=[]
 turtle.speed(speed=0)
-length=250
+length=200
 def move(length,angle):
     turtle.forward(length)
     turtle.forward(-length)

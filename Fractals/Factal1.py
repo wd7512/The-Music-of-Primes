@@ -1,4 +1,5 @@
 import turtle
+turtle.speed(speed=10)
 def tree(length,n):
     if length>0:
         turtle.left(69)
