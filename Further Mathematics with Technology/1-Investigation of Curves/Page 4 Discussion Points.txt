@@ -1,0 +1,3 @@
+y=3x+c, c translates in the y direction by magnitude c
+x^2+bx+4, traslates by [b/2,b^2/2]
+e^kx, stretches the y axis by k
