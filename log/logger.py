@@ -3,7 +3,7 @@ import logging
 import datetime
 import smtplib
 import platform
-import requests
+#import requests
 
 global maildata
 global sendfreq
