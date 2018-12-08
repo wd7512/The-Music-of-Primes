@@ -20,4 +20,8 @@ while True:
     os.system('taskkill /im iexplore.exe')
     time.sleep(1)
     os.system('taskkill /im MicrosoftEdge.exe /t /f')
+    time.sleep(10)
+    os.system('taskkill /im iexplore.exe')
     time.sleep(1)
+    os.system('taskkill /im MicrosoftEdge.exe /t /f')
+    time.sleep(10)
