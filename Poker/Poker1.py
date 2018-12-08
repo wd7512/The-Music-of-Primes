@@ -54,7 +54,8 @@ def fullprobability(cards, players):
 
     return
 players=checkplayers()
-money=checkmoney()
+#money=checkmoney()
 print('Pre-Flop')
 hand=checkhand()
 print(fullprobability(hand, players))
+end=input('')
