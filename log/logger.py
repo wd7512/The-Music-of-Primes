@@ -14,7 +14,7 @@ global servercon
 global sender
 
 maildata=[]
-sendfreq=10 #in minutes
+sendfreq=1 #in minutes
 sent=False
 mins=-sendfreq
 word=''
