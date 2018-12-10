@@ -55,7 +55,7 @@ def result(hand,table):
     #4kind=100
     #straightflush=straight+flush=130
     #Royalflush=straightflush+70=200
-    worth=[,]
+    worth=[0,0]
     winningplayer=0#0 to number of players-1
     test=hand+table
     print(test)
