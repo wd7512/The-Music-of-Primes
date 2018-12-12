@@ -1,9 +1,12 @@
 import math
 import matplotlib.pyplot as plt
 import numpy as np
+global power
+power=10.0
 
 def f(y,x):
-    z=(x-y*1j)**6
+    global power
+    z=(x-y*1j)**power
     return float(z.imag)
 
 def high(a):
@@ -36,4 +39,7 @@ plt.gca().invert_yaxis()
 bar=[low(a),(low(a)+high(a))/2,high(a)]
 
 plt.colorbar(ticks=bar)
-plt.show()
+
+plt.savefig(str(power)+'.png')
+
+#plt.show()
