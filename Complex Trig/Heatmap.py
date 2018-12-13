@@ -6,8 +6,7 @@ power=10.0
 
 def f(y,x):
     global power
-    z=(x-y*1j)**power
-    return float(z.imag)
+    return float((power**(x+y*1j)).real)
 
 def high(a):
     list1=[]
@@ -21,8 +20,8 @@ def low(a):
         list1.append(min(i))
     return min(list1)
 
-num=10
-interval=.1
+num=math.pi*2
+interval=.01
 prod=num/interval
 a=[]
 
@@ -31,7 +30,7 @@ for i in range(int((prod)+1)):
     for j in range(int(prod)):
         a[i].append(f(i*interval,(j+1)*interval))
     print(str(100*i/(prod))+'%')
-plt.imshow(a, cmap='hot', interpolation='nearest')
+plt.imshow(a, cmap='terrain', interpolation='nearest')
 plt.xlabel('zoom=x'+str(interval)+'  0-'+str(num))
 plt.ylabel('zoom=x'+str(interval)+'  0-'+str(num))
 plt.gca().invert_yaxis()
@@ -40,6 +39,6 @@ bar=[low(a),(low(a)+high(a))/2,high(a)]
 
 plt.colorbar(ticks=bar)
 
-plt.savefig(str(power)+'.png')
+#plt.savefig(str(power)+'.png')
 
-#plt.show()
+plt.show()
