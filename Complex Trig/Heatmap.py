@@ -2,7 +2,7 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 global power
-power=.01
+power=-.7
 plt.title('Re['+str(power)+'^(x+yi)]')
 def f(y,x):
     global power
@@ -20,7 +20,7 @@ def low(a):
         list1.append(min(i))
     return min(list1)
 
-num=math.pi*2
+num=math.pi*4
 interval=.01
 prod=num/interval
 a=[]
