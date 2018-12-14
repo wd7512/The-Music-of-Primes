@@ -2,8 +2,8 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 global power
-power=10.0
-
+power=.01
+plt.title('Re['+str(power)+'^(x+yi)]')
 def f(y,x):
     global power
     return float((power**(x+y*1j)).real)
