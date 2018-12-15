@@ -1,40 +1,32 @@
 import random
 global deck
 
-class setup():
 
-    def newdeck():
-        global deck
-        deck=[]
-        
-        values=[2,3,4,5,6,7,8,9,10,11,12,13,14]
-        suits=['D','S','C','H']
-        
-        for suit in suits:
-            for value in values:
-                deck.append([value,suit])
-        
-        deck=random.sample(deck,52) #shuffle deck
 
-    def drawcard():
-        global deck
-        
-        card=deck[0] #taking top card
-        deck.remove(card)
+def newdeck():
+    global deck
+    deck=[]
+    
+    values=[2,3,4,5,6,7,8,9,10,11,12,13,14]
+    suits=['D','S','C','H']
+    
+    for suit in suits:
+        for value in values:
+            deck.append([value,suit])
+    
+    deck=random.sample(deck,52) #shuffle deck
 
-        return card
+def deal(players):
+    
+    hands=[]
+    
+    for i in range(players): #first round of dealing
+        hands.append([drawcard()])
 
-    def deal(players):
-        
-        hands=[]
-        
-        for i in range(players): #first round of dealing
-            hands.append([drawcard()])
-
-        for i in range(players): #second round of dealing
-            hands[i].append(drawcard())
-        
-        return hands
+    for i in range(players): #second round of dealing
+        hands[i].append(drawcard())
+    
+    return hands
 
 def playtable():
 
@@ -56,9 +48,31 @@ def playtable():
 
     return table
 
+def drawcard():
+        global deck
+        
+        card=deck[0] #taking top card
+        deck.remove(card)
 
+        return card
 
+class check:
 
+    def flush(hand,table):
+        
+        flush=[]
+        
+        for card in cards:
+            if hand[0][1]==card[1]:
+                flush.append(card)
+                
+        #print(flush)
+
+        if len(flush)<5:
+            flush=[]
+            for card in cards:
+                if hand[1][1]==card[1]:
+                    flush.append(card)
 
 
 def play(players):
