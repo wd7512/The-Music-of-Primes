@@ -98,10 +98,61 @@ class check:
         while len(flush)>5: #make sure highest possible
             flush.remove(min(flush))
 
-        if len(flush)==5:
+        
+        if len(flush)==5: #if flush
+            flush=sorted(flush,reverse=True) #order flush high to low
             return [4,flush]
         else:
             return False
+
+    def anysamenum(repeats):
+        for card1 in repeats:
+            for card2 in repeats:
+                if card1[0]==card2[0] and card1!=card2:
+                    return False #checks every card against eachother for repeats
+        return True
+    
+    def straight(hand,table):
+
+        cards=hand+table
+        straight=[]
+
+        cards=sorted(cards,reverse=True) #sort cards high to low
+
+        repeats=[]
+
+        for card1 in cards:
+            for card2 in cards:
+                if card1[0]==card2[0] and card1!=card2:
+                    repeats.append(card2) #checks every card against eachother and adds repeats to a list
+                    
+        #print(repeats)
+
+        i=0 #counter
+        while check.anysamenum(repeats)==False: #while there are still repeats
+            if repeats[i+1][0]==repeats[i][0]:
+                repeats.remove(repeats[i+1]) #remove them
+            i=i+1
+            
+        for card in repeats:
+            cards.remove(card)
+
+        #print(cards)
+
+        if len(cards)<5: #if not enough cards to make straight
+            return False
+
+        #we now have at least 5 different cards that could make a straight
+        
+        if len(cards)==5 and connect(cards)==True: #if connected
+            return [5,cards]
+        
+
+def connect(5cards):
+    for i in range(4):
+        if cards[i][0]-cards[i+1][0]!=1: #if any of the cards dont connect
+            return False
+    return True
 
 def play(players):
     
