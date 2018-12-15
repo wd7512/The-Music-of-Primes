@@ -2,7 +2,7 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 global power
-power=-.7
+power=.2
 plt.title('Re['+str(power)+'^(x+yi)]')
 def f(y,x):
     global power
