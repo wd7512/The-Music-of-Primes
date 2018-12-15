@@ -58,22 +58,50 @@ def drawcard():
 
 class check:
 
+    # index of how hands are ranked
+    '''
+    straight flush = 1
+    4 of a kind = 2
+    full house = 3
+    flush = 4
+    straight = 5
+    3 of a kind = 6
+    2 pair = 7
+    1 pair = 8
+    nothing/high card = 9
+    '''
+    # in the form [rank,cards]
+    
     def flush(hand,table):
-        
+
+        cards=hand+table
         flush=[]
         
-        for card in cards:
-            if hand[0][1]==card[1]:
+        for card in cards: #for all cards
+            if hand[0][1]==card[1]: #if suited to first hand card
                 flush.append(card)
                 
         #print(flush)
 
-        if len(flush)<5:
+        if len(flush)<5: #if flush is not make with first hand card use second
             flush=[]
             for card in cards:
                 if hand[1][1]==card[1]:
                     flush.append(card)
 
+        if len(flush)<5: #if flush not made with hand at all, check table
+            flush=[]
+            for card in cards:
+                if table[0][1]==card[1]:
+                    flush.append(card)
+
+        while len(flush)>5: #make sure highest possible
+            flush.remove(min(flush))
+
+        if len(flush)==5:
+            return [4,flush]
+        else:
+            return False
 
 def play(players):
     
