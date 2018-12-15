@@ -146,7 +146,10 @@ class check:
         
         if len(cards)==5 and connect(cards)==True: #if connected
             return [5,cards]
-        
+
+        if len(cards)==6:
+            True
+            #CONTINUE
 
 def connect(5cards):
     for i in range(4):
