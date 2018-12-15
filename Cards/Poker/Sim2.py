@@ -1,38 +1,40 @@
 import random
 global deck
 
-def newdeck():
-    global deck
-    deck=[]
-    
-    values=[2,3,4,5,6,7,8,9,10,11,12,13,14]
-    suits=['D','S','C','H']
-    
-    for suit in suits:
-        for value in values:
-            deck.append([value,suit])
-    
-    deck=random.sample(deck,52) #shuffle deck
+class setup():
 
-def drawcard():
-    global deck
-    
-    card=deck[0] #taking top card
-    deck.remove(card)
+    def newdeck():
+        global deck
+        deck=[]
+        
+        values=[2,3,4,5,6,7,8,9,10,11,12,13,14]
+        suits=['D','S','C','H']
+        
+        for suit in suits:
+            for value in values:
+                deck.append([value,suit])
+        
+        deck=random.sample(deck,52) #shuffle deck
 
-    return card
+    def drawcard():
+        global deck
+        
+        card=deck[0] #taking top card
+        deck.remove(card)
 
-def deal(players):
-    
-    hands=[]
-    
-    for i in range(players): #first round of dealing
-        hands.append([drawcard()])
+        return card
 
-    for i in range(players): #second round of dealing
-        hands[i].append(drawcard())
-    
-    return hands
+    def deal(players):
+        
+        hands=[]
+        
+        for i in range(players): #first round of dealing
+            hands.append([drawcard()])
+
+        for i in range(players): #second round of dealing
+            hands[i].append(drawcard())
+        
+        return hands
 
 def playtable():
 
@@ -53,6 +55,11 @@ def playtable():
     table.append(drawcard())
 
     return table
+
+
+
+
+
 
 def play(players):
     
