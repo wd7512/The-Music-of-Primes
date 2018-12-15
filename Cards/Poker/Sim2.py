@@ -54,4 +54,15 @@ def playtable():
 
     return table
 
+def play(players):
+    
+    newdeck()
+    
+    hands=deal(players)
+    print('Hands:')
+    for hand in hands:
+        print(hand)
 
+    table=playtable()
+    print('Table:\n'+str(table))
+    
