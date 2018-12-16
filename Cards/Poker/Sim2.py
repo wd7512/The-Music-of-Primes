@@ -168,9 +168,62 @@ class check:
                 return [5,cards[2:7]]
         
         return False
-        #CHECK THIS WORKS
+
+
+
+    def similar(hand,table):
+
+        cards=hand+table
+        similar=[]
+
+        for card1 in cards:
+            for card2 in cards:
+                if card1[0]==card2[0] and card1!=card2: #if same as another card
+                    #print(card1)
+                    similar.append(card1)
+
+        similar=sorted(similar, reverse=True)
+
+        print(similar)
+        
+        if len(similar)==2: #if only a pair
+            for card in similar: #remove cards already being outputted
+                cards.remove(card)
+            
+            cards=sorted(cards, reverse=True)
+            while len(cards+similar)>5:
+                cards.remove(cards[-1]) #take of the lowest cards to leave highest kickers
+            
+            return [8,similar+cards]
+
+        if len(similar)==4: #if two pair
+            for card in similar: #remove cards already being outputted
+                cards.remove(card)
+
+            cards=sorted(cards, reverse=True)
+            while len(cards+similar)>5:
+                cards.remove(cards[-1]) #take of the lowest cards to leave highest kickers
+
+            return [7,similar+cards]
+
+        if len(similar)==6: #either 3 of a kind or 3 pairs
+            if similar[0][0]==similar[2][0]:# 3 of a kind
+                True
+
+            else: #3 pairs
+                True
+                
 
     
+            return similar
+
+        if len(similar)==8: #full house
+            return similar
+        
+        if len(similar)==12: #4 of a kind
+            return similar
+
+
 
 def play(players):
     
