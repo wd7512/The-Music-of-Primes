@@ -240,6 +240,20 @@ class check:
             
             return check.similarend(2,similar,cards)
 
+        else: #if nothing is made
+            cards=sorted(cards, reverse=True)
+            while cards>5:
+                cards.remove(cards[-1])
+            return [9,cards]
+
+def result(hands,table):
+
+    results=[]
+    
+    for hand in hands:
+        
+        if straight(hand,table)!=False and flush(hand,table)!=False: #if flush and straights are made
+            True
 
 
 def play(players):
