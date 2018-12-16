@@ -218,10 +218,27 @@ class check:
             
 
         if len(similar)==8: #full house
-            return similar
-        
+
+
+            if similar[0][0]!=similar[2][0]: #if pair is before 3 of a kind
+
+                similar=similar[2:9]+similar[0:2]
+
+                #print(similar)
+            
+            for i in range(3):
+                similar.remove(similar[1+i]) #remove duplicates
+
+            return [3,similar]
+
+
         if len(similar)==12: #4 of a kind
-            return similar
+
+            for i in range(4):
+                similar.remove(similar[1+i])
+                similar.remove(similar[1+i]) #remove duplicates
+            
+            return check.similarend(2,similar,cards)
 
 
 
