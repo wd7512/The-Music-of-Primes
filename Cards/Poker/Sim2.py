@@ -308,19 +308,64 @@ def convert(num):
     if num==9:
         return 'High Card'
 
-def compare(draw,style):
+def compare(draw,style): #draw is all 5 card hands
     compare=[]
 
-    if style==1: #if straight-flush
+    if style==1 or style==5: #if straight
         
         for cards in draw:
             compare.append(max(cards)) #get the high card
             
         winner=compare.index(max(compare)) #find highest high card
         
-        return [1,draw[winner]] #return best hand and type
+        return [style,draw[winner]] #return best hand and type
 
+    if style==2: #if 4 of a kind 
 
+        drawcondition=False
+        drawconditionhands=[]
+        
+        winner=0 #index of place in draw
+
+        fourvalue=[] #what value of 4 of a kind
+
+        for hand in draw:
+            fourvalue.append(hand[0][0])
+
+        #print(fourvalue)
+
+        winner=fourvalue.index(max(fourvalue)) #finds which hand has the highest 4 of a kind
+
+        winhand=draw[winner]
+        
+        for hand in draw: #check if same four of a kind
+            
+            if winhand[0][0]==hand[0][0] and winhand!=hand: #if hand is same 4 of a kind as winning hand
+                
+                if winhand[4][0]==hand[4][0]: #if kickers the same
+                    
+                    #print('draw')
+                    #print('win'+str(winhand[4][0]))
+                    #print('hand'+str(hand[4][0]))
+                    #print(winhand)
+                    #print(hand)
+                    
+                    drawcondition=True
+                    
+                    if winhand not in drawconditionhands:
+                        drawconditionhands.append(winhand)
+                        
+                    if hand not in drawconditionhands:
+                        drawconditionhands.append(hand)
+
+                if winhand[4][0]<hand[4][0]: #if hand beats winning hand
+                    winhand=hand
+
+        if drawcondition==True:
+            
+            return [style,drawconditionhands]
+
+        return [style,winhand] #return best hand and type
 
 
 def play(players):
@@ -354,9 +399,11 @@ def play(players):
 
     
 
-    if len(draw)>1: 
-        winner=compare(draw,style) #WORK ON THIS
+    if len(draw)>1:
         #style is type
+        winner=compare(draw,style) #WORK ON THIS
+        if len(winner[1])>1: #if drawn
+            True #work on this
             
     player=winner.index(winningcards) #finds which players it is
     
