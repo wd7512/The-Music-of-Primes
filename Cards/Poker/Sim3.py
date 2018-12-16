@@ -195,7 +195,7 @@ class check:
 
         similar=sorted(similar, reverse=True)
 
-        print(similar)
+        #print(similar)
         
         if len(similar)==2: #if only a pair
             return check.similarend(8,similar,cards)
@@ -379,14 +379,13 @@ def play(players):
         print(hand) #displays hands
 
     table=playtable()
-    print('Table:\n'+str(table)) #deals table and shows
+    print('\nTable:\n'+str(table)+'\n') #deals table and shows
 
     winner=[]
 
     for hand in hands:
         winner.append(result(hand,table)) #tests hands
 
-<<<<<<< HEAD
     winner=sorted(winner,reverse=True)
     
     winningcards=winner[0] #takes best hand
@@ -408,10 +407,6 @@ def play(players):
             
     player=winner.index(winningcards) #finds which players it is
     
-=======
-    winningcards=min(winner) #takes best hand
-    player=winner.index(winningcards)
->>>>>>> parent of f2db3ec... a
 
     winningcards[0]=convert(winningcards[0])
 
