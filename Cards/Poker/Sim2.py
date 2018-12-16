@@ -169,7 +169,16 @@ class check:
         
         return False
 
+    def similarend(rank,similar,cards):
+        for card in similar: #remove cards already being outputted
+            cards.remove(card)
 
+        cards=sorted(cards, reverse=True) 
+        
+        while len(cards+similar)>5:
+            cards.remove(cards[-1]) #take of the lowest cards to leave highest kickers
+
+        return [rank,similar+cards]
 
     def similar(hand,table):
 
@@ -187,35 +196,26 @@ class check:
         print(similar)
         
         if len(similar)==2: #if only a pair
-            for card in similar: #remove cards already being outputted
-                cards.remove(card)
-            
-            cards=sorted(cards, reverse=True)
-            while len(cards+similar)>5:
-                cards.remove(cards[-1]) #take of the lowest cards to leave highest kickers
-            
-            return [8,similar+cards]
+            return check.similarend(8,similar,cards)
 
+        
         if len(similar)==4: #if two pair
-            for card in similar: #remove cards already being outputted
-                cards.remove(card)
-
-            cards=sorted(cards, reverse=True)
-            while len(cards+similar)>5:
-                cards.remove(cards[-1]) #take of the lowest cards to leave highest kickers
-
-            return [7,similar+cards]
+            return check.similarend(7,similar,cards)
 
         if len(similar)==6: #either 3 of a kind or 3 pairs
             if similar[0][0]==similar[2][0]:# 3 of a kind
-                True
+                for i in range(3):
+                    similar.remove(similar[1+i]) #remove duplicates
+
+                return check.similarend(6,similar,cards)
 
             else: #3 pairs
-                True
                 
+                similar.remove(similar[-1])
+                similar.remove(similar[-1]) #remove lowest pair
 
-    
-            return similar
+                return check.similarend(7,similar,cards)
+            
 
         if len(similar)==8: #full house
             return similar
