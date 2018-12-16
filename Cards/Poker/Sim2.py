@@ -312,10 +312,13 @@ def compare(draw,style):
     compare=[]
 
     if style==1: #if straight-flush
+        
         for cards in draw:
-            compare.append(max(cards))
-        winner=compare.index(max(compare))
-        return [1,draw[winner]]
+            compare.append(max(cards)) #get the high card
+            
+        winner=compare.index(max(compare)) #find highest high card
+        
+        return [1,draw[winner]] #return best hand and type
 
 
 
