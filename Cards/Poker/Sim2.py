@@ -123,6 +123,8 @@ class check:
         cards=hand+table
         straight=[]
 
+        #print('in straight'+str(cards))
+        
         cards=sorted(cards,reverse=True) #sort cards high to low
 
         repeats=[]
@@ -242,19 +244,39 @@ class check:
 
         else: #if nothing is made
             cards=sorted(cards, reverse=True)
-            while cards>5:
+            while len(cards)>5:
                 cards.remove(cards[-1])
             return [9,cards]
 
-def result(hands,table):
+def result(hand,table):
 
     results=[]
-    
-    for hand in hands:
-        
-        if straight(hand,table)!=False and flush(hand,table)!=False: #if flush and straights are made
-            True
+    cards=hand+table
 
+    straighthand=check.straight(hand,table)
+    flushhand=check.flush(hand,table)
+    similarhand=check.similar(hand,table)
+
+    print(straighthand)
+    print(flushhand)
+    print(similarhand)
+
+
+        
+    if straighthand!=False and flushhand!=False: #if flush and straights are made
+
+        suit=flushhand[1][0][1] #gets suit of flush
+        #print(suit)
+
+        for card in cards:
+            if card[1]!=suit:
+                cards.remove(card) #removing non suited cards
+
+        cards=sorted(cards, reverse=True) #order cards
+        #print(cards)
+        
+        if check.connect(cards)!=False: #if flush is also straight
+            return [1,cards]
 
 def play(players):
     
