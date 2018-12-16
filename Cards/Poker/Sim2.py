@@ -308,6 +308,17 @@ def convert(num):
     if num==9:
         return 'High Card'
 
+def compare(draw,style):
+    compare=[]
+
+    if style==1: #if straight-flush
+        for cards in draw:
+            compare.append(max(cards))
+        winner=compare.index(max(compare))
+        return [1,draw[winner]]
+
+
+
 
 def play(players):
     
@@ -327,9 +338,25 @@ def play(players):
     for hand in hands:
         winner.append(result(hand,table)) #tests hands
 
-    winningcards=min(winner) #takes best hand
+    winner=sorted(winner,reverse=True)
     
+    winningcards=winner[0] #takes best hand
+
+    draw=[winningcards] #check is any draws
+    i=1
+
+    while winningcards[0]==winner[i][0]: #if any same type of winning
+        style=winningcards[0]
+        draw.append(winner[i]) #append the cards of people that have same type
+
+    
+
+    if len(draw)>1: 
+        winner=compare(draw,style) #WORK ON THIS
+        #style is type
+            
     player=winner.index(winningcards) #finds which players it is
+    
 
     winningcards[0]=convert(winningcards[0])
 
