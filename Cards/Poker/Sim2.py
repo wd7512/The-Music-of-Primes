@@ -257,10 +257,16 @@ def result(hand,table):
     flushhand=check.flush(hand,table)
     similarhand=check.similar(hand,table)
 
-    print(straighthand)
-    print(flushhand)
-    print(similarhand)
+    #print(straighthand)
+    #print(flushhand)
+    #print(similarhand)
 
+    if straighthand!=False:
+        results.append(straighthand)
+    if flushhand!=False:
+        results.append(flushhand)
+    if similarhand!=False:
+        results.append(similarhand)
 
         
     if straighthand!=False and flushhand!=False: #if flush and straights are made
@@ -278,15 +284,53 @@ def result(hand,table):
         if check.connect(cards)!=False: #if flush is also straight
             return [1,cards]
 
+    result=min(results)
+    
+    return result
+
+def convert(num):
+    if num==1:
+        return 'Straight-Flush'
+    if num==2:
+        return '4 of a Kind'
+    if num==3:
+        return 'Full House'
+    if num==4:
+        return 'Flush'
+    if num==5:
+        return 'Straight'
+    if num==6:
+        return '3 of a Kind'
+    if num==7:
+        return '2 Pairs'
+    if num==8:
+        return 'Pair'
+    if num==9:
+        return 'High Card'
+
+
 def play(players):
     
-    newdeck()
+    newdeck() #generates new deck
     
-    hands=deal(players)
+    hands=deal(players) #deals players
+    
     print('Hands:')
     for hand in hands:
-        print(hand)
+        print(hand) #displays hands
 
     table=playtable()
-    print('Table:\n'+str(table))
+    print('Table:\n'+str(table)) #deals table and shows
+
+    winner=[]
+
+    for hand in hands:
+        winner.append(result(hand,table)) #tests hands
+
+    winningcards=min(winner) #takes best hand
+    player=winner.index(winningcards)
+
+    winningcards[0]=convert(winningcards[0])
+
+    print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
     
