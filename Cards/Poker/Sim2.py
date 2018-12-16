@@ -111,6 +111,12 @@ class check:
                 if card1[0]==card2[0] and card1!=card2:
                     return False #checks every card against eachother for repeats
         return True
+
+    def connect(cards):
+        for i in range(4):
+            if cards[i][0]-cards[i+1][0]!=1: #if any of the cards dont connect
+                return False
+        return True
     
     def straight(hand,table):
 
@@ -144,18 +150,27 @@ class check:
 
         #we now have at least 5 different cards that could make a straight
         
-        if len(cards)==5 and connect(cards)==True: #if connected
+        if len(cards)==5 and check.connect(cards)==True: #if connected
             return [5,cards]
 
         if len(cards)==6:
-            True
-            #CONTINUE
+            if check.connect(cards[0:5])==True:
+                return [5,cards[0:5]]
+            if check.connect(cards[1:6])==True:
+                return [5,cards[1:6]]
 
-def connect(5cards):
-    for i in range(4):
-        if cards[i][0]-cards[i+1][0]!=1: #if any of the cards dont connect
-            return False
-    return True
+        if len(cards)==7:
+            if check.connect(cards[0:5])==True:
+                return [5,cards[0:5]]
+            if check.connect(cards[1:6])==True:
+                return [5,cards[1:6]]
+            if check.connect(cards[2:7])==True:
+                return [5,cards[2:7]]
+        
+        return False
+        #CHECK THIS WORKS
+
+    
 
 def play(players):
     
