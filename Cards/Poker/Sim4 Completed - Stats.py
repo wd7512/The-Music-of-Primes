@@ -424,7 +424,7 @@ def play(players):
         if winningcards[0]==winningcards[1]:
             num1=winner.index(winningcards[0]) #sort this out in evaluation
             #print(num1)
-            return ['win',hands[num1],convert(listwin[0])]
+            return ['win',hands[num1],convert(listwin[0][0])]
         
         winhands=[]
         for player in players:
