@@ -316,7 +316,9 @@ def convert(num):
     if num==9:
         return 'High Card'
 
-
+def kicker(x):
+    print('kicker'+str(x))
+    return [x[0],0]
 def play(players):
     
     newdeck() #generates new deck
@@ -334,13 +336,46 @@ def play(players):
 
     for hand in hands:
         winner.append(result(hand,table)) #tests hands
-        print(str(hand)+' tested')
+        #print(str(hand)+' tested')
 
     winningcards=min(winner) #takes best hand
+
+    draw=[] #list for hand witb the same type
     
+    for sets in winner:
+        if winningcards[0]==sets[0]:
+            draw.append(sets)
+
+    print(sorted(draw,reverse=True))
+
+    for card in draw:
+        card[1]=sorted(card[1], reverse=True, key=kicker)
+
+    winningcards=(sorted(draw,reverse=True))[0]
+
+    print(winningcards)
+
+
+    
+    for hand in draw:
+        num=0
+        for i in range(5):
+            if hand[1][i]==winningcards[1][i]:
+                num=num+1
+        
+        
     player=winner.index(winningcards) #finds which players it is
+
+    #print(player)
 
     winningcards[0]=convert(winningcards[0])
 
-    print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+    if num<5: #if one winner
+        print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+
+        return([hands[player],'win'])
     
+    else: #if more than 1 winner
+        print('player '+str(player)+' draws\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+
+        return([hands[player],'draw'])
