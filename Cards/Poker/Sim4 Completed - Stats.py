@@ -341,7 +341,7 @@ def same(drawlist):
             
         #print(str(numlist)+'before')
         
-        for numbers in testlist: #NUMLIST IS LOSING SOMETHING HERE
+        for numbers in testlist: 
             if max(list1)>numbers[i]: 
                 testlist.remove(numbers)
                 
@@ -405,12 +405,24 @@ def play(players):
     if len(winningcards)==2 and len(winningcards[1])==5:
         winningcards[0]=convert(winningcards[0])
         player=winner.index(winningcards) #finds which players it is
-        print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+        #print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+
+        return [hands[player],winningcards[0],'win']
 
     else:
         players=[]
         for hand in winningcards:
+            print('winningcards')
+            print(winningcards)
+            print('hand')
+            print(hand)
+            print('winner')
+            print(winner)
             players.append(winner.index(hand)) #appends drawing players
+            
+            hand[0]=convert(hand[0])
+            if hand[0]=='none':
+                hi=input('stop')
         winhands=[]
         for player in players:
             winhands.append(hands[player])
