@@ -317,7 +317,7 @@ def convert(num):
         return 'High Card'
 
 def kicker(x):
-    print('kicker'+str(x))
+    #print('kicker'+str(x))
     return [x[0],0]
 def play(players):
     
@@ -325,12 +325,14 @@ def play(players):
     
     hands=deal(players) #deals players
     
-    print('Hands:')
-    for hand in hands:
-        print(hand) #displays hands
+    #print('Hands:')
+    #for hand in hands:
+        
+        #print(hand)
+        #displays hands
 
     table=playtable()
-    print('\nTable:\n'+str(table)+'\n') #deals table and shows
+    #print('\nTable:\n'+str(table)+'\n') #deals table and shows
 
     winner=[]
 
@@ -346,21 +348,21 @@ def play(players):
         if winningcards[0]==sets[0]:
             draw.append(sets)
 
-    print(sorted(draw,reverse=True))
+    #print(sorted(draw,reverse=True))
 
     for card in draw:
         card[1]=sorted(card[1], reverse=True, key=kicker)
 
     winningcards=(sorted(draw,reverse=True))[0]
 
-    print(winningcards)
+    #print(winningcards)
 
 
     
     for hand in draw:
         num=0
         for i in range(5):
-            if hand[1][i]==winningcards[1][i]:
+            if hand[1][i]==winningcards[1][i] and hand!=winningcards:
                 num=num+1
         
         
@@ -371,11 +373,12 @@ def play(players):
     winningcards[0]=convert(winningcards[0])
 
     if num<5: #if one winner
-        print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+        #print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
 
-        return([hands[player],'win'])
+        return([hands[player],'win',winningcards[0]])
     
     else: #if more than 1 winner
-        print('player '+str(player)+' draws\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+        #print('player '+str(player)+' draws\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
 
-        return([hands[player],'draw'])
+        return([hands[player],'draw',winningcards[0]])
+
