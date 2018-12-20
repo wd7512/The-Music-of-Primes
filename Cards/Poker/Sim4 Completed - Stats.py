@@ -289,7 +289,7 @@ def result(hand,table):
         cards=sorted(cards, reverse=True) #order cards
         #print(cards)
         
-        if check.connect(cards)!=False: #if flush is also straight
+        if check.connect(cards)!=False and len(cards)==5: #if flush is also straight
             return [1,cards]
 
     result=min(results)
@@ -374,12 +374,12 @@ def play(players):
     
     hands=deal(players) #deals players
     
-    print('Hands:')
-    for hand in hands:
-        print(hand) #displays hands
+    #print('Hands:')
+    #for hand in hands:
+        #print(hand) #displays hands
 
     table=playtable()
-    print('\nTable:\n'+str(table)+'\n') #deals table and shows
+    #print('\nTable:\n'+str(table)+'\n') #deals table and shows
 
     winner=[]
 
@@ -407,29 +407,36 @@ def play(players):
         player=winner.index(winningcards) #finds which players it is
         #print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
 
-        return [hands[player],winningcards[0],'win']
+        return ['win',hands[player],winningcards[0]]
 
     else:
         players=[]
+        listwin=list(winningcards)
         for hand in winningcards:
             print('winningcards')
             print(winningcards)
-            print('hand')
-            print(hand)
-            print('winner')
-            print(winner)
+            #print('hand')
+            #print(hand)
+            #print('winner')
+            #print(winner)
             players.append(winner.index(hand)) #appends drawing players
-            
-            hand[0]=convert(hand[0])
-            if hand[0]=='none':
-                hi=input('stop')
+
+        if winningcards[0]==winningcards[1]:
+            num1=winner.index(winningcards[0])
+            return ['win',hands[players[0]],convert(listwin[0])]
+        
         winhands=[]
         for player in players:
             winhands.append(hands[player])
-        print('player '+str(players)+' draws\nwith hands of '+str(winhands)+'\nand cards:\n'+str(winningcards))
+        #print('player '+str(players)+' draws\nwith hands of '+str(winhands)+'\nand cards:\n'+str(winningcards))
         
-        
+        return ['draw',winhands,convert(winningcards[0][0])]
     
-
+repetition=int(input('How many times do you want to simulate?'))
+players=int(input('How many players?'))
+for i in range(repetition):
+    f=open('Sim'+str(players)+'players.txt', 'a')
+    f.write(str(play(players))+'\n')
+    f.close()
 
 
