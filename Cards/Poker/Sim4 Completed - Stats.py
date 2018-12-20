@@ -413,8 +413,8 @@ def play(players):
         players=[]
         listwin=list(winningcards)
         for hand in winningcards:
-            print('winningcards')
-            print(winningcards)
+            #print('winningcards')
+            #print(winningcards)
             #print('hand')
             #print(hand)
             #print('winner')
@@ -422,8 +422,9 @@ def play(players):
             players.append(winner.index(hand)) #appends drawing players
 
         if winningcards[0]==winningcards[1]:
-            num1=winner.index(winningcards[0])
-            return ['win',hands[players[0]],convert(listwin[0])]
+            num1=winner.index(winningcards[0]) #sort this out in evaluation
+            #print(num1)
+            return ['win',hands[num1],convert(listwin[0])]
         
         winhands=[]
         for player in players:
@@ -438,5 +439,7 @@ for i in range(repetition):
     f=open('Sim'+str(players)+'players.txt', 'a')
     f.write(str(play(players))+'\n')
     f.close()
+    if (round(100*i/repetition))!=(round(100*(i+1)/repetition)):
+        print(str(round(100*i/repetition))+'%')
 
 
