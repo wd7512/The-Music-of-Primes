@@ -316,9 +316,6 @@ def convert(num):
     if num==9:
         return 'High Card'
 
-def kicker(x):
-    #print('kicker'+str(x))
-    return [x[0],0]
 
 def same(drawlist):
 
@@ -330,12 +327,47 @@ def same(drawlist):
             list1.append(card[0])
         numlist.append(list1)
 
-    print(numlist)
+    #print(numlist)
+    testlist=list(numlist)
+    #numlist.append('empty')
+    #to prevent duplicate
+    #print(testlist)
 
     for i in range(5):
+        #print(numlist)
+        list1=[]
+        for numbers in testlist:
+            list1.append(numbers[i])
+            
+        #print(str(numlist)+'before')
         
-    
+        for numbers in testlist: #NUMLIST IS LOSING SOMETHING HERE
+            if max(list1)>numbers[i]: 
+                testlist.remove(numbers)
+                
+        #print(str(numlist)+'after')
+        
+        #print('j')
+        #print(testlist)
+        if len(testlist)==1:
+            #print(str(numlist)+'after')
+            num=numlist.index(testlist[0]) #index last testlist
+            return drawlist[num]
 
+    nums=[]
+    
+    #print(testlist)
+    for numbers in testlist:
+        #print(numbers)
+        nums.append(numlist.index(numbers))
+
+    #print(nums)
+    end=[]
+    for num in nums:
+        end.append(drawlist[num])
+    return end
+
+    
 def play(players):
     
     newdeck() #generates new deck
@@ -363,40 +395,29 @@ def play(players):
         if winningcards[0]==sets[0]:
             draw.append(sets)
 
-    list1=(sorted(draw,reverse=True))
+    if len(draw)==2 and len(draw[1])==5:
+        winningcards=winningcards
+    else:
+        winningcards=same(draw)
 
-    #for card in draw:
-        #card[1]=sorted(card[1], reverse=True, key=kicker)
-
-    winningcards=(list1)[0]
-
-    print(list1)
-
-    if len(list1)>1: #gets winner of draw
-        i=0
-        while i!=len(list1)-1 and list1[i][1][0][0]==list1[i+1][1][0][0]:
-            winningcards=list1[i+1]
-            i=i+1
-            print(i)
+    #print(winningcards)
     
-    for hand in draw: #if real draw
-        num=0
-        for i in range(5):
-            if hand[1][i]==winningcards[1][i] and hand!=winningcards:
-                num=num+1
-                print(num)
-        
-        
-    player=winner.index(winningcards) #finds which players it is
-
-    #print(player)
-
-    winningcards[0]=convert(winningcards[0])
-
-    if num<5: #if one winner
+    if len(winningcards)==2 and len(winningcards[1])==5:
+        winningcards[0]=convert(winningcards[0])
+        player=winner.index(winningcards) #finds which players it is
         print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
 
+    else:
+        players=[]
+        for hand in winningcards:
+            players.append(winner.index(hand)) #appends drawing players
+        winhands=[]
+        for player in players:
+            winhands.append(hands[player])
+        print('player '+str(players)+' draws\nwith hands of '+str(winhands)+'\nand cards:\n'+str(winningcards))
+        
+        
     
-    else: #if more than 1 winner
-        print('player '+str(player)+' draws\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+
+
 
