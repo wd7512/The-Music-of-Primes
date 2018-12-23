@@ -405,7 +405,7 @@ def play(players):
     if len(winningcards)==2 and len(winningcards[1])==5:
         winningcards[0]=convert(winningcards[0])
         player=winner.index(winningcards) #finds which players it is
-        #print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
+        print('player '+str(player)+' wins\nwith a hand of '+str(hands[player])+'\nand cards:\n'+str(winningcards))
 
 
     else:
