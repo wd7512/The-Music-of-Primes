@@ -22,7 +22,7 @@ for i in range(len(y)):
 b=[] #bars
 f=[] #frequency
 ranger=max(z)-min(z)
-numbar=40 #number of bars
+numbar=50 #number of bars
 split=ranger/numbar
 for i in range(numbar):
     mina=min(z)+i*split
