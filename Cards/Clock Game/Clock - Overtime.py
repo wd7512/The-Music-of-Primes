@@ -59,15 +59,13 @@ def play():
             #print(clock[num])
             clock[num].remove(card)
 
-    count=0
+    
     for sets in clock: #counts how many empty sets
-        if sets==[]:
-            count=count+1
+        if sets!=[]:
+            return False
 
-    if count==12: #if all sets empty
-        return True
-    else:
-        return False
+    return True
+    
 def sim(howmanytimes):
 
     f=open('Clock Results.txt', 'r')
