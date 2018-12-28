@@ -1,8 +1,6 @@
 import random
 global deck
 
-
-
 def newdeck():
     global deck
     deck=[]
@@ -14,8 +12,6 @@ def newdeck():
         for value in values:
             deck.append([value,suit])
     
-    deck=random.sample(deck,52) #shuffle deck
-    deck=random.sample(deck,52) #shuffle deck
     deck=random.sample(deck,52) #shuffle deck
 
 def draw(): 
@@ -98,6 +94,15 @@ def sim(howmanytimes):
     f=open('Clock Results - Overtime.txt','a')
     f.write(str([total,100*suc/total])+'\n') #runs and percent
     f.close()
+
+    line1=''
+    a=len(str(total))+4
+    while a > 0:
+        line1=(line1+"*")
+        a=a-1
+    print(line1)
+    print("* "+str(total)+" *")
+    print(line1)
     
     print('Fail: '+str(fail)+'\n')
     print('Successful: '+str(suc)+'\n')
