@@ -1,0 +1,3 @@
+Fail: 19909170
+Successful: 90830
+% Chance of Winning: 0.454%
