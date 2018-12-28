@@ -104,5 +104,5 @@ def sim(howmanytimes):
     print('% Chance of Winning: '+str(round(100*suc/total,7))+'%')
 
 while True:
-    sim(50000)
+    sim(100000)
     
