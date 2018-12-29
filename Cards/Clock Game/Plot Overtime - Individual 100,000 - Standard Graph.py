@@ -22,12 +22,12 @@ for i in range(len(y)):
 b=[] #bars
 f=[] #frequency
 ranger=max(z)-min(z)
-numbar=50 #number of bars
+numbar=28 #number of bars
 split=ranger/numbar
 for i in range(numbar):
     mina=min(z)+i*split
     maxa=min(z)+(i+1)*split
-    b.append((mina+maxa)/1.75)
+    b.append((mina+maxa)/2)
 
     count=0
     for num in z:
@@ -36,8 +36,8 @@ for i in range(numbar):
                 count=count+1
     f.append(count)
 
-plt.xlabel('bar size='+str(split))    
-plt.bar(b,f,width=split)
+plt.xlabel('bar size='+str(split/1.2))    
+plt.bar(b,f,width=split/1.2)
 
-
-plt.show()
+plt.savefig(str(numbar)+'bars.png')
+#plt.show()
