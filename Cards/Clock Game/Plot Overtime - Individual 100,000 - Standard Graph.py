@@ -39,5 +39,5 @@ for i in range(numbar):
 plt.xlabel('bar size='+str(split/1.2))    
 plt.bar(b,f,width=split/1.2)
 
-plt.savefig(str(numbar)+'bars.png')
-#plt.show()
+#plt.savefig(str(numbar)+'bars.png')
+plt.show()

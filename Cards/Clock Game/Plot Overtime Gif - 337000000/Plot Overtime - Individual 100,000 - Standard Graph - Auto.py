@@ -39,6 +39,7 @@ def save(numbar):
 
     plt.xlabel('bar size='+str(split/1.2))    
     plt.bar(b,f,width=split/1.2)
+    plt.title(str(numbar)+'bars.png')
 
     plt.savefig(str(numbar)+'bars.png')
     plt.clf()
