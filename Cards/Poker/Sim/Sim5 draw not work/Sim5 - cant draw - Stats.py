@@ -482,3 +482,4 @@ def play(players):
         f.write(str(['win',hands[num],convert(ranked[0][0])])+'\n')
         f.close()
 
+
