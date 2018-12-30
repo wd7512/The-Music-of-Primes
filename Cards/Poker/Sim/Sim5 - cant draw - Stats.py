@@ -468,10 +468,17 @@ def play(players):
         for num in nums:
             winners.append(hands[num])
 
-        print(str(winners)+'draws with a '+str(convert(ranked[0][0])))
+        #print(str(winners)+'draws with a '+str(convert(ranked[0][0])))
 
+        f=open(str(players)+'people.txt','a')
+        f.write(str(['win',str(winners),convert(ranked[0][0])])+'\n')
+        f.close()
         
     else:
         num=scores.index(winner)
-        print(str(hands[num])+' wins with a '+str(convert(ranked[0][0])))
+        #print(str(hands[num])+' wins with a '+str(convert(ranked[0][0])))
+
+        f=open(str(players)+'people.txt','a')
+        f.write(str(['win',hands[num],convert(ranked[0][0])])+'\n')
+        f.close()
 
