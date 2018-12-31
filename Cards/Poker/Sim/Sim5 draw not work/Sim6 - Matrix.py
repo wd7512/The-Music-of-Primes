@@ -1,4 +1,6 @@
 import random
+import numpy as np
+
 
 global deck
 
@@ -373,7 +375,7 @@ def result(hand,table):
             for card in cards:
                 number=number+card[0]
             
-            return [9,number]
+            return '09'+number
 
     result=min(results)
 
@@ -386,7 +388,7 @@ def result(hand,table):
         if number[2:4]=='05': #if wrap around
             number='0504030214'
     
-    return [result[0],number]
+    return str(result[0])+number
 
 def convert(num):
     if num==9:
@@ -420,66 +422,98 @@ def drawcheck(ranked):
 
     return draws
 
+def newdata(players,hands,table):
+
+    empty='0 0 0'
+
+    for i in range(players-1):
+        empty=empty+';'+str(i+1)+' 0 0'
+
+    #print(empty)
+
+    data=np.matrix(empty)
+
+    for i in range(players):
+
+        score=result(hands[i],table)
+        score1=score[0:5]
+        score2=score[5:11]
+        
+        data[i,1]=int(score1)
+        data[i,2]=int(score2)
+
+    for j in range(players+1): #order by score1
+        for i in range(players-1):
+            if data[i,1]<data[i+1,1]:
+                data[[i,i+1]]=data[[i+1,i]]
+
+    print(str(data)+'\n\n')
+
+    for j in range(players+1):
+        pos=0
+        print(pos)
+        while data[pos,1]==data[pos+1,1] and pos<players: #if score1 same order by score2
+            
+            #print(data[pos,2])
+            #print(data[pos+1,2])
+            if data[pos,2]<data[pos+1,2]:
+                #print('less')
+                
+                data[[pos,pos+1]]=data[[pos+1,pos]]
+            pos=pos+1
+            
+        
+    return data
+
 def play(players):
 
     newdeck() #generates new deck
     
     hands=deal(players) #deals players
     
-    #print('Hands:')
-    #for hand in hands:
-        #print(hand) #displays hands
+    print('Hands:')
+    for hand in hands:
+        print(hand) #displays hands
 
     table=playtable()
-    #print('\nTable:\n'+str(table)+'\n') #deals table and shows
+    print('\nTable:\n'+str(table)+'\n') #deals table and shows
 
-    scores=[]
+    data=newdata(players,hands,table)
 
-    for hand in hands:
-        scores.append(result(hand,table)) #scores each hand
+    
 
-    ranked=sorted(scores, reverse=True) #ranked list
+    #print(data)
 
-    #print(ranked)
+    winners=[]
 
-    winner=ranked[0]
+    top=data[0,1:3]
 
-    draw=drawcheck(ranked) #gets 'drawn' hands
+    #print(top)
 
-    duplicate=[]
+    pos=0
+    while str(top)==str(data[pos,1:3]):
+        winners.append(data[pos,0])
+        pos=pos+1
 
-    for i in range(len(draw)-1):
-        if draw[0]==draw[i+1]:
-            duplicate.append(draw[i+1])
+    #print(winners)
 
-    print(duplicate)
+    typeofhand=convert(int(str(data[0,1])[0]))
 
-    for sets in duplicate:
-        draw.remove(sets)
+    #print(typeofhand)
 
-    if len(draw)>1:
+    winnerhands=[]
 
-        winners=[]
-        nums=[]
+    for num in winners:
+        winnerhands.append(hands[num])
 
-        for winner in draw:
-            nums.append(scores.index(winner))
+    if len(winners)>1:
 
-        for num in nums:
-            winners.append(hands[num])
+        
 
-        #print(str(winners)+'draws with a '+str(convert(ranked[0][0])))
+        print(str(winnerhands)+'draws with a '+typeofhand)
 
-        f=open(str(players)+'people.txt','a')
-        f.write(str(['win',str(winners),convert(ranked[0][0])])+'\n')
-        f.close()
         
     else:
-        num=scores.index(winner)
-        #print(str(hands[num])+' wins with a '+str(convert(ranked[0][0])))
 
-        f=open(str(players)+'people.txt','a')
-        f.write(str(['win',hands[num],convert(ranked[0][0])])+'\n')
-        f.close()
-
+        print(str(winnerhands)+' wins with a '+typeofhand)
 

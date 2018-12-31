@@ -426,12 +426,12 @@ def play(players):
     
     hands=deal(players) #deals players
     
-    #print('Hands:')
-    #for hand in hands:
-        #print(hand) #displays hands
+    print('Hands:')
+    for hand in hands:
+        print(hand) #displays hands
 
     table=playtable()
-    #print('\nTable:\n'+str(table)+'\n') #deals table and shows
+    print('\nTable:\n'+str(table)+'\n') #deals table and shows
 
     scores=[]
 
@@ -440,33 +440,22 @@ def play(players):
 
     ranked=sorted(scores, reverse=True) #ranked list
 
-    #print(ranked)
+    print(ranked)
 
     winner=ranked[0]
 
     draw=drawcheck(ranked) #gets 'drawn' hands
 
-    duplicate=[]
+    print(draw)
 
-    for i in range(len(draw)-1):
-        if draw[0]==draw[i+1]:
-            duplicate.append(draw[i+1])
-
-    print(duplicate)
-
-    for sets in duplicate:
-        draw.remove(sets)
+    
 
     if len(draw)>1:
 
         winners=[]
         nums=[]
 
-        for winner in draw:
-            nums.append(scores.index(winner))
-
-        for num in nums:
-            winners.append(hands[num])
+        
 
         print(str(winners)+'draws with a '+str(convert(ranked[0][0])))
 
