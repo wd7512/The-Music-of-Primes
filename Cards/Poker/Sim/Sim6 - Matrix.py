@@ -451,12 +451,18 @@ def newdata(players,hands,table):
 
     for j in range(players+1):
         pos=0
-        print(pos)
-        while data[pos,1]==data[pos+1,1] and pos<players: #if score1 same order by score2
-            
+        print('pos='+str(pos))
+        var1=data[pos,1]
+        var2=data[pos+1,1]
+        print(var1)
+        print(var2)
+        while var1==var2 and pos<players: #if score1 same order by score2
+
+            var1=data[pos,2]
+            var2=data[pos+1,2]
             #print(data[pos,2])
             #print(data[pos+1,2])
-            if data[pos,2]<data[pos+1,2]:
+            if var1<var2:
                 #print('less')
                 
                 data[[pos,pos+1]]=data[[pos+1,pos]]
