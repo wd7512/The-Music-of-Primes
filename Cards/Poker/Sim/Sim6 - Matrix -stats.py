@@ -516,10 +516,12 @@ def play(players):
 
         
 
-        print(str(winnerhands)+'draws with a '+typeofhand)
+        return ['draw',winnerhands,typeofhand]
 
         
     else:
 
-        print(str(winnerhands)+' wins with a '+typeofhand)
+        return ['win',winnerhands,typeofhand]
+
+
 
