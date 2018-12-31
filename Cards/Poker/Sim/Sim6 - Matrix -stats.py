@@ -104,6 +104,7 @@ class check:
 
         
         if len(flush)==5: #if flush
+            #print(str([6,flush]))
             flush=sorted(flush,reverse=True) #order flush high to low
             return [6,flush]
         else:
@@ -377,7 +378,7 @@ def result(hand,table):
             
             return '09'+number
 
-    result=min(results)
+    result=max(results)
 
     number=''
 
@@ -447,7 +448,7 @@ def newdata(players,hands,table):
             if data[i,1]<data[i+1,1]:
                 data[[i,i+1]]=data[[i+1,i]]
 
-    print(str(data)+'\n\n')
+    #print(str(data)+'\n\n')
 
     for j in range(players+1):
         pos=0
@@ -477,12 +478,12 @@ def play(players):
     
     hands=deal(players) #deals players
     
-    print('Hands:')
-    for hand in hands:
-        print(hand) #displays hands
+    #print('Hands:')
+    #for hand in hands:
+        #print(hand) #displays hands
 
     table=playtable()
-    print('\nTable:\n'+str(table)+'\n') #deals table and shows
+    #print('\nTable:\n'+str(table)+'\n') #deals table and shows
 
     data=newdata(players,hands,table)
 
@@ -501,7 +502,7 @@ def play(players):
         winners.append(data[pos,0])
         pos=pos+1
 
-    print(winners)
+    #print(winners)
 
     typeofhand=convert(int(str(data[0,1])[0]))
 
@@ -523,5 +524,30 @@ def play(players):
 
         return ['win',winnerhands,typeofhand]
 
+def mixed():
 
+    while True:
+        for i in range(9):
+            f=open(str(i+2)+'people.txt','a')
+            f.write(str(play(i+2))+'\n')
+            f.close()
 
+def million():
+    for i in range(1000000):
+        if i%1000==0:
+            print(i)
+        f=open('2people.txt','a')
+        f.write(str(play(2))+'\n')
+        f.close()
+        
+def groupedmillion(players):
+    for i in range(1000):
+        towrite=''
+        for j in range(1000):
+            towrite=towrite+str(play(players))+'\n'
+        f=open(str(players)+'people.txt','a')
+        f.write(towrite)
+        f.close()
+        print(i+1)
+
+groupedmillion(4)

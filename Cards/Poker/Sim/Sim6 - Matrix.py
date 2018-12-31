@@ -104,6 +104,7 @@ class check:
 
         
         if len(flush)==5: #if flush
+            #print(str([6,flush]))
             flush=sorted(flush,reverse=True) #order flush high to low
             return [6,flush]
         else:
@@ -377,7 +378,7 @@ def result(hand,table):
             
             return '09'+number
 
-    result=min(results)
+    result=max(results)
 
     number=''
 
@@ -516,10 +517,12 @@ def play(players):
 
         
 
-        print(str(winnerhands)+'draws with a '+typeofhand)
+        return ['draw',winnerhands,typeofhand]
 
         
     else:
 
-        print(str(winnerhands)+' wins with a '+typeofhand)
+        return ['win',winnerhands,typeofhand]
+
+
 
