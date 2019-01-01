@@ -545,10 +545,10 @@ def groupedmillion(players):
         towrite=''
         for j in range(1000):
             towrite=towrite+str(play(players))+'\n'
-        f=open(str(players)+'people.txt','a')
+        f=open(str(players)+'people1.txt','a')
         f.write(towrite)
         f.close()
         print(str((i+1)/10)+'%')
 
-players=int(input('Sim a million games with how many players?'))
-groupedmillion(players)
+
+
