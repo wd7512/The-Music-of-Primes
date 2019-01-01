@@ -550,4 +550,4 @@ def groupedmillion(players):
         f.close()
         print(i+1)
 
-groupedmillion(4)
+groupedmillion(10)
