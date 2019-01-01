@@ -551,9 +551,11 @@ def groupedmillion(players,index):
         f=open(str(players)+'people'+str(index)+'.txt','a')
         f.write(towrite)
         f.close()
-        print(str((i+1)/10)+'% estimated:'+str(round((time.time()-tim1)*(999-i)/60))+'min left')
+        dif=time.time()-tim1 #time to calculate
+        print(str((i+1)/10)+'% estimated:'+str(round((dif)*(999-i)/60))+'min left '+str(round(1000/dif))+' simulations/second')
+
+groupedmillion(2,3)
 
 
-for i in range(8):
-    groupedmillion(2,i+31)
+
 
