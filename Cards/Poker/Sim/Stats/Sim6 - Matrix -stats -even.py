@@ -555,14 +555,7 @@ def groupedmillion(players):
 
 
 
-groupedmillion(2)
-groupedmillion(4)
-groupedmillion(6)
-groupedmillion(8)
-groupedmillion(10)
-groupedmillion(12)
-groupedmillion(14)
-groupedmillion(16)
+
 groupedmillion(18)
 groupedmillion(20)
 groupedmillion(22)
