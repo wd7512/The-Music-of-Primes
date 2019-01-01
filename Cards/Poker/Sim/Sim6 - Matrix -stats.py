@@ -1,6 +1,6 @@
 import random
 import numpy as np
-
+import time
 
 global deck
 
@@ -542,13 +542,15 @@ def million():
         
 def groupedmillion(players):
     for i in range(1000):
+        tim1=time.time()
+        
         towrite=''
         for j in range(1000):
             towrite=towrite+str(play(players))+'\n'
         f=open(str(players)+'people1.txt','a')
         f.write(towrite)
         f.close()
-        print(str((i+1)/10)+'%')
+        print(str((i+1)/10)+'% estimated:'+str(round((time.time()-tim1)*(999-i)/60))+'min left')
 
 
 
