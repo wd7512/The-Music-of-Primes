@@ -555,5 +555,5 @@ def groupedmillion(players,index):
 
 
 for i in range(8):
-    groupedmillion(2,i+2)
+    groupedmillion(2,i+31)
 
