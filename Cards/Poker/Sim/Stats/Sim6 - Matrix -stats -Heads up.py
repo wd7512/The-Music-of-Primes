@@ -554,7 +554,7 @@ def groupedmillion(players,index):
         dif=time.time()-tim1 #time to calculate
         print(str((i+1)/10)+'% estimated:'+str(round((dif)*(999-i)/60))+'min left '+str(round(1000/dif))+' simulations/second')
 
-groupedmillion(2,3)
+groupedmillion(2,15)
 
 
 
