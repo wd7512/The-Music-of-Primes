@@ -2,7 +2,7 @@ import ast
 import numpy as np
 global fmatrix
 
-numfiles=int(input('How many files?:'))
+#numfile=int(input('Index of File?:'))
 
 
 def newmatrix():
@@ -19,7 +19,13 @@ def newmatrix():
             '10','11','12','13',
             '14']
 
-    for value in values: #make first coloumn matrix
+    cone=[]
+    for i in range(13):
+        for j in range(13-i):
+            cone.append(values[i]+values[j+i])
+    print(cone)
+    print(len(cone))
+        
 
 
 def cardconvert(value):
@@ -40,12 +46,12 @@ def cardconvert(value):
 
     
 
-for i in range(numfiles):
-    f=open('2people'+str(i+1)+'.txt','r')
+
+#f=open('2people'+str(numfile)+'.txt','r')
     
 
     
-    lines=f.readlines()
-    for line in lines:
-        line=ast.literal_eval(line)
+#lines=f.readlines()
+#for line in lines:
+    #line=ast.literal_eval(line)
     
