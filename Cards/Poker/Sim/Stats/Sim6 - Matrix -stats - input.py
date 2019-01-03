@@ -563,12 +563,12 @@ def groupedmillion(players,index):
         dif=time.time()-tim1 #time to calculate
         print(str((i+1)/10)+'% estimated:'+str(round((dif)*(999-i)/60))+'min left '+str(round(1000/dif))+' simulations/second')
 
-players=int(input('Players:'))
-index=input('File Suffix (e.g 10):')
-groupedmillion(players,index)
+#players=int(input('Players:'))
+#index=input('File Suffix (e.g 10):')
+#groupedmillion(players,index)
 
-#for i in range(100):
-    #groupedmillion(2,44+2*i)
+for i in range(100):
+    groupedmillion(2,53+4*i)
 
 
 
