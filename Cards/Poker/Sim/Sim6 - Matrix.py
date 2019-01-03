@@ -343,6 +343,10 @@ def result(hand,table):
     cards=hand+table
 
     straighthand=check.straight(hand,table)
+
+    for card in cards:
+        if card[0]=='01':
+            card[0]='14'
     flushhand=check.flush(hand,table)
     similarhand=check.similar(hand,table)
 
