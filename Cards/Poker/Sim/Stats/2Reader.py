@@ -89,7 +89,7 @@ def analyse(numfile):
 
     #print(matrix)
     for sets in matrix:
-        sets[1]=100*sets[2]/(sets[2]+sets[3])
+        sets[1]=round(100*sets[2]/(sets[2]+sets[3]),2)
     for i in range(169):
         for j in range(168):
             var1=matrix[j][:]
@@ -102,7 +102,14 @@ def analyse(numfile):
         #print(sets)
 
     f=open('2people'+str(numfile)+'-analysed.txt','a')
+    f.write('HAND-WIN%-TOTALWINS-TOTALLOSS-TOTALDRAWS\n')
     for sets in matrix:
+        var1=cardconvert(sets[0][0:2])
+        var2=cardconvert(sets[0][2:4])
+        if sets[0][4]=='s':
+            sets[0]=var1+var2+'s'
+        else:
+            sets[0]=var1+var2
         f.write(str(sets)+'\n')
 
     f.close()
