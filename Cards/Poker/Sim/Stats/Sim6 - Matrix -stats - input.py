@@ -518,16 +518,21 @@ def play(players):
     for num in winners:
         winnerhands.append(hands[num])
 
+    losehands=hands[:]
+
+    for winnerhand in winnerhands:
+        losehands.remove(winnerhand)
+
     if len(winners)>1:
 
         
 
-        return ['draw',winnerhands,typeofhand]
+        return ['draw',winnerhands,typeofhand,losehands]
 
         
     else:
 
-        return ['win',winnerhands,typeofhand]
+        return ['win',winnerhands,typeofhand,losehands]
 
 def mixed():
 
@@ -559,7 +564,7 @@ def groupedmillion(players,index):
         print(str((i+1)/10)+'% estimated:'+str(round((dif)*(999-i)/60))+'min left '+str(round(1000/dif))+' simulations/second')
 
 players=int(input('Players:'))
-index=int(input('File Suffix (e.g 10):'))
+index=input('File Suffix (e.g 10):')
 groupedmillion(players,index)
 
 #for i in range(100):
