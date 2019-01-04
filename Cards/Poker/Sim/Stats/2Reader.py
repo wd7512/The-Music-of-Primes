@@ -83,7 +83,12 @@ def analyse(numfile):
                     com[3]=com[3]+1
 
         else: #if draw
-            print('draw')
+            winhands=line[1]
+            for winhand in winhands:
+                winhand=formats(winhand)
+                for com in matrix:
+                    if com[0] in winhand:
+                        com[4]=com[4]+1
 
     #print(matrix)
     for sets in matrix:
@@ -107,8 +112,6 @@ def analyse(numfile):
     f.close()
     return
 
-#analyse(numfile)
-for i in range(21):
-    analyse(i+48)
-            
+analyse(numfile)
+
     
