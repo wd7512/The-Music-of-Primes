@@ -108,7 +108,7 @@ def analyse(numfile):
     return
 
 #analyse(numfile)
-for i in range(39):
-    analyse(i+31)
+for i in range(21):
+    analyse(i+48)
             
     
