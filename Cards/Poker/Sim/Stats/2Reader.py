@@ -48,16 +48,14 @@ def cardconvert(value):
     
 def formats(hand):
 
-    for card in hand:
-        if card[0]=='01':
-            card[0]='14'
-        handstr=hand[0][0]+hand[1][0] #make 4 char index
-
-        if hand[0][1]==hand[1][1]: #if suited
-            handstr=handstr+'s' #add suited
-
+    handstr1=hand[0][0]+hand[1][0] #make 4 char index
+    handstr2=hand[1][0]+hand[0][0]
     
-    return handstr
+    if hand[0][1]==hand[1][1]: #if suited
+        handstr1=handstr1+'s' #add suited
+        handstr2=handstr2+'s' #add suited
+    
+    return [handstr1,handstr2]
 
 def analyse(numfile):
     global matrix
@@ -79,9 +77,9 @@ def analyse(numfile):
             
             for com in matrix:
                 #print(com)
-                if com[0]==winhand:
+                if com[0] in winhand:
                     com[2]=com[2]+1
-                if com[0]==losshand:
+                if com[0] in losshand:
                     com[3]=com[3]+1
 
         else: #if draw
@@ -109,8 +107,8 @@ def analyse(numfile):
     f.close()
     return
 
-analyse(numfile)
-
-
+#analyse(numfile)
+for i in range(39):
+    analyse(i+31)
             
     

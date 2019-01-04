@@ -567,8 +567,8 @@ def groupedmillion(players,index):
 #index=input('File Suffix (e.g 10):')
 #groupedmillion(players,index)
 
-for i in range(100):
-    groupedmillion(2,53+4*i)
+for i in range(5):
+    groupedmillion(2,45+i)
 
 
 
