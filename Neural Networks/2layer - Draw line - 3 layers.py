@@ -70,8 +70,9 @@ def draw(brain,size):
                 inputs[0,6]=matrix[i+2,j] #bottom left
                 inputs[0,7]=matrix[i+1,j] #left
                 inputs[0,8]=matrix[i,j] #left top            
-            
-                outputs=inputs*brain
+
+                layer1=inputs*brain[0]
+                outputs=layer1*brain[1]
                 #print(outputs)
                 if outputs[0,0]>outputs[0,1]: #if 1st>2nd
                     matrix[i+1,j+1]=1
@@ -83,15 +84,31 @@ def draw(brain,size):
     return matrix
 
 
+def emptymatrix(x,y):
+    a=''
+    for i in range(x):
+        a=a+'0 '
+    b=''
+    for i in range(y-1):
+        b=b+a+';'
+    b=b+a
+
+    return np.matrix(b)
 
 def randomminds(numberofbrains): #randomly assign connections
     brains=[]
     for i in range(numberofbrains):
-        brain=np.matrix('0 0;0 0;0 0;0 0;0 0;0 0;0 0;0 0;0 0')
+        
+        brain1=emptymatrix(5,9)
         for i in range(9):
+            for j in range(5):
+                brain1[i,j]=random.randint(-100,100) #as percentage
+
+        brain2=emptymatrix(2,5)
+        for i in range(5):
             for j in range(2):
-                brain[i,j]=random.randint(-100,100) #as percentage
-        brains.append(brain)
+                brain2[i,j]=random.randint(-100,100) #as percentage
+        brains.append([brain1,brain2])
 
     return brains
             
@@ -107,21 +124,28 @@ def evolve(numberofbrains,brain):
         for ranbrain in ranbrains:
             brains.append(ranbrain)
         print(str(extras)+' have randomly mutated')
+
         
     for i in range(numberofbrains-1-extras):
-        add=np.matrix('0 0;0 0;0 0;0 0;0 0;0 0;0 0;0 0;0 0')
+        add1=emptymatrix(5,9)
         for i in range(9):
+            for j in range(5):
+                add1[i,j]=random.randint(-10,10)
+        add2=emptymatrix(2,5)
+        for i in range(5):
             for j in range(2):
-                add[i,j]=random.randint(-5,5)
-        brains.append(brain+add)
+                add2[i,j]=random.randint(-5,5)
+                
+        brains.append([brain[0]+add1,brain[1]+add2])
 
     for brain in brains:
-        for i in range(9):
-            for j in range(2):
-                if brain[i,j]>100:
-                    brain[i,j]=100
-                if brain[i,j]<-100:
-                    brain[i,j]=-100
+        for subbrain in brain:
+            for i in range(subbrain.shape[0]):
+                for j in range(subbrain.shape[1]):
+                    if subbrain[i,j]>100:
+                        subbrain[i,j]=100
+                    if subbrain[i,j]<-100:
+                        subbrain[i,j]=-100
     return brains
 
 def drawbrain(brain):
@@ -138,6 +162,9 @@ def drawbrain(brain):
     inputpos=[]
     for i in range(9):
         inputpos.append([-300,200-50*i])
+    middlepos=[]
+    for i in range(5):
+        middlepos.append([0,200-100*i])
     outputpos=[]
     for i in range(2):
         outputpos.append([300,100-200*i])
@@ -152,6 +179,12 @@ def drawbrain(brain):
         MT.write(inputs[i])
         MT.penup()
 
+    for i in range(5):
+        MT.setposition(middlepos[i])
+        MT.pendown()
+        MT.circle(20)
+        MT.penup()
+
     for i in range(2):
         MT.setposition(outputpos[i])
         MT.pendown()
@@ -163,11 +196,24 @@ def drawbrain(brain):
         MT.penup()
 
     for i in range(9):
-        for j in range(2):
+        for j in range(5):
             MT.penup()
             MT.setposition(inputpos[i][0]+20,inputpos[i][1]+20)
             MT.pendown()
-            stren=brain[i,j]/20
+            stren=brain[0][i,j]/20
+            MT.pensize(abs(stren))
+            if stren>0:
+                MT.color('blue')
+            else:
+                MT.color('red')
+            MT.setposition(middlepos[j][0]-20,middlepos[j][1]+20)
+
+    for i in range(5):
+        for j in range(2):
+            MT.penup()
+            MT.setposition(middlepos[i][0]+20,middlepos[i][1]+20)
+            MT.pendown()
+            stren=brain[0][i,j]/20
             MT.pensize(abs(stren))
             if stren>0:
                 MT.color('blue')
@@ -175,7 +221,7 @@ def drawbrain(brain):
                 MT.color('red')
             MT.setposition(outputpos[j][0]-20,outputpos[j][1]+20)
 
-
+    
 
 def play(rounds,popsize,matrixsize):
     brains=randomminds(popsize)
@@ -215,8 +261,10 @@ def play(rounds,popsize,matrixsize):
         plt.imshow(bestoutput)
         
         print(max(scores))
-        print(str(bestbrain)+'\n==========')
+        print(str(bestbrain[0])+'\n\n'+str(bestbrain[1])+'\n==========')
         brains=evolve(popsize,bestbrain)
     
-    plt.show()
+    #plt.show()
+    plt.savefig('rounds-'+str(rounds)+'popsize-'+str(popsize)+'matrixsize-'+str(matrixsize))
     drawbrain(bestbrain)
+    
