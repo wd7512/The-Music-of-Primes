@@ -3,7 +3,7 @@
 import numpy as np
 import random
 import matplotlib.pyplot as plt
-import turtle
+
 import math
 
 
@@ -149,7 +149,9 @@ def evolve(numberofbrains,brain):
     return brains
 
 def drawbrain(brain):
-
+    import turtle
+    
+    
     MT = turtle.Turtle()
     MT.speed(100)
     MT.penup()
