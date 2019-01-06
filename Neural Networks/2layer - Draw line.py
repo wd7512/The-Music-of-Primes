@@ -2,17 +2,31 @@
 #connections, top row is input 1, bottom row input 2
 import numpy as np
 import random
+import matplotlib.pyplot as plt
+
+import math
+
 
 def cleanmatrix(size):
     #size=int(input('Size of Matrix'))
     empty=''
-    line=''
+    edges=''
     for i in range(size):
-        line=line+'0 '
-    empty=empty+line
-    for i in range(size-1):
-        empty=empty+';'+line
+        edges=edges+'0 '
+    empty=empty+edges
+    for i in range(size-2):
+        empty=empty+';'+line(size)
+    empty=empty+';'+edges
     return np.matrix(empty)
+
+def line(size):
+    line='0 '
+    for i in range(size-2):
+        line=line+str(random.randint(0,1))+' ' #random start
+        #line=line+'0 ' #empty start
+    line=line+'0'
+    return line
+
 def score(matrix): #at least 3x3 and same dimensions
     score=0
     for i in range(len(matrix)-2): #not checking edges
@@ -41,7 +55,7 @@ def score(matrix): #at least 3x3 and same dimensions
 def draw(brain,size):
     matrix=cleanmatrix(size)
 
-    for i in range(size):
+    for a in range(1):
         for i in range(size-2):
             for j in range(size-2):
                 inputs=np.matrix('0 0 0 0 0 0 0 0 0')
@@ -110,15 +124,45 @@ def evolve(numberofbrains,brain):
                     brain[i,j]=-100
     return brains
 
-def play(rounds,popsize):
+def play(rounds,popsize,matrixsize):
     brains=randomminds(popsize)
+    fig=plt.figure()
     for i in range(rounds):
         scores=[]
+        results=[]
+
+        
+        root=math.ceil(math.sqrt(rounds))
+        #insubs=str(root)+str(root)
+
+        
         for brain in brains:
-            scores.append(score(draw(brain,10)))
-        best=brains[scores.index(max(scores))]
-        print(draw(best,10))
+            total=0
+            for j in range(5): #due to random start take 
+                total=total+score(draw(brain,matrixsize))
+            total=round(total/5) #take average of 5 runs
+            draws=draw(brain,matrixsize) #the output
+            scores.append(total) #the 'fitness'
+            results.append(draws)
+
+            #insub=insubs+str(count)
+            #print(int(insub))
+            
+            
+
+        
+            
+        bestbrain=brains[scores.index(max(scores))]
+        bestoutput=results[scores.index(max(scores))]
+        #print(bestoutput)
+        
+        print(str(i+1)+'Generation')
+        
+        plt.subplot(root,root,i+1)
+        plt.imshow(bestoutput)
+        
         print(max(scores))
-        print(str(best)+'\n==========')
-        brains=evolve(popsize,best)
+        print(str(bestbrain)+'\n==========')
+        brains=evolve(popsize,bestbrain)
     
+    plt.show()
