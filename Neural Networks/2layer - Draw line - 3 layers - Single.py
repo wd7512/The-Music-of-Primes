@@ -299,4 +299,4 @@ def play(rounds,popsize,matrixsize):
     f.close()
     drawbrain(bestbrain)
     
-play(100,100,12)
+play(225,100,12)
