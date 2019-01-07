@@ -199,29 +199,31 @@ def drawbrain(brain):
 
     for i in range(9):
         for j in range(5):
-            MT.penup()
-            MT.setposition(inputpos[i][0]+20,inputpos[i][1]+20)
-            MT.pendown()
             stren=brain[0][i,j]/20
-            MT.pensize(abs(stren))
-            if stren>0:
-                MT.color('blue')
-            else:
-                MT.color('red')
-            MT.setposition(middlepos[j][0]-20,middlepos[j][1]+20)
+            if abs(stren)>0:
+                MT.penup()
+                MT.setposition(inputpos[i][0]+20,inputpos[i][1]+20)
+                MT.pendown()
+                MT.pensize(abs(stren))
+                if stren>0:
+                    MT.color('blue')
+                else:
+                    MT.color('red')
+                MT.setposition(middlepos[j][0]-20,middlepos[j][1]+20)
 
     for i in range(5):
         for j in range(2):
-            MT.penup()
-            MT.setposition(middlepos[i][0]+20,middlepos[i][1]+20)
-            MT.pendown()
             stren=brain[0][i,j]/20
-            MT.pensize(abs(stren))
-            if stren>0:
-                MT.color('blue')
-            else:
-                MT.color('red')
-            MT.setposition(outputpos[j][0]-20,outputpos[j][1]+20)
+            if abs(stren)>0:
+                MT.penup()
+                MT.setposition(middlepos[i][0]+20,middlepos[i][1]+20)
+                MT.pendown()
+                MT.pensize(abs(stren))
+                if stren>0:
+                    MT.color('blue')
+                else:
+                    MT.color('red')
+                MT.setposition(outputpos[j][0]-20,outputpos[j][1]+20)
 
     
 
