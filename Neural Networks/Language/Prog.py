@@ -42,7 +42,7 @@ def randombrain(population):
     brains=[]
 
     for i in range(population):
-        net1=emptymatrix(14,10)
+        net1=emptymatrix(14,10*26) #10 chars
         net2=emptymatrix(2,14)
         for x in range(net1.shape[0]):
             for y in range(net1.shape[1]):
@@ -55,3 +55,42 @@ def randombrain(population):
         brains.append([net1,net2])
     
     return brains
+
+def savematrix(brain):
+    count=0
+    for sub in brain:
+        print(sub)
+        f=open('Layer'+str(count)+'.txt','w')
+        save=[]
+        for layer in sub:
+            #print('L'+str(layer))
+            save.append(str(layer))
+        for i in range(len(save)):
+            save[i]=save[i].split(' ')
+       
+        for s1 in save:
+            #print(s1)
+            s1=[x for x in s1
+                if len(x)>0 and (str.isdigit(x[-1])==True
+                                 or x[-2:]==']]')]
+            #print(s1)
+
+            #print(s1[0][0:2])
+            
+            if s1[0][0:2]=='[[':
+                #print('bad')
+                #print(s1[0][2:])
+                s1[0]=s1[0][2:]
+
+            #print(s1[-1][-2:])
+            if s1[-1][-2:]==']]':
+                #print('bad')
+                #print(s1[0][2:])
+                s1[-1]=s1[-1][:-2]
+            
+            f.write(str(s1)+'\n')
+        f.close()
+        count=count+1
+        
+            
+
