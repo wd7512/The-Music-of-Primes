@@ -1,5 +1,7 @@
 #26*23 max word = 598 input vector
 import numpy as np
+import random
+
 alphabet=['A','B','C','D','E',
           'F','G','H','I','J',
           'K','L','M','N','O',
@@ -33,3 +35,23 @@ def emptymatrix(x,y):
     b=b+a
 
     return np.matrix(b)
+
+def randombrain(population):
+    
+
+    brains=[]
+
+    for i in range(population):
+        net1=emptymatrix(14,10)
+        net2=emptymatrix(2,14)
+        for x in range(net1.shape[0]):
+            for y in range(net1.shape[1]):
+                net1[x,y]=random.randint(-100,100)
+            
+        for x in range(net2.shape[0]):
+            for y in range(net2.shape[1]):
+                net2[x,y]=random.randint(-100,100)
+        
+        brains.append([net1,net2])
+    
+    return brains
