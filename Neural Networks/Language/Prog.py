@@ -1,6 +1,7 @@
 #26*23 max word = 598 input vector
 import numpy as np
 import random
+import ast
 
 alphabet=['A','B','C','D','E',
           'F','G','H','I','J',
@@ -8,24 +9,9 @@ alphabet=['A','B','C','D','E',
           'P','Q','R','S','T',
           'U','V','W','X','Y',
           'Z']
-def start():
-    f=open('Reading.txt','r')
-    linesread=f.readline()
-    print(linesread)
-    linesread=int(linesread[12:])
-    print(linesread)
-    
-    f.close()
 
-    return linesread
-def save(brain,linesread):
-    linesread=start()
-    f=open('Reading.txt','w')
-    f.write('LINES READ: '+str(linesread)+'\n')
-    f.write('\n'+str(brain[0])+'\n\n'+str(brain[1]))
-    f.close()
     
-def emptymatrix(x,y):
+def emptymatrix(x,y): #makes empty matrix
     a=''
     for i in range(x):
         a=a+'0 '
@@ -36,9 +22,8 @@ def emptymatrix(x,y):
 
     return np.matrix(b)
 
-def randombrain(population):
-    
-
+def randombrain(population): #random networks
+    # 2 layers 260-14-2
     brains=[]
 
     for i in range(population):
@@ -56,11 +41,11 @@ def randombrain(population):
     
     return brains
 
-def savematrix(brain):
+def savematrix(brain,generation):
     count=0
     for sub in brain:
         print(sub)
-        f=open('Layer'+str(count)+'.txt','w')
+        f=open(str(generation)+'Layer'+str(count)+'.txt','w')
         save=[]
         for layer in sub:
             #print('L'+str(layer))
@@ -92,5 +77,89 @@ def savematrix(brain):
         f.close()
         count=count+1
         
+def openmatrix(generation,layers): #number of generations already done and layers of network
+
+    brain=[]
+    for i in range(layers): #for each layer
+        
+        f=open(str(generation)+'Layer'+str(i)+'.txt','r')
+        dat=f.readlines()
+
+
+        data=[]
+
+        for line in dat:
+            data.append(ast.literal_eval(line))
+
+       
+        
+        #print(data)
+
+        matrix=emptymatrix(len(data[0]),len(data))
+
+        #print(matrix)
             
 
+        for i in range(matrix.shape[0]):
+            for j in range(matrix.shape[1]):
+                #print(i)
+                #print(j)
+                matrix[i,j]=data[i][j]
+
+        brain.append(matrix)
+    return brain
+
+def evolve(numberofbrains,brain):
+    #print('population size'+str(numberofbrains))
+    brains=[brain]
+    change=random.randint(0,100)
+    extras=0
+    
+    if change<6: #extra random mutations
+        extras=round((numberofbrains-1)/(change+2))
+        ranbrains=randombrain(extras)
+        for ranbrain in ranbrains:
+            brains.append(ranbrain)
+        print(str(extras)+' have randomly mutated')
+
+        
+    for i in range(numberofbrains-1-extras):
+        add1=emptymatrix(14,260)
+        for i in range(260):
+            for j in range(14):
+                add1[i,j]=random.randint(-5,5)
+        add2=emptymatrix(2,14)
+        for i in range(14):
+            for j in range(2):
+                add2[i,j]=random.randint(-3,3)
+                
+        brains.append([brain[0]+add1,brain[1]+add2])
+
+    for brain in brains:
+        for subbrain in brain:
+            for i in range(subbrain.shape[0]):
+                for j in range(subbrain.shape[1]):
+                    if subbrain[i,j]>100:
+                        subbrain[i,j]=100
+                    if subbrain[i,j]<-100:
+                        subbrain[i,j]=-100
+    return brains
+
+def score(brain):
+    True
+    #work here
+
+def start(currentgen,uptogen,pop):
+    bestbrain=openmatrix(currentgen,2)
+    brains=evolve(pop,bestbrain)
+
+    for i in range(uptogen-currentgen):
+        scores=[]
+        
+
+        for brain in brains:
+            scores.append(score(brain))
+    #print(brains)
+    
+    
+    
