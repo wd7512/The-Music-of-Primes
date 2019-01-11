@@ -1,0 +1,4 @@
+n sided square in which all the rows and colomns
+and diagonals add up to the same number
+
+each number must be to the same power which must be greater than 1

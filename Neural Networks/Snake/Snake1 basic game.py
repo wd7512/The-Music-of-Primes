@@ -4,7 +4,7 @@ import random
 
 def game():
     #20x20 "pixels"
-    delay=0.1
+    delay=0.02
     xdim=600 #must be multiple of 40
     ydim=600
 
@@ -144,3 +144,4 @@ def game():
         time.sleep(delay)
 
     wn.mainloop() #keepwindow open
+game()
