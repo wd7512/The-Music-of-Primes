@@ -3,6 +3,7 @@ import time
 import random
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 
 
 def emptymatrix(x,y): #makes empty matrix
@@ -17,7 +18,7 @@ def emptymatrix(x,y): #makes empty matrix
     return np.matrix(b)
 
 def randombrain(population): #random networks
-    # 2 layers 260-14-2
+
     brains=[]
 
     for i in range(population):
@@ -126,7 +127,9 @@ def evolve(numberofbrains,brain):
         for i in range(14):
             for j in range(4):
                 add2[i,j]=random.randint(-3,3)
-                
+
+        #print(brain[0])
+        
         brains.append([brain[0]+add1,brain[1]+add2])
 
     for brain in brains:
@@ -139,9 +142,9 @@ def evolve(numberofbrains,brain):
                         subbrain[i,j]=-100
     return brains
 
-def game():
+def game(brain):
     #20x20 "pixels"
-    delay=0.1
+    delay=0.01
     xdim=600 #must be multiple of 40
     ydim=600
 
@@ -225,7 +228,12 @@ def game():
         rightwall=(xdim/2-20-x)/20
         leftwall=xdim/20-2-rightwall
 
-        toprightwall=
+        toprightwall=round(math.sqrt(topwall**2+rightwall**2))
+        botrightwall=round(math.sqrt(botwall**2+rightwall**2))
+        botleftwall=round(math.sqrt(botwall**2+leftwall**2))
+        topleftwall=round(math.sqrt(topwall**2+leftwall**2))
+
+        return np.matrix(str(topwall)+' '+str(toprightwall)+' '+str(rightwall)+' '+str(botrightwall)+' '+str(botwall)+' '+str(botleftwall)+' '+str(leftwall)+' '+str(topleftwall))
         
         #print(topwall)
         #print(botwall)
@@ -236,18 +244,45 @@ def game():
         
 
     def go_up():
+        print('up')
         head.direction='up'
     def go_down():
+        print('down')
         head.direction='down'
     def go_right():
+        print('right')
         head.direction='right'
     def go_left():
+        print('left')
         head.direction='left'
     
 
-    
-        
+    def changemov(output):
+        outlist=[]
+        for i in range(4):
+            outlist.append(output[0,i])
 
+        high=outlist.index(max(outlist))
+
+        if high==0:
+            go_up()
+            
+        if high==1:
+            go_down()
+            
+        if high==2:
+            go_right()
+            
+        if high==3:
+            go_left()
+
+        return
+
+    def end(tim):
+
+        return time.time()-tim
+        
+    starttime=time.time()
     while True: #update loop
         wn.update()
 
@@ -255,6 +290,9 @@ def game():
 
         if abs(head.xcor())>xdim/2-10 or abs(head.ycor())>ydim/2-10: #if hits boundries
             time.sleep(1)
+
+            return end(starttime)
+            
             head.goto(0,0) #restart
             head.direction='stop' #stop moving
 
@@ -288,13 +326,26 @@ def game():
             y=head.ycor()
             segments[0].goto(x,y)
 
-        inputs()
+        inp=inputs()
+
+        hiddenlayer=inp*brain[0]
+
+        print(hiddenlayer)
+
+        output=hiddenlayer*brain[1]
+
+        print(output)
+
+        changemov(output)
 
         move()
 
         for segment in segments:
             if head.distance(segment)<20: #if hits body
                 time.sleep(1)
+
+                #end()
+                
                 head.goto(0,0) #restart
                 head.direction='stop' #stop moving
 
@@ -305,3 +356,6 @@ def game():
         time.sleep(delay)
 
     wn.mainloop() #keepwindow open
+
+def play():
+    True #EVOLUTION GOES HERE
