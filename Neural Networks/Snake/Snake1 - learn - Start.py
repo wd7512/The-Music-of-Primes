@@ -247,7 +247,7 @@ def game(brain):
         leftfood=0
         topleftfood=0
 
-        '''
+        
         if fx==x: #if on same x axis
             if fy>y:
                 topfood=((fy-y)/20)
@@ -269,7 +269,7 @@ def game(brain):
                 botleft=round(math.sqrt(2)*abs(x-fx))
             if fx>x and fy<y: #topleft
                 topleft=round(math.sqrt(2)*abs(x-fx))
-        '''
+        
         
 
         return np.matrix(str(topwall)+' '+str(toprightwall)+' '+str(rightwall)+' '+str(botrightwall)+' '+str(botwall)+' '+str(botleftwall)+' '+str(leftwall)+' '+str(topleftwall)+' '+
@@ -355,6 +355,8 @@ def game(brain):
         if head.distance(food)<20: #if on food
             movefood()
 
+            tims=tims+1000
+            
             new_segment=turtle.Turtle()
             new_segment.speed(0)
             new_segment.shape('square')
@@ -441,4 +443,4 @@ bestbrain=play(pop,newgens,brain)
 
 savematrix(bestbrain,gen+newgens)
 '''
-savematrix(play(500,1,0),0)
+savematrix(play(200,1,0),0)

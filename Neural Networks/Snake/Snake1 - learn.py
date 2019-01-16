@@ -353,7 +353,7 @@ def game(brain):
             
 
         if head.distance(food)<20: #if on food
-            tims=tims+1
+            tims=tims+1000
             movefood()
 
             new_segment=turtle.Turtle()
@@ -403,6 +403,8 @@ def game(brain):
                     segment.color('black') #blend old segments into background
                     segment.goto(xdim,ydim)
                 segments=[] #get empty segments
+
+        tims=tims+500
         
         time.sleep(delay)
 
@@ -420,8 +422,10 @@ def play(pop,gens,brain):
     for i in range(gens):
         print('\nGeneration'+str(i+1)+'\n')
         scores=[]
+        
         for brain in brains:
-            scores.append(game(brain))
+            
+            scores.append((game(brain)+game(brain)+game(brain))/3)
 
         bestnum=scores.index(max(scores))
         bestbrain=brains[bestnum]
