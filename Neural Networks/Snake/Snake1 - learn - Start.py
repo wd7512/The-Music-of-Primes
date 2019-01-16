@@ -247,7 +247,7 @@ def game(brain):
         leftfood=0
         topleftfood=0
 
-        
+        '''
         if fx==x: #if on same x axis
             if fy>y:
                 topfood=((fy-y)/20)
@@ -269,7 +269,7 @@ def game(brain):
                 botleft=round(math.sqrt(2)*abs(x-fx))
             if fx>x and fy<y: #topleft
                 topleft=round(math.sqrt(2)*abs(x-fx))
-        
+        '''
         
 
         return np.matrix(str(topwall)+' '+str(toprightwall)+' '+str(rightwall)+' '+str(botrightwall)+' '+str(botwall)+' '+str(botleftwall)+' '+str(leftwall)+' '+str(topleftwall)+' '+
@@ -353,7 +353,6 @@ def game(brain):
             
 
         if head.distance(food)<20: #if on food
-            tims=tims+1
             movefood()
 
             new_segment=turtle.Turtle()
@@ -403,19 +402,19 @@ def game(brain):
                     segment.color('black') #blend old segments into background
                     segment.goto(xdim,ydim)
                 segments=[] #get empty segments
-        
+        tims=tims+1
         time.sleep(delay)
 
 
-        if time.time()-locked>5:
+        if time.time()-locked>10:
             return end(tims)
 
     wn.mainloop() #keepwindow open
 
 def play(pop,gens,brain):
 
-    brains=evolve(pop,brain)
-    #brains=randombrain(pop)
+    #brains=evolve(pop,brain)
+    brains=randombrain(pop)
 
     for i in range(gens):
         print('\nGeneration'+str(i+1)+'\n')
@@ -429,7 +428,7 @@ def play(pop,gens,brain):
         brains=evolve(pop,bestbrain)
 
     return bestbrain
-
+'''
 gen=int(input('Current gen:'))
 layers=2
 
@@ -441,5 +440,5 @@ newgens=int(input('extra gens:'))
 bestbrain=play(pop,newgens,brain)
 
 savematrix(bestbrain,gen+newgens)
-
-#savematrix(play(200,1,0),0)
+'''
+savematrix(play(500,1,0),0)
