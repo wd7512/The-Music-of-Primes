@@ -150,6 +150,8 @@ def game(brain):
     xdim=600 #must be multiple of 40
     ydim=600
 
+    diag=math.sqrt(xdim**2+ydim**2)
+
     wn=turtle.Screen() #window
     wn.title('Snake')
     wn.bgcolor('Black') #background
@@ -353,9 +355,10 @@ def game(brain):
             
 
         if head.distance(food)<20: #if on food
-            tims=tims+1000
             movefood()
 
+            tims=tims+0 #food reward
+            
             new_segment=turtle.Turtle()
             new_segment.speed(0)
             new_segment.shape('square')
@@ -403,59 +406,35 @@ def game(brain):
                     segment.color('black') #blend old segments into background
                     segment.goto(xdim,ydim)
                 segments=[] #get empty segments
-
-        tims=tims+10
-        
+                
+        tims=tims+round(diag-head.distance(food)) #living reward
+                                
         time.sleep(delay)
 
 
-        if time.time()-locked>4: #if longer than 4 sec its repeating
+        if time.time()-locked>10:
             return end(tims)
 
     wn.mainloop() #keepwindow open
 
 def play(pop,gens,brain):
 
-    brains=evolve(pop,brain)
-    #brains=randombrain(pop)
+    #brains=evolve(pop,brain)
+    brains=randombrain(pop)
 
     for i in range(gens):
         print('\nGeneration'+str(i+1)+'\n')
         scores=[]
-        
         for brain in brains:
-            
-            scores.append((game(brain)+game(brain)+game(brain))/3)
+            scores.append(game(brain))
 
-        bestbrains=[]
-        evbrains=[]
+        bestnum=scores.index(max(scores))
+        bestbrain=brains[bestnum]
 
-        for i in range(math.ceil(pop/10)): #evolve top 10th
-            bestnum=scores.index(max(scores))
-            scores.remove(max(scores))
-
-            print(brains)
-            
-            bestbrain=(brains[bestnum])
-
-            print(bestbrain)
-            
-            del brains[bestnum]
-
-            new=evolve(round(pop/10),bestbrain)
-
-            for brain in new:
-                evbrains.append(brain)
-            
-
-        
-        
-        
-
-        brains=evbrains
+        brains=evolve(pop,bestbrain)
 
     return bestbrain
-
+'''
 gen=int(input('Current gen:'))
 layers=2
 
@@ -467,5 +446,5 @@ newgens=int(input('extra gens:'))
 bestbrain=play(pop,newgens,brain)
 
 savematrix(bestbrain,gen+newgens)
-
-#savematrix(play(200,1,0),0)
+'''
+savematrix(play(200,1,0),0)

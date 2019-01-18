@@ -150,6 +150,8 @@ def game(brain):
     xdim=600 #must be multiple of 40
     ydim=600
 
+    diag=math.sqrt(xdim**2+ydim**2)
+                   
     wn=turtle.Screen() #window
     wn.title('Snake')
     wn.bgcolor('Black') #background
@@ -353,7 +355,7 @@ def game(brain):
             
 
         if head.distance(food)<20: #if on food
-            tims=tims+1000
+            tims=tims+0 #food reward
             movefood()
 
             new_segment=turtle.Turtle()
@@ -380,11 +382,11 @@ def game(brain):
 
         hiddenlayer=inp*brain[0]
 
-        print(hiddenlayer)
+        #print(hiddenlayer)
 
         output=hiddenlayer*brain[1]
 
-        print(output)
+        #print(output)
 
         changemov(output)
 
@@ -404,12 +406,12 @@ def game(brain):
                     segment.goto(xdim,ydim)
                 segments=[] #get empty segments
 
-        tims=tims+10
+        tims=tims+round(diag-(head.distance(food))**2) #living reward
         
         time.sleep(delay)
 
 
-        if time.time()-locked>4: #if longer than 4 sec its repeating
+        if time.time()-locked>3: #if longer than 3 sec its repeating
             return end(tims)
 
     wn.mainloop() #keepwindow open
