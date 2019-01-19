@@ -424,37 +424,13 @@ def play(pop,gens,brain):
     for i in range(gens):
         print('\nGeneration'+str(i+1)+'\n')
         scores=[]
-        
         for brain in brains:
-            
-            scores.append((game(brain)+game(brain)+game(brain))/3)
+            scores.append(game(brain))
 
-        bestbrains=[]
-        evbrains=[]
+        bestnum=scores.index(max(scores))
+        bestbrain=brains[bestnum]
 
-        for i in range(math.ceil(pop/10)): #evolve top 10th
-            bestnum=scores.index(max(scores))
-            scores.remove(max(scores))
-
-            print(brains)
-            
-            bestbrain=(brains[bestnum])
-
-            print(bestbrain)
-            
-            del brains[bestnum]
-
-            new=evolve(round(pop/10),bestbrain)
-
-            for brain in new:
-                evbrains.append(brain)
-            
-
-        
-        
-        
-
-        brains=evbrains
+        brains=evolve(pop,bestbrain)
 
     return bestbrain
 

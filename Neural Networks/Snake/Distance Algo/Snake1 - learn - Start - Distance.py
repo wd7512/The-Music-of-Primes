@@ -447,4 +447,4 @@ bestbrain=play(pop,newgens,brain)
 
 savematrix(bestbrain,gen+newgens)
 '''
-savematrix(play(200,1,0),0)
+savematrix(play(1000,1,0),0)
