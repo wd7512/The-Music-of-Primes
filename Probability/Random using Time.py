@@ -20,13 +20,13 @@ a=[]
 for i in range(limnum):
     a.append(i)
 
-x1=np.arange(0,100,1)
+x1=np.arange(0,1000,1)
 x2=x1
 
 y1=[]
 y2=[]
 
-for i in range(100):
+for i in range(1000):
     y1.append(random1(a))
     y2.append(random.randint(0,limnum-1))
 

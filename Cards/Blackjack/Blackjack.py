@@ -57,7 +57,7 @@ def check(cards):
     else:
         return max(end)
 
-def play(no,money):
+def play(no,money): #no-number of decks
     
     newdeck(no)
 
@@ -81,10 +81,11 @@ def play(no,money):
 
         action=str(input('Stand-s or Hit-h:'))
 
-        var=True
+        vara=True
 
-        while var==True:
-
+        while vara==True:
+            print(vara)
+            
             if action=='h': #if hits
                 
                 player.append(draw())
@@ -100,11 +101,10 @@ def play(no,money):
 
             if action=='s':
                 print('gdhsu')
-                var=False
+                vara=False
             
-        
-
-        
+            if check(player)=='bust':
+                vara=False        
     
 
 no=int(input('Number of Decks:'))

@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 
-limnum=2000
-runs=100000
+limnum=2300
+runs=10000
 period=10**(-10)
 
 def random1(list1,period):
@@ -39,7 +39,7 @@ for i in range(limnum):
     y1.append(z1.count(i))
     y2.append(z2.count(i))
     
-
+'''
 plt.subplot(2, 1, 1)
 plt.plot(x1, y1)
 plt.ylabel('Time Random')
@@ -54,6 +54,9 @@ plt.ylabel('Import Random')
 #plt.axis('Equal')
 plt.ylim(bottom=runs/(2*limnum))
 plt.ylim(top=3*runs/(2*limnum))
-
+'''
+plt.plot(x1,y1, label='time random')
+plt.plot(x2,y2, label='import random')
+plt.legend()
 plt.show()
 
