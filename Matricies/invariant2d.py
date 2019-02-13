@@ -31,7 +31,7 @@ matm=np.asmatrix(mata)
 
 circle00=[0,7,15,20,24,25,24,20,15,7]
 circle0=circle00[:]
-for num in circle00: #fix
+for num in circle00:
     #print(num)
     circle0.append(-num)
 circle1=circle0[int(len(circle0)/4):]+circle0[0:int(len(circle0)/4)]
