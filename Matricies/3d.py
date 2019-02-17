@@ -44,7 +44,7 @@ unitcube=np.array([[0,1,1,1,0,0,0,1],
 '''
 print(unitcube)
 '''
-size=105
+size=5
 xcir=[]
 ycir=[]
 zcir=[]
@@ -52,7 +52,7 @@ for xx in range(size+1):
     #print(xx)
     for yy in range(size+1):
         for zz in range(size+1):
-            if math.sqrt(xx**2+yy**2+zz**2)==5:
+            if xx**2+yy**2+zz**2==size**2:
                 xcir.append(xx)
                 ycir.append(yy)
                 zcir.append(zz)
@@ -99,22 +99,49 @@ new=np.asarray(np.asmatrix(mat)*np.asmatrix(circle))
 
 
 ax.plot(new[0],new[1],new[2],'go')
+'''
+d=81
+for i in range(new.shape[1]):
+    mx=new[0,i]
+    my=new[1,i]
+    mz=new[2,i]
+    
+    if mx==0:
+        nx=0
+        ny=math.sqrt(d/(1+mz**2)/my**2)
+        nz=ny*mz/my
+    
+    if True==False:
+        True
+    else:
+        
+        nx=math.sqrt(d/(1+(my**2+mz**2)/mx**2))
+        
+        if mx<0:
+            nx=-nx
+        ny=nx*my/mx
+        nz=nx*mz/mx
 
-d=25
+    #ax.plot([],[],[],colour='blue')
+    ax.plot([nx,mx],[ny,my],[nz,mz],color='green')
+'''
+d=30
 for i in range(new.shape[1]):
     mx=new[0,i]
     my=new[1,i]
     mz=new[2,i]
 
+    #mx*nx=my*ny=mz*nz
+    #nx**2+ny**2+nz**2=d**2
+    #nx**2(mx**2/(my**2+mz**2))=d**2
 
-    nx=math.sqrt(d/(1+(my**2+mz**2)/mx**2))
-    if mx<0:
-        nx=-nx
-    ny=nx*my/mx
-    nz=nx*my/mx
+    nx=math.sqrt((d**2)/(mx**2/(my**2+mz**2)))
+    ny=mx*nx/my
+    nz=mx*nx/mz
+    print([[nx,ny,nz],[mx,my,mz]])
 
-    #ax.plot([],[],[],colour='blue')
     ax.plot([nx,mx],[ny,my],[nz,mz],color='green')
+    
 
 ax.axis('equal')
 ax.set_xlabel('X axis')
