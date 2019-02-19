@@ -178,7 +178,7 @@ def evolve(halfbrains):
     for i in range(4):
         for j in range(index):
             for k in range(3*(4-i)): #increased pop to maintain
-                add=randommatrix(-10,10,16,4)
+                add=randommatrix(-5,5,16,4)
                 brains.append(add+brains[i*index+j])
 
     return brains
