@@ -24,19 +24,19 @@ def draw(num):
         y2.append((random.randint(0,1))*2-1+y2[i])
 
     y3=y1[index:]
-
+    
     if len(y3)>len(y1)/3:
         avg1=sum(y3)/len(y3)
         avg2=sum(y2)/len(y2)
         print('original avg : '+str(avg1))
         print('shifted avg : '+str(avg2))
 
-        f=open(str(num)+'flips cut.txt','a')
-        f.write(str([avg1,avg2])+'\n')
+        f=open(str(num)+'flips cut modify.txt','a')
+        f.write(str([avg1,avg2-maxx])+'\n')
         f.close()
         
     '''
-    #print(y2)
+
     plt.plot(x1,y1,label='original')
     plt.plot(x2,y2,label='shifted')
     plt.axis('equal')
@@ -46,3 +46,4 @@ def draw(num):
     
 for i in range(runs):
     draw(num)
+

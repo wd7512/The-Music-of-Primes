@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import ast
 import numpy as np
 
-f=open('10000flips cut.txt','r')
+f=open('10000flips cut modify.txt','r')
 data=f.readlines()
 f.close()
 x=[]
