@@ -25,14 +25,15 @@ def draw(num):
 
     y3=y1[index:]
 
-    avg1=sum(y3)/len(y3)
-    avg2=sum(y2)/len(y2)
-    print('original avg : '+str(avg1))
-    print('shifted avg : '+str(avg2))
+    if len(y3)>len(y1)/3:
+        avg1=sum(y3)/len(y3)
+        avg2=sum(y2)/len(y2)
+        print('original avg : '+str(avg1))
+        print('shifted avg : '+str(avg2))
 
-    f=open(str(num)+'flips.txt','a')
-    f.write(str([avg1,avg2])+'\n')
-    f.close()
+        f=open(str(num)+'flips cut.txt','a')
+        f.write(str([avg1,avg2])+'\n')
+        f.close()
         
     '''
     #print(y2)
