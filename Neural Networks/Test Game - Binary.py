@@ -183,4 +183,4 @@ def evolve(halfbrains):
 
     return brains
 
-start(2000,100)
+start(200,100)
