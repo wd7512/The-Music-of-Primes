@@ -1,4 +1,4 @@
-name=input('Name of person whos names need filling')
+name=input('Name of person whos names need filling:')
 f=open(name+'.txt','r')
 names=f.readlines()
 #print(names)
