@@ -106,9 +106,9 @@ def searchlayer(name,files,sets,gens):
         return
     else:
         lay1=search(name,files,sets)
-        print('\n===LAYER 1==='+str(len(lay1))+' people===')
-        for a in lay1:
-            print(a[:-4])
+        #print('\n===LAYER 1==='+str(len(lay1))+' people===')
+        #for a in lay1:
+            #print(a[:-4])
         
         name=name+'.txt'
         index=files.index(name)
@@ -123,8 +123,13 @@ def searchlayer(name,files,sets,gens):
                 if peep not in lay1:
                     lay2.append(peep)
             
-            print('\n===LAYER 2==='+str(len(lay2))+' people===')
-            for a in lay2:
+            print('\n===LAYER 1+2==='+str(len(lay1+lay2))+' people===')
+
+            display=lay1+lay2
+
+            random.shuffle(display)
+            
+            for a in display:
                 print(a[:-4])
 
             peeps=lay2
