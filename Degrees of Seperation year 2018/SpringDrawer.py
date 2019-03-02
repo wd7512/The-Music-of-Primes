@@ -20,7 +20,8 @@ nosubnodes=len(files)
 nomainnodes=len(mainnodes)
 
 
-radius=380
+radius=200
+minirad=5
 pen=turtle.Turtle()
 pen.speed(10000000)
 pen.ht()
@@ -90,7 +91,7 @@ print(str(nomainnodes)+' participants')
 
 
 coords=[]
-minirad=10
+
 freqa=[]
 for i in range(nosubnodes):
     
@@ -115,23 +116,28 @@ for fre in freq:
 #print(freq)
 
 
+
 for i in range(nosubnodes):
     pen.penup()
 
-    close=int(1.92**(freqa[i]))
+    close=int(1.8**(freqa[i]))
     
     if files[i] in mainnodes:
         pen.color('blue')
-        x=math.sin(angle*i)*(radius-close)
-        y=math.cos(angle*i)*(radius-close)
+        #x=math.sin(angle*i)*(radius-close)
+        #y=math.cos(angle*i)*(radius-close)
     else:
         pen.color('orange')
-        x=math.sin(angle*i)*(radius-close)
-        y=math.cos(angle*i)*(radius-close)
+        #x=math.sin(angle*i)*(radius-close)
+        #y=math.cos(angle*i)*(radius-close)
+    if files[i]=='Will Dennis.txt':
+        pen.color('red')
+    if files[i] in ['Pat Nichols.txt','Seb Merricks.txt','Lara Freeman.txt','Oscar Cowen.txt','Adam Robarts.txt','Ollie Rennison.txt','Reuben Heaton.txt']:
+        pen.color('green')
     
     
-    #x=random.randint(-radius,radius)
-    #y=random.randint(-radius,radius)
+    x=random.randint(-radius,radius)
+    y=random.randint(-radius,radius)
     
     coords.append([x,y])
     pen.setpos(x,y-minirad)
@@ -142,8 +148,41 @@ for i in range(nosubnodes):
     
     pen.circle(minirad)
 
+def buffer(coords,minirad):
+    for i in range(len(coords)):
 
-def drawcircles(minirad,files,mainnodes):
+        pos=coords[i]
+        x1=pos[0]
+        y1=pos[1]
+        #print(2*minirad)
+        for j in range(len(coords)):
+
+            if i!=j:
+
+                coord=coords[j]
+                x2=coord[0]
+                y2=coord[1]
+                
+                if math.sqrt((x2-x1)**2+(y2-y1)**2)<(2*minirad):
+                    if x2-x1==0:
+                        grad=1000000
+                    else:
+                        grad=(y2-y1)/(x2-x1)
+                    ang=math.atan(grad)
+
+                    while math.sqrt((x2-x1)**2+(y2-y1)**2)<(2*minirad):
+                        #print('BUFFER')
+                        x1=x1-math.cos(ang)
+                        y1=y1-math.sin(ang)
+                    #print('====')
+        coords[i][0]=x1
+        coords[i][1]=y1
+
+    return coords
+                
+                
+
+def drawcircles(minirad,files,mainnodes,coords):
 
     for i in range(len(files)):
         pen.penup()
@@ -152,6 +191,11 @@ def drawcircles(minirad,files,mainnodes):
             pen.color('blue')
         else:
             pen.color('orange')
+
+        if files[i]=='Will Dennis.txt':
+            pen.color('red')
+        if files[i] in ['Pat Nichols.txt','Seb Merricks.txt','Lara Freeman.txt','Oscar Cowen.txt','Adam Robarts.txt','Ollie Rennison.txt','Reuben Heaton.txt']:
+            pen.color('green')
 
         x=pos[0]
         y=pos[1]
@@ -185,10 +229,13 @@ def drawlines(mainnodes,files,coords):
 
 
 
-def shiftcoord(coords,files,sets):
+def shiftcoord(cordy,files,sets):
 
-    tension=0.05
+    coords=cordy[:]
+
+    tension=0.001
     springsize=40
+    new=[]
     for i in range(len(files)):
         pos1=coords[i]
         x1=pos1[0]
@@ -197,29 +244,93 @@ def shiftcoord(coords,files,sets):
 
         vectors=[]
         for peep in peeps:
+            #if files[i]=='Will Dennis.txt':
+                #print(files[peep])
             pos2=coords[peep]
             x2=pos2[0]
             y2=pos2[1]
             distance=math.sqrt((x2-x1)**2+(y2-y1)**2)
-            grad=(y2-y1)/(x2-x1)
+            if x2-x1==0:
+                grad=1000000
+            else:
+                grad=(y2-y1)/(x2-x1)
             ang=math.atan(grad)
-            vector=[math.cos(ang)*tension*distance,
-                    math.sin(ang)*tension*distance]
-            vectors.append(vector)
+            #print(math.atan(grad))
+            if grad>0:
+                vector=[math.cos(ang)*tension*distance*100,
+                        math.sin(ang)*tension*distance*100]
+            if grad<0:
+                vector=[-math.cos(ang)*tension*distance*100,
+                        math.sin(ang)*tension*distance*100]
+            #vectors.append(vector)
 
-
+        if x1==0:
+            grad=1000000*y1
+        else:
+            grad=y1/(x1)
+        ang=math.atan(grad)
+        distance=math.sqrt(x1**2+y1**2)
+        if grad>0:
+            
+            vector=[math.cos(ang)*tension*distance*25,
+                    math.sin(ang)*tension*distance*25]
+        else:
+            vecx=math.cos(ang)*tension*distance*25
+            vecy=math.sin(ang)*tension*distance*25
+            if x1>0:
+                vecx=-vecx
+            if y1<0:
+                vecy=-vecy
+            
+            vector=[vecx,vecy]
+        vectors.append(vector)
+        
+        xx=x1
+        yy=y1      
         for vector in vectors:
-            x1=x1+vector[0]
-            y1=y1+vector[1]
+            xx=xx+vector[0]
+            yy=yy+vector[1]
 
-        print([x1,y1])
+        #print(yy)
+        
+        while xx>350:
+            xx=xx-1
+        while xx<-350:
+            xx=xx+1
+        while yy>350:
+            yy=yy-1
+        while yy<-350:
+            yy=yy+1
 
-        coords[i]=[x1,y1]
+        #print([xx,yy])
+        #print(y1)
+        new.append([xx,yy])
 
-    return coords
+    return new
                
-drawlines(mainnodes,files,coords)
-coords=shiftcoord(coords,files,sets)
+#drawlines(mainnodes,files,coords)
 pen.clear()
-drawcircles(minirad,files,mainnodes)
+for i in range(1000):
+    print(i)
+    
+    coords=shiftcoord(coords,files,sets)
+    
+    #saver=turtle.getscreen()
+    #saver.getcanvas().postscript(file=str(i)+".eps")
+'''
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+coords=buffer(coords,minirad)
+'''
+drawcircles(minirad,files,mainnodes,coords)
+
+a=input(':')
 drawlines(mainnodes,files,coords)
