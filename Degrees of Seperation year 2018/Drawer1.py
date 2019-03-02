@@ -82,8 +82,8 @@ for i in range(nosubnodes):
 #for a in sets:
     #print(a)
 
-print(str(nosubnodes)+' nodes')
-print(str(nomainnodes)+' mainnodes')
+print(str(nosubnodes)+' people')
+print(str(nomainnodes)+' participants')
 
 
 
@@ -130,10 +130,15 @@ for i in range(nosubnodes):
     pen.circle(minirad)
 
 freq=[0,0,0,0,0,0,0,0,0,0,0,0,0]
+
 for re in freqa:
     #print(re)
     freq[re]=freq[re]+1
-print(freq)
+countvar=0
+for fre in freq:
+    print(str(fre)+' people with '+str(countvar)+' unique connections')
+    countvar=countvar+1
+#print(freq)
 
 
 pen.color('Black')
