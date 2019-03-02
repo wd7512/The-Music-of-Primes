@@ -5,7 +5,6 @@ import random
 files=os.listdir()
 for filename in files:
     if (filename[-4:])!='.txt':
-        #print(filename)
         files.remove(filename)
 random.shuffle(files)
 #print(files)
