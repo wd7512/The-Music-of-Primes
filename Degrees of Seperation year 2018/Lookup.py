@@ -112,6 +112,9 @@ def searchlayer(name,files,sets,gens):
         
         name=name+'.txt'
         index=files.index(name)
+
+        lay1.append(name)
+        
         #print(sets[index])
         #print('Connected to...')
         peeps=[]
