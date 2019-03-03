@@ -4,6 +4,7 @@ import math
 import random
 files=os.listdir()
 for filename in files:
+    print(filename)
     if (filename[-4:])!='.txt':
         files.remove(filename)
 random.shuffle(files)
@@ -164,10 +165,9 @@ def buffer(coords,minirad):
                 y2=coord[1]
                 
                 if math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
-                    if x2-x1==0:
-                        grad=1000000
-                    else:
-                        grad=(y2-y1)/(x2-x1)
+                    while x2-x1==0:
+                        x1=x1+random.randint(0,1)*2-1
+                    grad=(y2-y1)/(x2-x1)
                     ang=math.atan(grad)
 
                     while math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
@@ -250,10 +250,9 @@ def shiftcoord(cordy,files,sets):
             x2=pos2[0]
             y2=pos2[1]
             distance=math.sqrt((x2-x1)**2+(y2-y1)**2)
-            if x2-x1==0:
-                grad=1000000
-            else:
-                grad=(y2-y1)/(x2-x1)
+            while x2-x1==0:
+                x1=x1+random.randint(0,1)*2-1
+            grad=(y2-y1)/(x2-x1)
             ang=math.atan(grad)
             #print(math.atan(grad))
             if grad>0:
@@ -274,12 +273,12 @@ def shiftcoord(cordy,files,sets):
                 vector=[vecx,vecy]
             vectors.append(vector)
 
-        '''
+        
         inv=True
-        if x1==0:
-            grad=1000000*y1
-        else:
-            grad=y1/(x1)
+        while x1==0:
+            x1=x1+random.randint(0,1)*2-1
+        
+        grad=y1/(x1)
         ang=math.atan(grad)
         distance=math.sqrt(x1**2+y1**2)
         if grad>0:
@@ -306,7 +305,7 @@ def shiftcoord(cordy,files,sets):
 
             
         vectors.append(vector)
-        '''
+        
         xx=x1
         yy=y1      
         for vector in vectors:
@@ -338,8 +337,12 @@ for i in range(1000):
     print(i)
     coords=buffer(coords,minirad)
     coords=shiftcoord(coords,files,sets)
-    
-    (turtle.getscreen()).getcanvas().postscript(file=str(i)+".eps")
+    if (i+1)%10==0:
+        pen.clear()
+        drawcircles(minirad,files,mainnodes,coords)
+        sav=(turtle.getscreen())
+        sav.getcanvas().postscript(file=str(i)+".eps")
+        sav.clear()
 '''
 coords=buffer(coords,minirad)
 coords=buffer(coords,minirad)
