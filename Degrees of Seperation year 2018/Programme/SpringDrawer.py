@@ -125,20 +125,20 @@ for i in range(nosubnodes):
     
     if files[i] in mainnodes:
         pen.color('blue')
-        #x=math.sin(angle*i)*(radius-close)
-        #y=math.cos(angle*i)*(radius-close)
+        x=math.sin(angle*i)*(radius-close)
+        y=math.cos(angle*i)*(radius-close)
     else:
         pen.color('orange')
-        #x=math.sin(angle*i)*(radius-close)
-        #y=math.cos(angle*i)*(radius-close)
+        x=math.sin(angle*i)*(radius-close)
+        y=math.cos(angle*i)*(radius-close)
     if files[i]=='Will Dennis.txt':
         pen.color('red')
     if files[i] in ['Pat Nichols.txt','Seb Merricks.txt','Lara Freeman.txt','Oscar Cowen.txt','Adam Robarts.txt','Ollie Rennison.txt','Reuben Heaton.txt']:
         pen.color('green')
     
     
-    x=random.randint(-radius,radius)
-    y=random.randint(-radius,radius)
+    #x=random.randint(-radius,radius)
+    #y=random.randint(-radius,radius)
     
     coords.append([x,y])
     pen.setpos(x,y-minirad)
@@ -149,7 +149,7 @@ for i in range(nosubnodes):
     
     pen.circle(minirad)
 
-def buffer(coords,minirad):
+def oldbuffer(coords,minirad):
     for i in range(len(coords)):
 
         pos=coords[i]
@@ -164,23 +164,70 @@ def buffer(coords,minirad):
                 x2=coord[0]
                 y2=coord[1]
                 
-                if math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
+                if math.sqrt((x2-x1)**2+(y2-y1)**2)<(3*minirad):
                     while x2-x1==0:
                         x1=x1+random.randint(0,1)*2-1
+                    while y2-y1==0:
+                        y1=y1+random.randint(0,1)*2-1
                     grad=(y2-y1)/(x2-x1)
                     ang=math.atan(grad)
 
-                    while math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
-                        #print('BUFFER')
-                        x1=x1-math.cos(ang)
-                        y1=y1-math.sin(ang)
-                    #print('====')
+                    rad=random.randint(0,1)*2-1
+                    
+                    while math.sqrt((x2-x1)**2+(y2-y1)**2)<(3*minirad):
+                        print(files[i])
+                        print(files[j])
+                        cx=(math.cos(ang))
+                        cy=math.sin(ang)
+                        if grad>0:
+                            if x1>0:
+                                cx=-cx
+                                cy=-cy
+
+                        if grad<0:
+                            if x1>0:
+                                cx=-cx
+                            if y1<0:
+                                cy=-cy
+                        x1=x1+cx
+                        y1=y1+cy
+                    print('====')
         coords[i][0]=x1
         coords[i][1]=y1
 
     return coords
+
+def buffer(coords,minirad):
+    for i in range(len(coords)):
+        pos=coords[i]
+        x1=pos[0]
+        y1=pos[1]
+        rot=1
+        for j in range(len(coords)):
+            if i!=j:
+                coord=coords[j]
+                x2=coord[0]
+                y2=coord[1]
+                while math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
+                    if rot%4==0:
+                        x1=x1+1
+                    if (rot+1)%4==0:
+                        y1=y1+1
+                    if (rot+2)%4==0:
+                        x1=x1-1
+                    else:
+                        y1=y1-1
+
+                    
                 
-                
+
+
+        coords[i][0]=x1
+        coords[i][1]=y1
+
+    return coords
+                    
+                    
 
 def drawcircles(minirad,files,mainnodes,coords):
 
@@ -273,7 +320,7 @@ def shiftcoord(cordy,files,sets):
                 vector=[vecx,vecy]
             vectors.append(vector)
 
-        
+        '''
         inv=True
         while x1==0:
             x1=x1+random.randint(0,1)*2-1
@@ -305,7 +352,7 @@ def shiftcoord(cordy,files,sets):
 
             
         vectors.append(vector)
-        
+        '''
         xx=x1
         yy=y1      
         for vector in vectors:
@@ -323,6 +370,15 @@ def shiftcoord(cordy,files,sets):
         while yy<-350:
             yy=yy+1
 
+        while -20<xx<20:
+            multi=random.randint(1,4)
+            if xx>0:
+                xx=20*multi
+            if xx<0:
+                xx=-20*multi
+            else:
+                xx=20*multi
+
         #print([xx,yy])
         #print(y1)
 
@@ -333,16 +389,21 @@ def shiftcoord(cordy,files,sets):
                
 #drawlines(mainnodes,files,coords)
 pen.clear()
-for i in range(1000):
+for i in range(2000):
     print(i)
-    coords=buffer(coords,minirad)
+    
     coords=shiftcoord(coords,files,sets)
-    if (i+1)%10==0:
+    coords=buffer(coords,minirad)
+    
+    if (i+1)%50==0:
+        True
+        '''
         pen.clear()
         drawcircles(minirad,files,mainnodes,coords)
         sav=(turtle.getscreen())
-        sav.getcanvas().postscript(file=str(i)+".eps")
+        sav.getcanvas().postscript(file=str(i+1)+".eps")
         sav.clear()
+        '''
 '''
 coords=buffer(coords,minirad)
 coords=buffer(coords,minirad)
