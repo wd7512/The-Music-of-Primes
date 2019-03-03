@@ -163,14 +163,14 @@ def buffer(coords,minirad):
                 x2=coord[0]
                 y2=coord[1]
                 
-                if math.sqrt((x2-x1)**2+(y2-y1)**2)<(2*minirad):
+                if math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
                     if x2-x1==0:
                         grad=1000000
                     else:
                         grad=(y2-y1)/(x2-x1)
                     ang=math.atan(grad)
 
-                    while math.sqrt((x2-x1)**2+(y2-y1)**2)<(2*minirad):
+                    while math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
                         #print('BUFFER')
                         x1=x1-math.cos(ang)
                         y1=y1-math.sin(ang)
@@ -257,13 +257,25 @@ def shiftcoord(cordy,files,sets):
             ang=math.atan(grad)
             #print(math.atan(grad))
             if grad>0:
-                vector=[math.cos(ang)*tension*distance*100,
-                        math.sin(ang)*tension*distance*100]
+                if x1<0:
+            
+                    vector=[math.cos(ang)*tension*distance,
+                            math.sin(ang)*tension*distance]
+                else:
+                    vector=[-math.cos(ang)*tension*distance,
+                            -math.sin(ang)*tension*distance]
             if grad<0:
-                vector=[-math.cos(ang)*tension*distance*100,
-                        math.sin(ang)*tension*distance*100]
-            #vectors.append(vector)
+                vecx=math.cos(ang)*tension*distance
+                vecy=math.sin(ang)*tension*distance
+                if x1>0:
+                    vecx=-vecx
+                if y1<0:
+                    vecy=-vecy
+                vector=[vecx,vecy]
+            vectors.append(vector)
 
+        '''
+        inv=True
         if x1==0:
             grad=1000000*y1
         else:
@@ -273,22 +285,28 @@ def shiftcoord(cordy,files,sets):
         if grad>0:
             if x1<0:
             
-                vector=[math.cos(ang)*tension*distance*25,
-                        math.sin(ang)*tension*distance*25]
+                vector=[math.cos(ang)*tension*distance,
+                        math.sin(ang)*tension*distance]
             else:
-                vector=[-math.cos(ang)*tension*distance*25,
-                        -math.sin(ang)*tension*distance*25]
+                vector=[-math.cos(ang)*tension*distance,
+                        -math.sin(ang)*tension*distance]
         else:
-            vecx=math.cos(ang)*tension*distance*25
-            vecy=math.sin(ang)*tension*distance*25
+            vecx=math.cos(ang)*tension*distance
+            vecy=math.sin(ang)*tension*distance
             if x1>0:
                 vecx=-vecx
             if y1<0:
                 vecy=-vecy
+
+            if inv==True:
+                vector=[-vecx,-vecy]
+            else:
             
-            vector=[vecx,vecy]
+                vector=[vecx,vecy]
+
+            
         vectors.append(vector)
-        
+        '''
         xx=x1
         yy=y1      
         for vector in vectors:
@@ -308,6 +326,8 @@ def shiftcoord(cordy,files,sets):
 
         #print([xx,yy])
         #print(y1)
+
+        
         new.append([xx,yy])
 
     return new
@@ -316,11 +336,10 @@ def shiftcoord(cordy,files,sets):
 pen.clear()
 for i in range(1000):
     print(i)
-
+    coords=buffer(coords,minirad)
     coords=shiftcoord(coords,files,sets)
     
-    #saver=turtle.getscreen()
-    #saver.getcanvas().postscript(file=str(i)+".eps")
+    (turtle.getscreen()).getcanvas().postscript(file=str(i)+".eps")
 '''
 coords=buffer(coords,minirad)
 coords=buffer(coords,minirad)
