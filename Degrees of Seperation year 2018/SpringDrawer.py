@@ -271,9 +271,13 @@ def shiftcoord(cordy,files,sets):
         ang=math.atan(grad)
         distance=math.sqrt(x1**2+y1**2)
         if grad>0:
+            if x1<0:
             
-            vector=[math.cos(ang)*tension*distance*25,
-                    math.sin(ang)*tension*distance*25]
+                vector=[math.cos(ang)*tension*distance*25,
+                        math.sin(ang)*tension*distance*25]
+            else:
+                vector=[-math.cos(ang)*tension*distance*25,
+                        -math.sin(ang)*tension*distance*25]
         else:
             vecx=math.cos(ang)*tension*distance*25
             vecy=math.sin(ang)*tension*distance*25
@@ -312,7 +316,7 @@ def shiftcoord(cordy,files,sets):
 pen.clear()
 for i in range(1000):
     print(i)
-    
+
     coords=shiftcoord(coords,files,sets)
     
     #saver=turtle.getscreen()
