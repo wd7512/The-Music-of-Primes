@@ -202,21 +202,47 @@ def buffer(coords,minirad):
         pos=coords[i]
         x1=pos[0]
         y1=pos[1]
+
+        
         rot=1
         for j in range(len(coords)):
             if i!=j:
                 coord=coords[j]
                 x2=coord[0]
                 y2=coord[1]
-                while math.sqrt((x2-x1)**2+(y2-y1)**2)<(4*minirad):
-                    if rot%4==0:
-                        x1=x1+1
-                    if (rot+1)%4==0:
-                        y1=y1+1
-                    if (rot+2)%4==0:
-                        x1=x1-1
+                grad=(y2-y1)/(x2-x1)
+                
+                while math.sqrt((x2-x1)**2+(y2-y1)**2)<(2*minirad):
+                    remx=0+x1
+                    remy=0+y1
+                    print('o')
+                    if y2==remy:
+                        if x2>remx:
+                            x1=x1-0.1
+                        else:
+                            x1=x1+0.1
+                    elif remx==x2:
+                        if y2>remy:
+                            y1=y1-0.1
+                        else:
+                            y1=y1+0.1
                     else:
-                        y1=y1-1
+                        if grad>0:
+                            if x2-remx<0:
+                                x1=x1+0.1
+                                y1=y1+0.1
+                            else:
+                                x1=x1-0.1
+                                y1=y1-0.1
+                        else:
+                            if x2-remx<0:
+                                x1=x1-0.1
+                                y1=y1+0.1
+                            else:
+                                x1=x1+0.1
+                                y1=y1-0.1
+
+                        print(math.sqrt((x2-x1)**2+(y2-y1)**2))
 
                     
                 
@@ -370,14 +396,6 @@ def shiftcoord(cordy,files,sets):
         while yy<-350:
             yy=yy+1
 
-        while -20<xx<20:
-            multi=random.randint(1,4)
-            if xx>0:
-                xx=20*multi
-            if xx<0:
-                xx=-20*multi
-            else:
-                xx=20*multi
 
         #print([xx,yy])
         #print(y1)
@@ -389,11 +407,14 @@ def shiftcoord(cordy,files,sets):
                
 #drawlines(mainnodes,files,coords)
 pen.clear()
-for i in range(2000):
+for i in range(100):
     print(i)
-    
+    #pen.clear()
+    #drawcircles(minirad,files,mainnodes,coords)
     coords=shiftcoord(coords,files,sets)
-    coords=buffer(coords,minirad)
+    #pen.clear()
+    #drawcircles(minirad,files,mainnodes,coords)
+    #coords=buffer(coords,minirad)
     
     if (i+1)%50==0:
         True
@@ -404,20 +425,16 @@ for i in range(2000):
         sav.getcanvas().postscript(file=str(i+1)+".eps")
         sav.clear()
         '''
-'''
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-coords=buffer(coords,minirad)
-'''
+
 drawcircles(minirad,files,mainnodes,coords)
+
+
+coords=buffer(coords,minirad)
+
+pen.clear()
+drawcircles(minirad,files,mainnodes,coords)
+
+coords=buffer(coords,minirad)
 
 a=input(':')
 drawlines(mainnodes,files,coords)
