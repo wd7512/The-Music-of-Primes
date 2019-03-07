@@ -1,0 +1,2 @@
+This is designed to be used on a resolution of 1920x1080 pixels
+Your replay poker table should be full screen
