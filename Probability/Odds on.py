@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def chance(odds):
-    c=1
+    c=odds
     for i in range(odds):
         for j in range(odds):
             if (i+1)+(j+1)==odds and i!=j:
