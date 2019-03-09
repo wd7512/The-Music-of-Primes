@@ -289,18 +289,27 @@ def drawlines(mainnodes,files,coords):
 
 
 
-def shiftcoord(cordy,files,sets):
+def shiftcoord(cordy,files,sets,tension,spread):
 
     coords=cordy[:]
 
-    tension=0.001
-    springsize=40
+
+    centre=[0,0]
+    for cord in coords:
+        centre[0]=centre[0]+cord[0]
+        centre[1]=centre[1]+cord[1]
+
+    centre[0]=centre[0]/len(coords)
+    centre[1]=centre[1]/len(coords)
+    
+    #print(centre)
     new=[]
     for i in range(len(files)):
         pos1=coords[i]
         x1=pos1[0]
         y1=pos1[1]
         peeps=sets[i][2]
+
 
         vectors=[]
         for peep in peeps:
@@ -314,10 +323,18 @@ def shiftcoord(cordy,files,sets):
             
             vectors.append(vect)
 
-        
+        if x1>0:
+            vecx=700+x1-centre[0]
+        else:
+            vecx=-700+x1-centre[0]
+        if y1>0:
+            vecy=350+y1-centre[1]
+        else:
+            vecy=-350+y1-centre[0]
 
-            
-        vectors.append([-x1*tension,-y1*tension])
+        
+        vector=[spread*tension*vecx*len(peeps),spread*tension*vecy*len(peeps)]    
+        vectors.append(vector)
         
         xx=x1
         yy=y1      
@@ -337,7 +354,7 @@ def shiftcoord(cordy,files,sets):
             yy=yy+1
 
 
-        #print([xx,yy])
+        #print([xx-x1,yy-y1])
         #print(y1)
 
         
@@ -347,17 +364,21 @@ def shiftcoord(cordy,files,sets):
                
 #drawlines(mainnodes,files,coords)
 pen.clear()
-for i in range(1000):
+
+runs=1000
+tension=0.001
+spread=0.05
+for i in range(runs):
     print(i)
-    if i<900:
+    if i<runs-100:
         
-        coords=shiftcoord(coords,files,sets)
+        coords=shiftcoord(coords,files,sets,tension,spread)
         
         
         if (i+1)%100==0:
             coords=oldbuffer(coords,minirad,10)
             coords=oldbuffer(coords,minirad,5)
-            coords=oldbuffer(coords,minirad,2.5)
+            coords=oldbuffer(coords,minirad,3)
             '''
             pen.clear()
             drawcircles(minirad,files,mainnodes,coords)
@@ -366,8 +387,8 @@ for i in range(1000):
             sav.clear()
             '''
     else:
-        coords=oldbuffer(coords,minirad,2.5)
-        coords=shiftcoord(coords,files,sets)
+        coords=oldbuffer(coords,minirad,4)
+        coords=shiftcoord(coords,files,sets,tension,spread)
 
 
 pen.clear()
