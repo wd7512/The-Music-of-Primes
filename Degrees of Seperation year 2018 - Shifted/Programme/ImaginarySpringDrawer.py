@@ -367,7 +367,7 @@ pen.clear()
 
 runs=1000
 tension=0.001
-spread=0.05
+spread=0.01
 for i in range(runs):
     print(i)
     if i<runs-100:
