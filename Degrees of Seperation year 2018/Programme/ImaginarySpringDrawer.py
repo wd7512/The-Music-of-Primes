@@ -167,34 +167,18 @@ def oldbuffer(coords,minirad):
                 x2=coord[0]
                 y2=coord[1]
                 
-                if math.sqrt((x2-x1)**2+(y2-y1)**2)<(3*minirad):
-                    while x2-x1==0:
-                        x1=x1+random.randint(0,1)*2-1
-                    while y2-y1==0:
-                        y1=y1+random.randint(0,1)*2-1
-                    grad=(y2-y1)/(x2-x1)
-                    ang=math.atan(grad)
-
-                    rad=random.randint(0,1)*2-1
                     
-                    while math.sqrt((x2-x1)**2+(y2-y1)**2)<(3*minirad):
-                        print(files[i])
-                        print(files[j])
-                        cx=(math.cos(ang))
-                        cy=math.sin(ang)
-                        if grad>0:
-                            if x1>0:
-                                cx=-cx
-                                cy=-cy
 
-                        if grad<0:
-                            if x1>0:
-                                cx=-cx
-                            if y1<0:
-                                cy=-cy
-                        x1=x1+cx
-                        y1=y1+cy
-                    print('====')
+                
+                    
+                while math.sqrt((x2-x1)**2+(y2-y1)**2)<(10*minirad):
+                    #print(files[i])
+                    #print(files[j])
+                    
+                    
+                    x1=x1-(x2-x1)*0.1
+                    y1=y1-(y2-y1)*0.1
+                #print('====')
         coords[i][0]=x1
         coords[i][1]=y1
 
@@ -325,29 +309,10 @@ def shiftcoord(cordy,files,sets):
             pos2=coords[peep]
             x2=pos2[0]
             y2=pos2[1]
-            distance=math.sqrt((x2-x1)**2+(y2-y1)**2)
-            while x2-x1==0:
-                x1=x1+random.randint(0,1)*2-1
-            grad=(y2-y1)/(x2-x1)
-            ang=math.atan(grad)
-            #print(math.atan(grad))
-            if grad>0:
-                if x1<0:
+
+            vect=[(x2-x1)*tension,(y2-y1)*tension]
             
-                    vector=[math.cos(ang)*tension*distance,
-                            math.sin(ang)*tension*distance]
-                else:
-                    vector=[-math.cos(ang)*tension*distance,
-                            -math.sin(ang)*tension*distance]
-            if grad<0:
-                vecx=math.cos(ang)*tension*distance
-                vecy=math.sin(ang)*tension*distance
-                if x1>0:
-                    vecx=-vecx
-                if y1<0:
-                    vecy=-vecy
-                vector=[vecx,vecy]
-            vectors.append(vector)
+            vectors.append(vect)
 
         '''
         inv=True
@@ -410,34 +375,33 @@ def shiftcoord(cordy,files,sets):
                
 #drawlines(mainnodes,files,coords)
 pen.clear()
-for i in range(100):
+for i in range(10000):
     print(i)
-    #pen.clear()
-    #drawcircles(minirad,files,mainnodes,coords)
-    coords=shiftcoord(coords,files,sets)
-    #pen.clear()
-    #drawcircles(minirad,files,mainnodes,coords)
-    #coords=buffer(coords,minirad)
-    
-    if (i+1)%50==0:
-        True
-        '''
-        pen.clear()
-        drawcircles(minirad,files,mainnodes,coords)
-        sav=(turtle.getscreen())
-        sav.getcanvas().postscript(file=str(i+1)+".eps")
-        sav.clear()
-        '''
+    if i<9000:
+        
+        coords=shiftcoord(coords,files,sets)
+        
+        
+        if (i+1)%100==0:
+            coords=oldbuffer(coords,minirad)
+            coords=oldbuffer(coords,minirad)
+            coords=oldbuffer(coords,minirad)
+            '''
+            pen.clear()
+            drawcircles(minirad,files,mainnodes,coords)
+            sav=(turtle.getscreen())
+            sav.getcanvas().postscript(file=str(i+1)+".eps")
+            sav.clear()
+            '''
+    else:
+        coords=oldbuffer(coords,minirad)
+        coords=shiftcoord(coords,files,sets)
 
-drawcircles(minirad,files,mainnodes,coords)
-
-
-coords=buffer(coords,minirad)
 
 pen.clear()
 drawcircles(minirad,files,mainnodes,coords)
 
-coords=buffer(coords,minirad)
+
 
 a=input(':')
 drawlines(mainnodes,files,coords)
