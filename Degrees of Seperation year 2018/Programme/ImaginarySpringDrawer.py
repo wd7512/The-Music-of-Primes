@@ -152,7 +152,7 @@ for i in range(nosubnodes):
     
     pen.circle(minirad)
 
-def oldbuffer(coords,minirad):
+def oldbuffer(coords,minirad,dist):
     for i in range(len(coords)):
 
         pos=coords[i]
@@ -171,7 +171,7 @@ def oldbuffer(coords,minirad):
 
                 
                     
-                while math.sqrt((x2-x1)**2+(y2-y1)**2)<(10*minirad):
+                while math.sqrt((x2-x1)**2+(y2-y1)**2)<(dist*minirad):
                     #print(files[i])
                     #print(files[j])
                     
@@ -183,7 +183,7 @@ def oldbuffer(coords,minirad):
         coords[i][1]=y1
 
     return coords
-
+'''
 def buffer(coords,minirad):
     for i in range(len(coords)):
         pos=coords[i]
@@ -239,7 +239,7 @@ def buffer(coords,minirad):
         coords[i][1]=y1
 
     return coords
-                    
+'''                    
                     
 
 def drawcircles(minirad,files,mainnodes,coords):
@@ -314,39 +314,11 @@ def shiftcoord(cordy,files,sets):
             
             vectors.append(vect)
 
-        '''
-        inv=True
-        while x1==0:
-            x1=x1+random.randint(0,1)*2-1
         
-        grad=y1/(x1)
-        ang=math.atan(grad)
-        distance=math.sqrt(x1**2+y1**2)
-        if grad>0:
-            if x1<0:
-            
-                vector=[math.cos(ang)*tension*distance,
-                        math.sin(ang)*tension*distance]
-            else:
-                vector=[-math.cos(ang)*tension*distance,
-                        -math.sin(ang)*tension*distance]
-        else:
-            vecx=math.cos(ang)*tension*distance
-            vecy=math.sin(ang)*tension*distance
-            if x1>0:
-                vecx=-vecx
-            if y1<0:
-                vecy=-vecy
-
-            if inv==True:
-                vector=[-vecx,-vecy]
-            else:
-            
-                vector=[vecx,vecy]
 
             
-        vectors.append(vector)
-        '''
+        vectors.append([-x1*tension,-y1*tension])
+        
         xx=x1
         yy=y1      
         for vector in vectors:
@@ -355,9 +327,9 @@ def shiftcoord(cordy,files,sets):
 
         #print(yy)
         
-        while xx>350:
+        while xx>700:
             xx=xx-1
-        while xx<-350:
+        while xx<-700:
             xx=xx+1
         while yy>350:
             yy=yy-1
@@ -375,17 +347,17 @@ def shiftcoord(cordy,files,sets):
                
 #drawlines(mainnodes,files,coords)
 pen.clear()
-for i in range(10000):
+for i in range(1000):
     print(i)
-    if i<9000:
+    if i<900:
         
         coords=shiftcoord(coords,files,sets)
         
         
         if (i+1)%100==0:
-            coords=oldbuffer(coords,minirad)
-            coords=oldbuffer(coords,minirad)
-            coords=oldbuffer(coords,minirad)
+            coords=oldbuffer(coords,minirad,10)
+            coords=oldbuffer(coords,minirad,5)
+            coords=oldbuffer(coords,minirad,2.5)
             '''
             pen.clear()
             drawcircles(minirad,files,mainnodes,coords)
@@ -394,7 +366,7 @@ for i in range(10000):
             sav.clear()
             '''
     else:
-        coords=oldbuffer(coords,minirad)
+        coords=oldbuffer(coords,minirad,2.5)
         coords=shiftcoord(coords,files,sets)
 
 
