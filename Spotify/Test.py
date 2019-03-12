@@ -9,21 +9,24 @@ print(pag.size())
 
 
 
-xskip=1021
-yskip=962
-
-xsong=15
-for i in range(10):
-
-    greentick=pag.locateOnScreen('Green Tick.png', minSearchTime=10)
+xsong=182
+ysong=170
+songheight=40
+songwidth=320
 
 
-    ysong=greentick[1]
-    songwidth=greentick[0]-xsong
-    songheight=greentick[3]
+#while True:
+    #print(pag.position())
+for i in range(10000):
+    
+    greentick=pag.locateCenterOnScreen('Next.png', minSearchTime=10)
+
+
+    
     
     
     pag.screenshot('Test'+str(i+1)+'.png',region=(xsong,ysong,songwidth,songheight))
 
-    pag.moveTo(xskip,yskip,1)
+    pag.moveTo(greentick[0],greentick[1])
     pag.click()
+    pag.moveTo(greentick[0]+50,greentick[1])
