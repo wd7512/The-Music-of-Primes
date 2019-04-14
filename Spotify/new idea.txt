@@ -1,0 +1,5 @@
+make a new spotify account
+connect to last fm
+make a balanced playlist
+run for x amount of scrobbles
+analyse frequencies
