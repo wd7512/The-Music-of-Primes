@@ -1,0 +1,12 @@
+2 players x,y
+each player has a range of hands starting with 72/144
+
+x blind checks 0
+y bets 1 if their hand is in their range otherwise checks 0
+x calls 1 if their hand is in their range otherwise folds
+then all five cards are played with no more betting
+
+this is repeated a certain amount of times
+the winning range then widens and the losing range tightens
+
+repeat all.
