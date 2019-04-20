@@ -1,5 +1,6 @@
 import random
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def chance(odds):
@@ -10,7 +11,10 @@ def chance(odds):
                 c=c+1
 
     return 100*c/(odds**2)
-
+def odd(x):
+    return (2*x-1)/x**2
+def even(x):
+    return (2*x-2)/x**2
 
 odds=int(input('Odds out of:'))
 print('Chance of Happening:'+str(chance(odds))+'%')
@@ -43,10 +47,13 @@ for num in totest:
     
     
     print(pri+'      - - - '+odo+'%         - - - 1/'+str(outof))
-
+xnp=np.arange(1,odds,0.1)
 
 plt.xlabel('Odds on')
 plt.ylabel('Percent Chance')
 plt.plot(x,y)
+plt.plot(xnp,100*odd(xnp),label='odd')
+plt.plot(xnp,100*even(xnp),label='even')
+plt.legend()
 plt.grid()
 plt.show()
