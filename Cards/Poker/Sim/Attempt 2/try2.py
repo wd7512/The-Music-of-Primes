@@ -20,9 +20,47 @@ def score(hand,table):
     total = hand + table
     total = sorted(total)
 
-    flush=checkflush(total) #false is nothing, else returns the flush cards
+    flush = checkflush(total) #false is nothing, else returns the flush cards
+    straight = checkstraight(total)
 
-    return total
+
+    return len(total)
+
+def checkstraight(total):
+    nums = []
+    for card in total:
+        if card[0] not in nums:
+            nums.append(card[0])
+
+    var = 1
+    while len(nums) > 4:
+
+        if nums[-var] - nums[-var-1] != 1:
+            nums.remove(nums[-var])
+        elif var == 5:
+            return
+        else:
+            var += 1
+
+
+
+
+
+    return False
+
+def straightconv(total): #checked
+    totala = total[:]
+    aces = []
+    ones = []
+    for card in totala:
+        if card[0] == 14:
+            aces.append(card)
+
+    for card in aces:
+        totala.remove(card)
+        ones.append([1,card[1]])
+
+    return ones + totala
 
 def checkflush(total): #checked
     counter = [['H',0],['D',0],['C',0],['S',0]]
@@ -62,8 +100,6 @@ def game(players):
         card, deck = drawcard(deck)
         table.append(card)
 
+    return [score(hands[0],table)]
 
-
-    return [hands[0]+table,score(hands[0],table)]
-
-game(1)
+print(game(1))
