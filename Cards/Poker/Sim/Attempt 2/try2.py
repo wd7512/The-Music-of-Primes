@@ -12,7 +12,7 @@ def newdeck(): #checked
     return (deck)
 
 def drawcard(deck): #checked
-    card=deck[0]
+    card = deck[0]
     deck.remove(card)
     return [card,deck]
 
@@ -22,27 +22,41 @@ def score(hand,table):
 
     flush = checkflush(total) #false is nothing, else returns the flush cards
     straight = checkstraight(total)
+    if straight == False:
+        straight == checkstraight(straightconv(total))
+    print(straight)
 
-
-    return len(total)
+    return straight
 
 def checkstraight(total):
-    nums = []
+    nums = [] #purely numbers
     for card in total:
         if card[0] not in nums:
             nums.append(card[0])
 
-    var = 1
-    while len(nums) > 4:
 
-        if nums[-var] - nums[-var-1] != 1:
-            nums.remove(nums[-var])
-        elif var == 5:
-            return
-        else:
-            var += 1
+    if len(nums) < 5:
+        return False
 
+    if len(nums)==5 and (max(nums) - min(nums)) == 4:
+        return(nums)
 
+    if len(nums) == 6:
+        if (max(nums) - min(nums)) == 4:
+            return(nums)
+        if (max(nums) - min(nums)) == 5:
+            nums = nums[1:]
+            return(nums)
+
+    if len(nums) == 7:
+        if (max(nums) - min(nums)) == 4:
+            return(nums)
+        if (max(nums) - min(nums)) == 5:
+            nums = nums[1:]
+            return(nums)
+        if (max(nums) - min(nums)) == 6:
+            nums = nums[2:]
+            return(nums)
 
 
 
@@ -100,6 +114,16 @@ def game(players):
         card, deck = drawcard(deck)
         table.append(card)
 
-    return [score(hands[0],table)]
+    return score(hands[0],table)
 
-print(game(1))
+deck = newdeck()
+total = []
+for i in range(7):
+    card , deck = drawcard(deck)
+    total.append(card)
+
+
+a=False
+while a == False:
+	a=game(1)
+	print(a)
