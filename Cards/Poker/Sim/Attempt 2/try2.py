@@ -18,9 +18,13 @@ def drawcard(deck): #checked
 
 def score(hand,table):
     total = hand + table
-    total = sorted(total)
+    total = sorted(total, reverse=True)
 
-    flush = checkflush(total) #false is nothing, else returns the flush cards
+    #false is nothing, else returns [type,5 card values]
+
+    flush = checkflush(total) 
+    print(flush)
+    
     straight = checkstraight(total)
     if straight == False:
         straight == checkstraight(straightconv(total))
@@ -39,24 +43,24 @@ def checkstraight(total):
         return False
 
     if len(nums)==5 and (max(nums) - min(nums)) == 4:
-        return(nums)
+        return (['Straight',nums])
 
     if len(nums) == 6:
         if (max(nums) - min(nums)) == 4:
-            return(nums)
+            return (['Straight',nums])
         if (max(nums) - min(nums)) == 5:
             nums = nums[1:]
-            return(nums)
+            return (['Straight',nums])
 
     if len(nums) == 7:
         if (max(nums) - min(nums)) == 4:
-            return(nums)
+            return (['Straight',nums])
         if (max(nums) - min(nums)) == 5:
             nums = nums[1:]
-            return(nums)
+            return (['Straight',nums])
         if (max(nums) - min(nums)) == 6:
             nums = nums[2:]
-            return(nums)
+            return (['Straight',nums])
 
 
 
@@ -91,12 +95,16 @@ def checkflush(total): #checked
                 if card[1] == suit:
                     suitedcards.append(card)
 
-            suitedcards=sorted(suitedcards)
+            suitedcards=sorted(suitedcards, reverse=True)
 
             while len(suitedcards) > 5:
-                suitedcards = suitedcards[1:]
+                suitedcards = suitedcards[:-1]
 
-            return suitedcards
+            output = []
+            for card in suitedcards:
+                output.append(card[0])
+
+            return (['Flush',output])
 
 
     return False
