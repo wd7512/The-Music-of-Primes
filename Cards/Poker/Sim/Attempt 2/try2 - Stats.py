@@ -493,4 +493,4 @@ def headsup(runs):
     f.close()
     print('Saved')
         
-headsup(5000000)
+headsup(1000000)
