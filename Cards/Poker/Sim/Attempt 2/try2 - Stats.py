@@ -412,6 +412,41 @@ def game(players):
 
     return scores
 
+def gameflop(players):
+    deck = newdeck()
+    hands = []
+    for x in range(players):
+        card1, deck = drawcard(deck)
+        card2, deck = drawcard(deck)
+        hands.append([card1,card2])
+
+    table = []
+    for x in range(3):
+        card, deck = drawcard(deck)
+        table.append(card)
+
+    if players == 1:
+        return scoring(hands[0],table)
+
+    scores = []
+
+    for hand in hands:
+        sc = scoring(hand,table)
+        scores.append([strengthconv(sc[0],False),sc[1],hand])
+
+    scores = sorted(scores,reverse=True)
+
+    if players > 1:
+
+        count = 1
+        
+
+    for score in scores:
+        score[0] = strengthconv(score[0],True)
+    
+
+    return scores
+
 def printcheck(real,ref,num):
     percent = round(100*real/ref-100,ndigits=3)
     print(strengthconv(num,True)+' : '+str(real)+' // '+str(ref)+' : '+str(percent)+'%')
@@ -492,5 +527,31 @@ def headsup(runs):
         f.write(str(save)+'\n')
     f.close()
     print('Saved')
-        
-headsup(1000000)
+
+def headsupflop(runs):
+    cent = runs/100
+    per = 0
+    tosave = []
+    for i in range(runs):
+        result = gameflop(2)
+        winner = result[0]
+        loser = result[1]
+        draw = False
+        if result[0][1] == result[1][1]:
+            draw = True
+        #each line is [win hand, stregnth, lose hand, strength]
+        save = [winner[2],winner[0],loser[2],loser[0],draw]
+        tosave.append(save)
+        if i % cent == 0:
+            print(str(per)+'% calculated')
+            per = per + 1
+            
+    print('Saving...')
+    f = open('Headsupflop-'+str(runs)+' runs.txt','w')
+    for save in tosave:
+        f.write(str(save)+'\n')
+    f.close()
+    print('Saved')
+
+headsupflop(1000000)
+

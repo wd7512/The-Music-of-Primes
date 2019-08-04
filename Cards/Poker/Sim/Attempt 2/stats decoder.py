@@ -85,12 +85,7 @@ def decode(file,hand,suited):
     compress = []
 
     tot = sum(typefreq)
-    if suited == 0:
-        suitprint = 'any'
-    if suited == 1:
-        suitprint = 'offsuit'
-    if suited == 2:
-        suitprint = 'suited'
+    suitprint = suits(suited)
     print(str(tot)+' instances found of '+suitprint+' '+str(hand)+'\n')
     
     compress.append([tot,'instances'])
@@ -119,8 +114,33 @@ def decode(file,hand,suited):
 
     return compress
 
-file = 'Headsup-1000000 runs.txt'
+def suits(num):
+    if num == 0:
+        suitprint = 'any'
+    if num == 1:
+        suitprint = 'offsuit'
+    if num == 2:
+        suitprint = 'suited'
+    return suitprint
+
+def save(data,filename):
+    f = open(filename,'w')
+    for b in data:
+        f.write(str(b)+'\n')
+    f.close()
+
+hand = [6,6]
+suited = 0
+
+flop = False
+if flop == True:
+    file = 'Headsupflop-1000000 runs.txt'
+    filename = str(hand)+str(suited)+' flop.txt'
+else:
+    file = 'Headsup-1000000 runs.txt'
+    filename = str(hand)+str(suited)+' river.txt'
 #hand = [int(input('Card Value 1:')),int(input('Card Value 2:'))] #[num1,num2]
 #suited = int(input('Suited? (0-both,1-off,2-on):'))
 
-a=decode(file,[6,7],0)
+save(decode(file,hand,suited),filename)
+
