@@ -139,6 +139,6 @@ def show(data):
 
     print(Z)
 
-    ax.plot_wireframe(X,Y,Z,rstride=1, cstride=1)
+    ax.plot_surface(X,Y,Z,rstride=1, cstride=1, cmap = 'terrain')
 
     plt.show()
