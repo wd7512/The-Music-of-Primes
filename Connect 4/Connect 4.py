@@ -2,7 +2,7 @@
 import numpy as np
 def newgame():
 
-    return np.zeros([6,7],dtype=int)
+    return np.zeros((6,7),dtype=int)
 
 def addchip(playernum,col,game):
     #col is column ranging 0-6
@@ -68,7 +68,38 @@ def run_human():
     print('player '+str(turn)+' wins')
     print(game)
 
-def input_convert(game):
-    return game.resize((1,42))
-def input_revert(game):
-    return game.resize((6,7))
+def input_convert(gam):
+    return gam.resize((84,1))
+
+
+def random_matricies():
+    sizes = (84,50,50,7)
+    weight_sizes = [(a,b) for a,b in zip(sizes[1:],sizes[:-1])]
+    weights = [np.random.standard_normal(s) for s in weight_sizes]
+    #print(weights)
+    biases = [np.random.standard_normal((s,1)) for s in sizes]
+    #print(biases)
+
+    return [weights,biases]
+
+def function(x):
+    return 1/(1+np.exp(-x))
+
+def game_conv(game):
+    p = np.zeros((12,7),dtype=int)
+
+    for i in range(6):
+        for j in range(7):
+            if game[i][j] == 1:
+                p[i][j] = 1
+            if game[i][j] == 2:
+                p[i+6][j] = 1
+
+    return p
+
+def run_brain(weights,biases,game):
+    
+    inputs = game_conv(game)
+    input_convert(inputs)
+    return inputs
+    
