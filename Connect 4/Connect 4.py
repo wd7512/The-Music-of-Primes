@@ -68,16 +68,51 @@ def run_human():
     print('player '+str(turn)+' wins')
     print(game)
 
+def run_ai_vs_human(brain):
+    game = newgame()
+    w,b = brain
+
+    turn = int(input('Human First press 1, Ai first press 2'))
+
+
+    
+    while check_four(game) == False:
+        print(game)
+        
+        
+        if turn == 1:
+            col = int(input('p'+str(turn)+' column:'))
+            if np.any(addchip(turn,col,game)) == False:
+                print('player 2 wins')
+                return 
+            turn = 2
+        else:
+            col = np.argmax(run_brain(w,b,game))
+            if np.any(addchip(turn,col,game)) == False:
+                print('player 1 wins')
+                return 
+            turn = 1
+            
+
+        
+
+    if turn == 1:
+        turn = 2
+    else:
+        turn = 1
+    print('player '+str(turn)+' wins')
+    print(game)
+
 def input_convert(gam):
-    return gam.resize((84,1))
+    return gam.resize((1,84))
 
 
 def random_matricies():
     sizes = (84,50,50,7)
-    weight_sizes = [(a,b) for a,b in zip(sizes[1:],sizes[:-1])]
+    weight_sizes = [(a,b) for a,b in zip(sizes[:-1],sizes[1:])]
     weights = [np.random.standard_normal(s) for s in weight_sizes]
     #print(weights)
-    biases = [np.random.standard_normal((s,1)) for s in sizes]
+    biases = [np.random.standard_normal((1,s)) for s in sizes[1:]]
     #print(biases)
 
     return [weights,biases]
@@ -98,8 +133,102 @@ def game_conv(game):
     return p
 
 def run_brain(weights,biases,game):
+
+    #TEMP
+    #weights,biases = random_matricies()
     
     inputs = game_conv(game)
     input_convert(inputs)
-    return inputs
+
+    layer1 = function(np.matmul(inputs,weights[0])+biases[0]) #shape (1,50)
+
+    layer2 = function(np.matmul(layer1,weights[1])+biases[1])
+
+    output = function(np.matmul(layer2,weights[2])+biases[2])
     
+    return output
+    
+#a=newgame()
+#addchip(1,1,a)
+#addchip(2,2,a)
+def run_ai(brain1,brain2,game):
+    game = newgame()
+    w1,b1 = brain1
+    w2,b2 = brain2
+
+    turn = 1
+
+    while check_four(game) == False:
+        #print(str(game)+'\n')
+        #col = int(input('p'+str(turn)+' column:'))
+        
+        if turn == 1:
+            col = np.argmax(run_brain(w1,b1,game))
+            if np.any(addchip(turn,col,game)) == False:
+                return 2
+            
+            turn = 2
+        else:
+            col = np.argmax(run_brain(w2,b2,game))
+            if np.any(addchip(turn,col,game)) == False:
+                return 1
+            turn = 1
+
+    if turn == 1:
+        turn = 2
+    else:
+        turn = 1
+    print('player '+str(turn)+' wins')
+    print(game)
+
+    return turn
+
+def init_gens():
+    gens = []
+    for i in range(20):
+        gens.append(random_matricies())
+
+    return gens
+
+def test_ai(gens):
+    wins = []
+    for i in range(20):
+        wins.append(0)
+        
+    for i in range(20):
+        for j in range(20):
+            if i != j:
+                result = run_ai(gens[i],gens[j],newgame())
+                if result == 1:
+                    wins[i] = wins[i] + 1
+                if result == 2:
+                    wins[j] = wins[j] + 1
+
+    return wins
+
+def evolve(wins,gens):
+    new_gens = []
+    for i in range(5):
+        new_gens.append(random_matricies())
+
+    survivors = []
+    for i in range(5):
+        top = wins.index(max(wins))
+        survivors.append(gens[top])
+        new_gens.append(gens[top])
+        wins[top] = -1
+
+    for brain in survivors:
+        True
+
+def shrink(x):
+    return x/50
+
+def mutate(brain):
+    add = shrink(random_matricies())
+    final = brain + add
+    return final
+    
+    
+    
+
