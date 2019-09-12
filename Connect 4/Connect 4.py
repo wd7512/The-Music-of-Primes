@@ -165,16 +165,27 @@ def run_ai(brain1,brain2,game):
         if turn == 1:
             proba = run_brain(w1,b1,game)
             col = np.argmax(proba)
-            counta = 0
+            count = 0
             while np.any(addchip(turn,col,game)) == False:
                 proba[0,np.argmax(proba)] = -100
-                col = np.argmax(proba) #CHECK AND COPY THIS CODE
+                col = np.argmax(proba)
+                if count > 6:
+                    return 0
+                count = count + 1
+                
             
             turn = 2
         else:
-            col = np.argmax(run_brain(w2,b2,game))
-            if np.any(addchip(turn,col,game)) == False:
-                return 1
+            proba = run_brain(w2,b2,game)
+            col = np.argmax(proba)
+            
+            while np.any(addchip(turn,col,game)) == False:
+                proba[0,np.argmax(proba)] = -100
+                col = np.argmax(proba)
+                count = 0
+                if count > 6:
+                    return 0
+                count = count + 1
             turn = 1
 
     if turn == 1:
@@ -202,10 +213,15 @@ def test_ai(gens):
         for j in range(20):
             if i != j:
                 result = run_ai(gens[i],gens[j],newgame())
+                if result == 0:
+                    wins[i] = wins[i] + 0.5
+                    wins[j] = wins[j] + 0.5
                 if result == 1:
                     wins[i] = wins[i] + 1
                 if result == 2:
                     wins[j] = wins[j] + 1
+                
+                
 
     return wins
 
