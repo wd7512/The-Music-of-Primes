@@ -163,9 +163,12 @@ def run_ai(brain1,brain2,game):
         #col = int(input('p'+str(turn)+' column:'))
         
         if turn == 1:
-            col = np.argmax(run_brain(w1,b1,game))
-            if np.any(addchip(turn,col,game)) == False:
-                return 2
+            proba = run_brain(w1,b1,game)
+            col = np.argmax(proba)
+            counta = 0
+            while np.any(addchip(turn,col,game)) == False:
+                proba[0,np.argmax(proba)] = -100
+                col = np.argmax(proba) #CHECK AND COPY THIS CODE
             
             turn = 2
         else:
@@ -178,8 +181,8 @@ def run_ai(brain1,brain2,game):
         turn = 2
     else:
         turn = 1
-    print('player '+str(turn)+' wins')
-    print(game)
+    #print('player '+str(turn)+' wins')
+    #print(game)
 
     return turn
 
@@ -206,7 +209,8 @@ def test_ai(gens):
 
     return wins
 
-def evolve(wins,gens):
+def evolve(wina,gens):
+    wins = wina[:]
     new_gens = []
     for i in range(5):
         new_gens.append(random_matricies())
@@ -219,6 +223,7 @@ def evolve(wins,gens):
         wins[top] = -1
 
     for brain in survivors:
+        new_gens.append(mutate(brain))
         new_gens.append(mutate(brain))
 
     return new_gens
@@ -236,12 +241,20 @@ def mutate(brain):
 
     for i in range(2):
         for j in range(3):
-            True
-
+            brain[i][j] = brain[i][j] + add2[i][j]
             
-    final = brain + add
-    return final
+    return brain
+
+def learning(gens,runs):
     
-    
+    for i in range(runs):
+        wins = test_ai(gens)
+        print(wins)
+        #a = input('######')
+        gens = evolve(wins,gens)
+
+    return gens
+gens = init_gens()
+
     
 
