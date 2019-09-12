@@ -219,13 +219,26 @@ def evolve(wins,gens):
         wins[top] = -1
 
     for brain in survivors:
-        True
+        new_gens.append(mutate(brain))
 
-def shrink(x):
-    return x/50
+    return new_gens
+
+
 
 def mutate(brain):
-    add = shrink(random_matricies())
+    add1 = random_matricies()
+    add2 = []
+    for matrix in add1:
+        subadd = []
+        for mat in matrix:
+            subadd.append(mat/50)
+        add2.append(subadd)
+
+    for i in range(2):
+        for j in range(3):
+            True
+
+            
     final = brain + add
     return final
     
