@@ -87,10 +87,17 @@ def run_ai_vs_human(brain):
                 return 
             turn = 2
         else:
-            col = np.argmax(run_brain(w,b,game))
-            if np.any(addchip(turn,col,game)) == False:
-                print('player 1 wins')
-                return 
+            proba = run_brain(w,b,game)
+            col = np.argmax(proba)
+            count = 0
+            while np.any(addchip(turn,col,game)) == False:
+                proba[0,np.argmax(proba)] = -100
+                col = np.argmax(proba)
+                if count > 6:
+                    return 0
+                count = count + 1
+                
+            
             turn = 1
             
 
@@ -262,12 +269,11 @@ def mutate(brain):
     return brain
 
 def learning(gens,runs):
-    
+    wins = test_ai(gens)
     for i in range(runs):
+        gens = evolve(wins,gens)
         wins = test_ai(gens)
         print(wins)
-        #a = input('######')
-        gens = evolve(wins,gens)
 
     return gens
 gens = init_gens()
