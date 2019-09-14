@@ -1,5 +1,6 @@
 #connect 4
 import numpy as np
+import random
 def newgame():
 
     return np.zeros((6,7),dtype=int)
@@ -115,7 +116,7 @@ def input_convert(gam):
 
 
 def random_matricies():
-    sizes = (84,50,50,7)
+    sizes = (84,50,7)
     weight_sizes = [(a,b) for a,b in zip(sizes[:-1],sizes[1:])]
     weights = [np.random.standard_normal(s) for s in weight_sizes]
     #print(weights)
@@ -149,9 +150,9 @@ def run_brain(weights,biases,game):
 
     layer1 = function(np.matmul(inputs,weights[0])+biases[0]) #shape (1,50)
 
-    layer2 = function(np.matmul(layer1,weights[1])+biases[1])
+    #layer2 = function(np.matmul(layer1,weights[1])+biases[1])
 
-    output = function(np.matmul(layer2,weights[2])+biases[2])
+    output = function(np.matmul(layer1,weights[1])+biases[1])
     
     return output
     
@@ -206,18 +207,19 @@ def run_ai(brain1,brain2,game):
 
 def init_gens():
     gens = []
-    for i in range(20):
+    for i in range(1000):
         gens.append(random_matricies())
 
     return gens
 
 def test_ai(gens):
     wins = []
-    for i in range(20):
+    num = len(gens)
+    for i in range(num):
         wins.append(0)
         
-    for i in range(20):
-        for j in range(20):
+    for i in range(num):
+        for j in range(num):
             if i != j:
                 result = run_ai(gens[i],gens[j],newgame())
                 if result == 0:
@@ -235,11 +237,11 @@ def test_ai(gens):
 def evolve(wina,gens):
     wins = wina[:]
     new_gens = []
-    for i in range(5):
+    for i in range(610):
         new_gens.append(random_matricies())
 
     survivors = []
-    for i in range(5):
+    for i in range(130):
         top = wins.index(max(wins))
         survivors.append(gens[top])
         new_gens.append(gens[top])
@@ -259,11 +261,14 @@ def mutate(brain):
     for matrix in add1:
         subadd = []
         for mat in matrix:
-            subadd.append(mat/50)
+            if random.randint(0,100) == 50:
+                subadd.append(mat/50)
+            else:
+                subadd.append(0)
         add2.append(subadd)
 
     for i in range(2):
-        for j in range(3):
+        for j in range(2):
             brain[i][j] = brain[i][j] + add2[i][j]
             
     return brain
@@ -273,9 +278,9 @@ def learning(gens,runs):
     for i in range(runs):
         gens = evolve(wins,gens)
         wins = test_ai(gens)
-        print(wins)
+        print(str(max(wins))+' '+str(sum(wins[:610])/610)+' '+str(sum(wins[-390:])/390))
 
-    return gens
+    return gens,wins
 gens = init_gens()
 
     
