@@ -237,19 +237,20 @@ def test_ai(gens):
 def evolve(wina,gens):
     wins = wina[:]
     new_gens = []
-    for i in range(610):
+    for i in range(200):
         new_gens.append(random_matricies())
 
     survivors = []
-    for i in range(130):
+    for i in range(40):
         top = wins.index(max(wins))
         survivors.append(gens[top])
         new_gens.append(gens[top])
         wins[top] = -1
 
     for brain in survivors:
-        new_gens.append(mutate(brain))
-        new_gens.append(mutate(brain))
+        for i in range(19):
+            new_gens.append(mutate(brain))
+            
 
     return new_gens
 
@@ -278,10 +279,14 @@ def learning(gens,runs):
     for i in range(runs):
         gens = evolve(wins,gens)
         wins = test_ai(gens)
-        print(str(max(wins))+' '+str(sum(wins[:610])/610)+' '+str(sum(wins[-390:])/390))
+        print(str(max(wins))+' '+str(sum(wins[:200])/200)+' '+str(sum(wins[-800:-760])/50)+' '+str(sum(wins[-760:])/750))
 
     return gens,wins
-gens = init_gens()
 
+
+gens = init_gens()
+for i in range(100):
+    print('Gen '+str(i))
+    gens,wins = learning(gens,1)
     
 
