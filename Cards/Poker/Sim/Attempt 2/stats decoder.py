@@ -128,19 +128,25 @@ def save(data,filename):
     for b in data:
         f.write(str(b)+'\n')
     f.close()
+    
+def run(hand,suited,flop):
+    
+    if flop == True:
+        file = 'Headsupflop-1000000 runs.txt'
+        filename = str(hand)+str(suited)+' flop.txt'
+    else:
+        file = 'Headsup-1000000 runs.txt'
+        filename = str(hand)+str(suited)+' river.txt'
+    #hand = [int(input('Card Value 1:')),int(input('Card Value 2:'))] #[num1,num2]
+    #suited = int(input('Suited? (0-both,1-off,2-on):'))
 
-hand = [6,6]
-suited = 0
+    save(decode(file,hand,suited),filename)
 
-flop = False
-if flop == True:
-    file = 'Headsupflop-1000000 runs.txt'
-    filename = str(hand)+str(suited)+' flop.txt'
-else:
-    file = 'Headsup-1000000 runs.txt'
-    filename = str(hand)+str(suited)+' river.txt'
-#hand = [int(input('Card Value 1:')),int(input('Card Value 2:'))] #[num1,num2]
-#suited = int(input('Suited? (0-both,1-off,2-on):'))
-
-save(decode(file,hand,suited),filename)
-
+for i in range(13):
+    for j in range(13-i-1):
+        hand = [i+2,j+3+i]
+        print(hand)
+        run(hand,0,True)
+        run(hand,1,True)
+        run(hand,0,False)
+        run(hand,1,False)
