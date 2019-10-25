@@ -1,0 +1,5 @@
+Setmining:
+	-Deep Stack Sizes (at least 25x the call)
+	-Who open? (generally tighter player better)
+	-Position (very difficult out of position)
+	-Players Behind (looking for fish, avoid squeeze)
