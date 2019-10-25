@@ -1,0 +1,14 @@
+VPIP: (Voluntarility Put in Pot)
+	-% of hands in which player voluntarility put money into pot
+
+PFR: (Preflop Raise)
+	-% of hands which player makes a preflop raise
+
+AFq: (Agression Frequency)
+	-% of bets,raises vs bets,raises,calls,folds
+	
+Setmining:
+	-Deep Stack Sizes (at least 25x the call)
+	-Who open? (generally tighter player better)
+	-Position (very difficult out of position)
+	-Players Behind (looking for fish, avoid squeeze)
