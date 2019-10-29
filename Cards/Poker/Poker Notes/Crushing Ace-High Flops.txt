@@ -1,0 +1,49 @@
+Two Rules that Govern Solid Poker
+
+	-(1) If your oppenent bets or raises, you should usually continue.
+		-We do not allow our opponent outright profitable bets.
+
+	-(2) If you bet one street and your opponent calls, you should usually bet again on the next card.
+		-We apply pressure to hands that cant handle it
+		-We avoid letting the villan make easy bluffs
+
+	-The word 'usually' used in these situations can be used at 70% as a starting point
+
+	-Our range can be seen as a pyramid from preflop-flop-turn-river.
+		-Each round should have a consitient of hands folding.
+		-This leads to a 'smooth pyramid'
+
+	-Most oppentents do not follow these rules
+
+The Aggressor
+
+	-Example
+		-Flop [As,8h,4c]
+		-Often the preflop raiser may CB 100% of the time
+			-This leads to the jagged pyramid with a large flop
+			-Breaking rule 2
+
+		-The opponent is often folding too much of the time
+			-This leads to a jagged pyramid with a small flop
+			-Breaking rule 1
+	
+	-In general people dont want to play for stacks on these textures
+
+	-The opponent needs to defend with more than just top pair+
+
+	-GTO suggests... 
+		-The agressor should CB 40% of the time
+			-King x usually checks
+		-The opponent calls 45% of the time
+			-King x usually fold
+			-Any Ace calls
+	
+	-Exploitative Play
+		-The opponent only gives action with middle pair+
+			-The agressor should bluff nearly everything as the BB is folding too much
+		-The agressor is CB 100% of the time
+			-The opponent should call then do one of the following
+				-Donk the turn
+				-Bet river after checked turn
+
+
