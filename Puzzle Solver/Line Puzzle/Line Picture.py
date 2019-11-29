@@ -94,5 +94,5 @@ def rearrange_decoder(picture,output): # decodes and rearranges pictue, given th
         outlist[maxx] = -1
 
     return newpicture
-        
+
         
