@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 from google_images_download import google_images_download
 import os
+import math
 
 def random_picture(length,size):
     picture = []
@@ -146,3 +147,49 @@ def grey_folder(folder):
     for im in images:
         newname = folder + '/' +im
         grey(newname)
+
+def array(picture_name): #input greyscale picture
+    img = Image.open(picture_name)
+    size = np.size(img)
+    #print(size)
+    data = list(img.getdata())
+    #print(len(data))
+    #print(np.size(data))
+    arraydata = np.zeros((size[1],size[0]))
+    for i in range(size[1]):
+        ind = i*size[0]
+        #print(ind)
+        for j in range(size[0]):
+            arraydata[i][j] = data[ind+j][0]
+
+    return arraydata
+
+def slice_array(slice_size,array):
+    shape = np.shape(array)
+    num1 = math.floor(shape[0]/slice_size)
+    num2 = math.floor(shape[1]/slice_size)
+    slices = []
+    for i in range(num1):
+        start = i * slice_size
+        slise = np.zeros((slice_size,slice_size * num2))
+        for j in range(slice_size):
+            for k in range(slice_size * num2):
+                slise[j][k] = array[start+j][k]
+        slices.append(slise)
+
+    return slices
+
+def save_image(array,name):
+    im = Image.fromarray(array)
+    
+    im.save(name)
+
+arra = array('horse.jpg-grey.png')
+slices = slice_array(50,arra)
+for slik in slices:
+    plt.matshow(slik)
+    plt.show()
+    #save_image(slik,'abc.png')
+        
+            
+    
