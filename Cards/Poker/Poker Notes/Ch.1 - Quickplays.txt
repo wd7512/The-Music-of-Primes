@@ -3,3 +3,7 @@ Setmining:
 	-Who open? (generally tighter player better)
 	-Position (very difficult out of position)
 	-Players Behind (looking for fish, avoid squeeze)
+
+Turbo Tournaments 101:
+	-Know your push fold ranges
+	-Know your call vs shove ranges
