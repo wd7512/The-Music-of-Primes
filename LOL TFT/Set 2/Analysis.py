@@ -16,5 +16,5 @@ def csv_conv(filename):
     else:
         return output
 
-a = csv_conv('Traits.csv')
-b = csv_conv('Champs.csv')
+#a = csv_conv('Traits.csv')
+#b = csv_conv('Champs.csv')
