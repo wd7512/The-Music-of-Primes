@@ -184,12 +184,14 @@ def save_image(array,name):
     
     im.save(name)
 
-arra = array('horse.jpg-grey.png')
-slices = slice_array(50,arra)
-for slik in slices:
-    plt.matshow(slik)
-    plt.show()
-    #save_image(slik,'abc.png')
+def test_slice():
+
+    arra = array('horse.jpg-grey.png')
+    slices = slice_array(50,arra)
+    for slik in slices:
+        plt.matshow(slik)
+        plt.colorbar()
+        plt.show()
         
             
     
