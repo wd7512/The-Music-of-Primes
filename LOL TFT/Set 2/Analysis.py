@@ -16,5 +16,19 @@ def csv_conv(filename):
     else:
         return output
 
-#a = csv_conv('Traits.csv')
-#b = csv_conv('Champs.csv')
+def update_stats():
+    champs = csv_conv('Champs.csv')
+    
+    
+
+def save_csv(data,name):
+    f = open(name+'.csv','w')
+    strdata = [str(a) for a in data]
+    f.write(','.join(strdata))
+    f.close()
+
+a = csv_conv('Traits.csv')
+b = csv_conv('Champs.csv')
+
+#.write(str(','.join(example)))
+
