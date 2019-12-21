@@ -136,5 +136,5 @@ a = csv_conv('Traits.csv')
 #b = csv_conv('Champs.csv')
 
 #.write(str(','.join(example)))
-main(3,4)
+main(3,2)
 syng = intflt(csv_conv('Traits.csv')[1:])
