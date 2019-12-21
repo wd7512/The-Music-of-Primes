@@ -34,10 +34,11 @@ def update_stats():
 def clean(num):
     return round(num,10)
 
-def save_csv(data,name):
+def save_csv(data2d,name):
     f = open(name+'.csv','w')
-    strdata = [str(a) for a in data]
-    f.write(','.join(strdata))
+    for data in data2d:
+        strdata = [str(a) for a in data]
+        f.write(','.join(strdata)+'\n')
     f.close()
 
 
@@ -136,7 +137,7 @@ def main(level_size,maxcost):
     for a in sorted(eff_chemistry,reverse=True):
         print(a)
     '''
-
+    return eff_chemistry
     
 def remove_dup(badlist):
     qi = set(['Qiyana_M','Qiyana_O','Qiyana_C','Qiyana_I'])
@@ -155,11 +156,15 @@ def remove_dup(badlist):
     
     
 
-a = csv_conv('Traits.csv')
+#a = csv_conv('Traits.csv')
 #b = csv_conv('Champs.csv')
 
 #.write(str(','.join(example)))
-main(3,3)
-syng = intflt(csv_conv('Traits.csv')[1:])
+
+people = 5
+maxcost = 3
+
+data = main(people,maxcost)
+save_csv(data,str(people)+'-'+str(maxcost))
 
 end = input(':')
