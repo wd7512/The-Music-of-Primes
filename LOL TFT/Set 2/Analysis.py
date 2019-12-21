@@ -1,4 +1,13 @@
 import itertools
+from progressbar import ProgressBar
+import operator as op
+from functools import reduce
+
+def ncr(n, r):
+    r = min(r, n-r)
+    numer = reduce(op.mul, range(n, n-r, -1), 1)
+    denom = reduce(op.mul, range(1, r+1), 1)
+    return numer / denom
 
 def csv_conv(filename):
     f = open(filename,'r')
@@ -45,17 +54,22 @@ def intflt(array):
     return array
 
 def main(level_size,maxcost):
+    pbar = ProgressBar()
+    
     champs = intflt(csv_conv('Champs.csv')[1:])
     syng = intflt(csv_conv('Traits.csv')[1:])
     
             
     low_champs = [x for x in champs if x[1] <= maxcost] #champs below maxcost
-    for a in low_champs:
-        print(a)
+    #for a in low_champs:
+        #print(a)
 
     size = len(low_champs)
-    print(size)
+    print(str(size)+' champions')
+    total = ncr(size,level_size)
+    print(str(total)+' combinations')
     low_champs_names = [x[0] for x in low_champs]
+    print('Calculating Possible Combinations')
     '''
     low_champs_trips = []
     
@@ -66,18 +80,21 @@ def main(level_size,maxcost):
                     low_champs_trips.append({a[0],b[0],c[0]})
     '''
 
-    low_champs_trips = list(itertools.combinations(low_champs_names, level_size))
+    low_champs_trips = pbar(list(itertools.combinations(low_champs_names, level_size)))
 
     
     low_champs_trips = remove_dup(low_champs_trips)
 
-    print(len(low_champs_trips))
+    print(str(len(low_champs_trips))+' true sets')
     #for a in low_champs_names:
         #print(a)
 
     raw_chemistry = []
     eff_chemistry = []
-    for group in low_champs_trips:
+
+    print('Evaluating Combinations')
+    pbar = ProgressBar()
+    for group in pbar(low_champs_trips):
         traits = []
         for champ in group:
             indv_trait = low_champs[low_champs_names.index(champ)][3:]
@@ -115,17 +132,23 @@ def main(level_size,maxcost):
         eff_chemistry.append(eff_traits)
 
             
-    
+    '''
     for a in sorted(eff_chemistry,reverse=True):
         print(a)
-    
+    '''
 
     
 def remove_dup(badlist):
+    qi = set(['Qiyana_M','Qiyana_O','Qiyana_C','Qiyana_I'])
+
     goodlist = []
     for item in badlist:
         if item not in goodlist:
-            goodlist.append(item)
+            if type(item) == tuple and len(qi.intersection(item)) > 1:
+                #print('&&&&')
+                pass
+            else:
+                goodlist.append(item)
 
     return goodlist
     
@@ -136,5 +159,7 @@ a = csv_conv('Traits.csv')
 #b = csv_conv('Champs.csv')
 
 #.write(str(','.join(example)))
-main(3,2)
+main(3,3)
 syng = intflt(csv_conv('Traits.csv')[1:])
+
+end = input(':')
