@@ -1,3 +1,4 @@
+import itertools
 
 def csv_conv(filename):
     f = open(filename,'r')
@@ -43,24 +44,30 @@ def intflt(array):
                     pass
     return array
 
-def level_three():
+def main(level_size,maxcost):
     champs = intflt(csv_conv('Champs.csv')[1:])
     syng = intflt(csv_conv('Traits.csv')[1:])
     
             
-    low_champs = [x for x in champs if x[1]<4] #champs below 4 cost
+    low_champs = [x for x in champs if x[1] <= maxcost] #champs below maxcost
     for a in low_champs:
         print(a)
 
     size = len(low_champs)
     print(size)
     low_champs_names = [x[0] for x in low_champs]
+    '''
     low_champs_trips = []
+    
     for a in low_champs:
         for b in low_champs:
             for c in low_champs:
                 if a!=b and b!=c and c!=a:
                     low_champs_trips.append({a[0],b[0],c[0]})
+    '''
+
+    low_champs_trips = list(itertools.combinations(low_champs_names, level_size))
+
     
     low_champs_trips = remove_dup(low_champs_trips)
 
@@ -104,11 +111,13 @@ def level_three():
 
         eff_traits = [count] + eff_traits + [list(group)]
 
-        print(eff_traits)
+        #print(eff_traits)
         eff_chemistry.append(eff_traits)
 
             
-            
+    
+    for a in sorted(eff_chemistry,reverse=True):
+        print(a)
     
 
     
@@ -127,5 +136,5 @@ a = csv_conv('Traits.csv')
 #b = csv_conv('Champs.csv')
 
 #.write(str(','.join(example)))
-level_three()
+main(3,4)
 syng = intflt(csv_conv('Traits.csv')[1:])
