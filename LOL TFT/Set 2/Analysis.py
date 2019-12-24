@@ -127,7 +127,7 @@ def main(level_size,maxcost):
                 if sy[0] == trait and num >= sy[1]:
                     count = count + 1
 
-        eff_traits = [count] + eff_traits + [list(group)]
+        eff_traits = [count] + [list(group)] + eff_traits
 
         #print(eff_traits)
         eff_chemistry.append(eff_traits)
