@@ -161,8 +161,8 @@ def remove_dup(badlist):
 
 #.write(str(','.join(example)))
 
-people = 3
-maxcost = 3
+people = 2
+maxcost = 1
 
 data = main(people,maxcost)
 save_csv(data,str(people)+'-'+str(maxcost))
