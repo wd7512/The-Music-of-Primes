@@ -10,7 +10,7 @@ f.close()
 comp = []
 print('compressing data')
 for lines in data:
-    comp.append(((lines.replace(']','')).replace('[','')).replace("'",''))
+    comp.append((((lines.replace(']','')).replace('[','')).replace("'",'')).replace('"',''))
 
 f = open('comp '+filename,'w')
 pbar = ProgressBar()
