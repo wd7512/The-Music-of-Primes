@@ -1,300 +1,300 @@
-0,Diana, Ivern,Inferno, 1,Assassin, 1,Woodland, 1,Druid, 1
-0,Diana, KogMaw,Inferno, 1,Assassin, 1,Poison, 1,Predator, 1
-0,Diana, Maokai,Inferno, 1,Assassin, 1,Woodland, 1,Druid, 1
-0,Diana, Nasus,Inferno, 1,Assassin, 1,Light, 1,Warden, 1
-0,Diana, Ornn,Inferno, 1,Assassin, 1,Electric, 1,Warden, 1
-0,Diana, Renekton,Inferno, 1,Assassin, 1,Desert, 1,Berserker, 1
-0,Diana, Taliyah,Inferno, 1,Assassin, 1,Mountain, 1,Mage, 1
-0,Diana, Vayne,Inferno, 1,Assassin, 1,Light, 1,Ranger, 1
-0,Diana, Vladamir,Inferno, 1,Assassin, 1,Ocean, 1,Mage, 1
-0,Diana, Warwick,Inferno, 1,Assassin, 1,Glacial, 1,Predator, 1
-0,Diana, Zyra,Inferno, 2,Assassin, 1,Summoner, 1
-0,Diana, Braum,Inferno, 1,Assassin, 1,Glacial, 1,Warden, 1
-0,Diana, Jax,Inferno, 1,Assassin, 1,Light, 1,Berserker, 1
-0,Diana, Leblanc,Inferno, 1,Assassin, 2,Woodland, 1,Mage, 1
-0,Diana, Malzahar,Inferno, 1,Assassin, 1,Shadow, 1,Summoner, 1
-0,Diana, Neeko,Inferno, 1,Assassin, 1,Woodland, 1,Druid, 1
-0,Diana, RekSai,Inferno, 1,Assassin, 1,Steel, 1,Predator, 1
-0,Diana, Senna,Inferno, 1,Assassin, 1,Shadow, 1,Soulbound, 1
-0,Diana, Skarner,Inferno, 1,Assassin, 1,Crystal, 1,Predator, 1
-0,Diana, Syndra,Inferno, 1,Assassin, 1,Ocean, 1,Mage, 1
-0,Diana, Thresh,Inferno, 1,Assassin, 1,Ocean, 1,Warden, 1
-0,Diana, Varus,Inferno, 2,Assassin, 1,Ranger, 1
-0,Diana, Volibear,Inferno, 1,Assassin, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Diana, Yasuo,Inferno, 1,Assassin, 1,Cloud, 1,Blademaster, 1
-0,Ivern, KogMaw,Woodland, 1,Druid, 1,Poison, 1,Predator, 1
-1,Ivern, Maokai,Woodland, 2,Druid, 2
-0,Ivern, Nasus,Woodland, 1,Druid, 1,Light, 1,Warden, 1
-0,Ivern, Ornn,Woodland, 1,Druid, 1,Electric, 1,Warden, 1
-0,Ivern, Renekton,Woodland, 1,Druid, 1,Desert, 1,Berserker, 1
-0,Ivern, Taliyah,Woodland, 1,Druid, 1,Mountain, 1,Mage, 1
-0,Ivern, Vayne,Woodland, 1,Druid, 1,Light, 1,Ranger, 1
-0,Ivern, Vladamir,Woodland, 1,Druid, 1,Ocean, 1,Mage, 1
-0,Ivern, Warwick,Woodland, 1,Druid, 1,Glacial, 1,Predator, 1
-0,Ivern, Zyra,Woodland, 1,Druid, 1,Inferno, 1,Summoner, 1
-0,Ivern, Braum,Woodland, 1,Druid, 1,Glacial, 1,Warden, 1
-0,Ivern, Jax,Woodland, 1,Druid, 1,Light, 1,Berserker, 1
-0,Ivern, Leblanc,Woodland, 2,Druid, 1,Mage, 1,Assassin, 1
-0,Ivern, Malzahar,Woodland, 1,Druid, 1,Shadow, 1,Summoner, 1
-1,Ivern, Neeko,Woodland, 2,Druid, 2
-0,Ivern, RekSai,Woodland, 1,Druid, 1,Steel, 1,Predator, 1
-0,Ivern, Senna,Woodland, 1,Druid, 1,Shadow, 1,Soulbound, 1
-0,Ivern, Skarner,Woodland, 1,Druid, 1,Crystal, 1,Predator, 1
-0,Ivern, Syndra,Woodland, 1,Druid, 1,Ocean, 1,Mage, 1
-0,Ivern, Thresh,Woodland, 1,Druid, 1,Ocean, 1,Warden, 1
-0,Ivern, Varus,Woodland, 1,Druid, 1,Inferno, 1,Ranger, 1
-0,Ivern, Volibear,Woodland, 1,Druid, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Ivern, Yasuo,Woodland, 1,Druid, 1,Cloud, 1,Blademaster, 1
-0,KogMaw, Maokai,Poison, 1,Predator, 1,Woodland, 1,Druid, 1
-0,KogMaw, Nasus,Poison, 1,Predator, 1,Light, 1,Warden, 1
-0,KogMaw, Ornn,Poison, 1,Predator, 1,Electric, 1,Warden, 1
-0,KogMaw, Renekton,Poison, 1,Predator, 1,Desert, 1,Berserker, 1
-0,KogMaw, Taliyah,Poison, 1,Predator, 1,Mountain, 1,Mage, 1
-0,KogMaw, Vayne,Poison, 1,Predator, 1,Light, 1,Ranger, 1
-0,KogMaw, Vladamir,Poison, 1,Predator, 1,Ocean, 1,Mage, 1
-0,KogMaw, Warwick,Poison, 1,Predator, 2,Glacial, 1
-0,KogMaw, Zyra,Poison, 1,Predator, 1,Inferno, 1,Summoner, 1
-0,KogMaw, Braum,Poison, 1,Predator, 1,Glacial, 1,Warden, 1
-0,KogMaw, Jax,Poison, 1,Predator, 1,Light, 1,Berserker, 1
-0,KogMaw, Leblanc,Poison, 1,Predator, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,KogMaw, Malzahar,Poison, 1,Predator, 1,Shadow, 1,Summoner, 1
-0,KogMaw, Neeko,Poison, 1,Predator, 1,Woodland, 1,Druid, 1
-0,KogMaw, RekSai,Poison, 1,Predator, 2,Steel, 1
-0,KogMaw, Senna,Poison, 1,Predator, 1,Shadow, 1,Soulbound, 1
-0,KogMaw, Skarner,Poison, 1,Predator, 2,Crystal, 1
-0,KogMaw, Syndra,Poison, 1,Predator, 1,Ocean, 1,Mage, 1
-0,KogMaw, Thresh,Poison, 1,Predator, 1,Ocean, 1,Warden, 1
-0,KogMaw, Varus,Poison, 1,Predator, 1,Inferno, 1,Ranger, 1
-0,KogMaw, Volibear,Poison, 1,Predator, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,KogMaw, Yasuo,Poison, 1,Predator, 1,Cloud, 1,Blademaster, 1
-0,Maokai, Nasus,Woodland, 1,Druid, 1,Light, 1,Warden, 1
-0,Maokai, Ornn,Woodland, 1,Druid, 1,Electric, 1,Warden, 1
-0,Maokai, Renekton,Woodland, 1,Druid, 1,Desert, 1,Berserker, 1
-0,Maokai, Taliyah,Woodland, 1,Druid, 1,Mountain, 1,Mage, 1
-0,Maokai, Vayne,Woodland, 1,Druid, 1,Light, 1,Ranger, 1
-0,Maokai, Vladamir,Woodland, 1,Druid, 1,Ocean, 1,Mage, 1
-0,Maokai, Warwick,Woodland, 1,Druid, 1,Glacial, 1,Predator, 1
-0,Maokai, Zyra,Woodland, 1,Druid, 1,Inferno, 1,Summoner, 1
-0,Maokai, Braum,Woodland, 1,Druid, 1,Glacial, 1,Warden, 1
-0,Maokai, Jax,Woodland, 1,Druid, 1,Light, 1,Berserker, 1
-0,Maokai, Leblanc,Woodland, 2,Druid, 1,Mage, 1,Assassin, 1
-0,Maokai, Malzahar,Woodland, 1,Druid, 1,Shadow, 1,Summoner, 1
-1,Maokai, Neeko,Woodland, 2,Druid, 2
-0,Maokai, RekSai,Woodland, 1,Druid, 1,Steel, 1,Predator, 1
-0,Maokai, Senna,Woodland, 1,Druid, 1,Shadow, 1,Soulbound, 1
-0,Maokai, Skarner,Woodland, 1,Druid, 1,Crystal, 1,Predator, 1
-0,Maokai, Syndra,Woodland, 1,Druid, 1,Ocean, 1,Mage, 1
-0,Maokai, Thresh,Woodland, 1,Druid, 1,Ocean, 1,Warden, 1
-0,Maokai, Varus,Woodland, 1,Druid, 1,Inferno, 1,Ranger, 1
-0,Maokai, Volibear,Woodland, 1,Druid, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Maokai, Yasuo,Woodland, 1,Druid, 1,Cloud, 1,Blademaster, 1
-1,Nasus, Ornn,Light, 1,Warden, 2,Electric, 1
-0,Nasus, Renekton,Light, 1,Warden, 1,Desert, 1,Berserker, 1
-0,Nasus, Taliyah,Light, 1,Warden, 1,Mountain, 1,Mage, 1
-0,Nasus, Vayne,Light, 2,Warden, 1,Ranger, 1
-0,Nasus, Vladamir,Light, 1,Warden, 1,Ocean, 1,Mage, 1
-0,Nasus, Warwick,Light, 1,Warden, 1,Glacial, 1,Predator, 1
-0,Nasus, Zyra,Light, 1,Warden, 1,Inferno, 1,Summoner, 1
-1,Nasus, Braum,Light, 1,Warden, 2,Glacial, 1
-0,Nasus, Jax,Light, 2,Warden, 1,Berserker, 1
-0,Nasus, Leblanc,Light, 1,Warden, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Nasus, Malzahar,Light, 1,Warden, 1,Shadow, 1,Summoner, 1
-0,Nasus, Neeko,Light, 1,Warden, 1,Woodland, 1,Druid, 1
-0,Nasus, RekSai,Light, 1,Warden, 1,Steel, 1,Predator, 1
-0,Nasus, Senna,Light, 1,Warden, 1,Shadow, 1,Soulbound, 1
-0,Nasus, Skarner,Light, 1,Warden, 1,Crystal, 1,Predator, 1
-0,Nasus, Syndra,Light, 1,Warden, 1,Ocean, 1,Mage, 1
-1,Nasus, Thresh,Light, 1,Warden, 2,Ocean, 1
-0,Nasus, Varus,Light, 1,Warden, 1,Inferno, 1,Ranger, 1
-0,Nasus, Volibear,Light, 1,Warden, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Nasus, Yasuo,Light, 1,Warden, 1,Cloud, 1,Blademaster, 1
-0,Ornn, Renekton,Electric, 1,Warden, 1,Desert, 1,Berserker, 1
-0,Ornn, Taliyah,Electric, 1,Warden, 1,Mountain, 1,Mage, 1
-0,Ornn, Vayne,Electric, 1,Warden, 1,Light, 1,Ranger, 1
-0,Ornn, Vladamir,Electric, 1,Warden, 1,Ocean, 1,Mage, 1
-0,Ornn, Warwick,Electric, 1,Warden, 1,Glacial, 1,Predator, 1
-0,Ornn, Zyra,Electric, 1,Warden, 1,Inferno, 1,Summoner, 1
-1,Ornn, Braum,Electric, 1,Warden, 2,Glacial, 1
-0,Ornn, Jax,Electric, 1,Warden, 1,Light, 1,Berserker, 1
-0,Ornn, Leblanc,Electric, 1,Warden, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Ornn, Malzahar,Electric, 1,Warden, 1,Shadow, 1,Summoner, 1
-0,Ornn, Neeko,Electric, 1,Warden, 1,Woodland, 1,Druid, 1
-0,Ornn, RekSai,Electric, 1,Warden, 1,Steel, 1,Predator, 1
-0,Ornn, Senna,Electric, 1,Warden, 1,Shadow, 1,Soulbound, 1
-0,Ornn, Skarner,Electric, 1,Warden, 1,Crystal, 1,Predator, 1
-0,Ornn, Syndra,Electric, 1,Warden, 1,Ocean, 1,Mage, 1
-1,Ornn, Thresh,Electric, 1,Warden, 2,Ocean, 1
-0,Ornn, Varus,Electric, 1,Warden, 1,Inferno, 1,Ranger, 1
-1,Ornn, Volibear,Electric, 2,Warden, 1,Glacial, 1,Berserker, 1
-0,Ornn, Yasuo,Electric, 1,Warden, 1,Cloud, 1,Blademaster, 1
-0,Renekton, Taliyah,Desert, 1,Berserker, 1,Mountain, 1,Mage, 1
-0,Renekton, Vayne,Desert, 1,Berserker, 1,Light, 1,Ranger, 1
-0,Renekton, Vladamir,Desert, 1,Berserker, 1,Ocean, 1,Mage, 1
-0,Renekton, Warwick,Desert, 1,Berserker, 1,Glacial, 1,Predator, 1
-0,Renekton, Zyra,Desert, 1,Berserker, 1,Inferno, 1,Summoner, 1
-0,Renekton, Braum,Desert, 1,Berserker, 1,Glacial, 1,Warden, 1
-0,Renekton, Jax,Desert, 1,Berserker, 2,Light, 1
-0,Renekton, Leblanc,Desert, 1,Berserker, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Renekton, Malzahar,Desert, 1,Berserker, 1,Shadow, 1,Summoner, 1
-0,Renekton, Neeko,Desert, 1,Berserker, 1,Woodland, 1,Druid, 1
-0,Renekton, RekSai,Desert, 1,Berserker, 1,Steel, 1,Predator, 1
-0,Renekton, Senna,Desert, 1,Berserker, 1,Shadow, 1,Soulbound, 1
-0,Renekton, Skarner,Desert, 1,Berserker, 1,Crystal, 1,Predator, 1
-0,Renekton, Syndra,Desert, 1,Berserker, 1,Ocean, 1,Mage, 1
-0,Renekton, Thresh,Desert, 1,Berserker, 1,Ocean, 1,Warden, 1
-0,Renekton, Varus,Desert, 1,Berserker, 1,Inferno, 1,Ranger, 1
-0,Renekton, Volibear,Desert, 1,Berserker, 2,Electric, 1,Glacial, 1
-0,Renekton, Yasuo,Desert, 1,Berserker, 1,Cloud, 1,Blademaster, 1
-0,Taliyah, Vayne,Mountain, 1,Mage, 1,Light, 1,Ranger, 1
-0,Taliyah, Vladamir,Mountain, 1,Mage, 2,Ocean, 1
-0,Taliyah, Warwick,Mountain, 1,Mage, 1,Glacial, 1,Predator, 1
-0,Taliyah, Zyra,Mountain, 1,Mage, 1,Inferno, 1,Summoner, 1
-0,Taliyah, Braum,Mountain, 1,Mage, 1,Glacial, 1,Warden, 1
-0,Taliyah, Jax,Mountain, 1,Mage, 1,Light, 1,Berserker, 1
-0,Taliyah, Leblanc,Mountain, 1,Mage, 2,Woodland, 1,Assassin, 1
-0,Taliyah, Malzahar,Mountain, 1,Mage, 1,Shadow, 1,Summoner, 1
-0,Taliyah, Neeko,Mountain, 1,Mage, 1,Woodland, 1,Druid, 1
-0,Taliyah, RekSai,Mountain, 1,Mage, 1,Steel, 1,Predator, 1
-0,Taliyah, Senna,Mountain, 1,Mage, 1,Shadow, 1,Soulbound, 1
-0,Taliyah, Skarner,Mountain, 1,Mage, 1,Crystal, 1,Predator, 1
-0,Taliyah, Syndra,Mountain, 1,Mage, 2,Ocean, 1
-0,Taliyah, Thresh,Mountain, 1,Mage, 1,Ocean, 1,Warden, 1
-0,Taliyah, Varus,Mountain, 1,Mage, 1,Inferno, 1,Ranger, 1
-0,Taliyah, Volibear,Mountain, 1,Mage, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Taliyah, Yasuo,Mountain, 1,Mage, 1,Cloud, 1,Blademaster, 1
-0,Vayne, Vladamir,Light, 1,Ranger, 1,Ocean, 1,Mage, 1
-0,Vayne, Warwick,Light, 1,Ranger, 1,Glacial, 1,Predator, 1
-0,Vayne, Zyra,Light, 1,Ranger, 1,Inferno, 1,Summoner, 1
-0,Vayne, Braum,Light, 1,Ranger, 1,Glacial, 1,Warden, 1
-0,Vayne, Jax,Light, 2,Ranger, 1,Berserker, 1
-0,Vayne, Leblanc,Light, 1,Ranger, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Vayne, Malzahar,Light, 1,Ranger, 1,Shadow, 1,Summoner, 1
-0,Vayne, Neeko,Light, 1,Ranger, 1,Woodland, 1,Druid, 1
-0,Vayne, RekSai,Light, 1,Ranger, 1,Steel, 1,Predator, 1
-0,Vayne, Senna,Light, 1,Ranger, 1,Shadow, 1,Soulbound, 1
-0,Vayne, Skarner,Light, 1,Ranger, 1,Crystal, 1,Predator, 1
-0,Vayne, Syndra,Light, 1,Ranger, 1,Ocean, 1,Mage, 1
-0,Vayne, Thresh,Light, 1,Ranger, 1,Ocean, 1,Warden, 1
-1,Vayne, Varus,Light, 1,Ranger, 2,Inferno, 1
-0,Vayne, Volibear,Light, 1,Ranger, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Vayne, Yasuo,Light, 1,Ranger, 1,Cloud, 1,Blademaster, 1
-0,Vladamir, Warwick,Ocean, 1,Mage, 1,Glacial, 1,Predator, 1
-0,Vladamir, Zyra,Ocean, 1,Mage, 1,Inferno, 1,Summoner, 1
-0,Vladamir, Braum,Ocean, 1,Mage, 1,Glacial, 1,Warden, 1
-0,Vladamir, Jax,Ocean, 1,Mage, 1,Light, 1,Berserker, 1
-0,Vladamir, Leblanc,Ocean, 1,Mage, 2,Woodland, 1,Assassin, 1
-0,Vladamir, Malzahar,Ocean, 1,Mage, 1,Shadow, 1,Summoner, 1
-0,Vladamir, Neeko,Ocean, 1,Mage, 1,Woodland, 1,Druid, 1
-0,Vladamir, RekSai,Ocean, 1,Mage, 1,Steel, 1,Predator, 1
-0,Vladamir, Senna,Ocean, 1,Mage, 1,Shadow, 1,Soulbound, 1
-0,Vladamir, Skarner,Ocean, 1,Mage, 1,Crystal, 1,Predator, 1
-1,Vladamir, Syndra,Ocean, 2,Mage, 2
-1,Vladamir, Thresh,Ocean, 2,Mage, 1,Warden, 1
-0,Vladamir, Varus,Ocean, 1,Mage, 1,Inferno, 1,Ranger, 1
-0,Vladamir, Volibear,Ocean, 1,Mage, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Vladamir, Yasuo,Ocean, 1,Mage, 1,Cloud, 1,Blademaster, 1
-0,Warwick, Zyra,Glacial, 1,Predator, 1,Inferno, 1,Summoner, 1
-1,Warwick, Braum,Glacial, 2,Predator, 1,Warden, 1
-0,Warwick, Jax,Glacial, 1,Predator, 1,Light, 1,Berserker, 1
-0,Warwick, Leblanc,Glacial, 1,Predator, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Warwick, Malzahar,Glacial, 1,Predator, 1,Shadow, 1,Summoner, 1
-0,Warwick, Neeko,Glacial, 1,Predator, 1,Woodland, 1,Druid, 1
-0,Warwick, RekSai,Glacial, 1,Predator, 2,Steel, 1
-0,Warwick, Senna,Glacial, 1,Predator, 1,Shadow, 1,Soulbound, 1
-0,Warwick, Skarner,Glacial, 1,Predator, 2,Crystal, 1
-0,Warwick, Syndra,Glacial, 1,Predator, 1,Ocean, 1,Mage, 1
-0,Warwick, Thresh,Glacial, 1,Predator, 1,Ocean, 1,Warden, 1
-0,Warwick, Varus,Glacial, 1,Predator, 1,Inferno, 1,Ranger, 1
-1,Warwick, Volibear,Glacial, 2,Predator, 1,Electric, 1,Berserker, 1
-0,Warwick, Yasuo,Glacial, 1,Predator, 1,Cloud, 1,Blademaster, 1
-0,Zyra, Braum,Inferno, 1,Summoner, 1,Glacial, 1,Warden, 1
-0,Zyra, Jax,Inferno, 1,Summoner, 1,Light, 1,Berserker, 1
-0,Zyra, Leblanc,Inferno, 1,Summoner, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Zyra, Malzahar,Inferno, 1,Summoner, 2,Shadow, 1
-0,Zyra, Neeko,Inferno, 1,Summoner, 1,Woodland, 1,Druid, 1
-0,Zyra, RekSai,Inferno, 1,Summoner, 1,Steel, 1,Predator, 1
-0,Zyra, Senna,Inferno, 1,Summoner, 1,Shadow, 1,Soulbound, 1
-0,Zyra, Skarner,Inferno, 1,Summoner, 1,Crystal, 1,Predator, 1
-0,Zyra, Syndra,Inferno, 1,Summoner, 1,Ocean, 1,Mage, 1
-0,Zyra, Thresh,Inferno, 1,Summoner, 1,Ocean, 1,Warden, 1
-0,Zyra, Varus,Inferno, 2,Summoner, 1,Ranger, 1
-0,Zyra, Volibear,Inferno, 1,Summoner, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Zyra, Yasuo,Inferno, 1,Summoner, 1,Cloud, 1,Blademaster, 1
-0,Braum, Jax,Glacial, 1,Warden, 1,Light, 1,Berserker, 1
-0,Braum, Leblanc,Glacial, 1,Warden, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Braum, Malzahar,Glacial, 1,Warden, 1,Shadow, 1,Summoner, 1
-0,Braum, Neeko,Glacial, 1,Warden, 1,Woodland, 1,Druid, 1
-0,Braum, RekSai,Glacial, 1,Warden, 1,Steel, 1,Predator, 1
-0,Braum, Senna,Glacial, 1,Warden, 1,Shadow, 1,Soulbound, 1
-0,Braum, Skarner,Glacial, 1,Warden, 1,Crystal, 1,Predator, 1
-0,Braum, Syndra,Glacial, 1,Warden, 1,Ocean, 1,Mage, 1
-1,Braum, Thresh,Glacial, 1,Warden, 2,Ocean, 1
-0,Braum, Varus,Glacial, 1,Warden, 1,Inferno, 1,Ranger, 1
-1,Braum, Volibear,Glacial, 2,Warden, 1,Electric, 1,Berserker, 1
-0,Braum, Yasuo,Glacial, 1,Warden, 1,Cloud, 1,Blademaster, 1
-0,Jax, Leblanc,Light, 1,Berserker, 1,Woodland, 1,Mage, 1,Assassin, 1
-0,Jax, Malzahar,Light, 1,Berserker, 1,Shadow, 1,Summoner, 1
-0,Jax, Neeko,Light, 1,Berserker, 1,Woodland, 1,Druid, 1
-0,Jax, RekSai,Light, 1,Berserker, 1,Steel, 1,Predator, 1
-0,Jax, Senna,Light, 1,Berserker, 1,Shadow, 1,Soulbound, 1
-0,Jax, Skarner,Light, 1,Berserker, 1,Crystal, 1,Predator, 1
-0,Jax, Syndra,Light, 1,Berserker, 1,Ocean, 1,Mage, 1
-0,Jax, Thresh,Light, 1,Berserker, 1,Ocean, 1,Warden, 1
-0,Jax, Varus,Light, 1,Berserker, 1,Inferno, 1,Ranger, 1
-0,Jax, Volibear,Light, 1,Berserker, 2,Electric, 1,Glacial, 1
-0,Jax, Yasuo,Light, 1,Berserker, 1,Cloud, 1,Blademaster, 1
-0,Leblanc, Malzahar,Woodland, 1,Mage, 1,Assassin, 1,Shadow, 1,Summoner, 1
-0,Leblanc, Neeko,Woodland, 2,Mage, 1,Assassin, 1,Druid, 1
-0,Leblanc, RekSai,Woodland, 1,Mage, 1,Assassin, 1,Steel, 1,Predator, 1
-0,Leblanc, Senna,Woodland, 1,Mage, 1,Assassin, 1,Shadow, 1,Soulbound, 1
-0,Leblanc, Skarner,Woodland, 1,Mage, 1,Assassin, 1,Crystal, 1,Predator, 1
-0,Leblanc, Syndra,Woodland, 1,Mage, 2,Assassin, 1,Ocean, 1
-0,Leblanc, Thresh,Woodland, 1,Mage, 1,Assassin, 1,Ocean, 1,Warden, 1
-0,Leblanc, Varus,Woodland, 1,Mage, 1,Assassin, 1,Inferno, 1,Ranger, 1
-0,Leblanc, Volibear,Woodland, 1,Mage, 1,Assassin, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Leblanc, Yasuo,Woodland, 1,Mage, 1,Assassin, 1,Cloud, 1,Blademaster, 1
-0,Malzahar, Neeko,Shadow, 1,Summoner, 1,Woodland, 1,Druid, 1
-0,Malzahar, RekSai,Shadow, 1,Summoner, 1,Steel, 1,Predator, 1
-0,Malzahar, Senna,Shadow, 2,Summoner, 1,Soulbound, 1
-0,Malzahar, Skarner,Shadow, 1,Summoner, 1,Crystal, 1,Predator, 1
-0,Malzahar, Syndra,Shadow, 1,Summoner, 1,Ocean, 1,Mage, 1
-0,Malzahar, Thresh,Shadow, 1,Summoner, 1,Ocean, 1,Warden, 1
-0,Malzahar, Varus,Shadow, 1,Summoner, 1,Inferno, 1,Ranger, 1
-0,Malzahar, Volibear,Shadow, 1,Summoner, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Malzahar, Yasuo,Shadow, 1,Summoner, 1,Cloud, 1,Blademaster, 1
-0,Neeko, RekSai,Woodland, 1,Druid, 1,Steel, 1,Predator, 1
-0,Neeko, Senna,Woodland, 1,Druid, 1,Shadow, 1,Soulbound, 1
-0,Neeko, Skarner,Woodland, 1,Druid, 1,Crystal, 1,Predator, 1
-0,Neeko, Syndra,Woodland, 1,Druid, 1,Ocean, 1,Mage, 1
-0,Neeko, Thresh,Woodland, 1,Druid, 1,Ocean, 1,Warden, 1
-0,Neeko, Varus,Woodland, 1,Druid, 1,Inferno, 1,Ranger, 1
-0,Neeko, Volibear,Woodland, 1,Druid, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Neeko, Yasuo,Woodland, 1,Druid, 1,Cloud, 1,Blademaster, 1
-0,RekSai, Senna,Steel, 1,Predator, 1,Shadow, 1,Soulbound, 1
-0,RekSai, Skarner,Steel, 1,Predator, 2,Crystal, 1
-0,RekSai, Syndra,Steel, 1,Predator, 1,Ocean, 1,Mage, 1
-0,RekSai, Thresh,Steel, 1,Predator, 1,Ocean, 1,Warden, 1
-0,RekSai, Varus,Steel, 1,Predator, 1,Inferno, 1,Ranger, 1
-0,RekSai, Volibear,Steel, 1,Predator, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,RekSai, Yasuo,Steel, 1,Predator, 1,Cloud, 1,Blademaster, 1
-0,Senna, Skarner,Shadow, 1,Soulbound, 1,Crystal, 1,Predator, 1
-0,Senna, Syndra,Shadow, 1,Soulbound, 1,Ocean, 1,Mage, 1
-0,Senna, Thresh,Shadow, 1,Soulbound, 1,Ocean, 1,Warden, 1
-0,Senna, Varus,Shadow, 1,Soulbound, 1,Inferno, 1,Ranger, 1
-0,Senna, Volibear,Shadow, 1,Soulbound, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Senna, Yasuo,Shadow, 1,Soulbound, 1,Cloud, 1,Blademaster, 1
-0,Skarner, Syndra,Crystal, 1,Predator, 1,Ocean, 1,Mage, 1
-0,Skarner, Thresh,Crystal, 1,Predator, 1,Ocean, 1,Warden, 1
-0,Skarner, Varus,Crystal, 1,Predator, 1,Inferno, 1,Ranger, 1
-0,Skarner, Volibear,Crystal, 1,Predator, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Skarner, Yasuo,Crystal, 1,Predator, 1,Cloud, 1,Blademaster, 1
-1,Syndra, Thresh,Ocean, 2,Mage, 1,Warden, 1
-0,Syndra, Varus,Ocean, 1,Mage, 1,Inferno, 1,Ranger, 1
-0,Syndra, Volibear,Ocean, 1,Mage, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Syndra, Yasuo,Ocean, 1,Mage, 1,Cloud, 1,Blademaster, 1
-0,Thresh, Varus,Ocean, 1,Warden, 1,Inferno, 1,Ranger, 1
-0,Thresh, Volibear,Ocean, 1,Warden, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Thresh, Yasuo,Ocean, 1,Warden, 1,Cloud, 1,Blademaster, 1
-0,Varus, Volibear,Inferno, 1,Ranger, 1,Electric, 1,Glacial, 1,Berserker, 1
-0,Varus, Yasuo,Inferno, 1,Ranger, 1,Cloud, 1,Blademaster, 1
-0,Volibear, Yasuo,Electric, 1,Glacial, 1,Berserker, 1,Cloud, 1,Blademaster, 1
+1,Ivern, Maokai,Woodland,2,Druid,2,,,,,,,,
+1,Ivern, Neeko,Woodland,2,Druid,2,,,,,,,,
+1,Maokai, Neeko,Woodland,2,Druid,2,,,,,,,,
+1,Nasus, Ornn,Light,1,Warden,2,Electric,1,,,,,,
+1,Nasus, Braum,Light,1,Warden,2,Glacial,1,,,,,,
+1,Nasus, Thresh,Light,1,Warden,2,Ocean,1,,,,,,
+1,Ornn, Braum,Electric,1,Warden,2,Glacial,1,,,,,,
+1,Ornn, Thresh,Electric,1,Warden,2,Ocean,1,,,,,,
+1,Ornn, Volibear,Electric,2,Warden,1,Glacial,1,Berserker,1,,,,
+1,Vayne, Varus,Light,1,Ranger,2,Inferno,1,,,,,,
+1,Vladamir, Syndra,Ocean,2,Mage,2,,,,,,,,
+1,Vladamir, Thresh,Ocean,2,Mage,1,Warden,1,,,,,,
+1,Warwick, Braum,Glacial,2,Predator,1,Warden,1,,,,,,
+1,Warwick, Volibear,Glacial,2,Predator,1,Electric,1,Berserker,1,,,,
+1,Braum, Thresh,Glacial,1,Warden,2,Ocean,1,,,,,,
+1,Braum, Volibear,Glacial,2,Warden,1,Electric,1,Berserker,1,,,,
+1,Syndra, Thresh,Ocean,2,Mage,1,Warden,1,,,,,,
+0,Diana, Ivern,Inferno,1,Assassin,1,Woodland,1,Druid,1,,,,
+0,Diana, KogMaw,Inferno,1,Assassin,1,Poison,1,Predator,1,,,,
+0,Diana, Maokai,Inferno,1,Assassin,1,Woodland,1,Druid,1,,,,
+0,Diana, Nasus,Inferno,1,Assassin,1,Light,1,Warden,1,,,,
+0,Diana, Ornn,Inferno,1,Assassin,1,Electric,1,Warden,1,,,,
+0,Diana, Renekton,Inferno,1,Assassin,1,Desert,1,Berserker,1,,,,
+0,Diana, Taliyah,Inferno,1,Assassin,1,Mountain,1,Mage,1,,,,
+0,Diana, Vayne,Inferno,1,Assassin,1,Light,1,Ranger,1,,,,
+0,Diana, Vladamir,Inferno,1,Assassin,1,Ocean,1,Mage,1,,,,
+0,Diana, Warwick,Inferno,1,Assassin,1,Glacial,1,Predator,1,,,,
+0,Diana, Zyra,Inferno,2,Assassin,1,Summoner,1,,,,,,
+0,Diana, Braum,Inferno,1,Assassin,1,Glacial,1,Warden,1,,,,
+0,Diana, Jax,Inferno,1,Assassin,1,Light,1,Berserker,1,,,,
+0,Diana, Leblanc,Inferno,1,Assassin,2,Woodland,1,Mage,1,,,,
+0,Diana, Malzahar,Inferno,1,Assassin,1,Shadow,1,Summoner,1,,,,
+0,Diana, Neeko,Inferno,1,Assassin,1,Woodland,1,Druid,1,,,,
+0,Diana, RekSai,Inferno,1,Assassin,1,Steel,1,Predator,1,,,,
+0,Diana, Senna,Inferno,1,Assassin,1,Shadow,1,Soulbound,1,,,,
+0,Diana, Skarner,Inferno,1,Assassin,1,Crystal,1,Predator,1,,,,
+0,Diana, Syndra,Inferno,1,Assassin,1,Ocean,1,Mage,1,,,,
+0,Diana, Thresh,Inferno,1,Assassin,1,Ocean,1,Warden,1,,,,
+0,Diana, Varus,Inferno,2,Assassin,1,Ranger,1,,,,,,
+0,Diana, Volibear,Inferno,1,Assassin,1,Electric,1,Glacial,1,Berserker,1,,
+0,Diana, Yasuo,Inferno,1,Assassin,1,Cloud,1,Blademaster,1,,,,
+0,Ivern, KogMaw,Woodland,1,Druid,1,Poison,1,Predator,1,,,,
+0,Ivern, Nasus,Woodland,1,Druid,1,Light,1,Warden,1,,,,
+0,Ivern, Ornn,Woodland,1,Druid,1,Electric,1,Warden,1,,,,
+0,Ivern, Renekton,Woodland,1,Druid,1,Desert,1,Berserker,1,,,,
+0,Ivern, Taliyah,Woodland,1,Druid,1,Mountain,1,Mage,1,,,,
+0,Ivern, Vayne,Woodland,1,Druid,1,Light,1,Ranger,1,,,,
+0,Ivern, Vladamir,Woodland,1,Druid,1,Ocean,1,Mage,1,,,,
+0,Ivern, Warwick,Woodland,1,Druid,1,Glacial,1,Predator,1,,,,
+0,Ivern, Zyra,Woodland,1,Druid,1,Inferno,1,Summoner,1,,,,
+0,Ivern, Braum,Woodland,1,Druid,1,Glacial,1,Warden,1,,,,
+0,Ivern, Jax,Woodland,1,Druid,1,Light,1,Berserker,1,,,,
+0,Ivern, Leblanc,Woodland,2,Druid,1,Mage,1,Assassin,1,,,,
+0,Ivern, Malzahar,Woodland,1,Druid,1,Shadow,1,Summoner,1,,,,
+0,Ivern, RekSai,Woodland,1,Druid,1,Steel,1,Predator,1,,,,
+0,Ivern, Senna,Woodland,1,Druid,1,Shadow,1,Soulbound,1,,,,
+0,Ivern, Skarner,Woodland,1,Druid,1,Crystal,1,Predator,1,,,,
+0,Ivern, Syndra,Woodland,1,Druid,1,Ocean,1,Mage,1,,,,
+0,Ivern, Thresh,Woodland,1,Druid,1,Ocean,1,Warden,1,,,,
+0,Ivern, Varus,Woodland,1,Druid,1,Inferno,1,Ranger,1,,,,
+0,Ivern, Volibear,Woodland,1,Druid,1,Electric,1,Glacial,1,Berserker,1,,
+0,Ivern, Yasuo,Woodland,1,Druid,1,Cloud,1,Blademaster,1,,,,
+0,KogMaw, Maokai,Poison,1,Predator,1,Woodland,1,Druid,1,,,,
+0,KogMaw, Nasus,Poison,1,Predator,1,Light,1,Warden,1,,,,
+0,KogMaw, Ornn,Poison,1,Predator,1,Electric,1,Warden,1,,,,
+0,KogMaw, Renekton,Poison,1,Predator,1,Desert,1,Berserker,1,,,,
+0,KogMaw, Taliyah,Poison,1,Predator,1,Mountain,1,Mage,1,,,,
+0,KogMaw, Vayne,Poison,1,Predator,1,Light,1,Ranger,1,,,,
+0,KogMaw, Vladamir,Poison,1,Predator,1,Ocean,1,Mage,1,,,,
+0,KogMaw, Warwick,Poison,1,Predator,2,Glacial,1,,,,,,
+0,KogMaw, Zyra,Poison,1,Predator,1,Inferno,1,Summoner,1,,,,
+0,KogMaw, Braum,Poison,1,Predator,1,Glacial,1,Warden,1,,,,
+0,KogMaw, Jax,Poison,1,Predator,1,Light,1,Berserker,1,,,,
+0,KogMaw, Leblanc,Poison,1,Predator,1,Woodland,1,Mage,1,Assassin,1,,
+0,KogMaw, Malzahar,Poison,1,Predator,1,Shadow,1,Summoner,1,,,,
+0,KogMaw, Neeko,Poison,1,Predator,1,Woodland,1,Druid,1,,,,
+0,KogMaw, RekSai,Poison,1,Predator,2,Steel,1,,,,,,
+0,KogMaw, Senna,Poison,1,Predator,1,Shadow,1,Soulbound,1,,,,
+0,KogMaw, Skarner,Poison,1,Predator,2,Crystal,1,,,,,,
+0,KogMaw, Syndra,Poison,1,Predator,1,Ocean,1,Mage,1,,,,
+0,KogMaw, Thresh,Poison,1,Predator,1,Ocean,1,Warden,1,,,,
+0,KogMaw, Varus,Poison,1,Predator,1,Inferno,1,Ranger,1,,,,
+0,KogMaw, Volibear,Poison,1,Predator,1,Electric,1,Glacial,1,Berserker,1,,
+0,KogMaw, Yasuo,Poison,1,Predator,1,Cloud,1,Blademaster,1,,,,
+0,Maokai, Nasus,Woodland,1,Druid,1,Light,1,Warden,1,,,,
+0,Maokai, Ornn,Woodland,1,Druid,1,Electric,1,Warden,1,,,,
+0,Maokai, Renekton,Woodland,1,Druid,1,Desert,1,Berserker,1,,,,
+0,Maokai, Taliyah,Woodland,1,Druid,1,Mountain,1,Mage,1,,,,
+0,Maokai, Vayne,Woodland,1,Druid,1,Light,1,Ranger,1,,,,
+0,Maokai, Vladamir,Woodland,1,Druid,1,Ocean,1,Mage,1,,,,
+0,Maokai, Warwick,Woodland,1,Druid,1,Glacial,1,Predator,1,,,,
+0,Maokai, Zyra,Woodland,1,Druid,1,Inferno,1,Summoner,1,,,,
+0,Maokai, Braum,Woodland,1,Druid,1,Glacial,1,Warden,1,,,,
+0,Maokai, Jax,Woodland,1,Druid,1,Light,1,Berserker,1,,,,
+0,Maokai, Leblanc,Woodland,2,Druid,1,Mage,1,Assassin,1,,,,
+0,Maokai, Malzahar,Woodland,1,Druid,1,Shadow,1,Summoner,1,,,,
+0,Maokai, RekSai,Woodland,1,Druid,1,Steel,1,Predator,1,,,,
+0,Maokai, Senna,Woodland,1,Druid,1,Shadow,1,Soulbound,1,,,,
+0,Maokai, Skarner,Woodland,1,Druid,1,Crystal,1,Predator,1,,,,
+0,Maokai, Syndra,Woodland,1,Druid,1,Ocean,1,Mage,1,,,,
+0,Maokai, Thresh,Woodland,1,Druid,1,Ocean,1,Warden,1,,,,
+0,Maokai, Varus,Woodland,1,Druid,1,Inferno,1,Ranger,1,,,,
+0,Maokai, Volibear,Woodland,1,Druid,1,Electric,1,Glacial,1,Berserker,1,,
+0,Maokai, Yasuo,Woodland,1,Druid,1,Cloud,1,Blademaster,1,,,,
+0,Nasus, Renekton,Light,1,Warden,1,Desert,1,Berserker,1,,,,
+0,Nasus, Taliyah,Light,1,Warden,1,Mountain,1,Mage,1,,,,
+0,Nasus, Vayne,Light,2,Warden,1,Ranger,1,,,,,,
+0,Nasus, Vladamir,Light,1,Warden,1,Ocean,1,Mage,1,,,,
+0,Nasus, Warwick,Light,1,Warden,1,Glacial,1,Predator,1,,,,
+0,Nasus, Zyra,Light,1,Warden,1,Inferno,1,Summoner,1,,,,
+0,Nasus, Jax,Light,2,Warden,1,Berserker,1,,,,,,
+0,Nasus, Leblanc,Light,1,Warden,1,Woodland,1,Mage,1,Assassin,1,,
+0,Nasus, Malzahar,Light,1,Warden,1,Shadow,1,Summoner,1,,,,
+0,Nasus, Neeko,Light,1,Warden,1,Woodland,1,Druid,1,,,,
+0,Nasus, RekSai,Light,1,Warden,1,Steel,1,Predator,1,,,,
+0,Nasus, Senna,Light,1,Warden,1,Shadow,1,Soulbound,1,,,,
+0,Nasus, Skarner,Light,1,Warden,1,Crystal,1,Predator,1,,,,
+0,Nasus, Syndra,Light,1,Warden,1,Ocean,1,Mage,1,,,,
+0,Nasus, Varus,Light,1,Warden,1,Inferno,1,Ranger,1,,,,
+0,Nasus, Volibear,Light,1,Warden,1,Electric,1,Glacial,1,Berserker,1,,
+0,Nasus, Yasuo,Light,1,Warden,1,Cloud,1,Blademaster,1,,,,
+0,Ornn, Renekton,Electric,1,Warden,1,Desert,1,Berserker,1,,,,
+0,Ornn, Taliyah,Electric,1,Warden,1,Mountain,1,Mage,1,,,,
+0,Ornn, Vayne,Electric,1,Warden,1,Light,1,Ranger,1,,,,
+0,Ornn, Vladamir,Electric,1,Warden,1,Ocean,1,Mage,1,,,,
+0,Ornn, Warwick,Electric,1,Warden,1,Glacial,1,Predator,1,,,,
+0,Ornn, Zyra,Electric,1,Warden,1,Inferno,1,Summoner,1,,,,
+0,Ornn, Jax,Electric,1,Warden,1,Light,1,Berserker,1,,,,
+0,Ornn, Leblanc,Electric,1,Warden,1,Woodland,1,Mage,1,Assassin,1,,
+0,Ornn, Malzahar,Electric,1,Warden,1,Shadow,1,Summoner,1,,,,
+0,Ornn, Neeko,Electric,1,Warden,1,Woodland,1,Druid,1,,,,
+0,Ornn, RekSai,Electric,1,Warden,1,Steel,1,Predator,1,,,,
+0,Ornn, Senna,Electric,1,Warden,1,Shadow,1,Soulbound,1,,,,
+0,Ornn, Skarner,Electric,1,Warden,1,Crystal,1,Predator,1,,,,
+0,Ornn, Syndra,Electric,1,Warden,1,Ocean,1,Mage,1,,,,
+0,Ornn, Varus,Electric,1,Warden,1,Inferno,1,Ranger,1,,,,
+0,Ornn, Yasuo,Electric,1,Warden,1,Cloud,1,Blademaster,1,,,,
+0,Renekton, Taliyah,Desert,1,Berserker,1,Mountain,1,Mage,1,,,,
+0,Renekton, Vayne,Desert,1,Berserker,1,Light,1,Ranger,1,,,,
+0,Renekton, Vladamir,Desert,1,Berserker,1,Ocean,1,Mage,1,,,,
+0,Renekton, Warwick,Desert,1,Berserker,1,Glacial,1,Predator,1,,,,
+0,Renekton, Zyra,Desert,1,Berserker,1,Inferno,1,Summoner,1,,,,
+0,Renekton, Braum,Desert,1,Berserker,1,Glacial,1,Warden,1,,,,
+0,Renekton, Jax,Desert,1,Berserker,2,Light,1,,,,,,
+0,Renekton, Leblanc,Desert,1,Berserker,1,Woodland,1,Mage,1,Assassin,1,,
+0,Renekton, Malzahar,Desert,1,Berserker,1,Shadow,1,Summoner,1,,,,
+0,Renekton, Neeko,Desert,1,Berserker,1,Woodland,1,Druid,1,,,,
+0,Renekton, RekSai,Desert,1,Berserker,1,Steel,1,Predator,1,,,,
+0,Renekton, Senna,Desert,1,Berserker,1,Shadow,1,Soulbound,1,,,,
+0,Renekton, Skarner,Desert,1,Berserker,1,Crystal,1,Predator,1,,,,
+0,Renekton, Syndra,Desert,1,Berserker,1,Ocean,1,Mage,1,,,,
+0,Renekton, Thresh,Desert,1,Berserker,1,Ocean,1,Warden,1,,,,
+0,Renekton, Varus,Desert,1,Berserker,1,Inferno,1,Ranger,1,,,,
+0,Renekton, Volibear,Desert,1,Berserker,2,Electric,1,Glacial,1,,,,
+0,Renekton, Yasuo,Desert,1,Berserker,1,Cloud,1,Blademaster,1,,,,
+0,Taliyah, Vayne,Mountain,1,Mage,1,Light,1,Ranger,1,,,,
+0,Taliyah, Vladamir,Mountain,1,Mage,2,Ocean,1,,,,,,
+0,Taliyah, Warwick,Mountain,1,Mage,1,Glacial,1,Predator,1,,,,
+0,Taliyah, Zyra,Mountain,1,Mage,1,Inferno,1,Summoner,1,,,,
+0,Taliyah, Braum,Mountain,1,Mage,1,Glacial,1,Warden,1,,,,
+0,Taliyah, Jax,Mountain,1,Mage,1,Light,1,Berserker,1,,,,
+0,Taliyah, Leblanc,Mountain,1,Mage,2,Woodland,1,Assassin,1,,,,
+0,Taliyah, Malzahar,Mountain,1,Mage,1,Shadow,1,Summoner,1,,,,
+0,Taliyah, Neeko,Mountain,1,Mage,1,Woodland,1,Druid,1,,,,
+0,Taliyah, RekSai,Mountain,1,Mage,1,Steel,1,Predator,1,,,,
+0,Taliyah, Senna,Mountain,1,Mage,1,Shadow,1,Soulbound,1,,,,
+0,Taliyah, Skarner,Mountain,1,Mage,1,Crystal,1,Predator,1,,,,
+0,Taliyah, Syndra,Mountain,1,Mage,2,Ocean,1,,,,,,
+0,Taliyah, Thresh,Mountain,1,Mage,1,Ocean,1,Warden,1,,,,
+0,Taliyah, Varus,Mountain,1,Mage,1,Inferno,1,Ranger,1,,,,
+0,Taliyah, Volibear,Mountain,1,Mage,1,Electric,1,Glacial,1,Berserker,1,,
+0,Taliyah, Yasuo,Mountain,1,Mage,1,Cloud,1,Blademaster,1,,,,
+0,Vayne, Vladamir,Light,1,Ranger,1,Ocean,1,Mage,1,,,,
+0,Vayne, Warwick,Light,1,Ranger,1,Glacial,1,Predator,1,,,,
+0,Vayne, Zyra,Light,1,Ranger,1,Inferno,1,Summoner,1,,,,
+0,Vayne, Braum,Light,1,Ranger,1,Glacial,1,Warden,1,,,,
+0,Vayne, Jax,Light,2,Ranger,1,Berserker,1,,,,,,
+0,Vayne, Leblanc,Light,1,Ranger,1,Woodland,1,Mage,1,Assassin,1,,
+0,Vayne, Malzahar,Light,1,Ranger,1,Shadow,1,Summoner,1,,,,
+0,Vayne, Neeko,Light,1,Ranger,1,Woodland,1,Druid,1,,,,
+0,Vayne, RekSai,Light,1,Ranger,1,Steel,1,Predator,1,,,,
+0,Vayne, Senna,Light,1,Ranger,1,Shadow,1,Soulbound,1,,,,
+0,Vayne, Skarner,Light,1,Ranger,1,Crystal,1,Predator,1,,,,
+0,Vayne, Syndra,Light,1,Ranger,1,Ocean,1,Mage,1,,,,
+0,Vayne, Thresh,Light,1,Ranger,1,Ocean,1,Warden,1,,,,
+0,Vayne, Volibear,Light,1,Ranger,1,Electric,1,Glacial,1,Berserker,1,,
+0,Vayne, Yasuo,Light,1,Ranger,1,Cloud,1,Blademaster,1,,,,
+0,Vladamir, Warwick,Ocean,1,Mage,1,Glacial,1,Predator,1,,,,
+0,Vladamir, Zyra,Ocean,1,Mage,1,Inferno,1,Summoner,1,,,,
+0,Vladamir, Braum,Ocean,1,Mage,1,Glacial,1,Warden,1,,,,
+0,Vladamir, Jax,Ocean,1,Mage,1,Light,1,Berserker,1,,,,
+0,Vladamir, Leblanc,Ocean,1,Mage,2,Woodland,1,Assassin,1,,,,
+0,Vladamir, Malzahar,Ocean,1,Mage,1,Shadow,1,Summoner,1,,,,
+0,Vladamir, Neeko,Ocean,1,Mage,1,Woodland,1,Druid,1,,,,
+0,Vladamir, RekSai,Ocean,1,Mage,1,Steel,1,Predator,1,,,,
+0,Vladamir, Senna,Ocean,1,Mage,1,Shadow,1,Soulbound,1,,,,
+0,Vladamir, Skarner,Ocean,1,Mage,1,Crystal,1,Predator,1,,,,
+0,Vladamir, Varus,Ocean,1,Mage,1,Inferno,1,Ranger,1,,,,
+0,Vladamir, Volibear,Ocean,1,Mage,1,Electric,1,Glacial,1,Berserker,1,,
+0,Vladamir, Yasuo,Ocean,1,Mage,1,Cloud,1,Blademaster,1,,,,
+0,Warwick, Zyra,Glacial,1,Predator,1,Inferno,1,Summoner,1,,,,
+0,Warwick, Jax,Glacial,1,Predator,1,Light,1,Berserker,1,,,,
+0,Warwick, Leblanc,Glacial,1,Predator,1,Woodland,1,Mage,1,Assassin,1,,
+0,Warwick, Malzahar,Glacial,1,Predator,1,Shadow,1,Summoner,1,,,,
+0,Warwick, Neeko,Glacial,1,Predator,1,Woodland,1,Druid,1,,,,
+0,Warwick, RekSai,Glacial,1,Predator,2,Steel,1,,,,,,
+0,Warwick, Senna,Glacial,1,Predator,1,Shadow,1,Soulbound,1,,,,
+0,Warwick, Skarner,Glacial,1,Predator,2,Crystal,1,,,,,,
+0,Warwick, Syndra,Glacial,1,Predator,1,Ocean,1,Mage,1,,,,
+0,Warwick, Thresh,Glacial,1,Predator,1,Ocean,1,Warden,1,,,,
+0,Warwick, Varus,Glacial,1,Predator,1,Inferno,1,Ranger,1,,,,
+0,Warwick, Yasuo,Glacial,1,Predator,1,Cloud,1,Blademaster,1,,,,
+0,Zyra, Braum,Inferno,1,Summoner,1,Glacial,1,Warden,1,,,,
+0,Zyra, Jax,Inferno,1,Summoner,1,Light,1,Berserker,1,,,,
+0,Zyra, Leblanc,Inferno,1,Summoner,1,Woodland,1,Mage,1,Assassin,1,,
+0,Zyra, Malzahar,Inferno,1,Summoner,2,Shadow,1,,,,,,
+0,Zyra, Neeko,Inferno,1,Summoner,1,Woodland,1,Druid,1,,,,
+0,Zyra, RekSai,Inferno,1,Summoner,1,Steel,1,Predator,1,,,,
+0,Zyra, Senna,Inferno,1,Summoner,1,Shadow,1,Soulbound,1,,,,
+0,Zyra, Skarner,Inferno,1,Summoner,1,Crystal,1,Predator,1,,,,
+0,Zyra, Syndra,Inferno,1,Summoner,1,Ocean,1,Mage,1,,,,
+0,Zyra, Thresh,Inferno,1,Summoner,1,Ocean,1,Warden,1,,,,
+0,Zyra, Varus,Inferno,2,Summoner,1,Ranger,1,,,,,,
+0,Zyra, Volibear,Inferno,1,Summoner,1,Electric,1,Glacial,1,Berserker,1,,
+0,Zyra, Yasuo,Inferno,1,Summoner,1,Cloud,1,Blademaster,1,,,,
+0,Braum, Jax,Glacial,1,Warden,1,Light,1,Berserker,1,,,,
+0,Braum, Leblanc,Glacial,1,Warden,1,Woodland,1,Mage,1,Assassin,1,,
+0,Braum, Malzahar,Glacial,1,Warden,1,Shadow,1,Summoner,1,,,,
+0,Braum, Neeko,Glacial,1,Warden,1,Woodland,1,Druid,1,,,,
+0,Braum, RekSai,Glacial,1,Warden,1,Steel,1,Predator,1,,,,
+0,Braum, Senna,Glacial,1,Warden,1,Shadow,1,Soulbound,1,,,,
+0,Braum, Skarner,Glacial,1,Warden,1,Crystal,1,Predator,1,,,,
+0,Braum, Syndra,Glacial,1,Warden,1,Ocean,1,Mage,1,,,,
+0,Braum, Varus,Glacial,1,Warden,1,Inferno,1,Ranger,1,,,,
+0,Braum, Yasuo,Glacial,1,Warden,1,Cloud,1,Blademaster,1,,,,
+0,Jax, Leblanc,Light,1,Berserker,1,Woodland,1,Mage,1,Assassin,1,,
+0,Jax, Malzahar,Light,1,Berserker,1,Shadow,1,Summoner,1,,,,
+0,Jax, Neeko,Light,1,Berserker,1,Woodland,1,Druid,1,,,,
+0,Jax, RekSai,Light,1,Berserker,1,Steel,1,Predator,1,,,,
+0,Jax, Senna,Light,1,Berserker,1,Shadow,1,Soulbound,1,,,,
+0,Jax, Skarner,Light,1,Berserker,1,Crystal,1,Predator,1,,,,
+0,Jax, Syndra,Light,1,Berserker,1,Ocean,1,Mage,1,,,,
+0,Jax, Thresh,Light,1,Berserker,1,Ocean,1,Warden,1,,,,
+0,Jax, Varus,Light,1,Berserker,1,Inferno,1,Ranger,1,,,,
+0,Jax, Volibear,Light,1,Berserker,2,Electric,1,Glacial,1,,,,
+0,Jax, Yasuo,Light,1,Berserker,1,Cloud,1,Blademaster,1,,,,
+0,Leblanc, Malzahar,Woodland,1,Mage,1,Assassin,1,Shadow,1,Summoner,1,,
+0,Leblanc, Neeko,Woodland,2,Mage,1,Assassin,1,Druid,1,,,,
+0,Leblanc, RekSai,Woodland,1,Mage,1,Assassin,1,Steel,1,Predator,1,,
+0,Leblanc, Senna,Woodland,1,Mage,1,Assassin,1,Shadow,1,Soulbound,1,,
+0,Leblanc, Skarner,Woodland,1,Mage,1,Assassin,1,Crystal,1,Predator,1,,
+0,Leblanc, Syndra,Woodland,1,Mage,2,Assassin,1,Ocean,1,,,,
+0,Leblanc, Thresh,Woodland,1,Mage,1,Assassin,1,Ocean,1,Warden,1,,
+0,Leblanc, Varus,Woodland,1,Mage,1,Assassin,1,Inferno,1,Ranger,1,,
+0,Leblanc, Volibear,Woodland,1,Mage,1,Assassin,1,Electric,1,Glacial,1,Berserker,1
+0,Leblanc, Yasuo,Woodland,1,Mage,1,Assassin,1,Cloud,1,Blademaster,1,,
+0,Malzahar, Neeko,Shadow,1,Summoner,1,Woodland,1,Druid,1,,,,
+0,Malzahar, RekSai,Shadow,1,Summoner,1,Steel,1,Predator,1,,,,
+0,Malzahar, Senna,Shadow,2,Summoner,1,Soulbound,1,,,,,,
+0,Malzahar, Skarner,Shadow,1,Summoner,1,Crystal,1,Predator,1,,,,
+0,Malzahar, Syndra,Shadow,1,Summoner,1,Ocean,1,Mage,1,,,,
+0,Malzahar, Thresh,Shadow,1,Summoner,1,Ocean,1,Warden,1,,,,
+0,Malzahar, Varus,Shadow,1,Summoner,1,Inferno,1,Ranger,1,,,,
+0,Malzahar, Volibear,Shadow,1,Summoner,1,Electric,1,Glacial,1,Berserker,1,,
+0,Malzahar, Yasuo,Shadow,1,Summoner,1,Cloud,1,Blademaster,1,,,,
+0,Neeko, RekSai,Woodland,1,Druid,1,Steel,1,Predator,1,,,,
+0,Neeko, Senna,Woodland,1,Druid,1,Shadow,1,Soulbound,1,,,,
+0,Neeko, Skarner,Woodland,1,Druid,1,Crystal,1,Predator,1,,,,
+0,Neeko, Syndra,Woodland,1,Druid,1,Ocean,1,Mage,1,,,,
+0,Neeko, Thresh,Woodland,1,Druid,1,Ocean,1,Warden,1,,,,
+0,Neeko, Varus,Woodland,1,Druid,1,Inferno,1,Ranger,1,,,,
+0,Neeko, Volibear,Woodland,1,Druid,1,Electric,1,Glacial,1,Berserker,1,,
+0,Neeko, Yasuo,Woodland,1,Druid,1,Cloud,1,Blademaster,1,,,,
+0,RekSai, Senna,Steel,1,Predator,1,Shadow,1,Soulbound,1,,,,
+0,RekSai, Skarner,Steel,1,Predator,2,Crystal,1,,,,,,
+0,RekSai, Syndra,Steel,1,Predator,1,Ocean,1,Mage,1,,,,
+0,RekSai, Thresh,Steel,1,Predator,1,Ocean,1,Warden,1,,,,
+0,RekSai, Varus,Steel,1,Predator,1,Inferno,1,Ranger,1,,,,
+0,RekSai, Volibear,Steel,1,Predator,1,Electric,1,Glacial,1,Berserker,1,,
+0,RekSai, Yasuo,Steel,1,Predator,1,Cloud,1,Blademaster,1,,,,
+0,Senna, Skarner,Shadow,1,Soulbound,1,Crystal,1,Predator,1,,,,
+0,Senna, Syndra,Shadow,1,Soulbound,1,Ocean,1,Mage,1,,,,
+0,Senna, Thresh,Shadow,1,Soulbound,1,Ocean,1,Warden,1,,,,
+0,Senna, Varus,Shadow,1,Soulbound,1,Inferno,1,Ranger,1,,,,
+0,Senna, Volibear,Shadow,1,Soulbound,1,Electric,1,Glacial,1,Berserker,1,,
+0,Senna, Yasuo,Shadow,1,Soulbound,1,Cloud,1,Blademaster,1,,,,
+0,Skarner, Syndra,Crystal,1,Predator,1,Ocean,1,Mage,1,,,,
+0,Skarner, Thresh,Crystal,1,Predator,1,Ocean,1,Warden,1,,,,
+0,Skarner, Varus,Crystal,1,Predator,1,Inferno,1,Ranger,1,,,,
+0,Skarner, Volibear,Crystal,1,Predator,1,Electric,1,Glacial,1,Berserker,1,,
+0,Skarner, Yasuo,Crystal,1,Predator,1,Cloud,1,Blademaster,1,,,,
+0,Syndra, Varus,Ocean,1,Mage,1,Inferno,1,Ranger,1,,,,
+0,Syndra, Volibear,Ocean,1,Mage,1,Electric,1,Glacial,1,Berserker,1,,
+0,Syndra, Yasuo,Ocean,1,Mage,1,Cloud,1,Blademaster,1,,,,
+0,Thresh, Varus,Ocean,1,Warden,1,Inferno,1,Ranger,1,,,,
+0,Thresh, Volibear,Ocean,1,Warden,1,Electric,1,Glacial,1,Berserker,1,,
+0,Thresh, Yasuo,Ocean,1,Warden,1,Cloud,1,Blademaster,1,,,,
+0,Varus, Volibear,Inferno,1,Ranger,1,Electric,1,Glacial,1,Berserker,1,,
+0,Varus, Yasuo,Inferno,1,Ranger,1,Cloud,1,Blademaster,1,,,,
+0,Volibear, Yasuo,Electric,1,Glacial,1,Berserker,1,Cloud,1,Blademaster,1,,

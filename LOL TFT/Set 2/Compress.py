@@ -1,7 +1,7 @@
 from progressbar import ProgressBar
 pbar = ProgressBar()
 
-filename = '2-2.csv'
+filename = '4-3.csv'
 
 f = open(filename,'r')
 print('reading file')
