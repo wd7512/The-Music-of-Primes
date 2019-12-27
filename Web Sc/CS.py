@@ -10,8 +10,8 @@ sale_prices = []
 
 
 
-search = 'community_7'
-pagenum_total = 13
+search = 'community_2'
+pagenum_total = 11
 
 def scrap(search,pagenum):
 
