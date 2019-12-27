@@ -132,10 +132,10 @@ def save(data,filename):
 def run(hand,suited,flop):
     
     if flop == True:
-        file = 'Headsupflop-1000000 runs.txt'
+        file = 'Headsupflop-10000000 runs.txt'
         filename = str(hand)+str(suited)+' flop.txt'
     else:
-        file = 'Headsup-1000000 runs.txt'
+        file = 'Headsup-10000000 runs.txt'
         filename = str(hand)+str(suited)+' river.txt'
     #hand = [int(input('Card Value 1:')),int(input('Card Value 2:'))] #[num1,num2]
     #suited = int(input('Suited? (0-both,1-off,2-on):'))

@@ -553,5 +553,6 @@ def headsupflop(runs):
     f.close()
     print('Saved')
 
-headsupflop(1000000)
+headsup(10000000)
+headsupflop(10000000)
 
