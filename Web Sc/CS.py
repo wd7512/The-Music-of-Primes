@@ -7,10 +7,10 @@ import time
 products = [] 
 normal_prices = [] 
 sale_prices = []
+volume = []
 
 
-
-search = 'community_2'
+search = 'community_1'
 pagenum_total = 11
 
 def scrap(search,pagenum):
@@ -54,6 +54,12 @@ def scrap(search,pagenum):
             point = data.index('>')
             sale_prices.append(data[point+1:])
 
+        if '<span class="market_listing_num_listings_qty" data-qty="' in datall:
+            data = datall[datall.index('<span class="market_listing_num_listings_qty" data-qty="')+56:]
+            data = data[:data.index('">')]
+            #print(data)
+            volume.append(data)
+
     
     
     time.sleep(2)
@@ -78,17 +84,23 @@ for i in range(pagenum_total):
 
 
 
-output = list(zip(products,normal_prices,sale_prices))
+output = list(zip(products,volume,normal_prices,sale_prices))
 for item in output:
     print(item)
 
 f = open(search+'.csv','w')
-f.write('Product,Skin,Normal Price,Sale Price\n')
+f.write('Product,Volume,Normal Price,Sale Price\n')
 for a in output:
+    if a[0][-4:] == 'Case' or a[0][-3:] == 'Key':
+        pass
+    else:
+        f.write(a[0]+','+a[1]+','+a[2]+','+a[3]+'\n')
+    '''
     name = a[0]
     nam = name.split('|')
     if len(nam) == 2:
         f.write(nam[0][:-1]+','+nam[1][1:]+','+a[1]+','+a[2]+'\n')
+    '''
 
 f.close()
 
