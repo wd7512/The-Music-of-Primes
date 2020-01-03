@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
@@ -36,8 +37,15 @@ def lookup(gun,skin,wear):
 
     
     driver = webdriver.Chrome('C:\\chromedriver_win32\\chromedriver.exe')
-    driver.get('https://steamcommunity.com/market/listings/730/'+gun+'%20%7C%20'+skin+'%20%28'+wear+'%29')
-    content = driver.find_element_by_id("largeiteminfo_item_type")
+    #driver.get('https://steamcommunity.com/market/listings/730/'+gun+'%20%7C%20'+skin+'%20%28'+wear+'%29')
+    content = False
+    while content == False:
+        try:
+            driver.get('https://steamcommunity.com/market/listings/730/'+gun+'%20%7C%20'+skin+'%20%28'+wear+'%29')
+            content = driver.find_element_by_id("largeiteminfo_item_type")
+        except NoSuchElementException:
+            driver.quit()
+            time.sleep(6)
     #print(content.text)
 
     grade = str(content.text)
@@ -68,7 +76,7 @@ def lookup(gun,skin,wear):
 
     return output
 
-file = 'community_1.csv'
+file = 'community_2.csv'
 grades = []
 guns,inpdata = collection(file)
 for item in guns:

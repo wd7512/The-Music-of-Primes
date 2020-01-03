@@ -10,8 +10,8 @@ sale_prices = []
 volume = []
 
 
-search = 'community_1'
-pagenum_total = 11
+search = 'community_3'
+pagenum_total = 31
 
 def scrap(search,pagenum):
 
@@ -20,12 +20,21 @@ def scrap(search,pagenum):
     normal_prices = [] 
     sale_prices = []
     driver = webdriver.Chrome('C:\\chromedriver_win32\\chromedriver.exe')
-    #driver.get('https://steamcommunity.com/market/search?appid=730&q='+search+'#p'+str(pagenum)+'_price_asc')
+
+    
+
+
+    
+    #url = 'https://steamcommunity.com/market/search?appid=730&q='+search+'#p'+str(pagenum)+'_price_asc'
     #general search
-    #driver.get('https://steamcommunity.com/market/search?q=&category_730_ItemSet%5B%5D=any&category_730_ProPlayer%5B%5D=any&category_730_StickerCapsule%5B%5D=any&category_730_TournamentTeam%5B%5D=any&category_730_Weapon%5B%5D=tag_weapon_'+weapon+'&appid=730#p'+str(pagenum)+'_price_asc')
+    #url = 'https://steamcommunity.com/market/search?q=&category_730_ItemSet%5B%5D=any&category_730_ProPlayer%5B%5D=any&category_730_StickerCapsule%5B%5D=any&category_730_TournamentTeam%5B%5D=any&category_730_Weapon%5B%5D=tag_weapon_'+weapon+'&appid=730#p'+str(pagenum)+'_price_asc'
     #specific gun
-    driver.get('https://steamcommunity.com/market/search?q=&category_730_ItemSet%5B%5D=tag_set_'+search+'&category_730_ProPlayer%5B%5D=any&category_730_StickerCapsule%5B%5D=any&category_730_TournamentTeam%5B%5D=any&category_730_Weapon%5B%5D=any&appid=730#p'+str(pagenum)+'_price_asc')
+    url = 'https://steamcommunity.com/market/search?q=&category_730_ItemSet%5B%5D=tag_set_'+search+'&category_730_ProPlayer%5B%5D=any&category_730_StickerCapsule%5B%5D=any&category_730_TournamentTeam%5B%5D=any&category_730_Weapon%5B%5D=any&appid=730#p'+str(pagenum)+'_price_asc'
     #collection
+
+    
+    
+    driver.get(url)
     content = driver.page_source
     soup = BeautifulSoup(content)
     for a in soup.findAll('a',href=True):

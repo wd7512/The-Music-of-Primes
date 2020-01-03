@@ -1,0 +1,105 @@
+Gun,Skin,Wear,Grade,Volume,Normal Price,Sale Price
+UMP-45,Corporal,Battle-Scarred,Mil-SpecGrade,241,$0.11 USD,$0.10 USD
+UMP-45,Corporal,Field-Tested,Mil-SpecGrade,537,$0.12 USD,$0.11 USD
+Tec-9,Sandstorm,Battle-Scarred,Mil-SpecGrade,209,$0.12 USD,$0.11 USD
+Tec-9,Sandstorm,Field-Tested,Mil-SpecGrade,1167,$0.12 USD,$0.11 USD
+MAG-7,Heaven Guard,Field-Tested,Mil-SpecGrade,477,$0.12 USD,$0.11 USD
+Negev,Terrain,Field-Tested,Mil-SpecGrade,406,$0.13 USD,$0.12 USD
+Negev,Terrain,Well-Worn,Mil-SpecGrade,101,$0.14 USD,$0.13 USD
+UMP-45,Corporal,Well-Worn,Mil-SpecGrade,172,$0.16 USD,$0.15 USD
+MAG-7,Heaven Guard,Well-Worn,Mil-SpecGrade,121,$0.17 USD,$0.16 USD
+Tec-9,Sandstorm,Well-Worn,Mil-SpecGrade,139,$0.19 USD,$0.18 USD
+UMP-45,Corporal,Minimal Wear,Mil-SpecGrade,303,$0.20 USD,$0.19 USD
+Negev,Terrain,Minimal Wear,Mil-SpecGrade,135,$0.21 USD,$0.20 USD
+MAG-7,Heaven Guard,Minimal Wear,Mil-SpecGrade,202,$0.21 USD,$0.20 USD
+StatTrak™ UMP-45,Corporal,Battle-Scarred,StatTrak™Mil-SpecGrade,151,$0.24 USD,$0.23 USD
+StatTrak™ Tec-9,Sandstorm,Battle-Scarred,StatTrak™Mil-SpecGrade,170,$0.28 USD,$0.27 USD
+Negev,Terrain,Factory New,Mil-SpecGrade,156,$0.30 USD,$0.29 USD
+Tec-9,Sandstorm,Minimal Wear,Mil-SpecGrade,200,$0.31 USD,$0.30 USD
+MAG-7,Heaven Guard,Factory New,Mil-SpecGrade,253,$0.31 USD,$0.30 USD
+StatTrak™ MAG-7,Heaven Guard,Field-Tested,StatTrak™Mil-SpecGrade,196,$0.34 USD,$0.33 USD
+StatTrak™ Tec-9,Sandstorm,Well-Worn,StatTrak™Mil-SpecGrade,118,$0.35 USD,$0.34 USD
+StatTrak™ UMP-45,Corporal,Field-Tested,StatTrak™Mil-SpecGrade,232,$0.35 USD,$0.34 USD
+StatTrak™ Tec-9,Sandstorm,Field-Tested,StatTrak™Mil-SpecGrade,869,$0.36 USD,$0.35 USD
+StatTrak™ Negev,Terrain,Well-Worn,StatTrak™Mil-SpecGrade,71,$0.36 USD,$0.35 USD
+StatTrak™ Negev,Terrain,Field-Tested,StatTrak™Mil-SpecGrade,170,$0.39 USD,$0.38 USD
+UMP-45,Corporal,Factory New,Mil-SpecGrade,54,$0.40 USD,$0.39 USD
+StatTrak™ UMP-45,Corporal,Well-Worn,StatTrak™Mil-SpecGrade,88,$0.42 USD,$0.41 USD
+StatTrak™ MAG-7,Heaven Guard,Well-Worn,StatTrak™Mil-SpecGrade,35,$0.55 USD,$0.53 USD
+StatTrak™ UMP-45,Corporal,Minimal Wear,StatTrak™Mil-SpecGrade,139,$0.59 USD,$0.57 USD
+FAMAS,Sergeant,Battle-Scarred,Restricted,123,$0.69 USD,$0.66 USD
+StatTrak™ Negev,Terrain,Minimal Wear,StatTrak™Mil-SpecGrade,105,$0.70 USD,$0.67 USD
+StatTrak™ MAG-7,Heaven Guard,Minimal Wear,StatTrak™Mil-SpecGrade,116,$0.71 USD,$0.68 USD
+MAC-10,Heat,Battle-Scarred,Restricted,90,$0.73 USD,$0.70 USD
+MAC-10,Heat,Well-Worn,Restricted,82,$0.81 USD,$0.78 USD
+FAMAS,Sergeant,Field-Tested,Restricted,187,$0.85 USD,$0.82 USD
+MAC-10,Heat,Field-Tested,Restricted,162,$0.87 USD,$0.84 USD
+FAMAS,Sergeant,Well-Worn,Restricted,64,$0.97 USD,$0.93 USD
+StatTrak™ MAG-7,Heaven Guard,Factory New,StatTrak™Mil-SpecGrade,182,$1.06 USD,$1.02 USD
+StatTrak™ Tec-9,Sandstorm,Minimal Wear,StatTrak™Mil-SpecGrade,132,$1.11 USD,$1.07 USD
+StatTrak™ Negev,Terrain,Factory New,StatTrak™Mil-SpecGrade,154,$1.16 USD,$1.11 USD
+StatTrak™ UMP-45,Corporal,Factory New,StatTrak™Mil-SpecGrade,77,$1.24 USD,$1.19 USD
+USP-S,Guardian,Field-Tested,Restricted,365,$1.28 USD,$1.23 USD
+StatTrak™ FAMAS,Sergeant,Battle-Scarred,StatTrak™Restricted,119,$1.62 USD,$1.55 USD
+MAC-10,Heat,Minimal Wear,Restricted,87,$1.80 USD,$1.73 USD
+StatTrak™ MAC-10,Heat,Battle-Scarred,StatTrak™Restricted,62,$1.81 USD,$1.74 USD
+USP-S,Guardian,Minimal Wear,Restricted,379,$1.87 USD,$1.79 USD
+SG 553,Pulse,Battle-Scarred,Restricted,56,$1.92 USD,$1.84 USD
+StatTrak™ FAMAS,Sergeant,Field-Tested,StatTrak™Restricted,97,$1.99 USD,$1.91 USD
+StatTrak™ FAMAS,Sergeant,Well-Worn,StatTrak™Restricted,39,$2.00 USD,$1.92 USD
+SG 553,Pulse,Field-Tested,Restricted,544,$2.00 USD,$1.92 USD
+StatTrak™ MAC-10,Heat,Well-Worn,StatTrak™Restricted,48,$2.07 USD,$1.98 USD
+StatTrak™ MAC-10,Heat,Field-Tested,StatTrak™Restricted,99,$2.36 USD,$2.26 USD
+MAC-10,Heat,Factory New,Restricted,88,$2.46 USD,$2.36 USD
+USP-S,Guardian,Factory New,Restricted,369,$2.49 USD,$2.39 USD
+FAMAS,Sergeant,Minimal Wear,Restricted,37,$2.50 USD,$2.40 USD
+SG 553,Pulse,Well-Worn,Restricted,61,$2.69 USD,$2.58 USD
+StatTrak™ SG 553,Pulse,Battle-Scarred,StatTrak™Restricted,50,$3.80 USD,$3.64 USD
+P90,Trigon,Battle-Scarred,Classified,16,$3.87 USD,$3.71 USD
+StatTrak™ USP-S,Guardian,Field-Tested,StatTrak™Restricted,124,$3.98 USD,$3.81 USD
+AUG,Chameleon,Field-Tested,Covert,125,$4.29 USD,$4.11 USD
+P90,Trigon,Field-Tested,Classified,120,$4.65 USD,$4.45 USD
+AUG,Chameleon,Minimal Wear,Covert,184,$4.77 USD,$4.57 USD
+P90,Trigon,Well-Worn,Classified,18,$5.11 USD,$4.89 USD
+Nova,Antique,Field-Tested,Classified,44,$5.17 USD,$4.95 USD
+StatTrak™ SG 553,Pulse,Well-Worn,StatTrak™Restricted,33,$5.29 USD,$5.06 USD
+AUG,Chameleon,Battle-Scarred,Covert,29,$5.49 USD,$5.26 USD
+AUG,Chameleon,Well-Worn,Covert,31,$5.49 USD,$5.26 USD
+StatTrak™ USP-S,Guardian,Minimal Wear,StatTrak™Restricted,140,$5.55 USD,$5.31 USD
+Nova,Antique,Minimal Wear,Classified,39,$5.68 USD,$5.44 USD
+StatTrak™ SG 553,Pulse,Field-Tested,StatTrak™Restricted,226,$5.77 USD,$5.52 USD
+StatTrak™ MAC-10,Heat,Minimal Wear,StatTrak™Restricted,40,$6.45 USD,$6.17 USD
+P90,Trigon,Minimal Wear,Classified,50,$6.64 USD,$6.36 USD
+StatTrak™ FAMAS,Sergeant,Minimal Wear,StatTrak™Restricted,42,$6.92 USD,$6.62 USD
+SG 553,Pulse,Minimal Wear,Restricted,203,$7.05 USD,$6.75 USD
+AUG,Chameleon,Factory New,Covert,158,$7.21 USD,$6.90 USD
+StatTrak™ USP-S,Guardian,Factory New,StatTrak™Restricted,162,$7.85 USD,$7.51 USD
+Nova,Antique,Factory New,Classified,74,$8.02 USD,$7.68 USD
+StatTrak™ P90,Trigon,Battle-Scarred,StatTrak™Classified,14,$8.16 USD,$7.81 USD
+StatTrak™ MAC-10,Heat,Factory New,StatTrak™Restricted,34,$9.13 USD,$8.74 USD
+StatTrak™ P90,Trigon,Field-Tested,StatTrak™Classified,52,$9.20 USD,$8.80 USD
+AK-47,Redline,Battle-Scarred,Classified,162,$9.24 USD,$8.84 USD
+StatTrak™ Nova,Antique,Field-Tested,StatTrak™Classified,12,$11.09 USD,$10.61 USD
+StatTrak™ P90,Trigon,Well-Worn,StatTrak™Classified,6,$11.50 USD,$11.00 USD
+StatTrak™ AUG,Chameleon,Field-Tested,StatTrak™Covert,34,$12.22 USD,$11.69 USD
+StatTrak™ AUG,Chameleon,Well-Worn,StatTrak™Covert,20,$12.33 USD,$11.80 USD
+StatTrak™ AUG,Chameleon,Battle-Scarred,StatTrak™Covert,8,$12.44 USD,$11.90 USD
+StatTrak™ Nova,Antique,Minimal Wear,StatTrak™Classified,14,$12.78 USD,$12.23 USD
+AK-47,Redline,Field-Tested,Classified,1340,$13.68 USD,$13.09 USD
+AK-47,Redline,Well-Worn,Classified,104,$13.80 USD,$13.20 USD
+StatTrak™ P90,Trigon,Minimal Wear,StatTrak™Classified,36,$14.87 USD,$14.23 USD
+StatTrak™ AUG,Chameleon,Minimal Wear,StatTrak™Covert,29,$18.94 USD,$18.12 USD
+StatTrak™ SG 553,Pulse,Minimal Wear,StatTrak™Restricted,43,$19.98 USD,$19.12 USD
+StatTrak™ Nova,Antique,Factory New,StatTrak™Classified,32,$20.12 USD,$19.25 USD
+StatTrak™ AK-47,Redline,Battle-Scarred,StatTrak™Classified,43,$20.93 USD,$20.02 USD
+StatTrak™ AUG,Chameleon,Factory New,StatTrak™Covert,29,$32.05 USD,$30.66 USD
+StatTrak™ AK-47,Redline,Well-Worn,StatTrak™Classified,15,$33.94 USD,$32.47 USD
+StatTrak™ AK-47,Redline,Field-Tested,StatTrak™Classified,235,$38.00 USD,$36.35 USD
+AWP,Asiimov,Battle-Scarred,CovertSniper,227,$42.93 USD,$41.07 USD
+AK-47,Redline,Minimal Wear,Classified,133,$48.26 USD,$46.17 USD
+AWP,Asiimov,Well-Worn,CovertSniper,83,$54.19 USD,$51.84 USD
+AWP,Asiimov,Field-Tested,CovertSniper,183,$70.06 USD,$67.02 USD
+StatTrak™ AWP,Asiimov,Battle-Scarred,StatTrak™CovertSniper,47,$94.41 USD,$90.31 USD
+StatTrak™ AWP,Asiimov,Well-Worn,StatTrak™CovertSniper,7,$120.71 USD,$115.47 USD
+StatTrak™ AWP,Asiimov,Field-Tested,StatTrak™CovertSniper,28,$172.76 USD,$165.25 USD
+StatTrak™ AK-47,Redline,Minimal Wear,StatTrak™Classified,14,$173.03 USD,$165.51 USD

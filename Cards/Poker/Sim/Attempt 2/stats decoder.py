@@ -142,6 +142,7 @@ def run(hand,suited,flop):
 
     save(decode(file,hand,suited),filename)
 
+'''
 for i in range(13):
     for j in range(13-i-1):
         hand = [i+2,j+3+i]
@@ -150,3 +151,17 @@ for i in range(13):
         run(hand,1,True)
         run(hand,0,False)
         run(hand,1,False)
+'''
+
+
+left = [5,6,7,8,9,10,11,12,13,14]
+for num in left:
+    for i in range(14-num):
+        hand = [num,num+1+i]
+        print(hand)
+        run(hand,0,True)
+        run(hand,1,True)
+        run(hand,0,False)
+        run(hand,1,False)
+
+
