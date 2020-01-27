@@ -33,10 +33,6 @@ Karma,3,16,Lunar,Mystic,
 Kindred,3,16,Shadow,Inferno,Ranger
 Nautilus,3,16,Ocean,Warden,
 Nocturne,3,16,Steel,Assassin,
-Qiyana_M,3,16,Mountain,Assassin,
-Qiyana_O,3,16,Ocean,Assassin,
-Qiyana_C,3,16,Cloud,Assassin,
-Qiyana_I,3,16,Inferno,Assassin,
 Sion,3,16,Shadow,Berserker,
 Sivir,3,16,Desert,Blademaster,
 Soraka,3,16,Light,Mystic,
@@ -56,13 +52,3 @@ Nami,5,10,Ocean,Mystic,
 Singed,5,10,Poison,Alchemist,
 Taric,5,10,Crystal,Warden,
 Zed,5,10,Electric,Summoner,Assassin
-Lux_ST,7,10,Avatar,Steel,Steel
-Lux_SH,7,10,Avatar,Shadow,Shadow
-Lux_OC,7,10,Avatar,Ocean,Ocean
-Lux_CL,7,10,Avatar,Cloud,Cloud
-Lux_GL,7,10,Avatar,Glacial,Glacial
-Lux_LI,7,10,Avatar,Light,Light
-Lux_CR,7,10,Avatar,Crystal,Crystal
-Lux_WO,7,10,Avatar,Woodland,Woodland
-Lux_EL,7,10,Avatar,Electric,Electric
-Lux_IN,7,10,Avatar,Inferno,Inferno
