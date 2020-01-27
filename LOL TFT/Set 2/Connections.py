@@ -72,13 +72,24 @@ def trait_nodes(champs,traits):
 
     
     #pos = nx.kamada_kawai_layout(G)
-    pos = nx.spring_layout(G,iterations=10000)
+    pos = nx.spring_layout(G,iterations=2000)
     nx.draw_networkx(G,pos)
     plt.show()
 
-    return nx.to_numpy_matrix(G)
+    return [nx.to_numpy_matrix(G,nodelist=traits+[c[0] for c in champs]),traits]
             
 #simple(champs)
-A = trait_nodes(champs,traits)
+A,save_traits = trait_nodes(champs,traits)
+B = A*A
+C = B[:23,:23]
+f = open('text.csv','w')
+for i in range(len(C)):
+    out = str(C[i])
+    out = out.replace('. ',',')
+    out = out.replace('.','\n')
+    out = out.replace('[[','')
+    out = out.replace(']]','')
+    f.write(save_traits[i]+','+out)
+f.close()
 
     
