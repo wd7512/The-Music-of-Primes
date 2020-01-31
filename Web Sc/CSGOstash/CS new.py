@@ -51,7 +51,10 @@ for url in urls:
             data = data[data.find('href')+1:]
 
         links.append(data[5:data.find('>')-1])
-    f = open(url[31:]+'.txt','w')
+
+    name = url[28:]
+    #print(name)
+    f = open(name[name.index('/')+1:]+'.txt','w')
     for link in links:
         f.write(link+'\n')
     f.close()
