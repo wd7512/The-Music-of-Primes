@@ -4,17 +4,35 @@ from scipy.io import wavfile
 import numpy as np
 
 #r.recognize_google(audio, language="fr-FR") french example
-mic = sr.Microphone()
+
 
 r = sr.Recognizer()
 
+'''
+mic = sr.Microphone()
 with mic as source:
     r.adjust_for_ambient_noise(source)
     audio = r.listen(source)
-try:
-    print(r.recognize_google(audio))
-except sr.RequestError:
-    print('Connection to API failed')
+'''
+
+def convert_speech(source):
+
+    output = False
     
-except sr.UnknownValueError:
-    print('Unable to recognize speech')
+    try:
+        output = r.recognize_google(audio)
+        
+    except sr.RequestError:
+        print('Connection to API failed')
+    
+    except sr.UnknownValueError:
+        print('Unable to recognize speech')
+
+    return output    
+    
+audio_file = sr.AudioFile('basic.wav')
+with audio_file as source:
+    audio = r.record(source)
+
+
+
