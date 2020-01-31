@@ -3,7 +3,7 @@ import sounddevice as sd
 from scipy.io import wavfile
 import numpy as np
 
-
+#r.recognize_google(audio, language="fr-FR") french example
 mic = sr.Microphone()
 
 r = sr.Recognizer()
