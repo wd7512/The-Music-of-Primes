@@ -3,18 +3,19 @@ import sounddevice as sd
 from scipy.io import wavfile
 import numpy as np
 import time
+import googletrans
 
 #r.recognize_google(audio, language="fr-FR") french example
 
 
-def convert_speech(audio):
+def convert_speech(audio,lang):
     r = sr.Recognizer()
 
     output = False
     
     try:
-        output = r.recognize_google(audio)
-        #output = r.recognize_google(audio, language="fr-FR")
+        
+        output = r.recognize_google(audio, language=lang)
         
     except sr.RequestError:
         print('Connection to API failed')
@@ -39,8 +40,9 @@ def using_mic():
     
     countdown = 3
     for i in range(countdown):
-        print('Speak in '+str(countdown-i))
         time.sleep(1)
+        print('Speak in '+str(countdown-i))
+        
     print('Mic on')
     
     
@@ -52,5 +54,71 @@ def using_mic():
 
     return audio
 
+def demo():
 
-a = convert_speech(using_mic())
+    questions = ['What is the reason for your visit today?',
+                 'Please could you tell me more?']
+                 
+    answers = []
+    
+    Langs = ['Language,languageCode,Language (English name)', 'Afrikaans (Suid-Afrika),af-ZA,Afrikaans (South Africa)', 'Bahasa Indonesia (Indonesia),id-ID,Indonesian (Indonesia)', 'Bahasa Melayu (Malaysia),ms-MY,Malay (Malaysia)', 'Català (Espanya),ca-ES,Catalan (Spain)', 'Ceština (Ceská republika),cs-CZ,Czech (Czech Republic)', 'Dansk (Danmark),da-DK,Danish (Denmark)', 'Deutsch (Deutschland),de-DE,German (Germany)', 'English (Great Britain),en-GB,English (United Kingdom)', 'Español (España),es-ES,Spanish (Spain)', 'Euskara (Espainia),eu-ES,Basque (Spain)', 'Filipino (Pilipinas),fil-PH,Filipino (Philippines)', 'Français (France),fr-FR,French (France)', 'Galego (España),gl-ES,Galician (Spain)', 'Hrvatski (Hrvatska),hr-HR,Croatian (Croatia)', 'IsiZulu (Ningizimu Afrika),zu-ZA,Zulu (South Africa)', 'Íslenska (Ísland),is-IS,Icelandic (Iceland)', 'Italiano (Italia),it-IT,Italian (Italy)', 'Latviešu (latviešu),lv-LV,Latvian (Latvia)', 'Lietuviu (Lietuva),lt-LT,Lithuanian (Lithuania)', 'Magyar (Magyarország),hu-HU,Hungarian (Hungary)', 'Nederlands (Nederland),nl-NL,Dutch (Netherlands)', 'Polski (Polska),pl-PL,Polish (Poland)', 'Português (Portugal),pt-PT,Portuguese (Portugal)', 'Româna (România),ro-RO,Romanian (Romania)', 'Slovencina (Slovensko),sk-SK,Slovak (Slovakia)', 'Slovenšcina (Slovenija),sl-SI,Slovenian (Slovenia)', 'Urang (Indonesia),su-ID,Sundanese (Indonesia)', 'Swahili (Tanzania),sw-TZ,Swahili (Tanzania)', 'Swahili (Kenya),sw-KE,Swahili (Kenya)', 'Suomi (Suomi),fi-FI,Finnish (Finland)', 'Svenska (Sverige),sv-SE,Swedish (Sweden)', 'Türkçe (Türkiye),tr-TR,Turkish (Turkey)']
+    for i in range(len(Langs)):
+        line = Langs[i].split(',')
+        flan = line[0]
+        elan = line[2]
+        spaces = ''
+        for k in range(30-len(flan)):
+            spaces = spaces + ' '
+        if i < 10:
+            print('('+str(i)+')  '+flan + spaces + elan)
+        else:
+            print('('+str(i)+') '+flan + spaces + elan)
+
+    
+    lan_code = Langs[int(input('\nWhich language is needed?(number): '))].split(',')[1]
+    #print(lan_code)
+
+    for q in questions:
+        ans = question(q,lan_code)
+        answers.append(ans)
+
+
+
+    return answers,questions
+
+def question(ques,lan):
+    t = googletrans.Translator()
+    new_ques = t.translate(ques,src='en',dest=lan[:2])
+    
+    print('\nQuestion for patient:\n'+str(new_ques.text))
+
+    
+    sp_out = False
+    while sp_out == False:
+        cont = input('\nPress enter to start:')
+        sp_out = convert_speech(using_mic(),lan)
+        if sp_out == False:
+            pass
+        else:
+            corr = str(input(sp_out+'\nIs this correct (y/n):'))
+            
+            if corr == 'n':
+                sp_out = False
+            else:
+                pass
+        
+    #print('Patient Said: '+str(sp_out))
+
+    en_out = t.translate(sp_out,src=lan[:2],dest='en')
+    output = en_out.text
+    print("Patient Said: "+str(output)+' ('+str(sp_out)+')')
+    return str(output)
+    
+
+out = demo()
+print('\n####Final Report####\n')
+output = zip(out[1],out[0])
+for o in output:
+    print(o)
+
+    
