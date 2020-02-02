@@ -7,8 +7,6 @@ import time
 #r.recognize_google(audio, language="fr-FR") french example
 
 
-
-
 def convert_speech(audio):
     r = sr.Recognizer()
 
@@ -16,6 +14,7 @@ def convert_speech(audio):
     
     try:
         output = r.recognize_google(audio)
+        #output = r.recognize_google(audio, language="fr-FR")
         
     except sr.RequestError:
         print('Connection to API failed')
@@ -54,4 +53,4 @@ def using_mic():
     return audio
 
 
-convert_speech(using_mic())
+a = convert_speech(using_mic())
