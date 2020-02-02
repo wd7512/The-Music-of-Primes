@@ -118,7 +118,14 @@ def question(ques,lan):
 out = demo()
 print('\n####Final Report####\n')
 output = zip(out[1],out[0])
+f = open('Final Report.csv','w')
+f.write('Question,Answer\n')
 for o in output:
     print(o)
+    f.write(str(o)[1:-1]+'\n')
+f.close()
 
-    
+
+
+
+end = input('Press enter to quit:')

@@ -2,9 +2,10 @@ from cx_Freeze import setup, Executable
 
 base = None    
 
-executables = [Executable("myfirstprog.py", base=base)]
+executables = [Executable("Speech.py", base=base)]
 
-packages = ["idna"]
+packages = ["idna",'speech_recognition','sounddevice',
+            'scipy.io','numpy','time','googletrans']
 options = {
     'build_exe': {    
         'packages':packages,
