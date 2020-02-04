@@ -1,0 +1,4 @@
+Start working on GUI
+Add Flags and a tick/cross to the 'is this correct?'
+
+Start working on voice speech
