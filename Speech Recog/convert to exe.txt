@@ -1,0 +1,2 @@
+pyinstaller --onefile prog.py
+prog.exe found in dist folder
