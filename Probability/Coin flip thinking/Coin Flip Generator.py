@@ -35,14 +35,13 @@ def draw(num):
         f.write(str([avg1,avg2-maxx])+'\n')
         f.close()
         
-    '''
-
+    
     plt.plot(x1,y1,label='original')
     plt.plot(x2,y2,label='shifted')
     plt.axis('equal')
     plt.legend()
     plt.show()
-    '''
+    
     
 for i in range(runs):
     draw(num)

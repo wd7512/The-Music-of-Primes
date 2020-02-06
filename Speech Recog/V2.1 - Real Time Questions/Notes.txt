@@ -1,0 +1,5 @@
+
+Add document input ##DONE
+Change 'is this correct' to chose language ##DONE
+
+Add questions in real time #Done
