@@ -4,7 +4,7 @@ import random
 
 def game():
     #20x20 "pixels"
-    delay=0.02
+    delay=0.03
     xdim=600 #must be multiple of 40
     ydim=600
 
