@@ -17,22 +17,6 @@ urls = f.readlines()
 f.close()
 
 
-
-'''
-content = False
-while content == False:
-    try:
-        driver.get(url)
-        content = driver.find_element_by_class_name("col-lg-4 col-md-6 col-widen text-center")
-    except NoSuchElementException:
-        content = driver.page_source
-        print('gsuifghsd')
-        driver.quit()
-        #time.sleep(6)
-
-print(str(content))
-'''
-
 for url in urls:
     driver = webdriver.Chrome('C:\\chromedriver_win32\\chromedriver.exe')
     url = url[:-1]
