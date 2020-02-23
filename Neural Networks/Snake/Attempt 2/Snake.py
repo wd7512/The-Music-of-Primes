@@ -18,8 +18,8 @@ def new_board(size): #creates empty game board
     
     return board
     
-def add_food(board,size):
-    flat = board.reshape([1,size*size])
+def add_food(board,size): # had potential to be faster
+    flat = (board+0).reshape([1,size*size])
     num = np.random.choice(np.where(flat==0)[1])
     flat[0,num] = 2
     mat = flat.reshape([size,size])
@@ -31,7 +31,16 @@ def show(frames): #frames may be the board states as a matrix
     for frame in frames:
         im = plt.imshow(frame,animated=True)
         ims.append([im])
-    ani = animation.ArtistAnimation(fig,ims,interval=100,blit=True,repeat_delay=100)
-    # ani.save('dynamic_images.mp4')
+    ani = animation.ArtistAnimation(fig,ims,interval=100,blit=True,repeat_delay=1000)
+    #ani.save('dynamic_images.gif')
     plt.show()
 
+def test_food(no_frames,size):
+    boards = [new_board(size)]
+    for i in range(no_frames-1):
+        new = add_food(boards[-1],size)
+        boards.append(new)
+    show(boards)
+    return boards
+    
+a = test_food(15*15-1,15)
