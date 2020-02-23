@@ -44,3 +44,6 @@ def test_food(no_frames,size):
     return boards
     
 a = test_food(15*15-1,15)
+
+def get_inputs(board,size):
+    flat = (board+0).reshape([1,size*size])
