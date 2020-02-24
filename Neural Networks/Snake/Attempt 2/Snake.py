@@ -43,7 +43,23 @@ def test_food(no_frames,size):
     show(boards)
     return boards
     
-a = test_food(15*15-1,15)
+
 
 def get_inputs(board,size):
     flat = (board+0).reshape([1,size*size])
+    
+    pos = np.where(board == 1)
+    head_pos = (pos[0][0],pos[1][0])
+
+    v_slice = board[:,head_pos[1]]
+    h_slice = board[head_pos[0]]
+    #d1_slice = board[]
+    #d2_slice = board[]
+
+    print(v_slice)
+    print(h_slice)
+    
+
+a = new_board(11)
+get_inputs(a,11)
+    
