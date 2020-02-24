@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 #random_matrix = np.random.rand(10,10)
+size = 41
 
 def new_board(size): #creates empty game board
     half = math.floor(size/2)
@@ -14,14 +15,14 @@ def new_board(size): #creates empty game board
     food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     while food_space == [half,half]:
         food_space = [random.randint(0,size-1),random.randint(0,size-1)]
-    board[food_space[0],food_space[1]] = 2
+    board[food_space[0],food_space[1]] = -1
     
     return board
     
 def add_food(board,size): # had potential to be faster
     flat = (board+0).reshape([1,size*size])
     num = np.random.choice(np.where(flat==0)[1])
-    flat[0,num] = 2
+    flat[0,num] = -1
     mat = flat.reshape([size,size])
     return mat
 
@@ -46,6 +47,8 @@ def test_food(no_frames,size):
 
 
 def get_inputs(board,size):
+    # 24 inputs 8 dir * distance to [wall,food,itself]
+    half = math.floor(size/2)
     flat = (board+0).reshape([1,size*size])
     
     pos = np.where(board == 1)
@@ -53,11 +56,23 @@ def get_inputs(board,size):
 
     v_slice = board[:,head_pos[1]]
     h_slice = board[head_pos[0]]
-    #d1_slice = board[]
-    #d2_slice = board[]
+    d1_slice = np.diag(board)
+    d2_slice = np.diag(np.fliplr(board+0))
 
     print(v_slice)
     print(h_slice)
+    print(d1_slice)
+    print(d2_slice)
+    print(board)
+
+    def conv(halfslice):
+        
+
+    #output = [top,bot,lef,rig,top-lef,top-right,bot-right,bot-left]
+    output = np.zeros((1,24))
+    
+    
+    
     
 
 
