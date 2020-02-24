@@ -60,6 +60,5 @@ def get_inputs(board,size):
     print(h_slice)
     
 
-a = new_board(11)
-get_inputs(a,11)
+
     
