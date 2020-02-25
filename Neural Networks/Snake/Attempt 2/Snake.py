@@ -58,13 +58,13 @@ def get_inputs(board,size):
     h_slice = board[head_pos[0]]
     d1_slice = np.diag(board)
     d2_slice = np.diag(np.fliplr(board+0))
-
+    '''
     print(v_slice)
     print(h_slice)
     print(d1_slice)
     print(d2_slice)
     print(board)
-
+    '''
     vA = np.flip(v_slice[:half])
     vB = v_slice[half+1:]
     hA = np.flip(h_slice[:half])
@@ -74,6 +74,8 @@ def get_inputs(board,size):
     d2A = np.flip(d2_slice[:half])
     d2B = d2_slice[half+1:]
 
+    slices = [vA,d2A,hB,d1B,vB,d2B,hA,d1A]
+    '''
     print(vA) 
     print(d2A)
     print(hB) 
@@ -82,10 +84,11 @@ def get_inputs(board,size):
     print(d2B)
     print(hA)
     print(d1A)
+    '''
 
     #output = [wall dist,food dist,iteself dist]
-    output = (np.zeros((1,24)))+10**6
-    print(output)
+    output = (np.zeros((1,24)))
+    #print(output)
     output[0][0] = pos[0][0] + 1
     output[0][1] = math.sqrt(2) * (pos[0][0] + 1 + pos[1][0] + 1)
     output[0][2] = pos[1][0] + 1
@@ -95,10 +98,21 @@ def get_inputs(board,size):
     output[0][6] = size - (pos[1][0])
     output[0][7] = math.sqrt(2) * (size - (pos[1][0]) + pos[0][0] + 1)
 
-    print(output)
-    
+    #print(output)
 
-    
+    slices_self = [np.where(var==1)[0][0]+1 if 1 in var else 10**6 for var in slices]
+    #print(slices_self)
+    slices_food = [np.where(var==-1)[0][0]+1 if -1 in var else 10**6 for var in slices]
+    #print(slices_food)
+
+    for i in range(8):
+        output[0][i+8] = slices_self[i]
+    for i in range(8):
+        output[0][i+16] = slices_food[i]
+
+    #print(output)
+
+    return output
         
     
 def function(x):
@@ -106,8 +120,4 @@ def function(x):
     
     
 
-a = new_board(9)
-for i in range(25):
-    a = add_food(a,9)
-get_inputs(a,9)
     
