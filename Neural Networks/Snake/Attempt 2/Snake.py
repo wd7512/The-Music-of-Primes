@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 #random_matrix = np.random.rand(10,10)
-size = 41
+
 
 def new_board(size): #creates empty game board
     half = math.floor(size/2)
@@ -111,9 +111,11 @@ def get_inputs(board,size):
 
     #print(output)
 
-    slices_self = [np.where(var==1)[0][0]+1 if 1 in var else 10**6 for var in slices]
+    inf = 10**6
+
+    slices_self = [np.where(var==1)[0][0]+1 if 1 in var else inf for var in slices]
     #print(slices_self)
-    slices_food = [np.where(var==-1)[0][0]+1 if -1 in var else 10**6 for var in slices]
+    slices_food = [np.where(var==-1)[0][0]+1 if -1 in var else inf for var in slices]
     #print(slices_food)
 
     for i in range(8):
@@ -147,13 +149,60 @@ def random_brain():
 def run_brain(brain,inputs):
     midlay = function(np.matmul(inputs,brain[0])) + brain[1]
     output = function(np.matmul(midlay,brain[2])) + brain[3]
-    return output
+    return output #[top, right, bot, left]
+
+def run_game(brain):
+
+    states = []
+    
+    size = 41
+    board = new_board(size)
+    brain = random_brain()
+
+    moves = 200
+
+    while moves > 0:
+        moves = moves - 1
+        
+        inputs = get_inputs(board,size)
+        outputs = run_brain(brain,inputs)
+        ind_max = outputs.argmax()
+        
+        direc = (-1,0)
+        if ind_max == 1:
+            direc = (0,1)
+        if ind_max == 2:
+            direc = (1,0)
+        if ind_max == 3:
+            direc = (0,-1)
+
+        #print(board)
+        states.append(board+0)
+        #print(direc)
+        
+
+        head_pos = np.where(board == 2)
+        body_pos = np.where(board == 1)
+        new_head_pos = (head_pos[0]+direc[0],head_pos[1]+direc[1])
+
+        board[head_pos] = 1
+        board[body_pos[0][-1],body_pos[1][-1]] = 0
+
+        board[new_head_pos] = 2
+    
+        
+    return states
+    
 
 
-a = new_board(11)
-a[5,5] = 0
-a[3,7] = 2
-for i in range(25):
-    a = add_food(a,11)
-b = get_inputs(a,11)
-
+'''
+size = 41
+a = new_board(size)
+ploot = []
+for i in range(100):
+    ploot.append(a)
+    a = add_food(a,size)
+b = get_inputs(a,size)
+show(ploot)
+'''
+show(run_game(random_brain()))
