@@ -10,21 +10,21 @@ import matplotlib.animation as animation
 def new_board(size): #creates empty game board
     half = math.floor(size/2)
     board = np.zeros((size,size),dtype = int)
-    board[half-1,half] = 2
-    board[half,half] = 1
-    board[half+1,half] = 1
+    board[half-1,half] = 1
+    board[half,half] = 2
+    board[half+1,half] = 3
 
     food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     while food_space == [half,half]:
         food_space = [random.randint(0,size-1),random.randint(0,size-1)]
-    board[food_space[0],food_space[1]] = -1
+    board[food_space[0],food_space[1]] = -10
     
     return board
     
 def add_food(board,size): # had potential to be faster
     flat = (board+0).reshape([1,size*size])
     num = np.random.choice(np.where(flat==0)[1])
-    flat[0,num] = -1
+    flat[0,num] = -10
     mat = flat.reshape([size,size])
     return mat
 
@@ -34,7 +34,7 @@ def show(frames): #frames may be the board states as a matrix
     for frame in frames:
         im = plt.imshow(frame,animated=True)
         ims.append([im])
-    ani = animation.ArtistAnimation(fig,ims,interval=50,blit=True,repeat_delay=1000)
+    ani = animation.ArtistAnimation(fig,ims,interval=75,blit=True,repeat_delay=1000)
     #ani.save('dynamic_images.gif')
     plt.show()
 
@@ -53,7 +53,7 @@ def get_inputs(board,size):
     half = math.floor(size/2) 
     flat = (board+0).reshape([1,size*size])
     
-    pos = np.where(board == 2)
+    pos = np.where(board == 1)
     head_pos = (pos[0][0],pos[1][0])
 
     v_slice = board[:,head_pos[1]]
@@ -64,7 +64,7 @@ def get_inputs(board,size):
 
     K = (dif_x-dif_y,-dif_y-dif_x)
     #print(K)
-    d1_slice = np.diag(board,k=K[0]) #needs offsetting
+    d1_slice = np.diag(board,k=K[0]) 
     d2_slice = np.diag(np.fliplr(board+0),k=-K[1])
     '''
     print(v_slice)
@@ -80,10 +80,10 @@ def get_inputs(board,size):
 
     
     
-    d1A = np.flip(d1_slice[:np.where(d1_slice==2)[0][0]])
-    d1B = d1_slice[np.where(d1_slice==2)[0][0]+1:] 
-    d2A = np.flip(d2_slice[:np.where(d2_slice==2)[0][0]])
-    d2B = d2_slice[np.where(d2_slice==2)[0][0]+1:]
+    d1A = np.flip(d1_slice[:np.where(d1_slice==1)[0][0]])
+    d1B = d1_slice[np.where(d1_slice==1)[0][0]+1:] 
+    d2A = np.flip(d2_slice[:np.where(d2_slice==1)[0][0]])
+    d2B = d2_slice[np.where(d2_slice==1)[0][0]+1:]
 
     slices = [vA,d2A,hB,d1B,vB,d2B,hA,d1A]
     '''
@@ -113,9 +113,9 @@ def get_inputs(board,size):
 
     inf = 10**6
 
-    slices_self = [np.where(var==1)[0][0]+1 if 1 in var else inf for var in slices]
+    slices_self = [np.where(var > 1)[0][0]+1 if any(x>1 for x in var) else inf for var in slices]
     #print(slices_self)
-    slices_food = [np.where(var==-1)[0][0]+1 if -1 in var else inf for var in slices]
+    slices_food = [np.where(var==-10)[0][0]+1 if -10 in var else inf for var in slices]
     #print(slices_food)
 
     for i in range(8):
@@ -178,21 +178,37 @@ def run_game(brain):
 
         #print(board)
         states.append(board+0)
-        print(direc)
+        #print(direc)
         
 
-        head_pos = np.where(board == 2)
-        body_pos = np.where(board == 1)
+        head_pos = np.where(board == 1)
+        body_pos = np.where(board > 1)
+        #print(body_pos)
+        snake_len = len(body_pos[0])
+        
+        
         new_head_pos = (head_pos[0]+direc[0],head_pos[1]+direc[1])
 
-        if -1 in new_head_pos or size in new_head_pos:
+        
+        on_itself = False
+        body_pos_list = []
+        for i in range(snake_len):
+
+            body_pos_list.append((body_pos[0][i],body_pos[1][i]))
+
+            if np.all(new_head_pos == body_pos_list[-1]):
+                on_itself = True
+        #print(new_head_pos)
+        if -1 in new_head_pos[0] or -1 in new_head_pos[1] or size in new_head_pos[0] or size in new_head_pos[1] or on_itself == True:
             moves = -1
         else:
+            
+            
+            board[body_pos] = board[body_pos] + 1
+            board[head_pos] = board[head_pos] + 1
+            board[new_head_pos] = 1
 
-            board[head_pos] = 1
-            board[body_pos[0][-1],body_pos[1][-1]] = 0
-
-            board[new_head_pos] = 2
+            board[np.where(board == (snake_len+2))] = 0
     
         
     return states
@@ -209,4 +225,6 @@ for i in range(100):
 b = get_inputs(a,size)
 show(ploot)
 '''
-show(run_game(random_brain()))
+game = run_game(random_brain())
+
+show(game)
