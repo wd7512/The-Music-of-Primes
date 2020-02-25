@@ -10,7 +10,7 @@ size = 41
 def new_board(size): #creates empty game board
     half = math.floor(size/2)
     board = np.zeros((size,size),dtype = int)
-    board[half,half] = 1
+    board[half,half] = 2
 
     food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     while food_space == [half,half]:
@@ -51,26 +51,32 @@ def get_inputs(board,size):
     half = math.floor(size/2) #replace half with pos
     flat = (board+0).reshape([1,size*size])
     
-    pos = np.where(board == 1)
+    pos = np.where(board == 2)
     head_pos = (pos[0][0],pos[1][0])
 
     v_slice = board[:,head_pos[1]]
     h_slice = board[head_pos[0]]
-    d1_slice = np.diag(board)
-    d2_slice = np.diag(np.fliplr(board+0))
-    '''
+
+    K = head_pos[0] + head_pos[1] - size # the offset
+    print(K)
+    d1_slice = np.diag(board,k=K) #needs offsetting
+    d2_slice = np.diag(np.fliplr(board+0),k=K)
+    
     print(v_slice)
     print(h_slice)
     print(d1_slice)
     print(d2_slice)
     print(board)
-    '''
-    vA = np.flip(v_slice[:half])
-    vB = v_slice[half+1:]
-    hA = np.flip(h_slice[:half])
-    hB = h_slice[half+1:]
+    
+    vA = np.flip(v_slice[:head_pos[0]])
+    vB = v_slice[head_pos[0]+1:]
+    hA = np.flip(h_slice[:head_pos[1]])
+    hB = h_slice[head_pos[1]+1:]
+
+    
+    
     d1A = np.flip(d1_slice[:half])
-    d1B = d1_slice[half+1:]
+    d1B = d1_slice[half+1:] #fix half
     d2A = np.flip(d2_slice[:half])
     d2B = d2_slice[half+1:]
 
@@ -114,10 +120,25 @@ def get_inputs(board,size):
 
     return output
         
-    
 def function(x):
     return 1/(1+np.exp(-x))
     
-    
+def random_brain():
+    # 24 - x - 4
+    x = 24
+    lay1 = np.random.rand(24,x)
+    add1 = np.random.rand(1,24)
+    lay2 = np.random.rand(x,4)
+    add2 = np.random.rand(1,4)
 
-    
+    return [lay1,add1,lay2,add2]
+
+def run_brain(brain,inputs):
+    midlay = function(np.matmul(inputs,brain[0])) + brain[1]
+    output = function(np.matmul(midlay,brain[2])) + brain[3]
+    return output
+
+a = new_board(10)
+for i in range(25):
+    a = add_food(a,10)
+b = get_inputs(a,10)
