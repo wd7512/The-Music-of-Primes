@@ -48,7 +48,7 @@ def test_food(no_frames,size):
 
 def get_inputs(board,size):
     # 24 inputs 8 dir * distance to [wall,food,itself]
-    half = math.floor(size/2) #replace half with pos
+    half = math.floor(size/2) 
     flat = (board+0).reshape([1,size*size])
     
     pos = np.where(board == 2)
@@ -57,17 +57,20 @@ def get_inputs(board,size):
     v_slice = board[:,head_pos[1]]
     h_slice = board[head_pos[0]]
 
-    K = head_pos[0] + head_pos[1] - size # the offset
-    print(K)
-    d1_slice = np.diag(board,k=K) #needs offsetting
-    d2_slice = np.diag(np.fliplr(board+0),k=K)
-    
+    dif_x = half - head_pos[0]
+    dif_y = half - head_pos[1]
+
+    K = (dif_x-dif_y,-dif_y-dif_x)
+    #print(K)
+    d1_slice = np.diag(board,k=K[0]) #needs offsetting
+    d2_slice = np.diag(np.fliplr(board+0),k=-K[1])
+    '''
     print(v_slice)
     print(h_slice)
     print(d1_slice)
     print(d2_slice)
     print(board)
-    
+    '''
     vA = np.flip(v_slice[:head_pos[0]])
     vB = v_slice[head_pos[0]+1:]
     hA = np.flip(h_slice[:head_pos[1]])
@@ -75,10 +78,10 @@ def get_inputs(board,size):
 
     
     
-    d1A = np.flip(d1_slice[:half])
-    d1B = d1_slice[half+1:] #fix half
-    d2A = np.flip(d2_slice[:half])
-    d2B = d2_slice[half+1:]
+    d1A = np.flip(d1_slice[:np.where(d1_slice==2)[0][0]])
+    d1B = d1_slice[np.where(d1_slice==2)[0][0]+1:] 
+    d2A = np.flip(d2_slice[:np.where(d2_slice==2)[0][0]])
+    d2B = d2_slice[np.where(d2_slice==2)[0][0]+1:]
 
     slices = [vA,d2A,hB,d1B,vB,d2B,hA,d1A]
     '''
@@ -138,7 +141,9 @@ def run_brain(brain,inputs):
     output = function(np.matmul(midlay,brain[2])) + brain[3]
     return output
 
-a = new_board(10)
+a = new_board(11)
+a[5,5] = 0
+a[6,6] = 2
 for i in range(25):
-    a = add_food(a,10)
-b = get_inputs(a,10)
+    a = add_food(a,11)
+b = get_inputs(a,11)
