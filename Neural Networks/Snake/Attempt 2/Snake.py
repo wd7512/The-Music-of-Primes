@@ -283,16 +283,12 @@ def basic_sim(pop,gens):
 
     return best_of_gen
 
-            
+def averaged_sim(pop,gens): #runs each brain x times and takes an average
 
-'''
-size = 41
-a = new_board(size)
-ploot = []
-for i in range(100):
-    ploot.append(a)
-    a = add_food(a,size)
-b = get_inputs(a,size)
-show(ploot)
-'''
+    mini_runs = 5
+    ind_pop = pop/5
+
+def save_matrix(mat,name):
+
+
 sim = basic_sim(10000,100)
