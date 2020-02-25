@@ -48,7 +48,7 @@ def test_food(no_frames,size):
 
 def get_inputs(board,size):
     # 24 inputs 8 dir * distance to [wall,food,itself]
-    half = math.floor(size/2)
+    half = math.floor(size/2) #replace half with pos
     flat = (board+0).reshape([1,size*size])
     
     pos = np.where(board == 1)
@@ -65,15 +65,49 @@ def get_inputs(board,size):
     print(d2_slice)
     print(board)
 
-    def conv(halfslice):
+    vA = np.flip(v_slice[:half])
+    vB = v_slice[half+1:]
+    hA = np.flip(h_slice[:half])
+    hB = h_slice[half+1:]
+    d1A = np.flip(d1_slice[:half])
+    d1B = d1_slice[half+1:]
+    d2A = np.flip(d2_slice[:half])
+    d2B = d2_slice[half+1:]
+
+    print(vA) 
+    print(d2A)
+    print(hB) 
+    print(d1B) 
+    print(vB)
+    print(d2B)
+    print(hA)
+    print(d1A)
+
+    #output = [wall dist,food dist,iteself dist]
+    output = (np.zeros((1,24)))+10**6
+    print(output)
+    output[0][0] = pos[0][0] + 1
+    output[0][1] = math.sqrt(2) * (pos[0][0] + 1 + pos[1][0] + 1)
+    output[0][2] = pos[1][0] + 1
+    output[0][3] = math.sqrt(2) * (size - (pos[0][0]) + pos[1][0] + 1)
+    output[0][4] = size - (pos[0][0])
+    output[0][5] = math.sqrt(2) * (size - (pos[0][0]) + size - (pos[1][0]))
+    output[0][6] = size - (pos[1][0])
+    output[0][7] = math.sqrt(2) * (size - (pos[1][0]) + pos[0][0] + 1)
+
+    print(output)
+    
+
+    
         
-
-    #output = [top,bot,lef,rig,top-lef,top-right,bot-right,bot-left]
-    output = np.zeros((1,24))
     
-    
+def function(x):
+    return 1/(1+np.exp(-x))
     
     
 
-
+a = new_board(9)
+for i in range(25):
+    a = add_food(a,9)
+get_inputs(a,9)
     
