@@ -12,12 +12,12 @@ def new_board(size): #creates empty game board
     board[half,half] = 2
     board[half+1,half] = 3
 
-    '''
+    
     food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     while food_space == [half-1,half]:
         food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     board[food_space[0],food_space[1]] = -10
-    '''
+    
     
     return board
     
@@ -230,13 +230,17 @@ def basic_sim(pop,gens):
     pop_games = sorted(pop_games, reverse = True, key=lambda x: x[0])
 
     top_percent = 0.05    
-    rand_percent = 0.1
+    rand_percent = 0.4
 
     top_nums = int(top_percent * pop)
     randoms = int(rand_percent * pop)
     child_percent = 1 - top_percent - rand_percent
-    child_num = int(child_percent / top_percent)
-    
+    child_num = round(child_percent / top_percent)
+    '''
+    print(child_num)
+    print(randoms)
+    print(top_nums)
+    '''
     best = pop_games[:top_nums]
     best_of_gen.append(best[0])
 
@@ -283,4 +287,4 @@ for i in range(100):
 b = get_inputs(a,size)
 show(ploot)
 '''
-sim = basic_sim(1000,50)
+sim = basic_sim(1000,100)
