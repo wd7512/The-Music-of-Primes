@@ -10,7 +10,9 @@ size = 41
 def new_board(size): #creates empty game board
     half = math.floor(size/2)
     board = np.zeros((size,size),dtype = int)
-    board[half,half] = 2
+    board[half-1,half] = 2
+    board[half,half] = 1
+    board[half+1,half] = 1
 
     food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     while food_space == [half,half]:
@@ -115,9 +117,15 @@ def get_inputs(board,size):
     #print(slices_food)
 
     for i in range(8):
-        output[0][i+8] = slices_self[i]
+        if i%2 == 1:
+            output[0][i+8] = slices_self[i] * math.sqrt(2)
+        else:
+            output[0][i+8] = slices_self[i]
     for i in range(8):
-        output[0][i+16] = slices_food[i]
+        if i%2 == 1:
+            output[0][i+16] = slices_food[i] * math.sqrt(2)
+        else:
+            output[0][i+16] = slices_food[i]
 
     #print(output)
 
@@ -141,9 +149,11 @@ def run_brain(brain,inputs):
     output = function(np.matmul(midlay,brain[2])) + brain[3]
     return output
 
+
 a = new_board(11)
 a[5,5] = 0
-a[6,6] = 2
+a[3,7] = 2
 for i in range(25):
     a = add_food(a,11)
 b = get_inputs(a,11)
+
