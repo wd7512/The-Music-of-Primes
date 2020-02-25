@@ -34,7 +34,7 @@ def show(frames): #frames may be the board states as a matrix
     for frame in frames:
         im = plt.imshow(frame,animated=True)
         ims.append([im])
-    ani = animation.ArtistAnimation(fig,ims,interval=100,blit=True,repeat_delay=1000)
+    ani = animation.ArtistAnimation(fig,ims,interval=50,blit=True,repeat_delay=1000)
     #ani.save('dynamic_images.gif')
     plt.show()
 
@@ -178,17 +178,21 @@ def run_game(brain):
 
         #print(board)
         states.append(board+0)
-        #print(direc)
+        print(direc)
         
 
         head_pos = np.where(board == 2)
         body_pos = np.where(board == 1)
         new_head_pos = (head_pos[0]+direc[0],head_pos[1]+direc[1])
 
-        board[head_pos] = 1
-        board[body_pos[0][-1],body_pos[1][-1]] = 0
+        if -1 in new_head_pos or size in new_head_pos:
+            moves = -1
+        else:
 
-        board[new_head_pos] = 2
+            board[head_pos] = 1
+            board[body_pos[0][-1],body_pos[1][-1]] = 0
+
+            board[new_head_pos] = 2
     
         
     return states
