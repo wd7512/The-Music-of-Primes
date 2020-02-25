@@ -157,10 +157,10 @@ def run_game(brain):
 
     states = []
     
-    size = 31
+    size = 21
     board = new_board(size)
 
-    moves = 200
+    moves = 100
     score = 0
 
     while moves > 0:
@@ -205,19 +205,27 @@ def run_game(brain):
         if -1 in new_head_pos[0] or -1 in new_head_pos[1] or size in new_head_pos[0] or size in new_head_pos[1] or on_itself == True:
             moves = -1
         else:
-            
-            
+            food_pos = np.where(board == -10)
+
             board[body_pos] = board[body_pos] + 1
             board[head_pos] = board[head_pos] + 1
             board[new_head_pos] = 1
 
-            board[np.where(board == (snake_len+2))] = 0
+            
+            if new_head_pos == (food_pos[0],food_pos[1]):
+                
+                moves = moves + 100
+                score = score + 100
+                board = add_food(board,size)
+                
+            else:
+                board[np.where(board == (snake_len+2))] = 0
     
     #print(score)
     return [score,states,brain]
 
 def mutate(brain):
-    factor = 10**-2
+    factor = 10**-4
     new_brain = [sub + (np.random.uniform(-1,1,(np.shape(sub)[0],np.shape(sub)[1])))*factor for sub in brain]
     return new_brain
     
@@ -287,4 +295,4 @@ for i in range(100):
 b = get_inputs(a,size)
 show(ploot)
 '''
-sim = basic_sim(1000,100)
+sim = basic_sim(10000,100)
