@@ -4,8 +4,6 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-#random_matrix = np.random.rand(10,10)
-
 
 def new_board(size): #creates empty game board
     half = math.floor(size/2)
@@ -14,10 +12,12 @@ def new_board(size): #creates empty game board
     board[half,half] = 2
     board[half+1,half] = 3
 
+    '''
     food_space = [random.randint(0,size-1),random.randint(0,size-1)]
-    while food_space == [half,half]:
+    while food_space == [half-1,half]:
         food_space = [random.randint(0,size-1),random.randint(0,size-1)]
     board[food_space[0],food_space[1]] = -10
+    '''
     
     return board
     
@@ -34,7 +34,7 @@ def show(frames): #frames may be the board states as a matrix
     for frame in frames:
         im = plt.imshow(frame,animated=True)
         ims.append([im])
-    ani = animation.ArtistAnimation(fig,ims,interval=75,blit=True,repeat_delay=1000)
+    ani = animation.ArtistAnimation(fig,ims,interval=50,blit=True,repeat_delay=1000)
     #ani.save('dynamic_images.gif')
     plt.show()
 
@@ -54,7 +54,9 @@ def get_inputs(board,size):
     flat = (board+0).reshape([1,size*size])
     
     pos = np.where(board == 1)
+    #print(pos)
     head_pos = (pos[0][0],pos[1][0])
+
 
     v_slice = board[:,head_pos[1]]
     h_slice = board[head_pos[0]]
@@ -139,10 +141,10 @@ def function(x):
 def random_brain():
     # 24 - x - 4
     x = 24
-    lay1 = np.random.rand(24,x)
-    add1 = np.random.rand(1,24)
-    lay2 = np.random.rand(x,4)
-    add2 = np.random.rand(1,4)
+    lay1 = np.random.uniform(-1,1,(24,x))
+    add1 = np.random.uniform(-1,1,(1,24))
+    lay2 = np.random.uniform(-1,1,(x,4))
+    add2 = np.random.uniform(-1,1,(1,4))
 
     return [lay1,add1,lay2,add2]
 
@@ -155,14 +157,15 @@ def run_game(brain):
 
     states = []
     
-    size = 41
+    size = 31
     board = new_board(size)
-    brain = random_brain()
 
     moves = 200
+    score = 0
 
     while moves > 0:
         moves = moves - 1
+        score = score + 1
         
         inputs = get_inputs(board,size)
         outputs = run_brain(brain,inputs)
@@ -210,10 +213,65 @@ def run_game(brain):
 
             board[np.where(board == (snake_len+2))] = 0
     
-        
-    return states
-    
+    #print(score)
+    return [score,states,brain]
 
+def mutate(brain):
+    factor = 10**-2
+    new_brain = [sub + (np.random.uniform(-1,1,(np.shape(sub)[0],np.shape(sub)[1])))*factor for sub in brain]
+    return new_brain
+    
+def basic_sim(pop,gens):
+
+    best_of_gen = []
+    
+    pop_brains = [random_brain() for i in range(pop)]
+    pop_games = [run_game(brain) for brain in pop_brains]
+    pop_games = sorted(pop_games, reverse = True, key=lambda x: x[0])
+
+    top_percent = 0.05    
+    rand_percent = 0.1
+
+    top_nums = int(top_percent * pop)
+    randoms = int(rand_percent * pop)
+    child_percent = 1 - top_percent - rand_percent
+    child_num = int(child_percent / top_percent)
+    
+    best = pop_games[:top_nums]
+    best_of_gen.append(best[0])
+
+    #show(best_of_gen[-1][1])
+
+    for i in range(gens):
+        print('Gen = '+str(i))
+        
+        pop_brains = [b[2] for b in best] + [random_brain() for i in range(randoms)]
+        
+        
+        for person in best:
+            brain = person[2]
+            children = [mutate(brain) for i in range(child_num)]
+            pop_brains = pop_brains + children
+
+        print('population = '+str(len(pop_brains)))
+
+
+        pop_games = [run_game(brain) for brain in pop_brains]
+        pop_games = sorted(pop_games, reverse = True, key=lambda x: x[0])
+        #print(pop_games[0])
+
+        best = pop_games[:top_nums]
+
+        best_of_gen.append(best[0])
+
+        print('Best Score = '+str(best[0][0]))
+
+        #show(best_of_gen[-1][1])
+
+
+    return best_of_gen
+
+            
 
 '''
 size = 41
@@ -225,6 +283,4 @@ for i in range(100):
 b = get_inputs(a,size)
 show(ploot)
 '''
-game = run_game(random_brain())
-
-show(game)
+sim = basic_sim(1000,50)
