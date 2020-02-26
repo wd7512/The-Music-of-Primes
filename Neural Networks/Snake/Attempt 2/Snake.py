@@ -292,15 +292,21 @@ def averaged_sim(pop,gens): #runs each brain x times and takes an average
 def save_matrix(mat,name):
     f = open(name+'.csv','w')
     size = np.shape(mat)
+    #print(mat)
     for i in range(size[0]):
         line = str(mat[i])
+        
         line = line.replace(']','')
         line = line.replace('[','')
         line = line.replace('    ',',')
         line = line.replace('   ',',')
         line = line.replace('  ',',')
         line = line.replace(' ',',')
-        print(line)
+        line = line.replace('\n','')
+        if line[0] == ',':
+            line = line[1:]
+        #print(line)
+        
         f.write(line+'\n')
     f.close()
 
@@ -321,7 +327,7 @@ def open_matrix(name):
         while '' in d:
             d.remove('')
 
-    print(new_data)
+    #print(new_data)
 
     size = (len(new_data),len(new_data[0]))
     print(size)
@@ -353,7 +359,7 @@ def open_brain(name):
     return [lay1,add1,lay2,add2]
 
 def save_frames(frames,name):
-
+    #print(len(frames))
     for i in range(len(frames)):
         frame = frames[i]
         save_name = name+'_frame_'+str(i)
@@ -386,6 +392,7 @@ def open_frames(name):
 
     #print(sorted_frame_files)
 
+    
     for file in sorted_frame_files:
         frames.append(open_matrix(file))
 
@@ -404,7 +411,8 @@ a = open_brain('new')
 show(run_game(b))
 show(run_game(a))
 '''
-sim = basic_sim(100,10)
-save_frames(sim[-1][1],'abc')
+sim = basic_sim(100,5)
+a = sim[-1][1]
+save_frames(a,'abc')
 #show(sim[-1][1])
-a = open_frames('abc')
+b = open_frames('abc')
