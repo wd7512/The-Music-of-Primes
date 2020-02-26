@@ -3,6 +3,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import os
 
 
 def new_board(size): #creates empty game board
@@ -157,7 +158,7 @@ def run_game(brain):
 
     states = []
     
-    size = 41
+    size = 31
     board = new_board(size)
 
     moves = 100
@@ -304,7 +305,10 @@ def save_matrix(mat,name):
     f.close()
 
 def open_matrix(name):
-    name = name+'.csv'
+    if '.csv' in name:
+        pass
+    else:
+        name = name+'.csv'
     f = open(name,'r')
     data = f.readlines()
     new_data = []
@@ -325,23 +329,26 @@ def open_matrix(name):
     mat = np.zeros(size)
     for i in range(size[0]):
         for j in range(size[1]):
-            flt = new_data[i][j]
-            print(flt)
+            try:
+                flt = new_data[i][j]
+            except IndexError:
+                print(name)
+
             mat[i][j] = float(flt)
 
     return mat
     
 def save_brain(brain,name):
-    save_matrix(brain[0],name+'lay1')
-    save_matrix(brain[1],name+'add1')
-    save_matrix(brain[2],name+'lay2')
-    save_matrix(brain[3],name+'add2')
+    save_matrix(brain[0],name+'_lay1')
+    save_matrix(brain[1],name+'_add1')
+    save_matrix(brain[2],name+'_lay2')
+    save_matrix(brain[3],name+'_add2')
 
 def open_brain(name):
-    lay1 = open_matrix(name+'lay1')
-    add1 = open_matrix(name+'add1')
-    lay2 = open_matrix(name+'lay2')
-    add2 = open_matrix(name+'add2')
+    lay1 = open_matrix(name+'_lay1')
+    add1 = open_matrix(name+'_add1')
+    lay2 = open_matrix(name+'_lay2')
+    add2 = open_matrix(name+'_add2')
 
     return [lay1,add1,lay2,add2]
 
@@ -349,15 +356,46 @@ def save_frames(frames,name):
 
     for i in range(len(frames)):
         frame = frames[i]
-        name = 'test_frame'+str(i)
-        save_matrix(frame,name)
+        save_name = name+'_frame_'+str(i)
+        save_matrix(frame,save_name)
 
+def open_frames(name):
+    frames = []
+    all_files = os.listdir()
+    find_name = name + '_frame_'
+    frame_files = []
+    for name in all_files:
+        if find_name in name:
+            frame_files.append(name)
+
+    sorted_frame_files = []
+    for i in range(len(frame_files)):
+
+
+        for j in range(len(frame_files)):
+            file = frame_files[j]
+
+            to_find = '_'+str(i)+'.csv'
+            
+            if to_find in file:
+                #print(file)
+                found = True
+                sort_file = file
+
+                sorted_frame_files.append(sort_file)
+
+    #print(sorted_frame_files)
+
+    for file in sorted_frame_files:
+        frames.append(open_matrix(file))
+
+    return frames
+                
 '''
 sim = basic_sim(100,10)
 final = sim[-1] #[score,frames,brain]
 final_frames = final[1]
 final_brain = final[2]
-'''
 
 b = random_brain()
 save_brain(b,'new')
@@ -365,4 +403,8 @@ a = open_brain('new')
 
 show(run_game(b))
 show(run_game(a))
-
+'''
+sim = basic_sim(100,10)
+save_frames(sim[-1][1],'abc')
+#show(sim[-1][1])
+a = open_frames('abc')
