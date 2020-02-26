@@ -310,18 +310,59 @@ def open_matrix(name):
     new_data = []
     for d in data:
         new_data.append((d.replace('\n','')).split(','))
+    
+
+    
+    for d in new_data:
+        while '' in d:
+            d.remove('')
+
+    print(new_data)
+
     size = (len(new_data),len(new_data[0]))
     print(size)
-
+    
     mat = np.zeros(size)
     for i in range(size[0]):
         for j in range(size[1]):
             flt = new_data[i][j]
+            print(flt)
             mat[i][j] = float(flt)
 
     return mat
     
+def save_brain(brain,name):
+    save_matrix(brain[0],name+'lay1')
+    save_matrix(brain[1],name+'add1')
+    save_matrix(brain[2],name+'lay2')
+    save_matrix(brain[3],name+'add2')
 
-#sim = basic_sim(10000,500)
+def open_brain(name):
+    lay1 = open_matrix(name+'lay1')
+    add1 = open_matrix(name+'add1')
+    lay2 = open_matrix(name+'lay2')
+    add2 = open_matrix(name+'add2')
 
+    return [lay1,add1,lay2,add2]
+
+def save_frames(frames,name):
+
+    for i in range(len(frames)):
+        frame = frames[i]
+        name = 'test_frame'+str(i)
+        save_matrix(frame,name)
+
+'''
+sim = basic_sim(100,10)
+final = sim[-1] #[score,frames,brain]
+final_frames = final[1]
+final_brain = final[2]
+'''
+
+b = random_brain()
+save_brain(b,'new')
+a = open_brain('new')
+
+show(run_game(b))
+show(run_game(a))
 
