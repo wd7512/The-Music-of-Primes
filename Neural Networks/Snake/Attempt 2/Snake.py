@@ -157,7 +157,7 @@ def run_game(brain):
 
     states = []
     
-    size = 21
+    size = 41
     board = new_board(size)
 
     moves = 100
@@ -296,5 +296,5 @@ def save_matrix(mat,name):
     f.close()
     
 
-sim = basic_sim(2000,500)
+sim = basic_sim(10000,500)
 
