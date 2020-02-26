@@ -292,9 +292,36 @@ def save_matrix(mat,name):
     f = open(name+'.csv','w')
     size = np.shape(mat)
     for i in range(size[0]):
-        f.write(str(mat[i]).replace(' ',',')+'\n')
+        line = str(mat[i])
+        line = line.replace(']','')
+        line = line.replace('[','')
+        line = line.replace('    ',',')
+        line = line.replace('   ',',')
+        line = line.replace('  ',',')
+        line = line.replace(' ',',')
+        print(line)
+        f.write(line+'\n')
     f.close()
+
+def open_matrix(name):
+    name = name+'.csv'
+    f = open(name,'r')
+    data = f.readlines()
+    new_data = []
+    for d in data:
+        new_data.append((d.replace('\n','')).split(','))
+    size = (len(new_data),len(new_data[0]))
+    print(size)
+
+    mat = np.zeros(size)
+    for i in range(size[0]):
+        for j in range(size[1]):
+            flt = new_data[i][j]
+            mat[i][j] = float(flt)
+
+    return mat
     
 
-sim = basic_sim(10000,500)
+#sim = basic_sim(10000,500)
+
 
