@@ -289,6 +289,12 @@ def averaged_sim(pop,gens): #runs each brain x times and takes an average
     ind_pop = pop/5
 
 def save_matrix(mat,name):
+    f = open(name+'.csv','w')
+    size = np.shape(mat)
+    for i in range(size[0]):
+        f.write(str(mat[i]).replace(' ',',')+'\n')
+    f.close()
+    
 
+sim = basic_sim(2000,500)
 
-sim = basic_sim(10000,100)
