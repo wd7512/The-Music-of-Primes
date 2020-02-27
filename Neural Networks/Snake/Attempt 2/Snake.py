@@ -286,8 +286,67 @@ def basic_sim(pop,gens):
 
 def averaged_sim(pop,gens): #runs each brain x times and takes an average
 
-    mini_runs = 5
-    ind_pop = pop/5
+    def avg_run(brain):
+        
+        runs = 5
+        
+        all_runs = [run_game(brain) for i in range(5)]
+        all_runs = sorted(all_runs, reverse = True, key=lambda x: x[0])
+        best = all_runs[0]
+
+        total_score = 0
+        for run in all_runs:
+            total_score = total_score + run[0]
+
+        return [total_score,best[1],brain]
+
+
+    best_of_gen = []
+
+    pop_brains = [random_brain() for i in range(pop)]
+    pop_games = [avg_run(brain) for brain in pop_brains]
+    pop_games = sorted(pop_games, reverse = True, key=lambda x: x[0])
+
+    top_percent = 0.1    
+    rand_percent = 0.4
+
+    top_nums = int(top_percent * pop)
+    randoms = int(rand_percent * pop)
+    child_percent = 1 - top_percent - rand_percent
+    child_num = round(child_percent / top_percent)
+
+    best = pop_games[:top_nums]
+    best_of_gen.append(best[0])
+
+    for i in range(gens):
+        print('Gen = '+str(i))
+        
+        pop_brains = [b[2] for b in best] + [random_brain() for i in range(randoms)]
+        
+        
+        for person in best:
+            brain = person[2]
+            children = [mutate(brain) for i in range(child_num)]
+            pop_brains = pop_brains + children
+
+        print('population = '+str(len(pop_brains)))
+
+
+        pop_games = [avg_run(brain) for brain in pop_brains]
+        pop_games = sorted(pop_games, reverse = True, key=lambda x: x[0])
+        #print(pop_games[0])
+
+        best = pop_games[:top_nums]
+
+        best_of_gen.append(best[0])
+
+        print('Best Score = '+str(best[0][0]))
+
+        #show(best_of_gen[-1][1])
+
+
+    return best_of_gen
+    
 
 def save_matrix(mat,name):
     f = open(name+'.csv','w')
@@ -411,8 +470,14 @@ a = open_brain('new')
 show(run_game(b))
 show(run_game(a))
 '''
-sim = basic_sim(100,5)
-a = sim[-1][1]
-save_frames(a,'abc')
-#show(sim[-1][1])
-b = open_frames('abc')
+
+
+sim = averaged_sim(1000,200)
+a = sim[-1]
+save_frames(a[1],'avg')
+save_brain(a[2],'avg')
+
+
+
+
+
