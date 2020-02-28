@@ -158,7 +158,7 @@ def run_game(brain):
 
     states = []
     
-    size = 31
+    size = 41
     board = new_board(size)
 
     moves = 100
@@ -216,7 +216,7 @@ def run_game(brain):
             if new_head_pos == (food_pos[0],food_pos[1]):
                 
                 moves = moves + 100
-                score = score + 100
+                score = score + 20
                 board = add_food(board,size)
                 
             else:
@@ -288,7 +288,7 @@ def averaged_sim(pop,gens): #runs each brain x times and takes an average
 
     def avg_run(brain):
         
-        runs = 5
+        runs = 3
         
         all_runs = [run_game(brain) for i in range(5)]
         all_runs = sorted(all_runs, reverse = True, key=lambda x: x[0])
@@ -341,6 +341,8 @@ def averaged_sim(pop,gens): #runs each brain x times and takes an average
         best_of_gen.append(best[0])
 
         print('Best Score = '+str(best[0][0]))
+
+        
 
         #show(best_of_gen[-1][1])
 
@@ -472,7 +474,7 @@ show(run_game(a))
 '''
 
 
-sim = averaged_sim(1000,200)
+sim = averaged_sim(2000,200)
 a = sim[-1]
 save_frames(a[1],'avg')
 save_brain(a[2],'avg')
