@@ -151,7 +151,7 @@ def random_brain():
 
 def run_brain(brain,inputs):
     midlay = function(np.matmul(inputs,brain[0])) + brain[1]
-    output = function(np.matmul(midlay,brain[2])) + brain[3]
+    output = function(np.matmul(midlay,brain[2])) #+ brain[3]
     return output #[top, right, bot, left]
 
 def run_game(brain):
@@ -474,7 +474,7 @@ show(run_game(a))
 '''
 
 
-sim = averaged_sim(2000,200)
+sim = averaged_sim(1000,100)
 a = sim[-1]
 save_frames(a[1],'avg')
 save_brain(a[2],'avg')
