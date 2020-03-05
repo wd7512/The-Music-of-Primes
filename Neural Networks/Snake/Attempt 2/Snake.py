@@ -216,7 +216,7 @@ def run_game(brain):
             if new_head_pos == (food_pos[0],food_pos[1]):
                 
                 moves = moves + 100
-                score = score + 20
+                score = score + 10
                 board = add_food(board,size)
                 
             else:
@@ -297,6 +297,8 @@ def averaged_sim(pop,gens): #runs each brain x times and takes an average
         total_score = 0
         for run in all_runs:
             total_score = total_score + run[0]
+
+        total_score = int(total_score/runs)
 
         return [total_score,best[1],brain]
 
@@ -474,7 +476,7 @@ show(run_game(a))
 '''
 
 
-sim = averaged_sim(1000,100)
+sim = averaged_sim(500,100)
 a = sim[-1]
 save_frames(a[1],'avg')
 save_brain(a[2],'avg')
