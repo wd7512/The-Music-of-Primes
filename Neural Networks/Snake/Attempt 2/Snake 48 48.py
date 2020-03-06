@@ -499,7 +499,7 @@ show(run_game(a))
 '''
 
 
-sim = averaged_sim(1000,100)
+sim = averaged_sim(2000,100)
 a = sim[-1]
 save_frames(a[1],'avg')
 save_brain(a[2],'avg')
