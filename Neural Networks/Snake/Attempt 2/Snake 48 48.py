@@ -221,7 +221,7 @@ def run_game(brain):
             if new_head_pos == (food_pos[0],food_pos[1]):
                 
                 moves = moves + 100
-                score = score + 100
+                score = score + 20
                 board = add_food(board,size)
                 
             else:
