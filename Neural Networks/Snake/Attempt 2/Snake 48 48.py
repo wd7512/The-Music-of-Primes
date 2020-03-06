@@ -137,7 +137,7 @@ def get_inputs(board,size):
     return output
         
 def function(x):
-    return 1/(1+np.exp(-x))
+    return -0.5+1/(1+np.exp(-x))
     
 def random_brain():
     # 24 - x - y - 4
@@ -221,7 +221,7 @@ def run_game(brain):
             if new_head_pos == (food_pos[0],food_pos[1]):
                 
                 moves = moves + 100
-                score = score + 20
+                score = score + 50
                 board = add_food(board,size)
                 
             else:
@@ -499,7 +499,7 @@ show(run_game(a))
 '''
 
 
-sim = averaged_sim(2000,100)
+sim = averaged_sim(1000,100)
 a = sim[-1]
 save_frames(a[1],'avg')
 save_brain(a[2],'avg')
