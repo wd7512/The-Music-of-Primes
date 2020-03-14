@@ -1,0 +1,84 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AK-47-Asiimov,Covert,731.21,7312.1,0.030769230769230778
+Minimal Wear_AK-47-Asiimov,Covert,106.82,1068.1999999999998,0.15384615384615385
+Field-Tested_AK-47-Asiimov,Covert,64.92,649.2,0.5076923076923078
+Well-Worn_AK-47-Asiimov,Covert,68.91,689.0999999999999,0.6153846153846155
+Battle-Scarred_AK-47-Asiimov,Covert,53.56,535.6,1.4615384615384617
+Factory New_AWP-Neo-Noir,Covert,112.47,1124.7,0.14
+Minimal Wear_AWP-Neo-Noir,Covert,84.15,841.5,0.3
+Field-Tested_AWP-Neo-Noir,Covert,62.7,627.0,0.76
+Well-Worn_AWP-Neo-Noir,Covert,52.83,528.3,0.9
+Battle-Scarred_AWP-Neo-Noir,Covert,48.18,481.8,2.0
+Factory New_Desert-Eagle-Mecha-Industries,Classified,30.82,308.2,0.11666666666666668
+Minimal Wear_Desert-Eagle-Mecha-Industries,Classified,19.28,192.8,0.25
+Field-Tested_Desert-Eagle-Mecha-Industries,Classified,11.01,110.1,0.6333333333333334
+Well-Worn_Desert-Eagle-Mecha-Industries,Classified,16.99,169.89999999999998,0.75
+Battle-Scarred_Desert-Eagle-Mecha-Industries,Classified,10.67,106.7,1.6666666666666667
+Factory New_MP5-SD-Phosphor,Classified,24.93,249.3,0.08750000000000001
+Minimal Wear_MP5-SD-Phosphor,Classified,11.41,114.1,0.18749999999999997
+Field-Tested_MP5-SD-Phosphor,Classified,6.91,69.1,0.475
+Well-Worn_MP5-SD-Phosphor,Classified,6.94,69.4,0.5625
+Battle-Scarred_MP5-SD-Phosphor,Classified,6.62,66.2,1.25
+Factory New_UMP-45-Momentum,Classified,23.43,234.3,0.14
+Minimal Wear_UMP-45-Momentum,Classified,13.44,134.4,0.3
+Field-Tested_UMP-45-Momentum,Classified,6.49,64.9,0.76
+Well-Worn_UMP-45-Momentum,Classified,7.14,71.39999999999999,0.9
+Battle-Scarred_UMP-45-Momentum,Classified,7.18,71.8,2.0
+Factory New_USP-S-Flashback,Restricted,4.73,47.300000000000004,0.14
+Minimal Wear_USP-S-Flashback,Restricted,3.79,37.9,0.3
+Field-Tested_USP-S-Flashback,Restricted,3.04,30.4,0.76
+Well-Worn_USP-S-Flashback,Restricted,3.57,35.699999999999996,0.9
+Battle-Scarred_USP-S-Flashback,Restricted,3.93,39.300000000000004,2.0
+Factory New_P250-Nevermore,Restricted,3.19,31.9,0.17500000000000002
+Minimal Wear_P250-Nevermore,Restricted,1.87,18.700000000000003,0.37499999999999994
+Field-Tested_P250-Nevermore,Restricted,1.27,12.7,0.95
+Well-Worn_P250-Nevermore,Restricted,1.64,16.4,1.125
+Factory New_Galil-AR-Signal,Restricted,2.93,29.3,0.14
+Minimal Wear_Galil-AR-Signal,Restricted,2.1,21.0,0.3
+Field-Tested_Galil-AR-Signal,Restricted,1.12,11.200000000000001,0.76
+Well-Worn_Galil-AR-Signal,Restricted,1.3,13.0,0.9
+Battle-Scarred_Galil-AR-Signal,Restricted,1.1,11.0,2.0
+Factory New_MAC-10-Pipe-Down,Restricted,4.28,42.800000000000004,0.07777777777777778
+Minimal Wear_MAC-10-Pipe-Down,Restricted,2.04,20.4,0.16666666666666666
+Field-Tested_MAC-10-Pipe-Down,Restricted,1.01,10.1,0.4222222222222222
+Well-Worn_MAC-10-Pipe-Down,Restricted,0.81,8.100000000000001,0.5
+Battle-Scarred_MAC-10-Pipe-Down,Restricted,0.78,7.800000000000001,1.1111111111111112
+Factory New_G3SG1-Scavenger,Restricted,3.0,30.0,0.1076923076923077
+Minimal Wear_G3SG1-Scavenger,Restricted,1.92,19.2,0.23076923076923075
+Field-Tested_G3SG1-Scavenger,Restricted,0.94,9.399999999999999,0.5846153846153846
+Well-Worn_G3SG1-Scavenger,Restricted,0.78,7.800000000000001,0.6923076923076923
+Battle-Scarred_G3SG1-Scavenger,Restricted,0.74,7.4,1.5384615384615383
+Factory New_M4A4-Magnesium,Mil-Spec,9.74,97.4,0.07
+Minimal Wear_M4A4-Magnesium,Mil-Spec,3.42,34.2,0.15
+Field-Tested_M4A4-Magnesium,Mil-Spec,2.05,20.5,0.38
+Well-Worn_M4A4-Magnesium,Mil-Spec,1.65,16.5,0.45
+Battle-Scarred_M4A4-Magnesium,Mil-Spec,1.73,17.3,1.0
+Factory New_SG-553-Danger-Close,Mil-Spec,3.86,38.6,0.06410256410256411
+Minimal Wear_SG-553-Danger-Close,Mil-Spec,0.96,9.6,0.16666666666666666
+Field-Tested_SG-553-Danger-Close,Mil-Spec,0.49,4.9,0.4615384615384615
+Well-Worn_SG-553-Danger-Close,Mil-Spec,1.03,10.3,0.5512820512820512
+Battle-Scarred_SG-553-Danger-Close,Mil-Spec,0.49,4.9,1.2564102564102564
+Factory New_Glock-18-Oxide-Blaze,Mil-Spec,2.29,22.9,0.0823529411764706
+Minimal Wear_Glock-18-Oxide-Blaze,Mil-Spec,0.65,6.5,0.17647058823529413
+Field-Tested_Glock-18-Oxide-Blaze,Mil-Spec,0.42,4.2,0.4470588235294118
+Well-Worn_Glock-18-Oxide-Blaze,Mil-Spec,0.76,7.6,0.5294117647058824
+Battle-Scarred_Glock-18-Oxide-Blaze,Mil-Spec,0.45,4.5,1.1764705882352942
+Minimal Wear_Tec-9-Fubar,Mil-Spec,1.91,19.099999999999998,0.011627906976744165
+Field-Tested_Tec-9-Fubar,Mil-Spec,1.91,19.099999999999998,0.27906976744186046
+Well-Worn_Tec-9-Fubar,Mil-Spec,0.18,1.7999999999999998,0.3604651162790698
+Battle-Scarred_Tec-9-Fubar,Mil-Spec,0.2,2.0,1.0
+Factory New_MP9-Modest-Threat,Mil-Spec,1.27,12.7,0.09333333333333334
+Minimal Wear_MP9-Modest-Threat,Mil-Spec,0.5,5.0,0.19999999999999998
+Field-Tested_MP9-Modest-Threat,Mil-Spec,0.23,2.3000000000000003,0.5066666666666667
+Well-Worn_MP9-Modest-Threat,Mil-Spec,0.47,4.699999999999999,0.6
+Battle-Scarred_MP9-Modest-Threat,Mil-Spec,0.22,2.2,1.3333333333333333
+Factory New_Sawed-Off-Black-Sand,Mil-Spec,0.79,7.9,0.07777777777777778
+Minimal Wear_Sawed-Off-Black-Sand,Mil-Spec,0.31,3.1,0.16666666666666666
+Field-Tested_Sawed-Off-Black-Sand,Mil-Spec,0.2,2.0,0.4222222222222222
+Well-Worn_Sawed-Off-Black-Sand,Mil-Spec,0.16,1.6,0.5
+Battle-Scarred_Sawed-Off-Black-Sand,Mil-Spec,0.18,1.7999999999999998,1.1111111111111112
+Factory New_Nova-Wood-Fired,Mil-Spec,0.58,5.8,0.09333333333333334
+Minimal Wear_Nova-Wood-Fired,Mil-Spec,0.31,3.1,0.19999999999999998
+Field-Tested_Nova-Wood-Fired,Mil-Spec,0.19,1.9,0.5066666666666667
+Well-Worn_Nova-Wood-Fired,Mil-Spec,0.22,2.2,0.6
+Battle-Scarred_Nova-Wood-Fired,Mil-Spec,0.16,1.6,1.3333333333333333

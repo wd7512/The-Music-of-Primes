@@ -1,0 +1,86 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_M4A4-Neo-Noir,Covert,272.51,2725.1,0.07777777777777778
+Minimal Wear_M4A4-Neo-Noir,Covert,100.98,1009.8000000000001,0.16666666666666666
+Field-Tested_M4A4-Neo-Noir,Covert,48.39,483.9,0.4222222222222222
+Well-Worn_M4A4-Neo-Noir,Covert,39.12,391.2,0.5
+Battle-Scarred_M4A4-Neo-Noir,Covert,29.73,297.3,1.1111111111111112
+Factory New_MP7-Bloodsport,Covert,24.48,244.8,0.1076923076923077
+Minimal Wear_MP7-Bloodsport,Covert,13.27,132.7,0.23076923076923075
+Field-Tested_MP7-Bloodsport,Covert,6.48,64.80000000000001,0.5846153846153846
+Well-Worn_MP7-Bloodsport,Covert,8.55,85.5,0.6923076923076923
+Battle-Scarred_MP7-Bloodsport,Covert,6.14,61.4,1.5384615384615383
+Factory New_USP-S-Cortex,Classified,53.91,539.0999999999999,0.07
+Minimal Wear_USP-S-Cortex,Classified,24.37,243.70000000000002,0.15
+Field-Tested_USP-S-Cortex,Classified,13.49,134.9,0.38
+Well-Worn_USP-S-Cortex,Classified,10.63,106.30000000000001,0.45
+Battle-Scarred_USP-S-Cortex,Classified,9.94,99.39999999999999,1.0
+Factory New_AWP-Mortis,Classified,21.48,214.8,0.10937500000000001
+Minimal Wear_AWP-Mortis,Classified,13.62,136.2,0.234375
+Field-Tested_AWP-Mortis,Classified,9.94,99.39999999999999,0.59375
+Well-Worn_AWP-Mortis,Classified,11.48,114.80000000000001,0.703125
+Battle-Scarred_AWP-Mortis,Classified,10.78,107.8,1.5625
+Factory New_AUG-Stymphalian,Classified,17.48,174.8,0.11111111111111112
+Minimal Wear_AUG-Stymphalian,Classified,6.93,69.3,0.23809523809523808
+Field-Tested_AUG-Stymphalian,Classified,3.4,34.0,0.6031746031746031
+Well-Worn_AUG-Stymphalian,Classified,3.83,38.3,0.7142857142857143
+Battle-Scarred_AUG-Stymphalian,Classified,3.37,33.7,1.5873015873015872
+Factory New_Glock-18-Moonrise,Restricted,7.29,72.9,0.1076923076923077
+Minimal Wear_Glock-18-Moonrise,Restricted,4.02,40.199999999999996,0.23076923076923075
+Field-Tested_Glock-18-Moonrise,Restricted,1.76,17.6,0.5846153846153846
+Well-Worn_Glock-18-Moonrise,Restricted,2.51,25.099999999999998,0.6923076923076923
+Battle-Scarred_Glock-18-Moonrise,Restricted,1.39,13.899999999999999,1.5384615384615383
+Factory New_UMP-45-Arctic-Wolf,Restricted,5.35,53.5,0.08750000000000001
+Minimal Wear_UMP-45-Arctic-Wolf,Restricted,2.06,20.6,0.18749999999999997
+Field-Tested_UMP-45-Arctic-Wolf,Restricted,0.97,9.7,0.475
+Well-Worn_UMP-45-Arctic-Wolf,Restricted,1.17,11.7,0.5625
+Battle-Scarred_UMP-45-Arctic-Wolf,Restricted,0.86,8.6,1.25
+Factory New_MAG-7-SWAG-7,Restricted,5.93,59.3,0.07608695652173914
+Minimal Wear_MAG-7-SWAG-7,Restricted,2.01,20.099999999999998,0.16304347826086954
+Field-Tested_MAG-7-SWAG-7,Restricted,0.87,8.7,0.41304347826086957
+Well-Worn_MAG-7-SWAG-7,Restricted,0.81,8.100000000000001,0.4891304347826087
+Battle-Scarred_MAG-7-SWAG-7,Restricted,0.77,7.7,1.0869565217391304
+Factory New_Nova-Wild-Six,Restricted,3.45,34.5,0.08750000000000001
+Minimal Wear_Nova-Wild-Six,Restricted,1.91,19.099999999999998,0.18749999999999997
+Field-Tested_Nova-Wild-Six,Restricted,0.9,9.0,0.475
+Well-Worn_Nova-Wild-Six,Restricted,1.38,13.799999999999999,0.5625
+Battle-Scarred_Nova-Wild-Six,Restricted,0.87,8.7,1.25
+Factory New_Negev-Lionfish,Restricted,3.09,30.9,0.1272727272727273
+Minimal Wear_Negev-Lionfish,Restricted,1.65,16.5,0.2727272727272727
+Field-Tested_Negev-Lionfish,Restricted,0.94,9.399999999999999,0.6909090909090908
+Well-Worn_Negev-Lionfish,Restricted,0.87,8.7,0.8181818181818181
+Battle-Scarred_Negev-Lionfish,Restricted,0.86,8.6,1.8181818181818181
+Factory New_SG-553-Aloha,Mil-Spec,1.96,19.6,0.1272727272727273
+Minimal Wear_SG-553-Aloha,Mil-Spec,0.99,9.9,0.2727272727272727
+Field-Tested_SG-553-Aloha,Mil-Spec,0.56,5.6000000000000005,0.6909090909090908
+Well-Worn_SG-553-Aloha,Mil-Spec,0.97,9.7,0.8181818181818181
+Battle-Scarred_SG-553-Aloha,Mil-Spec,0.52,5.2,1.8181818181818181
+Factory New_R8-Revolver-Grip,Mil-Spec,1.19,11.899999999999999,0.07
+Minimal Wear_R8-Revolver-Grip,Mil-Spec,0.28,2.8000000000000003,0.15
+Field-Tested_R8-Revolver-Grip,Mil-Spec,0.18,1.7999999999999998,0.38
+Well-Worn_R8-Revolver-Grip,Mil-Spec,0.18,1.7999999999999998,0.45
+Battle-Scarred_R8-Revolver-Grip,Mil-Spec,0.16,1.6,1.0
+Factory New_Five-SeveN-Flame-Test,Mil-Spec,0.75,7.5,0.1076923076923077
+Minimal Wear_Five-SeveN-Flame-Test,Mil-Spec,0.37,3.7,0.23076923076923075
+Field-Tested_Five-SeveN-Flame-Test,Mil-Spec,0.22,2.2,0.5846153846153846
+Well-Worn_Five-SeveN-Flame-Test,Mil-Spec,0.32,3.2,0.6923076923076923
+Battle-Scarred_Five-SeveN-Flame-Test,Mil-Spec,0.23,2.3000000000000003,1.5384615384615383
+Factory New_P2000-Urban-Hazard,Mil-Spec,1.1,11.0,0.07
+Minimal Wear_P2000-Urban-Hazard,Mil-Spec,0.3,3.0,0.15
+Field-Tested_P2000-Urban-Hazard,Mil-Spec,0.18,1.7999999999999998,0.38
+Well-Worn_P2000-Urban-Hazard,Mil-Spec,0.18,1.7999999999999998,0.45
+Battle-Scarred_P2000-Urban-Hazard,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_MP9-Black-Sand,Mil-Spec,1.03,10.3,0.07
+Minimal Wear_MP9-Black-Sand,Mil-Spec,0.3,3.0,0.15
+Field-Tested_MP9-Black-Sand,Mil-Spec,0.19,1.9,0.38
+Well-Worn_MP9-Black-Sand,Mil-Spec,0.18,1.7999999999999998,0.45
+Battle-Scarred_MP9-Black-Sand,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_PP-Bizon-Night-Riot,Mil-Spec,0.73,7.3,0.08750000000000001
+Minimal Wear_PP-Bizon-Night-Riot,Mil-Spec,0.29,2.9,0.18749999999999997
+Field-Tested_PP-Bizon-Night-Riot,Mil-Spec,0.18,1.7999999999999998,0.475
+Well-Worn_PP-Bizon-Night-Riot,Mil-Spec,0.24,2.4,0.5625
+Battle-Scarred_PP-Bizon-Night-Riot,Mil-Spec,0.16,1.6,1.25
+Factory New_XM1014-Oxide-Blaze,Mil-Spec,0.67,6.7,0.10000000000000002
+Minimal Wear_XM1014-Oxide-Blaze,Mil-Spec,0.29,2.9,0.2142857142857143
+Field-Tested_XM1014-Oxide-Blaze,Mil-Spec,0.18,1.7999999999999998,0.5428571428571429
+Well-Worn_XM1014-Oxide-Blaze,Mil-Spec,0.23,2.3000000000000003,0.6428571428571429
+Battle-Scarred_XM1014-Oxide-Blaze,Mil-Spec,0.18,1.7999999999999998,1.4285714285714286

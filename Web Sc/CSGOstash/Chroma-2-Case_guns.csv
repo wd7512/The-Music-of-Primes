@@ -1,0 +1,67 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_M4A1-S-Hyper-Beast,Covert,177.44,1774.4,0.07
+Minimal Wear_M4A1-S-Hyper-Beast,Covert,56.31,563.1,0.15
+Field-Tested_M4A1-S-Hyper-Beast,Covert,27.3,273.0,0.38
+Well-Worn_M4A1-S-Hyper-Beast,Covert,20.52,205.2,0.45
+Battle-Scarred_M4A1-S-Hyper-Beast,Covert,18.97,189.7,1.0
+Factory New_MAC-10-Neon-Rider,Covert,41.56,415.6,0.15555555555555556
+Minimal Wear_MAC-10-Neon-Rider,Covert,21.4,214.0,0.3333333333333333
+Field-Tested_MAC-10-Neon-Rider,Covert,13.84,138.4,0.8444444444444444
+Well-Worn_MAC-10-Neon-Rider,Covert,13.1,131.0,1.0
+Battle-Scarred_MAC-10-Neon-Rider,Covert,10.63,106.30000000000001,2.2222222222222223
+Minimal Wear_Galil-AR-Eco,Classified,52.25,522.5,0.06666666666666665
+Field-Tested_Galil-AR-Eco,Classified,52.25,522.5,0.37333333333333335
+Well-Worn_Galil-AR-Eco,Classified,7.13,71.3,0.4666666666666666
+Battle-Scarred_Galil-AR-Eco,Classified,6.22,62.199999999999996,1.2
+Minimal Wear_Five-SeveN-Monkey-Business,Classified,27.57,275.7,0.062499999999999986
+Field-Tested_Five-SeveN-Monkey-Business,Classified,27.57,275.7,0.35000000000000003
+Well-Worn_Five-SeveN-Monkey-Business,Classified,4.63,46.3,0.43749999999999994
+Battle-Scarred_Five-SeveN-Monkey-Business,Classified,4.23,42.300000000000004,1.125
+Factory New_FAMAS-Djinn,Classified,20.71,207.10000000000002,0.07
+Minimal Wear_FAMAS-Djinn,Classified,6.27,62.699999999999996,0.15
+Field-Tested_FAMAS-Djinn,Classified,3.47,34.7,0.38
+Well-Worn_FAMAS-Djinn,Classified,3.72,37.2,0.45
+Battle-Scarred_FAMAS-Djinn,Classified,3.42,34.2,1.0
+Factory New_AWP-Worm-God,Restricted,7.22,72.2,0.15555555555555556
+Minimal Wear_AWP-Worm-God,Restricted,5.0,50.0,0.3333333333333333
+Field-Tested_AWP-Worm-God,Restricted,5.15,51.5,0.8444444444444444
+Well-Worn_AWP-Worm-God,Restricted,5.58,55.8,1.0
+Battle-Scarred_AWP-Worm-God,Restricted,2.2,22.0,2.2222222222222223
+Factory New_MAG-7-Heat,Restricted,12.1,121.0,0.07
+Minimal Wear_MAG-7-Heat,Restricted,3.15,31.5,0.15
+Field-Tested_MAG-7-Heat,Restricted,1.43,14.299999999999999,0.38
+Well-Worn_MAG-7-Heat,Restricted,1.07,10.700000000000001,0.45
+Battle-Scarred_MAG-7-Heat,Restricted,1.0,10.0,1.0
+Factory New_CZ75-Auto-Pole-Position,Restricted,3.61,36.1,0.10000000000000002
+Minimal Wear_CZ75-Auto-Pole-Position,Restricted,1.66,16.599999999999998,0.2142857142857143
+Field-Tested_CZ75-Auto-Pole-Position,Restricted,0.69,6.8999999999999995,0.5428571428571429
+Well-Worn_CZ75-Auto-Pole-Position,Restricted,1.38,13.799999999999999,0.6428571428571429
+Battle-Scarred_CZ75-Auto-Pole-Position,Restricted,0.97,9.7,1.4285714285714286
+Field-Tested_UMP-45-Grand-Prix,Restricted,0.67,6.7,1.3000000000000003
+Factory New_AK-47-Elite-Build,Mil-Spec,20.72,207.2,0.07
+Minimal Wear_AK-47-Elite-Build,Mil-Spec,7.22,72.2,0.15
+Field-Tested_AK-47-Elite-Build,Mil-Spec,5.39,53.9,0.38
+Well-Worn_AK-47-Elite-Build,Mil-Spec,4.38,43.8,0.45
+Battle-Scarred_AK-47-Elite-Build,Mil-Spec,3.95,39.5,1.0
+Factory New_Desert-Eagle-Bronze-Deco,Mil-Spec,2.69,26.9,0.15217391304347827
+Minimal Wear_Desert-Eagle-Bronze-Deco,Mil-Spec,2.08,20.8,0.3260869565217391
+Field-Tested_Desert-Eagle-Bronze-Deco,Mil-Spec,1.39,13.899999999999999,0.8260869565217391
+Well-Worn_Desert-Eagle-Bronze-Deco,Mil-Spec,1.71,17.1,0.9782608695652174
+Battle-Scarred_Desert-Eagle-Bronze-Deco,Mil-Spec,2.13,21.299999999999997,2.1739130434782608
+Factory New_P250-Valence,Mil-Spec,2.94,29.4,0.08750000000000001
+Minimal Wear_P250-Valence,Mil-Spec,0.93,9.3,0.18749999999999997
+Field-Tested_P250-Valence,Mil-Spec,0.52,5.2,0.475
+Well-Worn_P250-Valence,Mil-Spec,1.03,10.3,0.5625
+Battle-Scarred_P250-Valence,Mil-Spec,0.52,5.2,1.25
+Minimal Wear_Negev-Man-o-war,Mil-Spec,0.55,5.5,0.4999999999999999
+Field-Tested_Negev-Man-o-war,Mil-Spec,0.55,5.5,2.8000000000000003
+Factory New_Sawed-Off-Origami,Mil-Spec,0.7,7.0,0.1272727272727273
+Minimal Wear_Sawed-Off-Origami,Mil-Spec,0.39,3.9000000000000004,0.2727272727272727
+Field-Tested_Sawed-Off-Origami,Mil-Spec,0.23,2.3000000000000003,0.6909090909090908
+Well-Worn_Sawed-Off-Origami,Mil-Spec,0.34,3.4000000000000004,0.8181818181818181
+Battle-Scarred_Sawed-Off-Origami,Mil-Spec,0.19,1.9,1.8181818181818181
+Factory New_MP7-Armor-Core,Mil-Spec,0.69,6.8999999999999995,0.14
+Minimal Wear_MP7-Armor-Core,Mil-Spec,0.34,3.4000000000000004,0.3
+Field-Tested_MP7-Armor-Core,Mil-Spec,0.23,2.3000000000000003,0.76
+Well-Worn_MP7-Armor-Core,Mil-Spec,0.29,2.9,0.9
+Battle-Scarred_MP7-Armor-Core,Mil-Spec,0.3,3.0,2.0

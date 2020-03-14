@@ -1,0 +1,72 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_M4A4-Desert-Strike,Covert,33.34,333.40000000000003,0.10000000000000002
+Minimal Wear_M4A4-Desert-Strike,Covert,21.63,216.29999999999998,0.2142857142857143
+Field-Tested_M4A4-Desert-Strike,Covert,12.91,129.1,0.5428571428571429
+Well-Worn_M4A4-Desert-Strike,Covert,17.07,170.7,0.6428571428571429
+Battle-Scarred_M4A4-Desert-Strike,Covert,12.57,125.7,1.4285714285714286
+Factory New_AK-47-Vulcan,Covert,516.94,5169.400000000001,0.07777777777777778
+Minimal Wear_AK-47-Vulcan,Covert,233.51,2335.1,0.16666666666666666
+Field-Tested_AK-47-Vulcan,Covert,97.4,974.0,0.4222222222222222
+Well-Worn_AK-47-Vulcan,Covert,73.48,734.8000000000001,0.5
+Battle-Scarred_AK-47-Vulcan,Covert,57.61,576.1,1.1111111111111112
+Factory New_USP-S-Caiman,Classified,34.57,345.7,0.17500000000000002
+Minimal Wear_USP-S-Caiman,Classified,21.53,215.3,0.37499999999999994
+Field-Tested_USP-S-Caiman,Classified,11.39,113.9,0.95
+Well-Worn_USP-S-Caiman,Classified,16.08,160.79999999999998,1.125
+Factory New_M4A1-S-Atomic-Alloy,Classified,41.44,414.4,0.07777777777777778
+Minimal Wear_M4A1-S-Atomic-Alloy,Classified,22.51,225.10000000000002,0.16666666666666666
+Field-Tested_M4A1-S-Atomic-Alloy,Classified,8.83,88.3,0.4222222222222222
+Well-Worn_M4A1-S-Atomic-Alloy,Classified,8.95,89.5,0.5
+Battle-Scarred_M4A1-S-Atomic-Alloy,Classified,7.94,79.4,1.1111111111111112
+Factory New_SCAR-20-Cyrex,Classified,35.97,359.7,0.14
+Minimal Wear_SCAR-20-Cyrex,Classified,20.72,207.2,0.3
+Field-Tested_SCAR-20-Cyrex,Classified,13.61,136.1,0.76
+Well-Worn_SCAR-20-Cyrex,Classified,7.24,72.4,0.9
+Battle-Scarred_SCAR-20-Cyrex,Classified,7.74,77.4,2.0
+Factory New_MAC-10-Tatter,Restricted,5.05,50.5,0.14
+Minimal Wear_MAC-10-Tatter,Restricted,4.33,43.3,0.3
+Field-Tested_MAC-10-Tatter,Restricted,3.6,36.0,0.76
+Well-Worn_MAC-10-Tatter,Restricted,3.17,31.7,0.9
+Battle-Scarred_MAC-10-Tatter,Restricted,2.42,24.2,2.0
+Factory New_XM1014-Heaven-Guard,Restricted,9.29,92.89999999999999,0.08510638297872343
+Minimal Wear_XM1014-Heaven-Guard,Restricted,4.12,41.2,0.2553191489361702
+Field-Tested_XM1014-Heaven-Guard,Restricted,3.12,31.200000000000003,0.7446808510638298
+Well-Worn_XM1014-Heaven-Guard,Restricted,2.99,29.900000000000002,0.8936170212765959
+Battle-Scarred_XM1014-Heaven-Guard,Restricted,3.71,37.1,2.0638297872340425
+Factory New_AUG-Torque,Restricted,8.1,81.0,0.14
+Minimal Wear_AUG-Torque,Restricted,4.23,42.300000000000004,0.3
+Field-Tested_AUG-Torque,Restricted,2.75,27.5,0.76
+Well-Worn_AUG-Torque,Restricted,2.52,25.2,0.9
+Battle-Scarred_AUG-Torque,Restricted,2.43,24.3,2.0
+Factory New_PP-Bizon-Antique,Restricted,5.7,57.0,0.14
+Minimal Wear_PP-Bizon-Antique,Restricted,3.95,39.5,0.3
+Field-Tested_PP-Bizon-Antique,Restricted,3.13,31.299999999999997,0.76
+Well-Worn_PP-Bizon-Antique,Restricted,2.78,27.799999999999997,0.9
+Battle-Scarred_PP-Bizon-Antique,Restricted,2.87,28.700000000000003,2.0
+Factory New_P90-Module,Mil-Spec,2.35,23.5,0.20000000000000004
+Minimal Wear_P90-Module,Mil-Spec,1.42,14.2,0.4285714285714286
+Field-Tested_P90-Module,Mil-Spec,1.25,12.5,1.0857142857142859
+Factory New_CZ75-Auto-Twist,Mil-Spec,2.25,22.5,0.07
+Minimal Wear_CZ75-Auto-Twist,Mil-Spec,0.65,6.5,0.15
+Field-Tested_CZ75-Auto-Twist,Mil-Spec,0.39,3.9000000000000004,0.38
+Well-Worn_CZ75-Auto-Twist,Mil-Spec,0.32,3.2,0.45
+Battle-Scarred_CZ75-Auto-Twist,Mil-Spec,0.33,3.3000000000000003,1.0
+Factory New_P2000-Pulse,Mil-Spec,1.31,13.100000000000001,0.11666666666666668
+Minimal Wear_P2000-Pulse,Mil-Spec,0.78,7.800000000000001,0.25
+Field-Tested_P2000-Pulse,Mil-Spec,0.41,4.1,0.6333333333333334
+Well-Worn_P2000-Pulse,Mil-Spec,0.63,6.3,0.75
+Battle-Scarred_P2000-Pulse,Mil-Spec,0.4,4.0,1.6666666666666667
+Factory New_Tec-9-Isaac,Mil-Spec,5.5,55.0,0.07
+Minimal Wear_Tec-9-Isaac,Mil-Spec,1.28,12.8,0.15
+Field-Tested_Tec-9-Isaac,Mil-Spec,0.63,6.3,0.38
+Well-Worn_Tec-9-Isaac,Mil-Spec,0.49,4.9,0.45
+Battle-Scarred_Tec-9-Isaac,Mil-Spec,0.41,4.1,1.0
+Minimal Wear_SSG-08-Slashed,Mil-Spec,1.64,16.4,0.0
+Field-Tested_SSG-08-Slashed,Mil-Spec,1.64,16.4,0.35384615384615387
+Well-Worn_SSG-08-Slashed,Mil-Spec,1.64,16.4,0.46153846153846156
+Battle-Scarred_SSG-08-Slashed,Mil-Spec,1.46,14.6,1.3076923076923077
+Factory New_Galil-AR-Kami,Mil-Spec,2.4,24.0,0.11666666666666668
+Minimal Wear_Galil-AR-Kami,Mil-Spec,1.39,13.899999999999999,0.25
+Field-Tested_Galil-AR-Kami,Mil-Spec,0.59,5.8999999999999995,0.6333333333333334
+Well-Worn_Galil-AR-Kami,Mil-Spec,0.84,8.4,0.75
+Battle-Scarred_Galil-AR-Kami,Mil-Spec,0.58,5.8,1.6666666666666667

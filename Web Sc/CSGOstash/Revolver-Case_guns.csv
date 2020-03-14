@@ -1,0 +1,81 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_M4A4-Royal-Paladin,Covert,361.33,3613.2999999999997,0.08750000000000001
+Minimal Wear_M4A4-Royal-Paladin,Covert,110.3,1103.0,0.18749999999999997
+Field-Tested_M4A4-Royal-Paladin,Covert,36.26,362.59999999999997,0.475
+Well-Worn_M4A4-Royal-Paladin,Covert,41.15,411.5,0.5625
+Battle-Scarred_M4A4-Royal-Paladin,Covert,27.11,271.1,1.25
+Factory New_R8-Revolver-Fade,Covert,51.66,516.5999999999999,0.17500000000000002
+Minimal Wear_R8-Revolver-Fade,Covert,25.9,259.0,0.37499999999999994
+Field-Tested_R8-Revolver-Fade,Covert,13.75,137.5,0.95
+Well-Worn_R8-Revolver-Fade,Covert,24.98,249.8,1.125
+Factory New_AK-47-Point-Disarray,Classified,115.17,1151.7,0.10447761194029852
+Minimal Wear_AK-47-Point-Disarray,Classified,56.98,569.8,0.22388059701492535
+Field-Tested_AK-47-Point-Disarray,Classified,36.52,365.20000000000005,0.5671641791044776
+Well-Worn_AK-47-Point-Disarray,Classified,40.28,402.8,0.6716417910447761
+Battle-Scarred_AK-47-Point-Disarray,Classified,26.91,269.1,1.4925373134328357
+Minimal Wear_G3SG1-The-Executioner,Classified,151.69,1516.9,0.014084507042253495
+Field-Tested_G3SG1-The-Executioner,Classified,151.69,1516.9,0.3380281690140845
+Well-Worn_G3SG1-The-Executioner,Classified,4.16,41.6,0.4366197183098592
+Battle-Scarred_G3SG1-The-Executioner,Classified,4.1,41.0,1.2112676056338028
+Factory New_P90-Shapewood,Classified,46.85,468.5,0.07
+Minimal Wear_P90-Shapewood,Classified,10.88,108.80000000000001,0.15
+Field-Tested_P90-Shapewood,Classified,5.02,50.199999999999996,0.38
+Well-Worn_P90-Shapewood,Classified,4.65,46.5,0.45
+Battle-Scarred_P90-Shapewood,Classified,4.7,47.0,1.0
+Factory New_SG-553-Tiger-Moth,Restricted,48.76,487.59999999999997,0.07
+Minimal Wear_SG-553-Tiger-Moth,Restricted,24.43,244.3,0.15
+Field-Tested_SG-553-Tiger-Moth,Restricted,11.97,119.7,0.38
+Well-Worn_SG-553-Tiger-Moth,Restricted,8.55,85.5,0.45
+Battle-Scarred_SG-553-Tiger-Moth,Restricted,7.35,73.5,1.0
+Factory New_Negev-Power-Loader,Restricted,31.02,310.2,0.07
+Minimal Wear_Negev-Power-Loader,Restricted,11.88,118.80000000000001,0.15
+Field-Tested_Negev-Power-Loader,Restricted,5.44,54.400000000000006,0.38
+Well-Worn_Negev-Power-Loader,Restricted,3.79,37.9,0.45
+Battle-Scarred_Negev-Power-Loader,Restricted,2.79,27.9,1.0
+Factory New_Five-SeveN-Retrobution,Restricted,12.43,124.3,0.07
+Minimal Wear_Five-SeveN-Retrobution,Restricted,4.98,49.800000000000004,0.15
+Field-Tested_Five-SeveN-Retrobution,Restricted,2.26,22.599999999999998,0.38
+Well-Worn_Five-SeveN-Retrobution,Restricted,1.93,19.3,0.45
+Battle-Scarred_Five-SeveN-Retrobution,Restricted,1.85,18.5,1.0
+Factory New_PP-Bizon-Fuel-Rod,Restricted,9.0,90.0,0.07
+Minimal Wear_PP-Bizon-Fuel-Rod,Restricted,6.42,64.2,0.15
+Field-Tested_PP-Bizon-Fuel-Rod,Restricted,2.12,21.200000000000003,0.38
+Well-Worn_PP-Bizon-Fuel-Rod,Restricted,1.8,18.0,0.45
+Battle-Scarred_PP-Bizon-Fuel-Rod,Restricted,1.61,16.1,1.0
+Factory New_XM1014-Teclu-Burner,Restricted,7.51,75.1,0.1076923076923077
+Minimal Wear_XM1014-Teclu-Burner,Restricted,4.72,47.199999999999996,0.23076923076923075
+Field-Tested_XM1014-Teclu-Burner,Restricted,2.02,20.2,0.5846153846153846
+Well-Worn_XM1014-Teclu-Burner,Restricted,4.05,40.5,0.6923076923076923
+Battle-Scarred_XM1014-Teclu-Burner,Restricted,1.74,17.4,1.5384615384615383
+Factory New_Tec-9-Avalanche,Restricted,8.74,87.4,0.07
+Minimal Wear_Tec-9-Avalanche,Restricted,4.13,41.3,0.15
+Field-Tested_Tec-9-Avalanche,Restricted,2.15,21.5,0.38
+Well-Worn_Tec-9-Avalanche,Restricted,1.8,18.0,0.45
+Battle-Scarred_Tec-9-Avalanche,Restricted,1.51,15.1,1.0
+Factory New_R8-Revolver-Crimson-Web,Mil-Spec,21.12,211.20000000000002,0.013513513513513526
+Minimal Wear_R8-Revolver-Crimson-Web,Mil-Spec,2.25,22.5,0.12162162162162161
+Field-Tested_R8-Revolver-Crimson-Web,Mil-Spec,0.57,5.699999999999999,0.43243243243243246
+Well-Worn_R8-Revolver-Crimson-Web,Mil-Spec,0.65,6.5,0.5270270270270271
+Battle-Scarred_R8-Revolver-Crimson-Web,Mil-Spec,0.41,4.1,1.2702702702702702
+Factory New_Desert-Eagle-Corinthian,Mil-Spec,6.77,67.69999999999999,0.15909090909090912
+Minimal Wear_Desert-Eagle-Corinthian,Mil-Spec,4.53,45.300000000000004,0.3409090909090909
+Field-Tested_Desert-Eagle-Corinthian,Mil-Spec,3.69,36.9,0.8636363636363636
+Well-Worn_Desert-Eagle-Corinthian,Mil-Spec,4.97,49.699999999999996,1.0227272727272727
+Factory New_AUG-Ricochet,Mil-Spec,4.99,49.900000000000006,0.08750000000000001
+Minimal Wear_AUG-Ricochet,Mil-Spec,2.34,23.4,0.18749999999999997
+Field-Tested_AUG-Ricochet,Mil-Spec,1.09,10.9,0.475
+Well-Worn_AUG-Ricochet,Mil-Spec,2.06,20.6,0.5625
+Battle-Scarred_AUG-Ricochet,Mil-Spec,0.96,9.6,1.25
+Factory New_P2000-Imperial,Mil-Spec,1.86,18.6,0.35000000000000003
+Minimal Wear_P2000-Imperial,Mil-Spec,1.46,14.6,0.7499999999999999
+Field-Tested_P2000-Imperial,Mil-Spec,1.02,10.2,1.9
+Factory New_Sawed-Off-Yorick,Mil-Spec,2.09,20.9,0.07
+Minimal Wear_Sawed-Off-Yorick,Mil-Spec,1.31,13.100000000000001,0.15
+Field-Tested_Sawed-Off-Yorick,Mil-Spec,0.56,5.6000000000000005,0.38
+Well-Worn_Sawed-Off-Yorick,Mil-Spec,0.37,3.7,0.45
+Battle-Scarred_Sawed-Off-Yorick,Mil-Spec,0.32,3.2,1.0
+Factory New_SCAR-20-Outbreak,Mil-Spec,1.8,18.0,0.14
+Minimal Wear_SCAR-20-Outbreak,Mil-Spec,1.33,13.3,0.3
+Field-Tested_SCAR-20-Outbreak,Mil-Spec,0.61,6.1,0.76
+Well-Worn_SCAR-20-Outbreak,Mil-Spec,0.4,4.0,0.9
+Battle-Scarred_SCAR-20-Outbreak,Mil-Spec,0.37,3.7,2.0

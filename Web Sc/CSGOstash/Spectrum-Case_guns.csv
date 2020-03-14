@@ -1,0 +1,86 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AK-47-Bloodsport,Covert,135.04,1350.3999999999999,0.15555555555555556
+Minimal Wear_AK-47-Bloodsport,Covert,114.85,1148.5,0.3333333333333333
+Field-Tested_AK-47-Bloodsport,Covert,87.08,870.8,0.8444444444444444
+Well-Worn_AK-47-Bloodsport,Covert,96.68,966.8000000000001,1.0
+Battle-Scarred_AK-47-Bloodsport,Covert,51.05,510.5,2.2222222222222223
+Factory New_USP-S-Neo-Noir,Covert,179.89,1798.8999999999999,0.10000000000000002
+Minimal Wear_USP-S-Neo-Noir,Covert,92.51,925.1,0.2142857142857143
+Field-Tested_USP-S-Neo-Noir,Covert,51.86,518.6,0.5428571428571429
+Well-Worn_USP-S-Neo-Noir,Covert,52.03,520.3,0.6428571428571429
+Battle-Scarred_USP-S-Neo-Noir,Covert,34.13,341.3,1.4285714285714286
+Factory New_AWP-Fever-Dream,Classified,25.89,258.9,0.1272727272727273
+Minimal Wear_AWP-Fever-Dream,Classified,17.0,170.0,0.2727272727272727
+Field-Tested_AWP-Fever-Dream,Classified,13.51,135.1,0.6909090909090908
+Well-Worn_AWP-Fever-Dream,Classified,12.98,129.8,0.8181818181818181
+Battle-Scarred_AWP-Fever-Dream,Classified,13.38,133.8,1.8181818181818181
+Factory New_M4A1-S-Decimator,Classified,32.63,326.3,0.0823529411764706
+Minimal Wear_M4A1-S-Decimator,Classified,15.22,152.20000000000002,0.17647058823529413
+Field-Tested_M4A1-S-Decimator,Classified,10.3,103.0,0.4470588235294118
+Well-Worn_M4A1-S-Decimator,Classified,14.14,141.4,0.5294117647058824
+Battle-Scarred_M4A1-S-Decimator,Classified,9.24,92.4,1.1764705882352942
+Factory New_CZ75-Auto-Xiangliu,Classified,17.29,172.89999999999998,0.125
+Minimal Wear_CZ75-Auto-Xiangliu,Classified,12.27,122.69999999999999,0.26785714285714285
+Field-Tested_CZ75-Auto-Xiangliu,Classified,8.57,85.7,0.6785714285714285
+Well-Worn_CZ75-Auto-Xiangliu,Classified,8.12,81.19999999999999,0.8035714285714285
+Battle-Scarred_CZ75-Auto-Xiangliu,Classified,7.48,74.80000000000001,1.7857142857142856
+Factory New_UMP-45-Scaffold,Restricted,3.94,39.4,0.07
+Minimal Wear_UMP-45-Scaffold,Restricted,1.74,17.4,0.15
+Field-Tested_UMP-45-Scaffold,Restricted,1.12,11.200000000000001,0.38
+Well-Worn_UMP-45-Scaffold,Restricted,1.01,10.1,0.45
+Battle-Scarred_UMP-45-Scaffold,Restricted,0.94,9.399999999999999,1.0
+Factory New_Galil-AR-Crimson-Tsunami,Restricted,3.31,33.1,0.1272727272727273
+Minimal Wear_Galil-AR-Crimson-Tsunami,Restricted,1.84,18.400000000000002,0.2727272727272727
+Field-Tested_Galil-AR-Crimson-Tsunami,Restricted,1.14,11.399999999999999,0.6909090909090908
+Well-Worn_Galil-AR-Crimson-Tsunami,Restricted,1.04,10.4,0.8181818181818181
+Battle-Scarred_Galil-AR-Crimson-Tsunami,Restricted,1.03,10.3,1.8181818181818181
+Factory New_XM1014-Seasons,Restricted,2.97,29.700000000000003,0.14
+Minimal Wear_XM1014-Seasons,Restricted,1.64,16.4,0.3
+Field-Tested_XM1014-Seasons,Restricted,1.16,11.6,0.76
+Well-Worn_XM1014-Seasons,Restricted,1.12,11.200000000000001,0.9
+Battle-Scarred_XM1014-Seasons,Restricted,1.22,12.2,2.0
+Factory New_MAC-10-Last-Dive,Restricted,2.7,27.0,0.13461538461538464
+Minimal Wear_MAC-10-Last-Dive,Restricted,1.7,17.0,0.28846153846153844
+Field-Tested_MAC-10-Last-Dive,Restricted,1.12,11.200000000000001,0.7307692307692307
+Well-Worn_MAC-10-Last-Dive,Restricted,1.27,12.7,0.8653846153846154
+Battle-Scarred_MAC-10-Last-Dive,Restricted,1.27,12.7,1.923076923076923
+Factory New_M249-Emerald-Poison-Dart,Restricted,2.57,25.7,0.15555555555555556
+Minimal Wear_M249-Emerald-Poison-Dart,Restricted,1.64,16.4,0.3333333333333333
+Field-Tested_M249-Emerald-Poison-Dart,Restricted,1.12,11.200000000000001,0.8444444444444444
+Well-Worn_M249-Emerald-Poison-Dart,Restricted,1.03,10.3,1.0
+Battle-Scarred_M249-Emerald-Poison-Dart,Restricted,0.87,8.7,2.2222222222222223
+Factory New_Desert-Eagle-Oxide-Blaze,Mil-Spec,2.33,23.3,0.14
+Minimal Wear_Desert-Eagle-Oxide-Blaze,Mil-Spec,2.01,20.099999999999998,0.3
+Field-Tested_Desert-Eagle-Oxide-Blaze,Mil-Spec,1.4,14.0,0.76
+Well-Worn_Desert-Eagle-Oxide-Blaze,Mil-Spec,1.72,17.2,0.9
+Battle-Scarred_Desert-Eagle-Oxide-Blaze,Mil-Spec,1.66,16.599999999999998,2.0
+Factory New_Five-SeveN-Capillary,Mil-Spec,0.88,8.8,0.10000000000000002
+Minimal Wear_Five-SeveN-Capillary,Mil-Spec,0.41,4.1,0.2142857142857143
+Field-Tested_Five-SeveN-Capillary,Mil-Spec,0.22,2.2,0.5428571428571429
+Well-Worn_Five-SeveN-Capillary,Mil-Spec,0.46,4.6000000000000005,0.6428571428571429
+Battle-Scarred_Five-SeveN-Capillary,Mil-Spec,0.23,2.3000000000000003,1.4285714285714286
+Factory New_P250-Ripple,Mil-Spec,0.65,6.5,0.14
+Minimal Wear_P250-Ripple,Mil-Spec,0.43,4.3,0.3
+Field-Tested_P250-Ripple,Mil-Spec,0.25,2.5,0.76
+Well-Worn_P250-Ripple,Mil-Spec,0.37,3.7,0.9
+Battle-Scarred_P250-Ripple,Mil-Spec,0.38,3.8,2.0
+Factory New_SCAR-20-Blueprint,Mil-Spec,0.77,7.7,0.09333333333333334
+Minimal Wear_SCAR-20-Blueprint,Mil-Spec,0.3,3.0,0.19999999999999998
+Field-Tested_SCAR-20-Blueprint,Mil-Spec,0.18,1.7999999999999998,0.5066666666666667
+Well-Worn_SCAR-20-Blueprint,Mil-Spec,0.28,2.8000000000000003,0.6
+Battle-Scarred_SCAR-20-Blueprint,Mil-Spec,0.18,1.7999999999999998,1.3333333333333333
+Factory New_Sawed-Off-Zander,Mil-Spec,0.72,7.199999999999999,0.021052631578947375
+Minimal Wear_Sawed-Off-Zander,Mil-Spec,0.28,2.8000000000000003,0.10526315789473684
+Field-Tested_Sawed-Off-Zander,Mil-Spec,0.18,1.7999999999999998,0.3473684210526316
+Well-Worn_Sawed-Off-Zander,Mil-Spec,0.15,1.5,0.4210526315789474
+Battle-Scarred_Sawed-Off-Zander,Mil-Spec,0.16,1.6,1.0
+Factory New_MP7-Akoben,Mil-Spec,0.61,6.1,0.10000000000000002
+Minimal Wear_MP7-Akoben,Mil-Spec,0.3,3.0,0.2142857142857143
+Field-Tested_MP7-Akoben,Mil-Spec,0.18,1.7999999999999998,0.5428571428571429
+Well-Worn_MP7-Akoben,Mil-Spec,0.22,2.2,0.6428571428571429
+Battle-Scarred_MP7-Akoben,Mil-Spec,0.16,1.6,1.4285714285714286
+Factory New_PP-Bizon-Jungle-Slipstream,Mil-Spec,0.56,5.6000000000000005,0.14
+Minimal Wear_PP-Bizon-Jungle-Slipstream,Mil-Spec,0.3,3.0,0.3
+Field-Tested_PP-Bizon-Jungle-Slipstream,Mil-Spec,0.18,1.7999999999999998,0.76
+Well-Worn_PP-Bizon-Jungle-Slipstream,Mil-Spec,0.18,1.7999999999999998,0.9
+Battle-Scarred_PP-Bizon-Jungle-Slipstream,Mil-Spec,0.21,2.1,2.0

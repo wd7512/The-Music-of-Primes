@@ -1,0 +1,81 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_USP-S-Kill-Confirmed,Covert,547.24,5472.4,0.07
+Minimal Wear_USP-S-Kill-Confirmed,Covert,232.63,2326.3,0.15
+Field-Tested_USP-S-Kill-Confirmed,Covert,145.07,1450.6999999999998,0.38
+Well-Worn_USP-S-Kill-Confirmed,Covert,95.46,954.5999999999999,0.45
+Battle-Scarred_USP-S-Kill-Confirmed,Covert,85.05,850.5,1.0
+Factory New_M4A1-S-Golden-Coil,Covert,161.48,1614.8,0.07
+Minimal Wear_M4A1-S-Golden-Coil,Covert,70.46,704.5999999999999,0.15
+Field-Tested_M4A1-S-Golden-Coil,Covert,36.08,360.79999999999995,0.38
+Well-Worn_M4A1-S-Golden-Coil,Covert,31.1,311.0,0.45
+Battle-Scarred_M4A1-S-Golden-Coil,Covert,27.38,273.8,1.0
+Factory New_AK-47-Frontside-Misty,Classified,108.03,1080.3,0.05882352941176471
+Minimal Wear_AK-47-Frontside-Misty,Classified,46.85,468.5,0.15294117647058825
+Field-Tested_AK-47-Frontside-Misty,Classified,29.55,295.5,0.4235294117647059
+Well-Worn_AK-47-Frontside-Misty,Classified,26.93,269.3,0.5058823529411764
+Battle-Scarred_AK-47-Frontside-Misty,Classified,23.23,232.3,1.1529411764705881
+Factory New_G3SG1-Flux,Classified,46.27,462.70000000000005,0.07777777777777778
+Minimal Wear_G3SG1-Flux,Classified,23.05,230.5,0.16666666666666666
+Field-Tested_G3SG1-Flux,Classified,10.41,104.1,0.4222222222222222
+Well-Worn_G3SG1-Flux,Classified,6.96,69.6,0.5
+Battle-Scarred_G3SG1-Flux,Classified,5.7,57.0,1.1111111111111112
+Factory New_SSG-08-Big-Iron,Classified,33.27,332.70000000000005,0.10937500000000001
+Minimal Wear_SSG-08-Big-Iron,Classified,22.07,220.7,0.234375
+Field-Tested_SSG-08-Big-Iron,Classified,7.5,75.0,0.59375
+Well-Worn_SSG-08-Big-Iron,Classified,7.12,71.2,0.703125
+Battle-Scarred_SSG-08-Big-Iron,Classified,7.87,78.7,1.5625
+Factory New_Galil-AR-Stone-Cold,Restricted,16.92,169.20000000000002,0.07777777777777778
+Minimal Wear_Galil-AR-Stone-Cold,Restricted,6.46,64.6,0.16666666666666666
+Field-Tested_Galil-AR-Stone-Cold,Restricted,2.59,25.9,0.4222222222222222
+Well-Worn_Galil-AR-Stone-Cold,Restricted,1.91,19.099999999999998,0.5
+Battle-Scarred_Galil-AR-Stone-Cold,Restricted,1.86,18.6,1.1111111111111112
+Factory New_P250-Wingshot,Restricted,11.64,116.4,0.07777777777777778
+Minimal Wear_P250-Wingshot,Restricted,3.98,39.8,0.16666666666666666
+Field-Tested_P250-Wingshot,Restricted,2.32,23.2,0.4222222222222222
+Well-Worn_P250-Wingshot,Restricted,2.24,22.400000000000002,0.5
+Battle-Scarred_P250-Wingshot,Restricted,2.15,21.5,1.1111111111111112
+Factory New_M249-Nebula-Crusader,Restricted,11.22,112.2,0.07
+Minimal Wear_M249-Nebula-Crusader,Restricted,3.4,34.0,0.15
+Field-Tested_M249-Nebula-Crusader,Restricted,1.85,18.5,0.38
+Well-Worn_M249-Nebula-Crusader,Restricted,1.78,17.8,0.45
+Battle-Scarred_M249-Nebula-Crusader,Restricted,1.16,11.6,1.0
+Factory New_MP7-Special-Delivery,Restricted,5.86,58.6,0.11290322580645162
+Minimal Wear_MP7-Special-Delivery,Restricted,3.17,31.7,0.24193548387096772
+Field-Tested_MP7-Special-Delivery,Restricted,2.15,21.5,0.6129032258064516
+Well-Worn_MP7-Special-Delivery,Restricted,1.51,15.1,0.7258064516129032
+Battle-Scarred_MP7-Special-Delivery,Restricted,1.51,15.1,1.6129032258064517
+Factory New_Dual-Berettas-Dualing-Dragons,Mil-Spec,5.17,51.7,0.07
+Minimal Wear_Dual-Berettas-Dualing-Dragons,Mil-Spec,0.95,9.5,0.15
+Field-Tested_Dual-Berettas-Dualing-Dragons,Mil-Spec,0.49,4.9,0.38
+Well-Worn_Dual-Berettas-Dualing-Dragons,Mil-Spec,0.37,3.7,0.45
+Battle-Scarred_Dual-Berettas-Dualing-Dragons,Mil-Spec,0.38,3.8,1.0
+Factory New_Glock-18-Wraiths,Mil-Spec,2.98,29.8,0.08750000000000001
+Minimal Wear_Glock-18-Wraiths,Mil-Spec,1.09,10.9,0.18749999999999997
+Field-Tested_Glock-18-Wraiths,Mil-Spec,0.61,6.1,0.475
+Well-Worn_Glock-18-Wraiths,Mil-Spec,1.52,15.2,0.5625
+Battle-Scarred_Glock-18-Wraiths,Mil-Spec,0.83,8.299999999999999,1.25
+Factory New_FAMAS-Survivor-Z,Mil-Spec,2.05,20.5,0.11666666666666668
+Minimal Wear_FAMAS-Survivor-Z,Mil-Spec,1.22,12.2,0.25
+Field-Tested_FAMAS-Survivor-Z,Mil-Spec,0.81,8.100000000000001,0.6333333333333334
+Well-Worn_FAMAS-Survivor-Z,Mil-Spec,1.14,11.399999999999999,0.75
+Battle-Scarred_FAMAS-Survivor-Z,Mil-Spec,0.75,7.5,1.6666666666666667
+Factory New_MAC-10-Rangeen,Mil-Spec,1.5,15.0,0.14
+Minimal Wear_MAC-10-Rangeen,Mil-Spec,0.82,8.2,0.3
+Field-Tested_MAC-10-Rangeen,Mil-Spec,0.5,5.0,0.76
+Well-Worn_MAC-10-Rangeen,Mil-Spec,0.76,7.6,0.9
+Battle-Scarred_MAC-10-Rangeen,Mil-Spec,0.61,6.1,2.0
+Factory New_MAG-7-Cobalt-Core,Mil-Spec,1.47,14.7,0.14
+Minimal Wear_MAG-7-Cobalt-Core,Mil-Spec,0.8,8.0,0.3
+Field-Tested_MAG-7-Cobalt-Core,Mil-Spec,0.29,2.9,0.76
+Well-Worn_MAG-7-Cobalt-Core,Mil-Spec,0.36,3.5999999999999996,0.9
+Battle-Scarred_MAG-7-Cobalt-Core,Mil-Spec,0.34,3.4000000000000004,2.0
+Factory New_XM1014-Scumbria,Mil-Spec,1.82,18.2,0.07
+Minimal Wear_XM1014-Scumbria,Mil-Spec,0.57,5.699999999999999,0.15
+Field-Tested_XM1014-Scumbria,Mil-Spec,0.24,2.4,0.38
+Well-Worn_XM1014-Scumbria,Mil-Spec,0.2,2.0,0.45
+Battle-Scarred_XM1014-Scumbria,Mil-Spec,0.19,1.9,1.0
+Factory New_SCAR-20-Green-Marine,Mil-Spec,1.32,13.200000000000001,0.08750000000000001
+Minimal Wear_SCAR-20-Green-Marine,Mil-Spec,0.58,5.8,0.18749999999999997
+Field-Tested_SCAR-20-Green-Marine,Mil-Spec,0.25,2.5,0.475
+Well-Worn_SCAR-20-Green-Marine,Mil-Spec,0.27,2.7,0.5625
+Battle-Scarred_SCAR-20-Green-Marine,Mil-Spec,0.24,2.4,1.25

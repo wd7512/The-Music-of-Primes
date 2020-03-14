@@ -1,0 +1,65 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_P90-Asiimov,Covert,189.17,1891.6999999999998,0.07608695652173914
+Minimal Wear_P90-Asiimov,Covert,46.82,468.2,0.16304347826086954
+Field-Tested_P90-Asiimov,Covert,18.49,184.89999999999998,0.41304347826086957
+Well-Worn_P90-Asiimov,Covert,14.01,140.1,0.4891304347826087
+Battle-Scarred_P90-Asiimov,Covert,12.17,121.7,1.0869565217391304
+Factory New_M4A1-S-Cyrex,Covert,44.6,446.0,0.14
+Minimal Wear_M4A1-S-Cyrex,Covert,27.69,276.90000000000003,0.3
+Field-Tested_M4A1-S-Cyrex,Covert,17.1,171.0,0.76
+Well-Worn_M4A1-S-Cyrex,Covert,20.99,209.89999999999998,0.9
+Battle-Scarred_M4A1-S-Cyrex,Covert,20.72,207.2,2.0
+Factory New_Glock-18-Water-Elemental,Classified,38.78,387.8,0.10000000000000002
+Minimal Wear_Glock-18-Water-Elemental,Classified,24.55,245.5,0.2142857142857143
+Field-Tested_Glock-18-Water-Elemental,Classified,14.29,142.89999999999998,0.5428571428571429
+Well-Worn_Glock-18-Water-Elemental,Classified,16.22,162.2,0.6428571428571429
+Battle-Scarred_Glock-18-Water-Elemental,Classified,11.46,114.60000000000001,1.4285714285714286
+Factory New_Desert-Eagle-Conspiracy,Classified,18.49,184.89999999999998,0.23333333333333336
+Minimal Wear_Desert-Eagle-Conspiracy,Classified,13.06,130.6,0.5
+Field-Tested_Desert-Eagle-Conspiracy,Classified,11.03,110.3,1.2666666666666668
+Factory New_Five-SeveN-Fowl-Play,Classified,14.17,141.7,0.07
+Minimal Wear_Five-SeveN-Fowl-Play,Classified,5.48,54.800000000000004,0.15
+Field-Tested_Five-SeveN-Fowl-Play,Classified,3.4,34.0,0.38
+Well-Worn_Five-SeveN-Fowl-Play,Classified,3.02,30.2,0.45
+Battle-Scarred_Five-SeveN-Fowl-Play,Classified,3.25,32.5,1.0
+Factory New_P250-Supernova,Restricted,2.92,29.2,0.17500000000000002
+Minimal Wear_P250-Supernova,Restricted,1.8,18.0,0.37499999999999994
+Field-Tested_P250-Supernova,Restricted,1.29,12.9,0.95
+Well-Worn_P250-Supernova,Restricted,1.93,19.3,1.125
+Factory New_CZ75-Auto-Tigris,Restricted,4.79,47.9,0.07
+Minimal Wear_CZ75-Auto-Tigris,Restricted,1.75,17.5,0.15
+Field-Tested_CZ75-Auto-Tigris,Restricted,1.11,11.100000000000001,0.38
+Well-Worn_CZ75-Auto-Tigris,Restricted,0.98,9.8,0.45
+Battle-Scarred_CZ75-Auto-Tigris,Restricted,0.85,8.5,1.0
+Factory New_Nova-Koi,Restricted,2.68,26.8,0.23333333333333336
+Minimal Wear_Nova-Koi,Restricted,1.58,15.8,0.5
+Field-Tested_Nova-Koi,Restricted,1.16,11.6,1.2666666666666668
+Factory New_PP-Bizon-Osiris,Restricted,2.67,26.7,0.14
+Minimal Wear_PP-Bizon-Osiris,Restricted,1.64,16.4,0.3
+Field-Tested_PP-Bizon-Osiris,Restricted,1.22,12.2,0.76
+Well-Worn_PP-Bizon-Osiris,Restricted,0.97,9.7,0.9
+Battle-Scarred_PP-Bizon-Osiris,Restricted,0.92,9.200000000000001,2.0
+Factory New_SSG-08-Abyss,Mil-Spec,8.52,85.19999999999999,0.07
+Minimal Wear_SSG-08-Abyss,Mil-Spec,2.28,22.799999999999997,0.15
+Field-Tested_SSG-08-Abyss,Mil-Spec,1.13,11.299999999999999,0.38
+Well-Worn_SSG-08-Abyss,Mil-Spec,0.92,9.200000000000001,0.45
+Battle-Scarred_SSG-08-Abyss,Mil-Spec,0.89,8.9,1.0
+Factory New_P2000-Ivory,Mil-Spec,1.12,11.200000000000001,0.07
+Minimal Wear_P2000-Ivory,Mil-Spec,0.3,3.0,0.15
+Field-Tested_P2000-Ivory,Mil-Spec,0.18,1.7999999999999998,0.38
+Well-Worn_P2000-Ivory,Mil-Spec,0.18,1.7999999999999998,0.45
+Battle-Scarred_P2000-Ivory,Mil-Spec,0.19,1.9,1.0
+Factory New_UMP-45-Labyrinth,Mil-Spec,0.57,5.699999999999999,0.17500000000000002
+Minimal Wear_UMP-45-Labyrinth,Mil-Spec,0.27,2.7,0.37499999999999994
+Field-Tested_UMP-45-Labyrinth,Mil-Spec,0.2,2.0,0.95
+Well-Worn_UMP-45-Labyrinth,Mil-Spec,0.32,3.2,1.125
+Factory New_MP7-Urban-Hazard,Mil-Spec,0.58,5.8,0.14
+Minimal Wear_MP7-Urban-Hazard,Mil-Spec,0.38,3.8,0.3
+Field-Tested_MP7-Urban-Hazard,Mil-Spec,0.22,2.2,0.76
+Well-Worn_MP7-Urban-Hazard,Mil-Spec,0.33,3.3000000000000003,0.9
+Battle-Scarred_MP7-Urban-Hazard,Mil-Spec,0.25,2.5,2.0
+Factory New_Negev-Desert-Strike,Mil-Spec,0.58,5.8,0.14
+Minimal Wear_Negev-Desert-Strike,Mil-Spec,0.31,3.1,0.3
+Field-Tested_Negev-Desert-Strike,Mil-Spec,0.2,2.0,0.76
+Well-Worn_Negev-Desert-Strike,Mil-Spec,0.24,2.4,0.9
+Battle-Scarred_Negev-Desert-Strike,Mil-Spec,0.25,2.5,2.0

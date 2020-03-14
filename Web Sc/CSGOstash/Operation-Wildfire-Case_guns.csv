@@ -1,0 +1,80 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AK-47-Fuel-Injector,Covert,212.44,2124.4,0.07
+Minimal Wear_AK-47-Fuel-Injector,Covert,212.44,2124.4,0.15
+Field-Tested_AK-47-Fuel-Injector,Covert,127.55,1275.5,0.38
+Well-Worn_AK-47-Fuel-Injector,Covert,83.2,832.0,0.45
+Battle-Scarred_AK-47-Fuel-Injector,Covert,72.09,720.9000000000001,1.0
+Factory New_M4A4-The-Battlestar,Covert,51.8,518.0,0.10937500000000001
+Minimal Wear_M4A4-The-Battlestar,Covert,33.11,331.1,0.234375
+Field-Tested_M4A4-The-Battlestar,Covert,18.23,182.3,0.59375
+Well-Worn_M4A4-The-Battlestar,Covert,32.3,323.0,0.703125
+Battle-Scarred_M4A4-The-Battlestar,Covert,18.52,185.2,1.5625
+Factory New_Desert-Eagle-Kumicho-Dragon,Classified,77.5,775.0,0.09210526315789475
+Minimal Wear_Desert-Eagle-Kumicho-Dragon,Classified,43.76,437.59999999999997,0.19736842105263158
+Field-Tested_Desert-Eagle-Kumicho-Dragon,Classified,27.19,271.90000000000003,0.5
+Well-Worn_Desert-Eagle-Kumicho-Dragon,Classified,38.93,389.3,0.5921052631578947
+Battle-Scarred_Desert-Eagle-Kumicho-Dragon,Classified,23.41,234.1,1.3157894736842106
+Factory New_AWP-Elite-Build,Classified,50.85,508.5,0.07
+Minimal Wear_AWP-Elite-Build,Classified,26.36,263.6,0.15
+Field-Tested_AWP-Elite-Build,Classified,13.61,136.1,0.38
+Well-Worn_AWP-Elite-Build,Classified,12.68,126.8,0.45
+Battle-Scarred_AWP-Elite-Build,Classified,14.5,145.0,1.0
+Factory New_Nova-Hyper-Beast,Classified,28.71,287.1,0.11666666666666668
+Minimal Wear_Nova-Hyper-Beast,Classified,17.06,170.6,0.25
+Field-Tested_Nova-Hyper-Beast,Classified,8.1,81.0,0.6333333333333334
+Well-Worn_Nova-Hyper-Beast,Classified,10.93,109.3,0.75
+Battle-Scarred_Nova-Hyper-Beast,Classified,7.17,71.7,1.6666666666666667
+Factory New_Glock-18-Royal-Legion,Restricted,20.94,209.4,0.07
+Minimal Wear_Glock-18-Royal-Legion,Restricted,6.73,67.30000000000001,0.15
+Field-Tested_Glock-18-Royal-Legion,Restricted,3.41,34.1,0.38
+Well-Worn_Glock-18-Royal-Legion,Restricted,2.68,26.8,0.45
+Battle-Scarred_Glock-18-Royal-Legion,Restricted,2.01,20.099999999999998,1.0
+Factory New_FAMAS-Valence,Restricted,14.3,143.0,0.08750000000000001
+Minimal Wear_FAMAS-Valence,Restricted,5.73,57.300000000000004,0.18749999999999997
+Field-Tested_FAMAS-Valence,Restricted,3.21,32.1,0.475
+Well-Worn_FAMAS-Valence,Restricted,4.45,44.5,0.5625
+Battle-Scarred_FAMAS-Valence,Restricted,2.75,27.5,1.25
+Factory New_MAG-7-Praetorian,Restricted,5.22,52.199999999999996,0.15555555555555556
+Minimal Wear_MAG-7-Praetorian,Restricted,3.15,31.5,0.3333333333333333
+Field-Tested_MAG-7-Praetorian,Restricted,1.85,18.5,0.8444444444444444
+Well-Worn_MAG-7-Praetorian,Restricted,1.75,17.5,1.0
+Battle-Scarred_MAG-7-Praetorian,Restricted,1.51,15.1,2.2222222222222223
+Factory New_MP7-Impire,Restricted,4.53,45.300000000000004,0.17500000000000002
+Minimal Wear_MP7-Impire,Restricted,3.24,32.400000000000006,0.37499999999999994
+Field-Tested_MP7-Impire,Restricted,1.91,19.099999999999998,0.95
+Well-Worn_MP7-Impire,Restricted,1.97,19.7,1.125
+Factory New_Five-SeveN-Triumvirate,Restricted,4.57,45.7,0.11475409836065575
+Minimal Wear_Five-SeveN-Triumvirate,Restricted,3.21,32.1,0.2459016393442623
+Field-Tested_Five-SeveN-Triumvirate,Restricted,1.82,18.2,0.6229508196721312
+Well-Worn_Five-SeveN-Triumvirate,Restricted,2.02,20.2,0.7377049180327869
+Battle-Scarred_Five-SeveN-Triumvirate,Restricted,1.7,17.0,1.639344262295082
+Factory New_USP-S-Lead-Conduit,Mil-Spec,9.14,91.4,0.07
+Minimal Wear_USP-S-Lead-Conduit,Mil-Spec,3.19,31.9,0.15
+Field-Tested_USP-S-Lead-Conduit,Mil-Spec,2.6,26.0,0.38
+Well-Worn_USP-S-Lead-Conduit,Mil-Spec,2.4,24.0,0.45
+Battle-Scarred_USP-S-Lead-Conduit,Mil-Spec,2.5,25.0,1.0
+Factory New_SSG-08-Necropos,Mil-Spec,7.87,78.7,0.07
+Minimal Wear_SSG-08-Necropos,Mil-Spec,2.04,20.4,0.15
+Field-Tested_SSG-08-Necropos,Mil-Spec,1.33,13.3,0.38
+Well-Worn_SSG-08-Necropos,Mil-Spec,1.14,11.399999999999999,0.45
+Battle-Scarred_SSG-08-Necropos,Mil-Spec,1.04,10.4,1.0
+Factory New_PP-Bizon-Photic-Zone,Mil-Spec,3.29,32.9,0.07
+Minimal Wear_PP-Bizon-Photic-Zone,Mil-Spec,0.96,9.6,0.15
+Field-Tested_PP-Bizon-Photic-Zone,Mil-Spec,0.42,4.2,0.38
+Well-Worn_PP-Bizon-Photic-Zone,Mil-Spec,0.32,3.2,0.45
+Battle-Scarred_PP-Bizon-Photic-Zone,Mil-Spec,0.32,3.2,1.0
+Factory New_Dual-Berettas-Cartel,Mil-Spec,1.96,19.6,0.07
+Minimal Wear_Dual-Berettas-Cartel,Mil-Spec,0.56,5.6000000000000005,0.15
+Field-Tested_Dual-Berettas-Cartel,Mil-Spec,0.3,3.0,0.38
+Well-Worn_Dual-Berettas-Cartel,Mil-Spec,0.23,2.3000000000000003,0.45
+Battle-Scarred_Dual-Berettas-Cartel,Mil-Spec,0.21,2.1,1.0
+Factory New_MAC-10-Lapis-Gator,Mil-Spec,1.24,12.4,0.14
+Minimal Wear_MAC-10-Lapis-Gator,Mil-Spec,0.86,8.6,0.3
+Field-Tested_MAC-10-Lapis-Gator,Mil-Spec,0.42,4.2,0.76
+Well-Worn_MAC-10-Lapis-Gator,Mil-Spec,0.56,5.6000000000000005,0.9
+Battle-Scarred_MAC-10-Lapis-Gator,Mil-Spec,0.47,4.699999999999999,2.0
+Factory New_Tec-9-Jambiya,Mil-Spec,1.54,15.4,0.07
+Minimal Wear_Tec-9-Jambiya,Mil-Spec,0.5,5.0,0.15
+Field-Tested_Tec-9-Jambiya,Mil-Spec,0.27,2.7,0.38
+Well-Worn_Tec-9-Jambiya,Mil-Spec,0.27,2.7,0.45
+Battle-Scarred_Tec-9-Jambiya,Mil-Spec,0.22,2.2,1.0

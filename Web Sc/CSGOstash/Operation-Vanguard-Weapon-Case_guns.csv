@@ -1,0 +1,63 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AK-47-Wasteland-Rebel,Covert,111.47,1114.7,0.030769230769230778
+Minimal Wear_AK-47-Wasteland-Rebel,Covert,111.47,1114.7,0.15384615384615385
+Field-Tested_AK-47-Wasteland-Rebel,Covert,68.39,683.9,0.5076923076923078
+Well-Worn_AK-47-Wasteland-Rebel,Covert,74.67,746.7,0.6153846153846155
+Battle-Scarred_AK-47-Wasteland-Rebel,Covert,54.01,540.1,1.4615384615384617
+Factory New_P2000-Fire-Elemental,Covert,71.71,717.0999999999999,0.11666666666666668
+Minimal Wear_P2000-Fire-Elemental,Covert,36.04,360.4,0.25
+Field-Tested_P2000-Fire-Elemental,Covert,23.26,232.60000000000002,0.6333333333333334
+Well-Worn_P2000-Fire-Elemental,Covert,31.33,313.29999999999995,0.75
+Battle-Scarred_P2000-Fire-Elemental,Covert,22.42,224.20000000000002,1.6666666666666667
+Factory New_XM1014-Tranquility,Classified,47.13,471.3,0.14
+Minimal Wear_XM1014-Tranquility,Classified,18.21,182.10000000000002,0.3
+Field-Tested_XM1014-Tranquility,Classified,7.74,77.4,0.76
+Well-Worn_XM1014-Tranquility,Classified,7.22,72.2,0.9
+Battle-Scarred_XM1014-Tranquility,Classified,10.83,108.3,2.0
+Factory New_SCAR-20-Cardiac,Classified,54.07,540.7,0.07
+Minimal Wear_SCAR-20-Cardiac,Classified,12.74,127.4,0.15
+Field-Tested_SCAR-20-Cardiac,Classified,9.01,90.1,0.38
+Well-Worn_SCAR-20-Cardiac,Classified,5.77,57.699999999999996,0.45
+Battle-Scarred_SCAR-20-Cardiac,Classified,5.7,57.0,1.0
+Factory New_P250-Cartel,Classified,37.68,376.8,0.09333333333333334
+Minimal Wear_P250-Cartel,Classified,13.58,135.8,0.19999999999999998
+Field-Tested_P250-Cartel,Classified,6.52,65.19999999999999,0.5066666666666667
+Well-Worn_P250-Cartel,Classified,10.16,101.6,0.6
+Battle-Scarred_P250-Cartel,Classified,6.31,63.099999999999994,1.3333333333333333
+Factory New_M4A4-Griffin,Restricted,22.48,224.8,0.08750000000000001
+Minimal Wear_M4A4-Griffin,Restricted,11.72,117.2,0.18749999999999997
+Field-Tested_M4A4-Griffin,Restricted,8.7,87.0,0.475
+Well-Worn_M4A4-Griffin,Restricted,11.44,114.39999999999999,0.5625
+Battle-Scarred_M4A4-Griffin,Restricted,8.28,82.8,1.25
+Factory New_M4A1-S-Basilisk,Restricted,11.42,114.2,0.10294117647058824
+Minimal Wear_M4A1-S-Basilisk,Restricted,5.04,50.4,0.2205882352941176
+Field-Tested_M4A1-S-Basilisk,Restricted,4.68,46.8,0.5588235294117647
+Well-Worn_M4A1-S-Basilisk,Restricted,4.82,48.2,0.6617647058823529
+Battle-Scarred_M4A1-S-Basilisk,Restricted,5.55,55.5,1.4705882352941175
+Factory New_Glock-18-Grinder,Restricted,5.98,59.800000000000004,0.21739130434782608
+Minimal Wear_Glock-18-Grinder,Restricted,3.6,36.0,0.5652173913043478
+Field-Tested_Glock-18-Grinder,Restricted,4.21,42.1,1.5652173913043477
+Factory New_Sawed-Off-Highwayman,Restricted,5.17,51.7,0.07
+Minimal Wear_Sawed-Off-Highwayman,Restricted,2.38,23.799999999999997,0.15
+Field-Tested_Sawed-Off-Highwayman,Restricted,1.04,10.4,0.38
+Well-Worn_Sawed-Off-Highwayman,Restricted,0.78,7.800000000000001,0.45
+Battle-Scarred_Sawed-Off-Highwayman,Restricted,0.76,7.6,1.0
+Factory New_MAG-7-Firestarter,Mil-Spec,7.64,76.39999999999999,0.023255813953488393
+Minimal Wear_MAG-7-Firestarter,Mil-Spec,1.1,11.0,0.20930232558139533
+Field-Tested_MAG-7-Firestarter,Mil-Spec,0.65,6.5,0.7441860465116279
+Well-Worn_MAG-7-Firestarter,Mil-Spec,0.78,7.800000000000001,0.9069767441860466
+Battle-Scarred_MAG-7-Firestarter,Mil-Spec,1.04,10.4,2.186046511627907
+Factory New_UMP-45-Delusion,Mil-Spec,3.02,30.2,0.03448275862068969
+Minimal Wear_UMP-45-Delusion,Mil-Spec,0.75,7.5,0.3103448275862069
+Field-Tested_UMP-45-Delusion,Mil-Spec,0.57,5.699999999999999,1.1034482758620692
+Factory New_Five-SeveN-Urban-Hazard,Mil-Spec,1.85,18.5,0.28
+Minimal Wear_Five-SeveN-Urban-Hazard,Mil-Spec,1.2,12.0,0.6
+Field-Tested_Five-SeveN-Urban-Hazard,Mil-Spec,1.06,10.600000000000001,1.52
+Factory New_MP9-Dart,Mil-Spec,1.79,17.9,0.15217391304347827
+Minimal Wear_MP9-Dart,Mil-Spec,1.07,10.700000000000001,0.3260869565217391
+Field-Tested_MP9-Dart,Mil-Spec,0.58,5.8,0.8260869565217391
+Well-Worn_MP9-Dart,Mil-Spec,0.69,6.8999999999999995,0.9782608695652174
+Battle-Scarred_MP9-Dart,Mil-Spec,2.51,25.099999999999998,2.1739130434782608
+Factory New_G3SG1-Murky,Mil-Spec,1.11,11.100000000000001,0.28
+Minimal Wear_G3SG1-Murky,Mil-Spec,0.75,7.5,0.6
+Field-Tested_G3SG1-Murky,Mil-Spec,0.55,5.5,1.52

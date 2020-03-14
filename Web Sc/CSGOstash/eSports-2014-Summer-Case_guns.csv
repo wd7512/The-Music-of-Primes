@@ -1,0 +1,70 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AK-47-Jaguar,Covert,204.93,2049.3,0.07
+Minimal Wear_AK-47-Jaguar,Covert,92.59,925.9000000000001,0.15
+Field-Tested_AK-47-Jaguar,Covert,49.1,491.0,0.38
+Well-Worn_AK-47-Jaguar,Covert,42.99,429.90000000000003,0.45
+Battle-Scarred_AK-47-Jaguar,Covert,39.64,396.4,1.0
+Factory New_M4A4-Bullet-Rain,Covert,114.68,1146.8000000000002,0.11363636363636365
+Minimal Wear_M4A4-Bullet-Rain,Covert,47.41,474.09999999999997,0.29545454545454547
+Field-Tested_M4A4-Bullet-Rain,Covert,26.99,269.9,0.8181818181818181
+Well-Worn_M4A4-Bullet-Rain,Covert,27.42,274.20000000000005,0.9772727272727273
+Battle-Scarred_M4A4-Bullet-Rain,Covert,30.99,309.9,2.227272727272727
+Factory New_AUG-Bengal-Tiger,Classified,102.4,1024.0,0.013513513513513526
+Minimal Wear_AUG-Bengal-Tiger,Classified,21.57,215.7,0.12162162162162161
+Field-Tested_AUG-Bengal-Tiger,Classified,7.64,76.39999999999999,0.43243243243243246
+Well-Worn_AUG-Bengal-Tiger,Classified,8.8,88.0,0.5270270270270271
+Battle-Scarred_AUG-Bengal-Tiger,Classified,8.25,82.5,1.2702702702702702
+Factory New_AWP-Corticera,Classified,62.17,621.7,0.041666666666666706
+Minimal Wear_AWP-Corticera,Classified,20.49,204.89999999999998,0.375
+Field-Tested_AWP-Corticera,Classified,14.75,147.5,1.3333333333333335
+Factory New_Nova-Bloomstick,Classified,99.51,995.1,0.013513513513513526
+Minimal Wear_Nova-Bloomstick,Classified,14.87,148.7,0.12162162162162161
+Field-Tested_Nova-Bloomstick,Classified,5.43,54.3,0.43243243243243246
+Well-Worn_Nova-Bloomstick,Classified,4.42,44.2,0.5270270270270271
+Battle-Scarred_Nova-Bloomstick,Classified,5.36,53.6,1.2702702702702702
+Factory New_P2000-Corticera,Classified,18.01,180.10000000000002,0.041666666666666706
+Minimal Wear_P2000-Corticera,Classified,8.27,82.69999999999999,0.375
+Field-Tested_P2000-Corticera,Classified,5.77,57.699999999999996,1.3333333333333335
+Factory New_Desert-Eagle-Crimson-Web,Restricted,423.62,4236.2,0.013513513513513526
+Minimal Wear_Desert-Eagle-Crimson-Web,Restricted,47.65,476.5,0.12162162162162161
+Field-Tested_Desert-Eagle-Crimson-Web,Restricted,10.9,109.0,0.43243243243243246
+Well-Worn_Desert-Eagle-Crimson-Web,Restricted,12.86,128.6,0.5270270270270271
+Battle-Scarred_Desert-Eagle-Crimson-Web,Restricted,10.35,103.5,1.2702702702702702
+Factory New_P90-Virus,Restricted,21.05,210.5,0.013513513513513526
+Minimal Wear_P90-Virus,Restricted,2.39,23.900000000000002,0.12162162162162161
+Field-Tested_P90-Virus,Restricted,1.16,11.6,0.43243243243243246
+Well-Worn_P90-Virus,Restricted,1.67,16.7,0.5270270270270271
+Battle-Scarred_P90-Virus,Restricted,1.47,14.7,1.2702702702702702
+Factory New_PP-Bizon-Blue-Streak,Restricted,14.62,146.2,0.013513513513513526
+Minimal Wear_PP-Bizon-Blue-Streak,Restricted,2.51,25.099999999999998,0.12162162162162161
+Field-Tested_PP-Bizon-Blue-Streak,Restricted,1.54,15.4,0.43243243243243246
+Well-Worn_PP-Bizon-Blue-Streak,Restricted,0.91,9.1,0.5270270270270271
+Battle-Scarred_PP-Bizon-Blue-Streak,Restricted,1.36,13.600000000000001,1.2702702702702702
+Factory New_MP7-Ocean-Foam,Restricted,4.51,45.099999999999994,0.8750000000000001
+Minimal Wear_MP7-Ocean-Foam,Restricted,4.2,42.0,1.875
+Factory New_Glock-18-Steel-Disruption,Restricted,4.96,49.6,0.35000000000000003
+Minimal Wear_Glock-18-Steel-Disruption,Restricted,3.15,31.5,0.7499999999999999
+Field-Tested_Glock-18-Steel-Disruption,Restricted,3.21,32.1,1.9
+Factory New_MAC-10-Ultraviolet,Mil-Spec,28.81,288.09999999999997,0.013513513513513526
+Minimal Wear_MAC-10-Ultraviolet,Mil-Spec,2.62,26.200000000000003,0.12162162162162161
+Field-Tested_MAC-10-Ultraviolet,Mil-Spec,0.98,9.8,0.43243243243243246
+Well-Worn_MAC-10-Ultraviolet,Mil-Spec,1.06,10.600000000000001,0.5270270270270271
+Battle-Scarred_MAC-10-Ultraviolet,Mil-Spec,0.73,7.3,1.2702702702702702
+Factory New_Negev-Bratatat,Mil-Spec,17.09,170.9,0.07
+Minimal Wear_Negev-Bratatat,Mil-Spec,3.56,35.6,0.15
+Field-Tested_Negev-Bratatat,Mil-Spec,1.53,15.3,0.38
+Well-Worn_Negev-Bratatat,Mil-Spec,1.18,11.799999999999999,0.45
+Battle-Scarred_Negev-Bratatat,Mil-Spec,1.13,11.299999999999999,1.0
+Factory New_USP-S-Blood-Tiger,Mil-Spec,5.93,59.3,0.23333333333333336
+Minimal Wear_USP-S-Blood-Tiger,Mil-Spec,3.05,30.5,0.5
+Field-Tested_USP-S-Blood-Tiger,Mil-Spec,2.94,29.4,1.2666666666666668
+Factory New_CZ75-Auto-Hexane,Mil-Spec,6.22,62.199999999999996,0.17500000000000002
+Minimal Wear_CZ75-Auto-Hexane,Mil-Spec,1.89,18.9,0.37499999999999994
+Field-Tested_CZ75-Auto-Hexane,Mil-Spec,0.73,7.3,0.95
+Well-Worn_CZ75-Auto-Hexane,Mil-Spec,0.94,9.399999999999999,1.125
+Minimal Wear_SSG-08-Dark-Water,Mil-Spec,2.06,20.6,0.31249999999999994
+Field-Tested_SSG-08-Dark-Water,Mil-Spec,2.06,20.6,1.7500000000000002
+Minimal Wear_XM1014-Red-Python,Mil-Spec,1.82,18.2,0.16666666666666666
+Field-Tested_XM1014-Red-Python,Mil-Spec,1.82,18.2,0.7142857142857143
+Well-Worn_XM1014-Red-Python,Mil-Spec,0.63,6.3,0.8809523809523809
+Battle-Scarred_XM1014-Red-Python,Mil-Spec,0.69,6.8999999999999995,2.1904761904761907

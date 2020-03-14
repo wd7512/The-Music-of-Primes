@@ -1,0 +1,84 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_M4A4-Buzz-Kill,Covert,82.03,820.3,0.10000000000000002
+Minimal Wear_M4A4-Buzz-Kill,Covert,54.62,546.1999999999999,0.2142857142857143
+Field-Tested_M4A4-Buzz-Kill,Covert,28.83,288.29999999999995,0.5428571428571429
+Well-Worn_M4A4-Buzz-Kill,Covert,38.26,382.59999999999997,0.6428571428571429
+Battle-Scarred_M4A4-Buzz-Kill,Covert,23.28,232.8,1.4285714285714286
+Factory New_SSG-08-Dragonfire,Covert,57.41,574.0999999999999,0.14
+Minimal Wear_SSG-08-Dragonfire,Covert,35.26,352.59999999999997,0.3
+Field-Tested_SSG-08-Dragonfire,Covert,26.42,264.20000000000005,0.76
+Well-Worn_SSG-08-Dragonfire,Covert,26.76,267.6,0.9
+Battle-Scarred_SSG-08-Dragonfire,Covert,31.01,310.1,2.0
+Factory New_FAMAS-Mecha-Industries,Classified,12.1,121.0,0.14
+Minimal Wear_FAMAS-Mecha-Industries,Classified,7.59,75.9,0.3
+Field-Tested_FAMAS-Mecha-Industries,Classified,4.31,43.099999999999994,0.76
+Well-Worn_FAMAS-Mecha-Industries,Classified,4.78,47.800000000000004,0.9
+Battle-Scarred_FAMAS-Mecha-Industries,Classified,4.33,43.3,2.0
+Factory New_P90-Shallow-Grave,Classified,13.72,137.20000000000002,0.09333333333333334
+Minimal Wear_P90-Shallow-Grave,Classified,6.5,65.0,0.19999999999999998
+Field-Tested_P90-Shallow-Grave,Classified,3.68,36.800000000000004,0.5066666666666667
+Well-Worn_P90-Shallow-Grave,Classified,4.46,44.6,0.6
+Battle-Scarred_P90-Shallow-Grave,Classified,3.57,35.699999999999996,1.3333333333333333
+Factory New_Sawed-Off-Wasteland-Princess,Classified,12.55,125.5,0.10000000000000002
+Minimal Wear_Sawed-Off-Wasteland-Princess,Classified,5.77,57.699999999999996,0.2142857142857143
+Field-Tested_Sawed-Off-Wasteland-Princess,Classified,3.58,35.8,0.5428571428571429
+Well-Worn_Sawed-Off-Wasteland-Princess,Classified,4.57,45.7,0.6428571428571429
+Battle-Scarred_Sawed-Off-Wasteland-Princess,Classified,3.37,33.7,1.4285714285714286
+Factory New_USP-S-Cyrex,Restricted,11.69,116.89999999999999,0.1272727272727273
+Minimal Wear_USP-S-Cyrex,Restricted,7.36,73.60000000000001,0.2727272727272727
+Field-Tested_USP-S-Cyrex,Restricted,4.48,44.800000000000004,0.6909090909090908
+Well-Worn_USP-S-Cyrex,Restricted,5.93,59.3,0.8181818181818181
+Battle-Scarred_USP-S-Cyrex,Restricted,4.18,41.8,1.8181818181818181
+Factory New_M4A1-S-Flashback,Restricted,8.6,86.0,0.07
+Minimal Wear_M4A1-S-Flashback,Restricted,3.95,39.5,0.15
+Field-Tested_M4A1-S-Flashback,Restricted,2.51,25.099999999999998,0.38
+Well-Worn_M4A1-S-Flashback,Restricted,2.44,24.4,0.45
+Battle-Scarred_M4A1-S-Flashback,Restricted,2.48,24.8,1.0
+Factory New_Dual-Berettas-Royal-Consorts,Restricted,3.9,39.0,0.07
+Minimal Wear_Dual-Berettas-Royal-Consorts,Restricted,1.33,13.3,0.15
+Field-Tested_Dual-Berettas-Royal-Consorts,Restricted,0.63,6.3,0.38
+Well-Worn_Dual-Berettas-Royal-Consorts,Restricted,0.67,6.7,0.45
+Battle-Scarred_Dual-Berettas-Royal-Consorts,Restricted,0.6,6.0,1.0
+Factory New_Nova-Gila,Restricted,2.21,22.1,0.23333333333333336
+Minimal Wear_Nova-Gila,Restricted,1.27,12.7,0.5
+Field-Tested_Nova-Gila,Restricted,0.67,6.7,1.2666666666666668
+Factory New_G3SG1-Stinger,Restricted,2.46,24.6,0.10000000000000002
+Minimal Wear_G3SG1-Stinger,Restricted,1.3,13.0,0.2142857142857143
+Field-Tested_G3SG1-Stinger,Restricted,0.61,6.1,0.5428571428571429
+Well-Worn_G3SG1-Stinger,Restricted,0.75,7.5,0.6428571428571429
+Battle-Scarred_G3SG1-Stinger,Restricted,0.65,6.5,1.4285714285714286
+Factory New_Glock-18-Ironwork,Mil-Spec,2.68,26.8,0.07
+Minimal Wear_Glock-18-Ironwork,Mil-Spec,0.7,7.0,0.15
+Field-Tested_Glock-18-Ironwork,Mil-Spec,0.49,4.9,0.38
+Well-Worn_Glock-18-Ironwork,Mil-Spec,0.45,4.5,0.45
+Battle-Scarred_Glock-18-Ironwork,Mil-Spec,0.43,4.3,1.0
+Factory New_MP7-Cirrus,Mil-Spec,1.65,16.5,0.09333333333333334
+Minimal Wear_MP7-Cirrus,Mil-Spec,0.63,6.3,0.19999999999999998
+Field-Tested_MP7-Cirrus,Mil-Spec,0.33,3.3000000000000003,0.5066666666666667
+Well-Worn_MP7-Cirrus,Mil-Spec,0.64,6.4,0.6
+Battle-Scarred_MP7-Cirrus,Mil-Spec,0.31,3.1,1.3333333333333333
+Factory New_Galil-AR-Black-Sand,Mil-Spec,2.05,20.5,0.07
+Minimal Wear_Galil-AR-Black-Sand,Mil-Spec,0.63,6.3,0.15
+Field-Tested_Galil-AR-Black-Sand,Mil-Spec,0.36,3.5999999999999996,0.38
+Well-Worn_Galil-AR-Black-Sand,Mil-Spec,0.32,3.2,0.45
+Battle-Scarred_Galil-AR-Black-Sand,Mil-Spec,0.32,3.2,1.0
+Factory New_P2000-Turf,Mil-Spec,1.72,17.2,0.07
+Minimal Wear_P2000-Turf,Mil-Spec,0.45,4.5,0.15
+Field-Tested_P2000-Turf,Mil-Spec,0.25,2.5,0.38
+Well-Worn_P2000-Turf,Mil-Spec,0.22,2.2,0.45
+Battle-Scarred_P2000-Turf,Mil-Spec,0.22,2.2,1.0
+Factory New_MP9-Sand-Scale,Mil-Spec,0.67,6.7,0.15555555555555556
+Minimal Wear_MP9-Sand-Scale,Mil-Spec,0.36,3.5999999999999996,0.3333333333333333
+Field-Tested_MP9-Sand-Scale,Mil-Spec,0.24,2.4,0.8444444444444444
+Well-Worn_MP9-Sand-Scale,Mil-Spec,0.22,2.2,1.0
+Battle-Scarred_MP9-Sand-Scale,Mil-Spec,0.18,1.7999999999999998,2.2222222222222223
+Factory New_MAG-7-Sonar,Mil-Spec,0.66,6.6000000000000005,0.15555555555555556
+Minimal Wear_MAG-7-Sonar,Mil-Spec,0.41,4.1,0.3333333333333333
+Field-Tested_MAG-7-Sonar,Mil-Spec,0.22,2.2,0.8444444444444444
+Well-Worn_MAG-7-Sonar,Mil-Spec,0.2,2.0,1.0
+Battle-Scarred_MAG-7-Sonar,Mil-Spec,0.18,1.7999999999999998,2.2222222222222223
+Factory New_CZ75-Auto-Polymer,Mil-Spec,0.64,6.4,0.14
+Minimal Wear_CZ75-Auto-Polymer,Mil-Spec,0.45,4.5,0.3
+Field-Tested_CZ75-Auto-Polymer,Mil-Spec,0.24,2.4,0.76
+Well-Worn_CZ75-Auto-Polymer,Mil-Spec,0.31,3.1,0.9
+Battle-Scarred_CZ75-Auto-Polymer,Mil-Spec,0.3,3.0,2.0

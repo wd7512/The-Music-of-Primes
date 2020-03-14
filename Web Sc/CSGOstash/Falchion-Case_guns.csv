@@ -1,0 +1,78 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AWP-Hyper-Beast,Covert,197.79,1977.8999999999999,0.07
+Minimal Wear_AWP-Hyper-Beast,Covert,90.8,908.0,0.15
+Field-Tested_AWP-Hyper-Beast,Covert,55.38,553.8000000000001,0.38
+Well-Worn_AWP-Hyper-Beast,Covert,41.75,417.5,0.45
+Battle-Scarred_AWP-Hyper-Beast,Covert,34.97,349.7,1.0
+Factory New_AK-47-Aquamarine-Revenge,Covert,180.22,1802.2,0.07
+Minimal Wear_AK-47-Aquamarine-Revenge,Covert,88.11,881.1,0.15
+Field-Tested_AK-47-Aquamarine-Revenge,Covert,51.11,511.1,0.38
+Well-Worn_AK-47-Aquamarine-Revenge,Covert,38.07,380.7,0.45
+Battle-Scarred_AK-47-Aquamarine-Revenge,Covert,35.14,351.4,1.0
+Factory New_SG-553-Cyrex,Classified,102.37,1023.7,0.07
+Minimal Wear_SG-553-Cyrex,Classified,44.23,442.29999999999995,0.15
+Field-Tested_SG-553-Cyrex,Classified,22.53,225.3,0.38
+Well-Worn_SG-553-Cyrex,Classified,15.76,157.6,0.45
+Battle-Scarred_SG-553-Cyrex,Classified,11.95,119.5,1.0
+Factory New_MP7-Nemesis,Classified,18.11,181.1,0.21875000000000003
+Minimal Wear_MP7-Nemesis,Classified,10.35,103.5,0.46875
+Field-Tested_MP7-Nemesis,Classified,6.43,64.3,1.1875
+Factory New_CZ75-Auto-Yellow-Jacket,Classified,25.11,251.1,0.07
+Minimal Wear_CZ75-Auto-Yellow-Jacket,Classified,13.28,132.79999999999998,0.15
+Field-Tested_CZ75-Auto-Yellow-Jacket,Classified,5.54,55.4,0.38
+Well-Worn_CZ75-Auto-Yellow-Jacket,Classified,5.02,50.199999999999996,0.45
+Battle-Scarred_CZ75-Auto-Yellow-Jacket,Classified,4.65,46.5,1.0
+Factory New_M4A4-Evil-Daimyo,Restricted,20.39,203.9,0.13461538461538464
+Minimal Wear_M4A4-Evil-Daimyo,Restricted,10.96,109.60000000000001,0.28846153846153844
+Field-Tested_M4A4-Evil-Daimyo,Restricted,7.49,74.9,0.7307692307692307
+Well-Worn_M4A4-Evil-Daimyo,Restricted,9.06,90.60000000000001,0.8653846153846154
+Battle-Scarred_M4A4-Evil-Daimyo,Restricted,8.31,83.10000000000001,1.923076923076923
+Minimal Wear_Negev-Loudmouth,Restricted,21.89,218.9,0.019607843137254864
+Field-Tested_Negev-Loudmouth,Restricted,21.89,218.9,0.47058823529411764
+Well-Worn_Negev-Loudmouth,Restricted,1.31,13.100000000000001,0.6078431372549019
+Battle-Scarred_Negev-Loudmouth,Restricted,1.66,16.599999999999998,1.6862745098039216
+Factory New_P2000-Handgun,Restricted,11.11,111.1,0.07
+Minimal Wear_P2000-Handgun,Restricted,2.81,28.1,0.15
+Field-Tested_P2000-Handgun,Restricted,1.34,13.4,0.38
+Well-Worn_P2000-Handgun,Restricted,1.09,10.9,0.45
+Battle-Scarred_P2000-Handgun,Restricted,1.05,10.5,1.0
+Factory New_MP9-Ruby-Poison-Dart,Restricted,5.38,53.8,0.14
+Minimal Wear_MP9-Ruby-Poison-Dart,Restricted,2.99,29.900000000000002,0.3
+Field-Tested_MP9-Ruby-Poison-Dart,Restricted,1.74,17.4,0.76
+Well-Worn_MP9-Ruby-Poison-Dart,Restricted,2.59,25.9,0.9
+Battle-Scarred_MP9-Ruby-Poison-Dart,Restricted,1.89,18.9,2.0
+Factory New_FAMAS-Neural-Net,Restricted,4.61,46.1,0.11666666666666668
+Minimal Wear_FAMAS-Neural-Net,Restricted,3.14,31.400000000000002,0.25
+Field-Tested_FAMAS-Neural-Net,Restricted,1.38,13.799999999999999,0.6333333333333334
+Well-Worn_FAMAS-Neural-Net,Restricted,1.73,17.3,0.75
+Battle-Scarred_FAMAS-Neural-Net,Restricted,1.54,15.4,1.6666666666666667
+Factory New_USP-S-Torque,Mil-Spec,4.96,49.6,0.15217391304347827
+Minimal Wear_USP-S-Torque,Mil-Spec,3.79,37.9,0.3260869565217391
+Field-Tested_USP-S-Torque,Mil-Spec,2.77,27.7,0.8260869565217391
+Well-Worn_USP-S-Torque,Mil-Spec,3.07,30.7,0.9782608695652174
+Battle-Scarred_USP-S-Torque,Mil-Spec,3.15,31.5,2.1739130434782608
+Factory New_Galil-AR-Rocket-Pop,Mil-Spec,12.1,121.0,0.07
+Minimal Wear_Galil-AR-Rocket-Pop,Mil-Spec,2.88,28.799999999999997,0.15
+Field-Tested_Galil-AR-Rocket-Pop,Mil-Spec,1.1,11.0,0.38
+Well-Worn_Galil-AR-Rocket-Pop,Mil-Spec,0.79,7.9,0.45
+Battle-Scarred_Galil-AR-Rocket-Pop,Mil-Spec,0.69,6.8999999999999995,1.0
+Factory New_P90-Elite-Build,Mil-Spec,9.8,98.0,0.07
+Minimal Wear_P90-Elite-Build,Mil-Spec,1.35,13.5,0.15
+Field-Tested_P90-Elite-Build,Mil-Spec,0.61,6.1,0.38
+Well-Worn_P90-Elite-Build,Mil-Spec,0.49,4.9,0.45
+Battle-Scarred_P90-Elite-Build,Mil-Spec,0.42,4.2,1.0
+Factory New_Glock-18-Bunsen-Burner,Mil-Spec,3.81,38.1,0.08750000000000001
+Minimal Wear_Glock-18-Bunsen-Burner,Mil-Spec,1.49,14.9,0.18749999999999997
+Field-Tested_Glock-18-Bunsen-Burner,Mil-Spec,0.8,8.0,0.475
+Well-Worn_Glock-18-Bunsen-Burner,Mil-Spec,1.97,19.7,0.5625
+Battle-Scarred_Glock-18-Bunsen-Burner,Mil-Spec,0.95,9.5,1.25
+Factory New_UMP-45-Riot,Mil-Spec,1.3,13.0,0.10000000000000002
+Minimal Wear_UMP-45-Riot,Mil-Spec,0.6,6.0,0.2142857142857143
+Field-Tested_UMP-45-Riot,Mil-Spec,0.32,3.2,0.5428571428571429
+Well-Worn_UMP-45-Riot,Mil-Spec,0.4,4.0,0.6428571428571429
+Battle-Scarred_UMP-45-Riot,Mil-Spec,0.3,3.0,1.4285714285714286
+Factory New_Nova-Ranger,Mil-Spec,1.37,13.700000000000001,0.07
+Minimal Wear_Nova-Ranger,Mil-Spec,0.58,5.8,0.15
+Field-Tested_Nova-Ranger,Mil-Spec,0.31,3.1,0.38
+Well-Worn_Nova-Ranger,Mil-Spec,0.3,3.0,0.45
+Battle-Scarred_Nova-Ranger,Mil-Spec,0.27,2.7,1.0
