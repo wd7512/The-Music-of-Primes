@@ -136,9 +136,17 @@ def tree_save(data,case):
             w = war[i]
             
             count = 0
-            while type(prices[i+count]) != float:
+            fall = True
+            while fall == True and type(prices[i+count]) != float:
                 count = count+1
-            price = prices[i+count]
+
+                if i+count+1 > len(prices):
+                    fall = False
+                
+            if fall == True:    
+                price = prices[i+count]
+            else:
+                price = 'n/a'
 
             flt_output = conv_wear(w)
             flt_input = (flt_output - wear_min) / wear_diff
@@ -161,7 +169,7 @@ def conv_wear(strname):
     i = wear_names.index(strname)
     return wear_ranges[i]
     
-f = open('Names.txt','r')
+f = open('New_Collections.txt','r')
 cases = f.readlines()
 f.close()
 
