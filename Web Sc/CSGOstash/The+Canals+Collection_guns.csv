@@ -1,0 +1,88 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AWP-The-Prince,Covert,985.99,9859.9,0.11666666666666668
+Minimal Wear_AWP-The-Prince,Covert,985.99,9859.9,0.25
+Field-Tested_AWP-The-Prince,Covert,985.99,9859.9,0.6333333333333334
+Well-Worn_AWP-The-Prince,Covert,985.99,9859.9,0.75
+Battle-Scarred_AWP-The-Prince,Covert,985.99,9859.9,1.6666666666666667
+Factory New_MAG-7-Cinquedea,Classified,296.41,2964.1000000000004,0.07
+Minimal Wear_MAG-7-Cinquedea,Classified,296.41,2964.1000000000004,0.15
+Field-Tested_MAG-7-Cinquedea,Classified,296.41,2964.1000000000004,0.38
+Well-Worn_MAG-7-Cinquedea,Classified,296.41,2964.1000000000004,0.45
+Battle-Scarred_MAG-7-Cinquedea,Classified,296.41,2964.1000000000004,1.0
+Factory New_MAC-10-Red-Filigree,Restricted,24.96,249.60000000000002,0.14
+Minimal Wear_MAC-10-Red-Filigree,Restricted,24.96,249.60000000000002,0.3
+Field-Tested_MAC-10-Red-Filigree,Restricted,24.96,249.60000000000002,0.76
+Well-Worn_MAC-10-Red-Filigree,Restricted,24.96,249.60000000000002,0.9
+Battle-Scarred_MAC-10-Red-Filigree,Restricted,24.96,249.60000000000002,2.0
+Factory New_MP9-Stained-Glass,Restricted,26.35,263.5,0.14
+Minimal Wear_MP9-Stained-Glass,Restricted,26.35,263.5,0.3
+Field-Tested_MP9-Stained-Glass,Restricted,26.35,263.5,0.76
+Well-Worn_MP9-Stained-Glass,Restricted,26.35,263.5,0.9
+Battle-Scarred_MP9-Stained-Glass,Restricted,26.35,263.5,2.0
+Factory New_Nova-Baroque-Orange,Restricted,24.8,248.0,0.14
+Minimal Wear_Nova-Baroque-Orange,Restricted,24.8,248.0,0.3
+Field-Tested_Nova-Baroque-Orange,Restricted,24.8,248.0,0.76
+Well-Worn_Nova-Baroque-Orange,Restricted,24.8,248.0,0.9
+Battle-Scarred_Nova-Baroque-Orange,Restricted,24.8,248.0,2.0
+Factory New_Dual-Berettas-Emerald,Mil-Spec,2.91,29.1,0.8750000000000001
+Minimal Wear_Dual-Berettas-Emerald,Mil-Spec,2.91,29.1,1.875
+Factory New_G3SG1-Violet-Murano,Mil-Spec,3.0,30.0,0.14
+Minimal Wear_G3SG1-Violet-Murano,Mil-Spec,3.0,30.0,0.3
+Field-Tested_G3SG1-Violet-Murano,Mil-Spec,3.0,30.0,0.76
+Well-Worn_G3SG1-Violet-Murano,Mil-Spec,3.0,30.0,0.9
+Battle-Scarred_G3SG1-Violet-Murano,Mil-Spec,3.0,30.0,2.0
+Factory New_P90-Baroque-Red,Mil-Spec,3.0,30.0,0.14
+Minimal Wear_P90-Baroque-Red,Mil-Spec,3.0,30.0,0.3
+Field-Tested_P90-Baroque-Red,Mil-Spec,3.0,30.0,0.76
+Well-Worn_P90-Baroque-Red,Mil-Spec,3.0,30.0,0.9
+Battle-Scarred_P90-Baroque-Red,Mil-Spec,3.0,30.0,2.0
+Factory New_SSG-08-Orange-Filigree,Mil-Spec,2.93,29.3,0.14
+Minimal Wear_SSG-08-Orange-Filigree,Mil-Spec,2.93,29.3,0.3
+Field-Tested_SSG-08-Orange-Filigree,Mil-Spec,2.93,29.3,0.76
+Well-Worn_SSG-08-Orange-Filigree,Mil-Spec,2.93,29.3,0.9
+Battle-Scarred_SSG-08-Orange-Filigree,Mil-Spec,2.93,29.3,2.0
+Factory New_AK-47-Baroque-Purple,Industrial,6.39,63.9,0.07
+Minimal Wear_AK-47-Baroque-Purple,Industrial,6.39,63.9,0.15
+Field-Tested_AK-47-Baroque-Purple,Industrial,6.39,63.9,0.38
+Well-Worn_AK-47-Baroque-Purple,Industrial,6.39,63.9,0.45
+Battle-Scarred_AK-47-Baroque-Purple,Industrial,6.39,63.9,1.0
+Factory New_SG-553-Candy-Apple,Industrial,3.86,38.6,0.10000000000000002
+Minimal Wear_SG-553-Candy-Apple,Industrial,3.86,38.6,0.2142857142857143
+Field-Tested_SG-553-Candy-Apple,Industrial,3.86,38.6,0.5428571428571429
+Well-Worn_SG-553-Candy-Apple,Industrial,3.86,38.6,0.6428571428571429
+Battle-Scarred_SG-553-Candy-Apple,Industrial,3.86,38.6,1.4285714285714286
+Factory New_Tec-9-Orange-Murano,Industrial,0.41,4.1,0.07
+Minimal Wear_Tec-9-Orange-Murano,Industrial,0.41,4.1,0.15
+Field-Tested_Tec-9-Orange-Murano,Industrial,0.41,4.1,0.38
+Well-Worn_Tec-9-Orange-Murano,Industrial,0.41,4.1,0.45
+Battle-Scarred_Tec-9-Orange-Murano,Industrial,0.41,4.1,1.0
+Factory New_P250-Dark-Filigree,Industrial,0.37,3.7,0.14
+Minimal Wear_P250-Dark-Filigree,Industrial,0.37,3.7,0.3
+Field-Tested_P250-Dark-Filigree,Industrial,0.37,3.7,0.76
+Well-Worn_P250-Dark-Filigree,Industrial,0.37,3.7,0.9
+Battle-Scarred_P250-Dark-Filigree,Industrial,0.37,3.7,2.0
+Factory New_CZ75-Auto-Indigo,Consumer,0.78,7.800000000000001,0.013513513513513526
+Minimal Wear_CZ75-Auto-Indigo,Consumer,0.78,7.800000000000001,0.12162162162162161
+Field-Tested_CZ75-Auto-Indigo,Consumer,0.78,7.800000000000001,0.43243243243243246
+Well-Worn_CZ75-Auto-Indigo,Consumer,0.78,7.800000000000001,0.5270270270270271
+Battle-Scarred_CZ75-Auto-Indigo,Consumer,0.78,7.800000000000001,1.2702702702702702
+Factory New_AUG-Navy-Murano,Consumer,0.61,6.1,0.07
+Minimal Wear_AUG-Navy-Murano,Consumer,0.61,6.1,0.15
+Field-Tested_AUG-Navy-Murano,Consumer,0.61,6.1,0.38
+Well-Worn_AUG-Navy-Murano,Consumer,0.61,6.1,0.45
+Battle-Scarred_AUG-Navy-Murano,Consumer,0.61,6.1,1.0
+Factory New_SCAR-20-Stone-Mosaico,Consumer,0.61,6.1,0.02272727272727275
+Minimal Wear_SCAR-20-Stone-Mosaico,Consumer,0.61,6.1,0.20454545454545453
+Field-Tested_SCAR-20-Stone-Mosaico,Consumer,0.61,6.1,0.7272727272727273
+Well-Worn_SCAR-20-Stone-Mosaico,Consumer,0.61,6.1,0.8863636363636364
+Battle-Scarred_SCAR-20-Stone-Mosaico,Consumer,0.61,6.1,2.1363636363636362
+Factory New_Negev-Boroque-Sand,Consumer,0.53,5.300000000000001,0.07
+Minimal Wear_Negev-Boroque-Sand,Consumer,0.53,5.300000000000001,0.15
+Field-Tested_Negev-Boroque-Sand,Consumer,0.53,5.300000000000001,0.38
+Well-Worn_Negev-Boroque-Sand,Consumer,0.53,5.300000000000001,0.45
+Battle-Scarred_Negev-Boroque-Sand,Consumer,0.53,5.300000000000001,1.0
+Factory New_R8-Revolver-Canal-Spray,Consumer,0.53,5.300000000000001,0.018518518518518535
+Minimal Wear_R8-Revolver-Canal-Spray,Consumer,0.53,5.300000000000001,0.16666666666666666
+Field-Tested_R8-Revolver-Canal-Spray,Consumer,0.53,5.300000000000001,0.5925925925925926
+Well-Worn_R8-Revolver-Canal-Spray,Consumer,0.53,5.300000000000001,0.7222222222222222
+Battle-Scarred_R8-Revolver-Canal-Spray,Consumer,0.53,5.300000000000001,1.7407407407407405

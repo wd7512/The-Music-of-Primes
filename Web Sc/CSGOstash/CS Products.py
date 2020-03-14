@@ -143,7 +143,8 @@ def tree_save(data,case):
                 if i+count+1 > len(prices):
                     fall = False
                 
-            if fall == True:    
+            if fall == True:
+                print(i+count)
                 price = prices[i+count]
             else:
                 price = 'n/a'

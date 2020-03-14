@@ -1,0 +1,87 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AWP-Gungnir,Covert,n/a,n/an/an/an/an/an/an/an/an/an/a,0.11666666666666668
+Minimal Wear_AWP-Gungnir,Covert,n/a,n/an/an/an/an/an/an/an/an/an/a,0.25
+Field-Tested_AWP-Gungnir,Covert,n/a,n/an/an/an/an/an/an/an/an/an/a,0.6333333333333334
+Well-Worn_AWP-Gungnir,Covert,n/a,n/an/an/an/an/an/an/an/an/an/a,0.75
+Battle-Scarred_AWP-Gungnir,Covert,n/a,n/an/an/an/an/an/an/an/an/an/a,1.6666666666666667
+Factory New_Negev-Mj%C3%B6lnir,Classified,433.82,4338.2,0.11666666666666668
+Minimal Wear_Negev-Mj%C3%B6lnir,Classified,433.82,4338.2,0.25
+Field-Tested_Negev-Mj%C3%B6lnir,Classified,433.82,4338.2,0.6333333333333334
+Well-Worn_Negev-Mj%C3%B6lnir,Classified,433.82,4338.2,0.75
+Battle-Scarred_Negev-Mj%C3%B6lnir,Classified,433.82,4338.2,1.6666666666666667
+Factory New_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.95,639.5,0.14
+Minimal Wear_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.95,639.5,0.3
+Field-Tested_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.95,639.5,0.76
+Well-Worn_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.95,639.5,0.9
+Battle-Scarred_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.95,639.5,2.0
+Factory New_AUG-Flame-J%C3%B6rmungandr,Restricted,43.88,438.8,0.14
+Minimal Wear_AUG-Flame-J%C3%B6rmungandr,Restricted,43.88,438.8,0.3
+Field-Tested_AUG-Flame-J%C3%B6rmungandr,Restricted,43.88,438.8,0.76
+Well-Worn_AUG-Flame-J%C3%B6rmungandr,Restricted,43.88,438.8,0.9
+Battle-Scarred_AUG-Flame-J%C3%B6rmungandr,Restricted,43.88,438.8,2.0
+Factory New_P90-Astral-J%C3%B6rmungandr,Restricted,44.06,440.6,0.14
+Minimal Wear_P90-Astral-J%C3%B6rmungandr,Restricted,44.06,440.6,0.3
+Field-Tested_P90-Astral-J%C3%B6rmungandr,Restricted,44.06,440.6,0.76
+Well-Worn_P90-Astral-J%C3%B6rmungandr,Restricted,44.06,440.6,0.9
+Battle-Scarred_P90-Astral-J%C3%B6rmungandr,Restricted,44.06,440.6,2.0
+Factory New_XM1014-Frost-Borre,Mil-Spec,7.73,77.30000000000001,0.14
+Minimal Wear_XM1014-Frost-Borre,Mil-Spec,7.73,77.30000000000001,0.3
+Field-Tested_XM1014-Frost-Borre,Mil-Spec,7.73,77.30000000000001,0.76
+Well-Worn_XM1014-Frost-Borre,Mil-Spec,7.73,77.30000000000001,0.9
+Battle-Scarred_XM1014-Frost-Borre,Mil-Spec,7.73,77.30000000000001,2.0
+Factory New_MAC-10-Copper-Borre,Mil-Spec,7.42,74.2,0.14
+Minimal Wear_MAC-10-Copper-Borre,Mil-Spec,7.42,74.2,0.3
+Field-Tested_MAC-10-Copper-Borre,Mil-Spec,7.42,74.2,0.76
+Well-Worn_MAC-10-Copper-Borre,Mil-Spec,7.42,74.2,0.9
+Battle-Scarred_MAC-10-Copper-Borre,Mil-Spec,7.42,74.2,2.0
+Factory New_CZ75-Auto-Emerald-Quartz,Mil-Spec,7.44,74.4,0.10000000000000002
+Minimal Wear_CZ75-Auto-Emerald-Quartz,Mil-Spec,7.44,74.4,0.2142857142857143
+Field-Tested_CZ75-Auto-Emerald-Quartz,Mil-Spec,7.44,74.4,0.5428571428571429
+Well-Worn_CZ75-Auto-Emerald-Quartz,Mil-Spec,7.44,74.4,0.6428571428571429
+Battle-Scarred_CZ75-Auto-Emerald-Quartz,Mil-Spec,7.44,74.4,1.4285714285714286
+Factory New_SCAR-20-Brass,Mil-Spec,7.81,78.1,0.07
+Minimal Wear_SCAR-20-Brass,Mil-Spec,7.81,78.1,0.15
+Field-Tested_SCAR-20-Brass,Mil-Spec,7.81,78.1,0.38
+Well-Worn_SCAR-20-Brass,Mil-Spec,7.81,78.1,0.45
+Battle-Scarred_SCAR-20-Brass,Mil-Spec,7.81,78.1,1.0
+Factory New_Dual-Berettas-Pyre,Industrial,1.88,18.799999999999997,0.020408163265306138
+Minimal Wear_Dual-Berettas-Pyre,Industrial,1.88,18.799999999999997,0.18367346938775508
+Field-Tested_Dual-Berettas-Pyre,Industrial,1.88,18.799999999999997,0.6530612244897959
+Well-Worn_Dual-Berettas-Pyre,Industrial,1.88,18.799999999999997,0.7959183673469388
+Battle-Scarred_Dual-Berettas-Pyre,Industrial,1.88,18.799999999999997,1.9183673469387752
+Factory New_USP-S-Pathfinder,Industrial,0.87,8.7,0.20000000000000004
+Minimal Wear_USP-S-Pathfinder,Industrial,0.87,8.7,0.4285714285714286
+Field-Tested_USP-S-Pathfinder,Industrial,0.87,8.7,1.0857142857142859
+Factory New_M4A1-S-Moss-Quartz,Industrial,0.89,8.9,0.14
+Minimal Wear_M4A1-S-Moss-Quartz,Industrial,0.89,8.9,0.3
+Field-Tested_M4A1-S-Moss-Quartz,Industrial,0.89,8.9,0.76
+Well-Worn_M4A1-S-Moss-Quartz,Industrial,0.89,8.9,0.9
+Battle-Scarred_M4A1-S-Moss-Quartz,Industrial,0.89,8.9,2.0
+Factory New_MAG-7-Chainmail,Industrial,0.83,8.299999999999999,0.31818181818181823
+Minimal Wear_MAG-7-Chainmail,Industrial,0.83,8.299999999999999,0.6818181818181818
+Field-Tested_MAG-7-Chainmail,Industrial,0.83,8.299999999999999,1.7272727272727273
+Factory New_SSG-08-Red-Stone,Consumer,0.68,6.800000000000001,0.02272727272727275
+Minimal Wear_SSG-08-Red-Stone,Consumer,0.68,6.800000000000001,0.20454545454545453
+Field-Tested_SSG-08-Red-Stone,Consumer,0.68,6.800000000000001,0.7272727272727273
+Well-Worn_SSG-08-Red-Stone,Consumer,0.68,6.800000000000001,0.8863636363636364
+Battle-Scarred_SSG-08-Red-Stone,Consumer,0.68,6.800000000000001,2.1363636363636362
+Factory New_Galil-AR-Tornado,Consumer,0.51,5.1,0.013513513513513526
+Minimal Wear_Galil-AR-Tornado,Consumer,0.51,5.1,0.12162162162162161
+Field-Tested_Galil-AR-Tornado,Consumer,0.51,5.1,0.43243243243243246
+Well-Worn_Galil-AR-Tornado,Consumer,0.51,5.1,0.5270270270270271
+Battle-Scarred_Galil-AR-Tornado,Consumer,0.51,5.1,1.2702702702702702
+Factory New_MP7-Scorched,Consumer,0.28,2.8000000000000003,0.013513513513513526
+Minimal Wear_MP7-Scorched,Consumer,0.28,2.8000000000000003,0.12162162162162161
+Field-Tested_MP7-Scorched,Consumer,0.28,2.8000000000000003,0.43243243243243246
+Well-Worn_MP7-Scorched,Consumer,0.28,2.8000000000000003,0.5270270270270271
+Battle-Scarred_MP7-Scorched,Consumer,0.28,2.8000000000000003,1.2702702702702702
+Factory New_SG-553-Barricade,Consumer,0.15,1.5,0.1076923076923077
+Minimal Wear_SG-553-Barricade,Consumer,0.15,1.5,0.23076923076923075
+Field-Tested_SG-553-Barricade,Consumer,0.15,1.5,0.5846153846153846
+Well-Worn_SG-553-Barricade,Consumer,0.15,1.5,0.6923076923076923
+Battle-Scarred_SG-553-Barricade,Consumer,0.15,1.5,1.5384615384615383
+Factory New_FAMAS-Night-Borre,Consumer,0.15,1.5,0.1272727272727273
+Minimal Wear_FAMAS-Night-Borre,Consumer,0.15,1.5,0.2727272727272727
+Field-Tested_FAMAS-Night-Borre,Consumer,0.15,1.5,0.6909090909090908
+Well-Worn_FAMAS-Night-Borre,Consumer,0.15,1.5,0.8181818181818181
+Battle-Scarred_FAMAS-Night-Borre,Consumer,0.15,1.5,1.8181818181818181

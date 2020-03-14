@@ -1,0 +1,91 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Factory New_AK-47-Wild-Lotus,Covert,933.34,9333.4,0.07
+Minimal Wear_AK-47-Wild-Lotus,Covert,933.34,9333.4,0.15
+Field-Tested_AK-47-Wild-Lotus,Covert,933.34,9333.4,0.38
+Well-Worn_AK-47-Wild-Lotus,Covert,933.34,9333.4,0.45
+Battle-Scarred_AK-47-Wild-Lotus,Covert,933.34,9333.4,1.0
+Factory New_MP9-Wild-Lily,Classified,283.79,2837.9,0.10000000000000002
+Minimal Wear_MP9-Wild-Lily,Classified,283.79,2837.9,0.2142857142857143
+Field-Tested_MP9-Wild-Lily,Classified,283.79,2837.9,0.5428571428571429
+Well-Worn_MP9-Wild-Lily,Classified,283.79,2837.9,0.6428571428571429
+Battle-Scarred_MP9-Wild-Lily,Classified,283.79,2837.9,1.4285714285714286
+Factory New_AUG-Midnight-Lily,Restricted,32.33,323.29999999999995,0.14
+Minimal Wear_AUG-Midnight-Lily,Restricted,32.33,323.29999999999995,0.3
+Field-Tested_AUG-Midnight-Lily,Restricted,32.33,323.29999999999995,0.76
+Well-Worn_AUG-Midnight-Lily,Restricted,32.33,323.29999999999995,0.9
+Battle-Scarred_AUG-Midnight-Lily,Restricted,32.33,323.29999999999995,2.0
+Factory New_SSG-08-Sea-Calico,Restricted,29.2,292.0,0.14
+Minimal Wear_SSG-08-Sea-Calico,Restricted,29.2,292.0,0.3
+Field-Tested_SSG-08-Sea-Calico,Restricted,29.2,292.0,0.76
+Well-Worn_SSG-08-Sea-Calico,Restricted,29.2,292.0,0.9
+Battle-Scarred_SSG-08-Sea-Calico,Restricted,29.2,292.0,2.0
+Factory New_Glock-18-Synth-Leaf,Restricted,30.74,307.4,0.10000000000000002
+Minimal Wear_Glock-18-Synth-Leaf,Restricted,30.74,307.4,0.2142857142857143
+Field-Tested_Glock-18-Synth-Leaf,Restricted,30.74,307.4,0.5428571428571429
+Well-Worn_Glock-18-Synth-Leaf,Restricted,30.74,307.4,0.6428571428571429
+Battle-Scarred_Glock-18-Synth-Leaf,Restricted,30.74,307.4,1.4285714285714286
+Factory New_MP7-Teal-Blossom,Mil-Spec,3.61,36.1,0.14
+Minimal Wear_MP7-Teal-Blossom,Mil-Spec,3.61,36.1,0.3
+Field-Tested_MP7-Teal-Blossom,Mil-Spec,3.61,36.1,0.76
+Well-Worn_MP7-Teal-Blossom,Mil-Spec,3.61,36.1,0.9
+Battle-Scarred_MP7-Teal-Blossom,Mil-Spec,3.61,36.1,2.0
+Factory New_Five-SeveN-Crimson-Blossom,Mil-Spec,3.89,38.9,0.14
+Minimal Wear_Five-SeveN-Crimson-Blossom,Mil-Spec,3.89,38.9,0.3
+Field-Tested_Five-SeveN-Crimson-Blossom,Mil-Spec,3.89,38.9,0.76
+Well-Worn_Five-SeveN-Crimson-Blossom,Mil-Spec,3.89,38.9,0.9
+Battle-Scarred_Five-SeveN-Crimson-Blossom,Mil-Spec,3.89,38.9,2.0
+Factory New_FAMAS-Sundown,Mil-Spec,3.88,38.8,0.11666666666666668
+Minimal Wear_FAMAS-Sundown,Mil-Spec,3.88,38.8,0.25
+Field-Tested_FAMAS-Sundown,Mil-Spec,3.88,38.8,0.6333333333333334
+Well-Worn_FAMAS-Sundown,Mil-Spec,3.88,38.8,0.75
+Battle-Scarred_FAMAS-Sundown,Mil-Spec,3.88,38.8,1.6666666666666667
+Factory New_UMP-45-Day-Lily,Mil-Spec,3.62,36.2,0.1272727272727273
+Minimal Wear_UMP-45-Day-Lily,Mil-Spec,3.62,36.2,0.2727272727272727
+Field-Tested_UMP-45-Day-Lily,Mil-Spec,3.62,36.2,0.6909090909090908
+Well-Worn_UMP-45-Day-Lily,Mil-Spec,3.62,36.2,0.8181818181818181
+Battle-Scarred_UMP-45-Day-Lily,Mil-Spec,3.62,36.2,1.8181818181818181
+Factory New_M4A4-Dark-Blossom,Industrial,0.72,7.199999999999999,0.14
+Minimal Wear_M4A4-Dark-Blossom,Industrial,0.72,7.199999999999999,0.3
+Field-Tested_M4A4-Dark-Blossom,Industrial,0.72,7.199999999999999,0.76
+Well-Worn_M4A4-Dark-Blossom,Industrial,0.72,7.199999999999999,0.9
+Battle-Scarred_M4A4-Dark-Blossom,Industrial,0.72,7.199999999999999,2.0
+Factory New_XM1014-Banana-Leaf,Industrial,0.37,3.7,0.11666666666666668
+Minimal Wear_XM1014-Banana-Leaf,Industrial,0.37,3.7,0.25
+Field-Tested_XM1014-Banana-Leaf,Industrial,0.37,3.7,0.6333333333333334
+Well-Worn_XM1014-Banana-Leaf,Industrial,0.37,3.7,0.75
+Battle-Scarred_XM1014-Banana-Leaf,Industrial,0.37,3.7,1.6666666666666667
+Factory New_P90-Sunset-Lily,Industrial,0.44,4.4,0.14
+Minimal Wear_P90-Sunset-Lily,Industrial,0.44,4.4,0.3
+Field-Tested_P90-Sunset-Lily,Industrial,0.44,4.4,0.76
+Well-Worn_P90-Sunset-Lily,Industrial,0.44,4.4,0.9
+Battle-Scarred_P90-Sunset-Lily,Industrial,0.44,4.4,2.0
+Factory New_Tec-9-Rust-Leaf,Industrial,0.39,3.9000000000000004,0.14
+Minimal Wear_Tec-9-Rust-Leaf,Industrial,0.39,3.9000000000000004,0.3
+Field-Tested_Tec-9-Rust-Leaf,Industrial,0.39,3.9000000000000004,0.76
+Well-Worn_Tec-9-Rust-Leaf,Industrial,0.39,3.9000000000000004,0.9
+Battle-Scarred_Tec-9-Rust-Leaf,Industrial,0.39,3.9000000000000004,2.0
+Factory New_M249-Jungle,Consumer,0.3,3.0,0.013513513513513526
+Minimal Wear_M249-Jungle,Consumer,0.3,3.0,0.12162162162162161
+Field-Tested_M249-Jungle,Consumer,0.3,3.0,0.43243243243243246
+Well-Worn_M249-Jungle,Consumer,0.3,3.0,0.5270270270270271
+Battle-Scarred_M249-Jungle,Consumer,0.3,3.0,1.2702702702702702
+Factory New_PP-Bizon-Seabird,Consumer,0.1,1.0,0.14
+Minimal Wear_PP-Bizon-Seabird,Consumer,0.1,1.0,0.3
+Field-Tested_PP-Bizon-Seabird,Consumer,0.1,1.0,0.76
+Well-Worn_PP-Bizon-Seabird,Consumer,0.1,1.0,0.9
+Battle-Scarred_PP-Bizon-Seabird,Consumer,0.1,1.0,2.0
+Factory New_MAC-10-Surfwood,Consumer,0.1,1.0,0.14
+Minimal Wear_MAC-10-Surfwood,Consumer,0.1,1.0,0.3
+Field-Tested_MAC-10-Surfwood,Consumer,0.1,1.0,0.76
+Well-Worn_MAC-10-Surfwood,Consumer,0.1,1.0,0.9
+Battle-Scarred_MAC-10-Surfwood,Consumer,0.1,1.0,2.0
+Factory New_Sawed-Off-Jungle-Thicket,Consumer,0.1,1.0,0.14
+Minimal Wear_Sawed-Off-Jungle-Thicket,Consumer,0.1,1.0,0.3
+Field-Tested_Sawed-Off-Jungle-Thicket,Consumer,0.1,1.0,0.76
+Well-Worn_Sawed-Off-Jungle-Thicket,Consumer,0.1,1.0,0.9
+Battle-Scarred_Sawed-Off-Jungle-Thicket,Consumer,0.1,1.0,2.0
+Factory New_MP5-SD-Bamboo-Garden,Consumer,0.1,1.0,0.1272727272727273
+Minimal Wear_MP5-SD-Bamboo-Garden,Consumer,0.1,1.0,0.2727272727272727
+Field-Tested_MP5-SD-Bamboo-Garden,Consumer,0.1,1.0,0.6909090909090908
+Well-Worn_MP5-SD-Bamboo-Garden,Consumer,0.1,1.0,0.8181818181818181
+Battle-Scarred_MP5-SD-Bamboo-Garden,Consumer,0.1,1.0,1.8181818181818181
