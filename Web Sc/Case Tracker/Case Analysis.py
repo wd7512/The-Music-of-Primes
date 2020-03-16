@@ -59,4 +59,4 @@ def plot(case_names,data_times,values):
 
 data = open_files()
 ana_data = analysis(data)
-plot(ana_data[0],ana_data[1],ana_data[3])
+plot(ana_data[0],ana_data[1],ana_data[4])
