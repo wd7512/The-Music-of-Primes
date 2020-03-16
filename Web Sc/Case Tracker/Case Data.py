@@ -53,14 +53,20 @@ def cut_find_text(text,data,reverse): #cuts string to end of first text
     else:
         return data[a+len(text):]
 
+def get_time():
+    now = datetime.now()
+    date_time = now.strftime("%d/%m/%Y %H:%M:%S")
+    dt = date_time.replace(' ',',')
+    return dt
+    
+
 def update():
 
     urls = get_urls()
     data = get_data(urls)
 
-    now = datetime.now()
-    date_time = now.strftime("%d/%m/%Y %H:%M:%S")
-    dt = date_time.replace(' ',',')
+    dt = get_time()
+    
 
     f = open('Listings.csv','a')
     Listings = ','.join(str(d[1]) for d in data)
@@ -111,5 +117,11 @@ def clean_set_up():
         f.close()
         
     
-
-update()
+urls = get_urls()
+while True:
+    time.sleep(30)
+    tim = get_time()
+    print(tim)
+    mini = tim[-5:-3]
+    if int(mini) % 5 == 0:
+        update()
