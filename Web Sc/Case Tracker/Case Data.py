@@ -119,9 +119,9 @@ def clean_set_up():
     
 urls = get_urls()
 while True:
-    time.sleep(30)
+    time.sleep(15)
     tim = get_time()
     print(tim)
     mini = tim[-5:-3]
-    if int(mini) % 5 == 0:
+    if int(mini) % 15 == 0:
         update()
