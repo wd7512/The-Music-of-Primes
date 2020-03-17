@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from datetime import date
 
 
 def open_files():
@@ -38,11 +39,46 @@ def analysis(data):
 
     return [case_names,data_times,Case_Listings,Case_Medians,Case_Volumes]
 
-def plot(case_names,data_times,values):
+def plot(data):
 
-    x_axis = [str(k) for k in data_times]
+    case_names = data[0]
+    data_times = data[1]
+    Listings = data[2]
+    Medians = data[3]
+    Volumes = data[4]
+    Total_Val_Sold = [] #Medians * Volumes
+
+    for i in range(len(Medians)):
+        M_line = Medians[i]
+        V_line = Volumes[i]
+
+        line = []
+        for i in range(len(M_line)):
+            line.append(float(M_line[i]) * float(V_line[i]))
+
+        Total_Val_Sold.append(line)
+
+    
+    fig, axs = plt.subplots(2,2)
+
+    x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
+
+    show_names = case_names[:]
+    
+    sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names)
+    sub_plot(axs[0,1],x_axis,Medians,'Median Sale Price in last 24hr',show_names)
+    sub_plot(axs[1,0],x_axis,Volumes,'Volume Sold in last 24hr',show_names)
+    sub_plot(axs[1,1],x_axis,Total_Val_Sold,'Total Value Sold in last 24hr',show_names)
+
+
+    plt.show()
+
+    
+
+def sub_plot(ax,x_axis,y_data,title,case_names):
+
     y_axis = []
-    for line in values:
+    for line in y_data:
         new_line = [float(k) for k in line]
         y_axis.append(new_line)
 
@@ -50,13 +86,29 @@ def plot(case_names,data_times,values):
 
         y = y_axis[i]
         name = case_names[i]
-        plt.plot(x_axis,y,label = name)
+        ax.plot(x_axis,y,label = name)
+    ax.set_title(title)
+    
+    #ax.legend()
 
-    plt.xticks(rotation=90)
-    plt.legend()
-    plt.show()
+    
+def x_time_conv(dat,tim):
+
+    date_split = [int(k) for k in dat.split('/')]
+    time_split = [int(k) for k in tim.split(':')]
+
+    d0 = date(2020,3,16)
+    d1 = date(date_split[2],date_split[1],date_split[0])
+    date_num = (d1 - d0).days # in days
+
+    time_num = (time_split[0]*60 + time_split[1]) # in minutes
+
+    output_num = time_num/(24*60) + date_num # in days
+
+    return output_num
+
     
 
 data = open_files()
 ana_data = analysis(data)
-plot(ana_data[0],ana_data[1],ana_data[4])
+plot(ana_data)
