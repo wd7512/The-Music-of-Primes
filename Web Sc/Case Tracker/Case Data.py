@@ -123,5 +123,5 @@ while True:
     tim = get_time()
     print(tim)
     mini = tim[-5:-3]
-    if int(mini) % 15 == 0:
+    if int(mini) % 10 == 0:
         update()
