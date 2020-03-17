@@ -63,33 +63,37 @@ def plot(data):
 
     x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
 
-    show_names = case_names[:]
+    show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case']
     
-    sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names)
-    sub_plot(axs[0,1],x_axis,Medians,'Median Sale Price in last 24hr',show_names)
-    sub_plot(axs[1,0],x_axis,Volumes,'Volume Sold in last 24hr',show_names)
-    sub_plot(axs[1,1],x_axis,Total_Val_Sold,'Total Value Sold in last 24hr',show_names)
+    #show_names = case_names[:]
+    print(show_names)
+    
+    sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names,case_names)
+    sub_plot(axs[0,1],x_axis,Medians,'Median Sale Price in last 24hr',show_names,case_names)
+    sub_plot(axs[1,0],x_axis,Volumes,'Volume Sold in last 24hr',show_names,case_names)
+    sub_plot(axs[1,1],x_axis,Total_Val_Sold,'Total Value Sold in last 24hr',show_names,case_names)
 
 
     plt.show()
 
     
 
-def sub_plot(ax,x_axis,y_data,title,case_names):
+def sub_plot(ax,x_axis,y_data,title,show_names,case_names):
 
     y_axis = []
     for line in y_data:
         new_line = [float(k) for k in line]
         y_axis.append(new_line)
 
-    for i in range(len(case_names)):
+    for i in range(len(show_names)):
 
-        y = y_axis[i]
-        name = case_names[i]
+        
+        name = show_names[i]
+        y = y_axis[case_names.index(name)]
         ax.plot(x_axis,y,label = name)
     ax.set_title(title)
     
-    #ax.legend()
+    ax.legend(prop={'size': 6})
 
     
 def x_time_conv(dat,tim):
