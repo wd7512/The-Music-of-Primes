@@ -59,7 +59,7 @@ def plot(data):
         Total_Val_Sold.append(line)
 
     
-    fig, axs = plt.subplots(2,2)
+    fig, axs = plt.subplots(2,3)
 
     x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
 
@@ -92,6 +92,7 @@ def sub_plot(ax,x_axis,y_data,title,show_names,case_names):
         y = y_axis[case_names.index(name)]
         ax.plot(x_axis,y,label = name)
     ax.set_title(title)
+    ax.set_ylim(ymin=0)
     
     ax.legend(prop={'size': 6})
 
