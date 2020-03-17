@@ -47,31 +47,44 @@ def plot(data):
     Medians = data[3]
     Volumes = data[4]
     Total_Val_Sold = [] #Medians * Volumes
+    Vol_List = [] # Volumes / Listings
 
     for i in range(len(Medians)):
         M_line = Medians[i]
         V_line = Volumes[i]
+        L_line = Listings[i]
 
-        line = []
+        line_t = []
+        line_v = []
         for i in range(len(M_line)):
-            line.append(float(M_line[i]) * float(V_line[i]))
+            m = float(M_line[i])
+            v = float(V_line[i])
+            l = float(L_line[i])
+            
+            line_t.append(m * v)
+            line_v.append(v / l)
+            
 
-        Total_Val_Sold.append(line)
+        Total_Val_Sold.append(line_t)
+        Vol_List.append(line_v)
+
+    
 
     
     fig, axs = plt.subplots(2,3)
 
     x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
 
-    show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case']
+    show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
     
-    #show_names = case_names[:]
+    show_names = case_names[:]
     print(show_names)
     
     sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names,case_names)
     sub_plot(axs[0,1],x_axis,Medians,'Median Sale Price in last 24hr',show_names,case_names)
     sub_plot(axs[1,0],x_axis,Volumes,'Volume Sold in last 24hr',show_names,case_names)
     sub_plot(axs[1,1],x_axis,Total_Val_Sold,'Total Value Sold in last 24hr',show_names,case_names)
+    sub_plot(axs[0,2],x_axis,Vol_List,'% of Listing being Sold',show_names,case_names)
 
 
     plt.show()
