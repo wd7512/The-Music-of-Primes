@@ -75,11 +75,12 @@ def plot(data):
 
     x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
 
-    #show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
+    
     exclude_names = ['CS:GO-Weapon-Case','Operation-Bravo-Case','CS:GO-Weapon-Case-2',
                      'CS:GO-Weapon-Case-3','Winter-Offensive-Weapon-Case','Huntsman-Weapon-Case',
                      'Operation-Hydra-Case']
     show_names = [k for k in case_names if k not in exclude_names]
+    show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
     #show_names = case_names[:]
     print(show_names)
     

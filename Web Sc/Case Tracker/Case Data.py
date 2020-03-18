@@ -115,6 +115,7 @@ def clean_set_up():
         
     
 urls = get_urls()
+update()
 while True:
     time.sleep(15)
     tim = get_time()
