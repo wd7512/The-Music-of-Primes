@@ -9,6 +9,7 @@ import time
 # so to get a certain output
 # (avg of inputs) = ((output float) - (output min)) / (range of output)
 
+#chrome_options.add_extension(r'C:\Users\wwden\AppData\Local\Google\Chrome\User Data\Default\Extensions\csflt')
 
 
 def get_data(case):
@@ -106,7 +107,7 @@ def get_data(case):
 
         #Volume sold in last 24 hours
 
-        data.append([nam,rarity,wears,possible_wear,rec_price,listings,median,volume])
+        data.append([nam,rarity,wears,possible_wear,rec_price,listings,median,volume,index_wear])
 
     return data
 
@@ -131,28 +132,24 @@ def tree_save(data,case):
         wear_range = d[2]
         wear_min = wear_range[0]
         wear_diff = wear_range[1] - wear_range[0]
-  
-        for i in range(len(war)):
-            w = war[i]
-            
-            count = 0
-            fall = True
-            while fall == True and type(prices[i+count]) != float:
-                count = count+1
+        ind_w = d[-1]
 
-                if i+count+1 > len(prices):
-                    fall = False
-                
-            if fall == True:
-                print(i+count)
-                price = prices[i+count]
-            else:
-                price = 'n/a'
+        print(ind_w)
+        
+  
+        for a in ind_w:
+            w = war[a]
+            price = prices[a]
+            
+            
 
             flt_output = conv_wear(w)
             flt_input = (flt_output - wear_min) / wear_diff
             
             to_write = w + '_' + name + ',' + rarity + ',' + str(price) + ',' + str(price*10) + ',' + str(flt_input) + '\n'
+
+            if a >= 5:
+                to_write = 'Stat-Trak_'+to_write
 
             has_write = False
             while has_write == False:
@@ -170,7 +167,7 @@ def conv_wear(strname):
     i = wear_names.index(strname)
     return wear_ranges[i]
     
-f = open('New_Collections.txt','r')
+f = open('Collections.txt','r')
 cases = f.readlines()
 f.close()
 
