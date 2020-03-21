@@ -1,0 +1,139 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Factory New_AK-47-Jaguar,Covert,243.15,2431.5,0.07
+Stat-Trak_Minimal Wear_AK-47-Jaguar,Covert,109.01,1090.1000000000001,0.15
+Stat-Trak_Field-Tested_AK-47-Jaguar,Covert,57.78,577.8,0.38
+Stat-Trak_Well-Worn_AK-47-Jaguar,Covert,48.59,485.90000000000003,0.45
+Stat-Trak_Battle-Scarred_AK-47-Jaguar,Covert,40.33,403.29999999999995,1.0
+Factory New_AK-47-Jaguar,Covert,49.12,491.2,0.07
+Minimal Wear_AK-47-Jaguar,Covert,23.82,238.2,0.15
+Field-Tested_AK-47-Jaguar,Covert,16.82,168.2,0.38
+Well-Worn_AK-47-Jaguar,Covert,15.69,156.9,0.45
+Battle-Scarred_AK-47-Jaguar,Covert,15.07,150.7,1.0
+Stat-Trak_Factory New_M4A4-Bullet-Rain,Covert,111.75,1117.5,0.11363636363636365
+Stat-Trak_Minimal Wear_M4A4-Bullet-Rain,Covert,51.21,512.1,0.29545454545454547
+Stat-Trak_Field-Tested_M4A4-Bullet-Rain,Covert,25.61,256.1,0.8181818181818181
+Stat-Trak_Well-Worn_M4A4-Bullet-Rain,Covert,26.58,265.79999999999995,0.9772727272727273
+Stat-Trak_Battle-Scarred_M4A4-Bullet-Rain,Covert,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.227272727272727
+Factory New_M4A4-Bullet-Rain,Covert,30.23,302.3,0.11363636363636365
+Minimal Wear_M4A4-Bullet-Rain,Covert,14.54,145.39999999999998,0.29545454545454547
+Field-Tested_M4A4-Bullet-Rain,Covert,10.26,102.6,0.8181818181818181
+Well-Worn_M4A4-Bullet-Rain,Covert,10.86,108.6,0.9772727272727273
+Battle-Scarred_M4A4-Bullet-Rain,Covert,16.21,162.10000000000002,2.227272727272727
+Stat-Trak_Factory New_AUG-Bengal-Tiger,Classified,125.51,1255.1000000000001,0.013513513513513526
+Stat-Trak_Minimal Wear_AUG-Bengal-Tiger,Classified,20.78,207.8,0.12162162162162161
+Stat-Trak_Field-Tested_AUG-Bengal-Tiger,Classified,8.52,85.19999999999999,0.43243243243243246
+Stat-Trak_Well-Worn_AUG-Bengal-Tiger,Classified,8.29,82.89999999999999,0.5270270270270271
+Stat-Trak_Battle-Scarred_AUG-Bengal-Tiger,Classified,7.75,77.5,1.2702702702702702
+Factory New_AUG-Bengal-Tiger,Classified,30.3,303.0,0.013513513513513526
+Minimal Wear_AUG-Bengal-Tiger,Classified,5.47,54.699999999999996,0.12162162162162161
+Field-Tested_AUG-Bengal-Tiger,Classified,2.62,26.200000000000003,0.43243243243243246
+Well-Worn_AUG-Bengal-Tiger,Classified,2.72,27.200000000000003,0.5270270270270271
+Battle-Scarred_AUG-Bengal-Tiger,Classified,3.68,36.800000000000004,1.2702702702702702
+Stat-Trak_Factory New_AWP-Corticera,Classified,52.58,525.8,0.041666666666666706
+Stat-Trak_Minimal Wear_AWP-Corticera,Classified,21.15,211.5,0.375
+Stat-Trak_Field-Tested_AWP-Corticera,Classified,15.11,151.1,1.3333333333333335
+Factory New_AWP-Corticera,Classified,15.74,157.4,0.041666666666666706
+Minimal Wear_AWP-Corticera,Classified,7.25,72.5,0.375
+Field-Tested_AWP-Corticera,Classified,6.14,61.4,1.3333333333333335
+Stat-Trak_Factory New_Nova-Bloomstick,Classified,99.92,999.2,0.013513513513513526
+Stat-Trak_Minimal Wear_Nova-Bloomstick,Classified,18.02,180.2,0.12162162162162161
+Stat-Trak_Field-Tested_Nova-Bloomstick,Classified,4.77,47.699999999999996,0.43243243243243246
+Stat-Trak_Well-Worn_Nova-Bloomstick,Classified,5.23,52.300000000000004,0.5270270270270271
+Stat-Trak_Battle-Scarred_Nova-Bloomstick,Classified,5.08,50.8,1.2702702702702702
+Factory New_Nova-Bloomstick,Classified,26.11,261.1,0.013513513513513526
+Minimal Wear_Nova-Bloomstick,Classified,5.56,55.599999999999994,0.12162162162162161
+Field-Tested_Nova-Bloomstick,Classified,2.72,27.200000000000003,0.43243243243243246
+Well-Worn_Nova-Bloomstick,Classified,2.43,24.3,0.5270270270270271
+Battle-Scarred_Nova-Bloomstick,Classified,2.99,29.900000000000002,1.2702702702702702
+Stat-Trak_Factory New_P2000-Corticera,Classified,18.13,181.29999999999998,0.041666666666666706
+Stat-Trak_Minimal Wear_P2000-Corticera,Classified,7.37,73.7,0.375
+Stat-Trak_Field-Tested_P2000-Corticera,Classified,5.35,53.5,1.3333333333333335
+Factory New_P2000-Corticera,Classified,5.54,55.4,0.041666666666666706
+Minimal Wear_P2000-Corticera,Classified,3.16,31.6,0.375
+Field-Tested_P2000-Corticera,Classified,2.92,29.2,1.3333333333333335
+Stat-Trak_Factory New_Desert-Eagle-Crimson-Web,Restricted,446.35,4463.5,0.013513513513513526
+Stat-Trak_Minimal Wear_Desert-Eagle-Crimson-Web,Restricted,46.35,463.5,0.12162162162162161
+Stat-Trak_Field-Tested_Desert-Eagle-Crimson-Web,Restricted,12.08,120.8,0.43243243243243246
+Stat-Trak_Well-Worn_Desert-Eagle-Crimson-Web,Restricted,11.9,119.0,0.5270270270270271
+Stat-Trak_Battle-Scarred_Desert-Eagle-Crimson-Web,Restricted,9.6,96.0,1.2702702702702702
+Factory New_Desert-Eagle-Crimson-Web,Restricted,69.09,690.9000000000001,0.013513513513513526
+Minimal Wear_Desert-Eagle-Crimson-Web,Restricted,15.93,159.3,0.12162162162162161
+Field-Tested_Desert-Eagle-Crimson-Web,Restricted,3.82,38.199999999999996,0.43243243243243246
+Well-Worn_Desert-Eagle-Crimson-Web,Restricted,5.66,56.6,0.5270270270270271
+Battle-Scarred_Desert-Eagle-Crimson-Web,Restricted,3.55,35.5,1.2702702702702702
+Stat-Trak_Factory New_PP-Bizon-Blue-Streak,Restricted,17.15,171.5,0.013513513513513526
+Stat-Trak_Minimal Wear_PP-Bizon-Blue-Streak,Restricted,2.29,22.9,0.12162162162162161
+Stat-Trak_Field-Tested_PP-Bizon-Blue-Streak,Restricted,1.38,13.799999999999999,0.43243243243243246
+Stat-Trak_Well-Worn_PP-Bizon-Blue-Streak,Restricted,1.03,10.3,0.5270270270270271
+Stat-Trak_Battle-Scarred_PP-Bizon-Blue-Streak,Restricted,1.39,13.899999999999999,1.2702702702702702
+Factory New_PP-Bizon-Blue-Streak,Restricted,4.28,42.800000000000004,0.013513513513513526
+Minimal Wear_PP-Bizon-Blue-Streak,Restricted,1.04,10.4,0.12162162162162161
+Field-Tested_PP-Bizon-Blue-Streak,Restricted,0.5,5.0,0.43243243243243246
+Well-Worn_PP-Bizon-Blue-Streak,Restricted,0.64,6.4,0.5270270270270271
+Battle-Scarred_PP-Bizon-Blue-Streak,Restricted,0.6,6.0,1.2702702702702702
+Stat-Trak_Factory New_MP7-Ocean-Foam,Restricted,4.51,45.099999999999994,0.8750000000000001
+Stat-Trak_Minimal Wear_MP7-Ocean-Foam,Restricted,4.14,41.4,1.875
+Factory New_MP7-Ocean-Foam,Restricted,1.5,15.0,0.8750000000000001
+Minimal Wear_MP7-Ocean-Foam,Restricted,1.78,17.8,1.875
+Stat-Trak_Factory New_Glock-18-Steel-Disruption,Restricted,5.66,56.6,0.35000000000000003
+Stat-Trak_Minimal Wear_Glock-18-Steel-Disruption,Restricted,3.69,36.9,0.7499999999999999
+Stat-Trak_Field-Tested_Glock-18-Steel-Disruption,Restricted,3.69,36.9,1.9
+Factory New_Glock-18-Steel-Disruption,Restricted,1.48,14.8,0.35000000000000003
+Minimal Wear_Glock-18-Steel-Disruption,Restricted,1.05,10.5,0.7499999999999999
+Field-Tested_Glock-18-Steel-Disruption,Restricted,1.45,14.5,1.9
+Stat-Trak_Factory New_P90-Virus,Restricted,13.97,139.70000000000002,0.013513513513513526
+Stat-Trak_Minimal Wear_P90-Virus,Restricted,2.68,26.8,0.12162162162162161
+Stat-Trak_Field-Tested_P90-Virus,Restricted,1.38,13.799999999999999,0.43243243243243246
+Stat-Trak_Well-Worn_P90-Virus,Restricted,1.64,16.4,0.5270270270270271
+Stat-Trak_Battle-Scarred_P90-Virus,Restricted,1.4,14.0,1.2702702702702702
+Factory New_P90-Virus,Restricted,2.9,29.0,0.013513513513513526
+Minimal Wear_P90-Virus,Restricted,1.09,10.9,0.12162162162162161
+Field-Tested_P90-Virus,Restricted,0.54,5.4,0.43243243243243246
+Well-Worn_P90-Virus,Restricted,0.84,8.4,0.5270270270270271
+Battle-Scarred_P90-Virus,Restricted,0.6,6.0,1.2702702702702702
+Stat-Trak_Factory New_MAC-10-Ultraviolet,Mil-Spec,60.96,609.6,0.013513513513513526
+Stat-Trak_Minimal Wear_MAC-10-Ultraviolet,Mil-Spec,3.11,31.099999999999998,0.12162162162162161
+Stat-Trak_Field-Tested_MAC-10-Ultraviolet,Mil-Spec,1.09,10.9,0.43243243243243246
+Stat-Trak_Well-Worn_MAC-10-Ultraviolet,Mil-Spec,1.08,10.8,0.5270270270270271
+Stat-Trak_Battle-Scarred_MAC-10-Ultraviolet,Mil-Spec,0.72,7.199999999999999,1.2702702702702702
+Factory New_MAC-10-Ultraviolet,Mil-Spec,9.05,90.5,0.013513513513513526
+Minimal Wear_MAC-10-Ultraviolet,Mil-Spec,1.51,15.1,0.12162162162162161
+Field-Tested_MAC-10-Ultraviolet,Mil-Spec,0.54,5.4,0.43243243243243246
+Well-Worn_MAC-10-Ultraviolet,Mil-Spec,0.59,5.8999999999999995,0.5270270270270271
+Battle-Scarred_MAC-10-Ultraviolet,Mil-Spec,0.47,4.699999999999999,1.2702702702702702
+Stat-Trak_Factory New_Negev-Bratatat,Mil-Spec,17.04,170.39999999999998,0.07
+Stat-Trak_Minimal Wear_Negev-Bratatat,Mil-Spec,4.01,40.099999999999994,0.15
+Stat-Trak_Field-Tested_Negev-Bratatat,Mil-Spec,1.75,17.5,0.38
+Stat-Trak_Well-Worn_Negev-Bratatat,Mil-Spec,1.21,12.1,0.45
+Stat-Trak_Battle-Scarred_Negev-Bratatat,Mil-Spec,1.29,12.9,1.0
+Factory New_Negev-Bratatat,Mil-Spec,4.29,42.9,0.07
+Minimal Wear_Negev-Bratatat,Mil-Spec,1.14,11.399999999999999,0.15
+Field-Tested_Negev-Bratatat,Mil-Spec,0.62,6.2,0.38
+Well-Worn_Negev-Bratatat,Mil-Spec,0.45,4.5,0.45
+Battle-Scarred_Negev-Bratatat,Mil-Spec,0.42,4.2,1.0
+Stat-Trak_Factory New_USP-S-Blood-Tiger,Mil-Spec,6.47,64.7,0.23333333333333336
+Stat-Trak_Minimal Wear_USP-S-Blood-Tiger,Mil-Spec,3.35,33.5,0.5
+Stat-Trak_Field-Tested_USP-S-Blood-Tiger,Mil-Spec,3.15,31.5,1.2666666666666668
+Factory New_USP-S-Blood-Tiger,Mil-Spec,1.57,15.700000000000001,0.23333333333333336
+Minimal Wear_USP-S-Blood-Tiger,Mil-Spec,1.08,10.8,0.5
+Field-Tested_USP-S-Blood-Tiger,Mil-Spec,1.04,10.4,1.2666666666666668
+Stat-Trak_Factory New_CZ75-Auto-Hexane,Mil-Spec,6.6,66.0,0.17500000000000002
+Stat-Trak_Minimal Wear_CZ75-Auto-Hexane,Mil-Spec,1.97,19.7,0.37499999999999994
+Stat-Trak_Field-Tested_CZ75-Auto-Hexane,Mil-Spec,0.74,7.4,0.95
+Stat-Trak_Well-Worn_CZ75-Auto-Hexane,Mil-Spec,0.96,9.6,1.125
+Factory New_CZ75-Auto-Hexane,Mil-Spec,2.34,23.4,0.17500000000000002
+Minimal Wear_CZ75-Auto-Hexane,Mil-Spec,0.73,7.3,0.37499999999999994
+Field-Tested_CZ75-Auto-Hexane,Mil-Spec,0.42,4.2,0.95
+Well-Worn_CZ75-Auto-Hexane,Mil-Spec,0.68,6.800000000000001,1.125
+Stat-Trak_Minimal Wear_SSG-08-Dark-Water,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.31249999999999994
+Stat-Trak_Field-Tested_SSG-08-Dark-Water,Mil-Spec,2.12,21.200000000000003,1.7500000000000002
+Minimal Wear_SSG-08-Dark-Water,Mil-Spec,FN,FNFNFNFNFNFNFNFNFNFN,0.31249999999999994
+Field-Tested_SSG-08-Dark-Water,Mil-Spec,0.75,7.5,1.7500000000000002
+Stat-Trak_Minimal Wear_XM1014-Red-Python,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.16666666666666666
+Stat-Trak_Field-Tested_XM1014-Red-Python,Mil-Spec,1.77,17.7,0.7142857142857143
+Stat-Trak_Well-Worn_XM1014-Red-Python,Mil-Spec,0.69,6.8999999999999995,0.8809523809523809
+Stat-Trak_Battle-Scarred_XM1014-Red-Python,Mil-Spec,0.66,6.6000000000000005,2.1904761904761907
+Minimal Wear_XM1014-Red-Python,Mil-Spec,FN,FNFNFNFNFNFNFNFNFNFN,0.16666666666666666
+Field-Tested_XM1014-Red-Python,Mil-Spec,0.66,6.6000000000000005,0.7142857142857143
+Well-Worn_XM1014-Red-Python,Mil-Spec,0.33,3.3000000000000003,0.8809523809523809
+Battle-Scarred_XM1014-Red-Python,Mil-Spec,0.34,3.4000000000000004,2.1904761904761907

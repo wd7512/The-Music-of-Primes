@@ -1,0 +1,167 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Factory New_AK-47-Neon-Revolution,Covert,169.86,1698.6000000000001,0.08750000000000001
+Stat-Trak_Minimal Wear_AK-47-Neon-Revolution,Covert,76.05,760.5,0.18749999999999997
+Stat-Trak_Field-Tested_AK-47-Neon-Revolution,Covert,47.43,474.3,0.475
+Stat-Trak_Well-Worn_AK-47-Neon-Revolution,Covert,64.77,647.6999999999999,0.5625
+Stat-Trak_Battle-Scarred_AK-47-Neon-Revolution,Covert,37.6,376.0,1.25
+Factory New_AK-47-Neon-Revolution,Covert,48.32,483.2,0.08750000000000001
+Minimal Wear_AK-47-Neon-Revolution,Covert,30.22,302.2,0.18749999999999997
+Field-Tested_AK-47-Neon-Revolution,Covert,20.9,209.0,0.475
+Well-Worn_AK-47-Neon-Revolution,Covert,24.68,246.8,0.5625
+Battle-Scarred_AK-47-Neon-Revolution,Covert,20.11,201.1,1.25
+Stat-Trak_Factory New_FAMAS-Roll-Cage,Covert,140.4,1404.0,0.07
+Stat-Trak_Minimal Wear_FAMAS-Roll-Cage,Covert,25.81,258.09999999999997,0.15
+Stat-Trak_Field-Tested_FAMAS-Roll-Cage,Covert,12.16,121.6,0.38
+Stat-Trak_Well-Worn_FAMAS-Roll-Cage,Covert,9.34,93.4,0.45
+Stat-Trak_Battle-Scarred_FAMAS-Roll-Cage,Covert,7.81,78.1,1.0
+Factory New_FAMAS-Roll-Cage,Covert,19.42,194.20000000000002,0.07
+Minimal Wear_FAMAS-Roll-Cage,Covert,6.78,67.8,0.15
+Field-Tested_FAMAS-Roll-Cage,Covert,4.36,43.6,0.38
+Well-Worn_FAMAS-Roll-Cage,Covert,3.58,35.8,0.45
+Battle-Scarred_FAMAS-Roll-Cage,Covert,3.58,35.8,1.0
+Stat-Trak_Factory New_AUG-Syd-Mead,Classified,32.4,324.0,0.08750000000000001
+Stat-Trak_Minimal Wear_AUG-Syd-Mead,Classified,12.36,123.6,0.18749999999999997
+Stat-Trak_Field-Tested_AUG-Syd-Mead,Classified,4.84,48.4,0.475
+Stat-Trak_Well-Worn_AUG-Syd-Mead,Classified,7.53,75.3,0.5625
+Stat-Trak_Battle-Scarred_AUG-Syd-Mead,Classified,3.66,36.6,1.25
+Factory New_AUG-Syd-Mead,Classified,6.54,65.4,0.08750000000000001
+Minimal Wear_AUG-Syd-Mead,Classified,3.42,34.2,0.18749999999999997
+Field-Tested_AUG-Syd-Mead,Classified,1.65,16.5,0.475
+Well-Worn_AUG-Syd-Mead,Classified,2.21,22.1,0.5625
+Battle-Scarred_AUG-Syd-Mead,Classified,1.6,16.0,1.25
+Stat-Trak_Factory New_MP9-Airlock,Classified,28.09,280.9,0.07
+Stat-Trak_Minimal Wear_MP9-Airlock,Classified,9.41,94.1,0.15
+Stat-Trak_Field-Tested_MP9-Airlock,Classified,4.18,41.8,0.38
+Stat-Trak_Well-Worn_MP9-Airlock,Classified,3.76,37.599999999999994,0.45
+Stat-Trak_Battle-Scarred_MP9-Airlock,Classified,4.18,41.8,1.0
+Factory New_MP9-Airlock,Classified,6.95,69.5,0.07
+Minimal Wear_MP9-Airlock,Classified,3.12,31.200000000000003,0.15
+Field-Tested_MP9-Airlock,Classified,1.64,16.4,0.38
+Well-Worn_MP9-Airlock,Classified,1.65,16.5,0.45
+Battle-Scarred_MP9-Airlock,Classified,1.64,16.4,1.0
+Stat-Trak_Factory New_Tec-9-Fuel-Injector,Classified,15.76,157.6,0.07
+Stat-Trak_Minimal Wear_Tec-9-Fuel-Injector,Classified,6.66,66.6,0.15
+Stat-Trak_Field-Tested_Tec-9-Fuel-Injector,Classified,3.77,37.7,0.38
+Stat-Trak_Well-Worn_Tec-9-Fuel-Injector,Classified,3.52,35.2,0.45
+Stat-Trak_Battle-Scarred_Tec-9-Fuel-Injector,Classified,3.66,36.6,1.0
+Factory New_Tec-9-Fuel-Injector,Classified,6.54,65.4,0.07
+Minimal Wear_Tec-9-Fuel-Injector,Classified,2.69,26.9,0.15
+Field-Tested_Tec-9-Fuel-Injector,Classified,1.8,18.0,0.38
+Well-Worn_Tec-9-Fuel-Injector,Classified,1.61,16.1,0.45
+Battle-Scarred_Tec-9-Fuel-Injector,Classified,1.53,15.3,1.0
+Stat-Trak_Factory New_Desert-Eagle-Directive,Restricted,30.12,301.2,0.010638297872340436
+Stat-Trak_Minimal Wear_Desert-Eagle-Directive,Restricted,6.9,69.0,0.09574468085106383
+Stat-Trak_Field-Tested_Desert-Eagle-Directive,Restricted,2.68,26.8,0.34042553191489366
+Stat-Trak_Well-Worn_Desert-Eagle-Directive,Restricted,2.71,27.1,0.41489361702127664
+Stat-Trak_Battle-Scarred_Desert-Eagle-Directive,Restricted,2.48,24.8,1.0
+Factory New_Desert-Eagle-Directive,Restricted,7.16,71.6,0.010638297872340436
+Minimal Wear_Desert-Eagle-Directive,Restricted,1.57,15.700000000000001,0.09574468085106383
+Field-Tested_Desert-Eagle-Directive,Restricted,0.63,6.3,0.34042553191489366
+Well-Worn_Desert-Eagle-Directive,Restricted,0.69,6.8999999999999995,0.41489361702127664
+Battle-Scarred_Desert-Eagle-Directive,Restricted,0.56,5.6000000000000005,1.0
+Stat-Trak_Factory New_SG-553-Triarch,Restricted,18.36,183.6,0.07
+Stat-Trak_Minimal Wear_SG-553-Triarch,Restricted,4.7,47.0,0.15
+Stat-Trak_Field-Tested_SG-553-Triarch,Restricted,1.87,18.700000000000003,0.38
+Stat-Trak_Well-Worn_SG-553-Triarch,Restricted,1.63,16.299999999999997,0.45
+Stat-Trak_Battle-Scarred_SG-553-Triarch,Restricted,1.23,12.3,1.0
+Factory New_SG-553-Triarch,Restricted,4.04,40.4,0.07
+Minimal Wear_SG-553-Triarch,Restricted,1.05,10.5,0.15
+Field-Tested_SG-553-Triarch,Restricted,0.43,4.3,0.38
+Well-Worn_SG-553-Triarch,Restricted,0.33,3.3000000000000003,0.45
+Battle-Scarred_SG-553-Triarch,Restricted,0.32,3.2,1.0
+Stat-Trak_Factory New_Glock-18-Weasel,Restricted,11.38,113.80000000000001,0.07
+Stat-Trak_Minimal Wear_Glock-18-Weasel,Restricted,4.37,43.7,0.15
+Stat-Trak_Field-Tested_Glock-18-Weasel,Restricted,2.66,26.6,0.38
+Stat-Trak_Well-Worn_Glock-18-Weasel,Restricted,2.17,21.7,0.45
+Stat-Trak_Battle-Scarred_Glock-18-Weasel,Restricted,2.05,20.5,1.0
+Factory New_Glock-18-Weasel,Restricted,2.91,29.1,0.07
+Minimal Wear_Glock-18-Weasel,Restricted,0.94,9.399999999999999,0.15
+Field-Tested_Glock-18-Weasel,Restricted,0.5,5.0,0.38
+Well-Worn_Glock-18-Weasel,Restricted,0.42,4.2,0.45
+Battle-Scarred_Glock-18-Weasel,Restricted,0.39,3.9000000000000004,1.0
+Stat-Trak_Factory New_SCAR-20-Powercore,Restricted,3.3,33.0,0.07
+Stat-Trak_Minimal Wear_SCAR-20-Powercore,Restricted,1.35,13.5,0.15
+Stat-Trak_Field-Tested_SCAR-20-Powercore,Restricted,0.72,7.199999999999999,0.38
+Stat-Trak_Well-Worn_SCAR-20-Powercore,Restricted,0.69,6.8999999999999995,0.45
+Stat-Trak_Battle-Scarred_SCAR-20-Powercore,Restricted,0.68,6.800000000000001,1.0
+Factory New_SCAR-20-Powercore,Restricted,1.06,10.600000000000001,0.07
+Minimal Wear_SCAR-20-Powercore,Restricted,0.48,4.8,0.15
+Field-Tested_SCAR-20-Powercore,Restricted,0.3,3.0,0.38
+Well-Worn_SCAR-20-Powercore,Restricted,0.3,3.0,0.45
+Battle-Scarred_SCAR-20-Powercore,Restricted,0.3,3.0,1.0
+Stat-Trak_Factory New_MAG-7-Petroglyph,Restricted,2.44,24.4,0.15909090909090912
+Stat-Trak_Minimal Wear_MAG-7-Petroglyph,Restricted,1.26,12.6,0.3409090909090909
+Stat-Trak_Field-Tested_MAG-7-Petroglyph,Restricted,0.69,6.8999999999999995,0.8636363636363636
+Stat-Trak_Well-Worn_MAG-7-Petroglyph,Restricted,0.68,6.800000000000001,1.0227272727272727
+Factory New_MAG-7-Petroglyph,Restricted,0.84,8.4,0.15909090909090912
+Minimal Wear_MAG-7-Petroglyph,Restricted,0.45,4.5,0.3409090909090909
+Field-Tested_MAG-7-Petroglyph,Restricted,0.3,3.0,0.8636363636363636
+Well-Worn_MAG-7-Petroglyph,Restricted,0.33,3.3000000000000003,1.0227272727272727
+Stat-Trak_Factory New_P90-Grim,Mil-Spec,4.21,42.1,0.08750000000000001
+Stat-Trak_Minimal Wear_P90-Grim,Mil-Spec,1.44,14.399999999999999,0.18749999999999997
+Stat-Trak_Field-Tested_P90-Grim,Mil-Spec,0.74,7.4,0.475
+Stat-Trak_Well-Worn_P90-Grim,Mil-Spec,1.32,13.200000000000001,0.5625
+Stat-Trak_Battle-Scarred_P90-Grim,Mil-Spec,0.63,6.3,1.25
+Factory New_P90-Grim,Mil-Spec,1.01,10.1,0.08750000000000001
+Minimal Wear_P90-Grim,Mil-Spec,0.42,4.2,0.18749999999999997
+Field-Tested_P90-Grim,Mil-Spec,0.22,2.2,0.475
+Well-Worn_P90-Grim,Mil-Spec,0.39,3.9000000000000004,0.5625
+Battle-Scarred_P90-Grim,Mil-Spec,0.18,1.7999999999999998,1.25
+Stat-Trak_Minimal Wear_Negev-Dazzle,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.09090909090909088
+Stat-Trak_Field-Tested_Negev-Dazzle,Mil-Spec,1.61,16.1,0.5090909090909091
+Stat-Trak_Well-Worn_Negev-Dazzle,Mil-Spec,0.24,2.4,0.6363636363636362
+Stat-Trak_Battle-Scarred_Negev-Dazzle,Mil-Spec,0.51,5.1,1.6363636363636362
+Minimal Wear_Negev-Dazzle,Mil-Spec,FN,FNFNFNFNFNFNFNFNFNFN,0.09090909090909088
+Field-Tested_Negev-Dazzle,Mil-Spec,0.26,2.6,0.5090909090909091
+Well-Worn_Negev-Dazzle,Mil-Spec,0.08,0.8,0.6363636363636362
+Battle-Scarred_Negev-Dazzle,Mil-Spec,0.11,1.1,1.6363636363636362
+Stat-Trak_Factory New_CZ75-Auto-Imprint,Mil-Spec,1.61,16.1,0.07
+Stat-Trak_Minimal Wear_CZ75-Auto-Imprint,Mil-Spec,0.43,4.3,0.15
+Stat-Trak_Field-Tested_CZ75-Auto-Imprint,Mil-Spec,0.25,2.5,0.38
+Stat-Trak_Well-Worn_CZ75-Auto-Imprint,Mil-Spec,0.24,2.4,0.45
+Stat-Trak_Battle-Scarred_CZ75-Auto-Imprint,Mil-Spec,0.23,2.3000000000000003,1.0
+Factory New_CZ75-Auto-Imprint,Mil-Spec,0.36,3.5999999999999996,0.07
+Minimal Wear_CZ75-Auto-Imprint,Mil-Spec,0.12,1.2,0.15
+Field-Tested_CZ75-Auto-Imprint,Mil-Spec,0.08,0.8,0.38
+Well-Worn_CZ75-Auto-Imprint,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_CZ75-Auto-Imprint,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_UMP-45-Briefing,Mil-Spec,1.52,15.2,0.07
+Stat-Trak_Minimal Wear_UMP-45-Briefing,Mil-Spec,0.45,4.5,0.15
+Stat-Trak_Field-Tested_UMP-45-Briefing,Mil-Spec,0.26,2.6,0.38
+Stat-Trak_Well-Worn_UMP-45-Briefing,Mil-Spec,0.24,2.4,0.45
+Stat-Trak_Battle-Scarred_UMP-45-Briefing,Mil-Spec,0.23,2.3000000000000003,1.0
+Factory New_UMP-45-Briefing,Mil-Spec,0.34,3.4000000000000004,0.07
+Minimal Wear_UMP-45-Briefing,Mil-Spec,0.12,1.2,0.15
+Field-Tested_UMP-45-Briefing,Mil-Spec,0.08,0.8,0.38
+Well-Worn_UMP-45-Briefing,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_UMP-45-Briefing,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_XM1014-Slipstream,Mil-Spec,0.98,9.8,0.14
+Stat-Trak_Minimal Wear_XM1014-Slipstream,Mil-Spec,0.56,5.6000000000000005,0.3
+Stat-Trak_Field-Tested_XM1014-Slipstream,Mil-Spec,0.23,2.3000000000000003,0.76
+Stat-Trak_Well-Worn_XM1014-Slipstream,Mil-Spec,0.36,3.5999999999999996,0.9
+Stat-Trak_Battle-Scarred_XM1014-Slipstream,Mil-Spec,0.22,2.2,2.0
+Factory New_XM1014-Slipstream,Mil-Spec,0.23,2.3000000000000003,0.14
+Minimal Wear_XM1014-Slipstream,Mil-Spec,0.12,1.2,0.3
+Field-Tested_XM1014-Slipstream,Mil-Spec,0.08,0.8,0.76
+Well-Worn_XM1014-Slipstream,Mil-Spec,0.09,0.8999999999999999,0.9
+Battle-Scarred_XM1014-Slipstream,Mil-Spec,0.08,0.8,2.0
+Stat-Trak_Factory New_Five-SeveN-Scumbria,Mil-Spec,1.25,12.5,0.07
+Stat-Trak_Minimal Wear_Five-SeveN-Scumbria,Mil-Spec,0.36,3.5999999999999996,0.15
+Stat-Trak_Field-Tested_Five-SeveN-Scumbria,Mil-Spec,0.2,2.0,0.38
+Stat-Trak_Well-Worn_Five-SeveN-Scumbria,Mil-Spec,0.2,2.0,0.45
+Stat-Trak_Battle-Scarred_Five-SeveN-Scumbria,Mil-Spec,0.2,2.0,1.0
+Factory New_Five-SeveN-Scumbria,Mil-Spec,0.25,2.5,0.07
+Minimal Wear_Five-SeveN-Scumbria,Mil-Spec,0.1,1.0,0.15
+Field-Tested_Five-SeveN-Scumbria,Mil-Spec,0.08,0.8,0.38
+Well-Worn_Five-SeveN-Scumbria,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_Five-SeveN-Scumbria,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_G3SG1-Ventilator,Mil-Spec,0.88,8.8,0.15555555555555556
+Stat-Trak_Minimal Wear_G3SG1-Ventilator,Mil-Spec,0.36,3.5999999999999996,0.3333333333333333
+Stat-Trak_Field-Tested_G3SG1-Ventilator,Mil-Spec,0.2,2.0,0.8444444444444444
+Stat-Trak_Well-Worn_G3SG1-Ventilator,Mil-Spec,0.27,2.7,1.0
+Stat-Trak_Battle-Scarred_G3SG1-Ventilator,Mil-Spec,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.2222222222222223
+Factory New_G3SG1-Ventilator,Mil-Spec,0.23,2.3000000000000003,0.15555555555555556
+Minimal Wear_G3SG1-Ventilator,Mil-Spec,0.11,1.1,0.3333333333333333
+Field-Tested_G3SG1-Ventilator,Mil-Spec,0.08,0.8,0.8444444444444444
+Well-Worn_G3SG1-Ventilator,Mil-Spec,0.1,1.0,1.0
+Battle-Scarred_G3SG1-Ventilator,Mil-Spec,BS,BSBSBSBSBSBSBSBSBSBS,2.2222222222222223

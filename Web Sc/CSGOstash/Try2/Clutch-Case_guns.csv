@@ -1,0 +1,171 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Factory New_M4A4-Neo-Noir,Covert,302.3,3023.0,0.07777777777777778
+Stat-Trak_Minimal Wear_M4A4-Neo-Noir,Covert,120.66,1206.6,0.16666666666666666
+Stat-Trak_Field-Tested_M4A4-Neo-Noir,Covert,50.43,504.3,0.4222222222222222
+Stat-Trak_Well-Worn_M4A4-Neo-Noir,Covert,39.31,393.1,0.5
+Stat-Trak_Battle-Scarred_M4A4-Neo-Noir,Covert,31.01,310.1,1.1111111111111112
+Factory New_M4A4-Neo-Noir,Covert,80.66,806.5999999999999,0.07777777777777778
+Minimal Wear_M4A4-Neo-Noir,Covert,41.7,417.0,0.16666666666666666
+Field-Tested_M4A4-Neo-Noir,Covert,19.07,190.7,0.4222222222222222
+Well-Worn_M4A4-Neo-Noir,Covert,15.65,156.5,0.5
+Battle-Scarred_M4A4-Neo-Noir,Covert,11.99,119.9,1.1111111111111112
+Stat-Trak_Factory New_MP7-Bloodsport,Covert,26.35,263.5,0.1076923076923077
+Stat-Trak_Minimal Wear_MP7-Bloodsport,Covert,13.87,138.7,0.23076923076923075
+Stat-Trak_Field-Tested_MP7-Bloodsport,Covert,7.41,74.1,0.5846153846153846
+Stat-Trak_Well-Worn_MP7-Bloodsport,Covert,8.15,81.5,0.6923076923076923
+Stat-Trak_Battle-Scarred_MP7-Bloodsport,Covert,5.69,56.900000000000006,1.5384615384615383
+Factory New_MP7-Bloodsport,Covert,7.39,73.89999999999999,0.1076923076923077
+Minimal Wear_MP7-Bloodsport,Covert,4.44,44.400000000000006,0.23076923076923075
+Field-Tested_MP7-Bloodsport,Covert,3.26,32.599999999999994,0.5846153846153846
+Well-Worn_MP7-Bloodsport,Covert,3.99,39.900000000000006,0.6923076923076923
+Battle-Scarred_MP7-Bloodsport,Covert,2.64,26.400000000000002,1.5384615384615383
+Stat-Trak_Factory New_USP-S-Cortex,Classified,56.83,568.3,0.07
+Stat-Trak_Minimal Wear_USP-S-Cortex,Classified,25.23,252.3,0.15
+Stat-Trak_Field-Tested_USP-S-Cortex,Classified,13.63,136.3,0.38
+Stat-Trak_Well-Worn_USP-S-Cortex,Classified,10.88,108.80000000000001,0.45
+Stat-Trak_Battle-Scarred_USP-S-Cortex,Classified,10.5,105.0,1.0
+Factory New_USP-S-Cortex,Classified,17.59,175.9,0.07
+Minimal Wear_USP-S-Cortex,Classified,8.42,84.2,0.15
+Field-Tested_USP-S-Cortex,Classified,5.23,52.300000000000004,0.38
+Well-Worn_USP-S-Cortex,Classified,4.45,44.5,0.45
+Battle-Scarred_USP-S-Cortex,Classified,4.04,40.4,1.0
+Stat-Trak_Factory New_AWP-Mortis,Classified,23.56,235.6,0.10937500000000001
+Stat-Trak_Minimal Wear_AWP-Mortis,Classified,13.89,138.9,0.234375
+Stat-Trak_Field-Tested_AWP-Mortis,Classified,10.62,106.19999999999999,0.59375
+Stat-Trak_Well-Worn_AWP-Mortis,Classified,13.78,137.79999999999998,0.703125
+Stat-Trak_Battle-Scarred_AWP-Mortis,Classified,10.21,102.10000000000001,1.5625
+Factory New_AWP-Mortis,Classified,6.81,68.1,0.10937500000000001
+Minimal Wear_AWP-Mortis,Classified,4.36,43.6,0.234375
+Field-Tested_AWP-Mortis,Classified,3.7,37.0,0.59375
+Well-Worn_AWP-Mortis,Classified,4.25,42.5,0.703125
+Battle-Scarred_AWP-Mortis,Classified,3.69,36.9,1.5625
+Stat-Trak_Factory New_AUG-Stymphalian,Classified,21.05,210.5,0.11111111111111112
+Stat-Trak_Minimal Wear_AUG-Stymphalian,Classified,8.52,85.19999999999999,0.23809523809523808
+Stat-Trak_Field-Tested_AUG-Stymphalian,Classified,4.01,40.099999999999994,0.6031746031746031
+Stat-Trak_Well-Worn_AUG-Stymphalian,Classified,3.97,39.7,0.7142857142857143
+Stat-Trak_Battle-Scarred_AUG-Stymphalian,Classified,3.61,36.1,1.5873015873015872
+Factory New_AUG-Stymphalian,Classified,5.78,57.800000000000004,0.11111111111111112
+Minimal Wear_AUG-Stymphalian,Classified,2.88,28.799999999999997,0.23809523809523808
+Field-Tested_AUG-Stymphalian,Classified,1.68,16.8,0.6031746031746031
+Well-Worn_AUG-Stymphalian,Classified,1.8,18.0,0.7142857142857143
+Battle-Scarred_AUG-Stymphalian,Classified,1.74,17.4,1.5873015873015872
+Stat-Trak_Factory New_Glock-18-Moonrise,Restricted,7.13,71.3,0.1076923076923077
+Stat-Trak_Minimal Wear_Glock-18-Moonrise,Restricted,4.18,41.8,0.23076923076923075
+Stat-Trak_Field-Tested_Glock-18-Moonrise,Restricted,1.85,18.5,0.5846153846153846
+Stat-Trak_Well-Worn_Glock-18-Moonrise,Restricted,2.69,26.9,0.6923076923076923
+Stat-Trak_Battle-Scarred_Glock-18-Moonrise,Restricted,1.58,15.8,1.5384615384615383
+Factory New_Glock-18-Moonrise,Restricted,1.67,16.7,0.1076923076923077
+Minimal Wear_Glock-18-Moonrise,Restricted,0.79,7.9,0.23076923076923075
+Field-Tested_Glock-18-Moonrise,Restricted,0.42,4.2,0.5846153846153846
+Well-Worn_Glock-18-Moonrise,Restricted,0.68,6.800000000000001,0.6923076923076923
+Battle-Scarred_Glock-18-Moonrise,Restricted,0.39,3.9000000000000004,1.5384615384615383
+Stat-Trak_Factory New_UMP-45-Arctic-Wolf,Restricted,5.97,59.699999999999996,0.08750000000000001
+Stat-Trak_Minimal Wear_UMP-45-Arctic-Wolf,Restricted,2.22,22.200000000000003,0.18749999999999997
+Stat-Trak_Field-Tested_UMP-45-Arctic-Wolf,Restricted,0.96,9.6,0.475
+Stat-Trak_Well-Worn_UMP-45-Arctic-Wolf,Restricted,1.2,12.0,0.5625
+Stat-Trak_Battle-Scarred_UMP-45-Arctic-Wolf,Restricted,0.82,8.2,1.25
+Factory New_UMP-45-Arctic-Wolf,Restricted,1.53,15.3,0.08750000000000001
+Minimal Wear_UMP-45-Arctic-Wolf,Restricted,0.69,6.8999999999999995,0.18749999999999997
+Field-Tested_UMP-45-Arctic-Wolf,Restricted,0.36,3.5999999999999996,0.475
+Well-Worn_UMP-45-Arctic-Wolf,Restricted,0.48,4.8,0.5625
+Battle-Scarred_UMP-45-Arctic-Wolf,Restricted,0.35,3.5,1.25
+Stat-Trak_Factory New_MAG-7-SWAG-7,Restricted,5.75,57.5,0.07608695652173914
+Stat-Trak_Minimal Wear_MAG-7-SWAG-7,Restricted,2.09,20.9,0.16304347826086954
+Stat-Trak_Field-Tested_MAG-7-SWAG-7,Restricted,0.96,9.6,0.41304347826086957
+Stat-Trak_Well-Worn_MAG-7-SWAG-7,Restricted,0.84,8.4,0.4891304347826087
+Stat-Trak_Battle-Scarred_MAG-7-SWAG-7,Restricted,0.81,8.100000000000001,1.0869565217391304
+Factory New_MAG-7-SWAG-7,Restricted,1.51,15.1,0.07608695652173914
+Minimal Wear_MAG-7-SWAG-7,Restricted,0.64,6.4,0.16304347826086954
+Field-Tested_MAG-7-SWAG-7,Restricted,0.35,3.5,0.41304347826086957
+Well-Worn_MAG-7-SWAG-7,Restricted,0.34,3.4000000000000004,0.4891304347826087
+Battle-Scarred_MAG-7-SWAG-7,Restricted,0.35,3.5,1.0869565217391304
+Stat-Trak_Factory New_Nova-Wild-Six,Restricted,3.62,36.2,0.08750000000000001
+Stat-Trak_Minimal Wear_Nova-Wild-Six,Restricted,1.81,18.1,0.18749999999999997
+Stat-Trak_Field-Tested_Nova-Wild-Six,Restricted,1.03,10.3,0.475
+Stat-Trak_Well-Worn_Nova-Wild-Six,Restricted,1.72,17.2,0.5625
+Stat-Trak_Battle-Scarred_Nova-Wild-Six,Restricted,0.84,8.4,1.25
+Factory New_Nova-Wild-Six,Restricted,1.08,10.8,0.08750000000000001
+Minimal Wear_Nova-Wild-Six,Restricted,0.6,6.0,0.18749999999999997
+Field-Tested_Nova-Wild-Six,Restricted,0.39,3.9000000000000004,0.475
+Well-Worn_Nova-Wild-Six,Restricted,0.39,3.9000000000000004,0.5625
+Battle-Scarred_Nova-Wild-Six,Restricted,0.35,3.5,1.25
+Stat-Trak_Factory New_Negev-Lionfish,Restricted,3.76,37.599999999999994,0.1272727272727273
+Stat-Trak_Minimal Wear_Negev-Lionfish,Restricted,1.87,18.700000000000003,0.2727272727272727
+Stat-Trak_Field-Tested_Negev-Lionfish,Restricted,1.03,10.3,0.6909090909090908
+Stat-Trak_Well-Worn_Negev-Lionfish,Restricted,1.0,10.0,0.8181818181818181
+Stat-Trak_Battle-Scarred_Negev-Lionfish,Restricted,0.84,8.4,1.8181818181818181
+Factory New_Negev-Lionfish,Restricted,1.24,12.4,0.1272727272727273
+Minimal Wear_Negev-Lionfish,Restricted,0.61,6.1,0.2727272727272727
+Field-Tested_Negev-Lionfish,Restricted,0.42,4.2,0.6909090909090908
+Well-Worn_Negev-Lionfish,Restricted,0.44,4.4,0.8181818181818181
+Battle-Scarred_Negev-Lionfish,Restricted,0.36,3.5999999999999996,1.8181818181818181
+Stat-Trak_Factory New_SG-553-Aloha,Mil-Spec,2.24,22.400000000000002,0.1272727272727273
+Stat-Trak_Minimal Wear_SG-553-Aloha,Mil-Spec,1.27,12.7,0.2727272727272727
+Stat-Trak_Field-Tested_SG-553-Aloha,Mil-Spec,0.66,6.6000000000000005,0.6909090909090908
+Stat-Trak_Well-Worn_SG-553-Aloha,Mil-Spec,0.9,9.0,0.8181818181818181
+Stat-Trak_Battle-Scarred_SG-553-Aloha,Mil-Spec,0.59,5.8999999999999995,1.8181818181818181
+Factory New_SG-553-Aloha,Mil-Spec,0.35,3.5,0.1272727272727273
+Minimal Wear_SG-553-Aloha,Mil-Spec,0.2,2.0,0.2727272727272727
+Field-Tested_SG-553-Aloha,Mil-Spec,0.09,0.8999999999999999,0.6909090909090908
+Well-Worn_SG-553-Aloha,Mil-Spec,0.15,1.5,0.8181818181818181
+Battle-Scarred_SG-553-Aloha,Mil-Spec,0.09,0.8999999999999999,1.8181818181818181
+Stat-Trak_Factory New_R8-Revolver-Grip,Mil-Spec,1.31,13.100000000000001,0.07
+Stat-Trak_Minimal Wear_R8-Revolver-Grip,Mil-Spec,0.32,3.2,0.15
+Stat-Trak_Field-Tested_R8-Revolver-Grip,Mil-Spec,0.19,1.9,0.38
+Stat-Trak_Well-Worn_R8-Revolver-Grip,Mil-Spec,0.18,1.7999999999999998,0.45
+Stat-Trak_Battle-Scarred_R8-Revolver-Grip,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_R8-Revolver-Grip,Mil-Spec,0.24,2.4,0.07
+Minimal Wear_R8-Revolver-Grip,Mil-Spec,0.11,1.1,0.15
+Field-Tested_R8-Revolver-Grip,Mil-Spec,0.08,0.8,0.38
+Well-Worn_R8-Revolver-Grip,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_R8-Revolver-Grip,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_P2000-Urban-Hazard,Mil-Spec,1.1,11.0,0.07
+Stat-Trak_Minimal Wear_P2000-Urban-Hazard,Mil-Spec,0.35,3.5,0.15
+Stat-Trak_Field-Tested_P2000-Urban-Hazard,Mil-Spec,0.19,1.9,0.38
+Stat-Trak_Well-Worn_P2000-Urban-Hazard,Mil-Spec,0.18,1.7999999999999998,0.45
+Stat-Trak_Battle-Scarred_P2000-Urban-Hazard,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_P2000-Urban-Hazard,Mil-Spec,0.24,2.4,0.07
+Minimal Wear_P2000-Urban-Hazard,Mil-Spec,0.1,1.0,0.15
+Field-Tested_P2000-Urban-Hazard,Mil-Spec,0.08,0.8,0.38
+Well-Worn_P2000-Urban-Hazard,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_P2000-Urban-Hazard,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_MP9-Black-Sand,Mil-Spec,1.08,10.8,0.07
+Stat-Trak_Minimal Wear_MP9-Black-Sand,Mil-Spec,0.33,3.3000000000000003,0.15
+Stat-Trak_Field-Tested_MP9-Black-Sand,Mil-Spec,0.2,2.0,0.38
+Stat-Trak_Well-Worn_MP9-Black-Sand,Mil-Spec,0.19,1.9,0.45
+Stat-Trak_Battle-Scarred_MP9-Black-Sand,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_MP9-Black-Sand,Mil-Spec,0.24,2.4,0.07
+Minimal Wear_MP9-Black-Sand,Mil-Spec,0.1,1.0,0.15
+Field-Tested_MP9-Black-Sand,Mil-Spec,0.08,0.8,0.38
+Well-Worn_MP9-Black-Sand,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_MP9-Black-Sand,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_Five-SeveN-Flame-Test,Mil-Spec,0.78,7.800000000000001,0.1076923076923077
+Stat-Trak_Minimal Wear_Five-SeveN-Flame-Test,Mil-Spec,0.4,4.0,0.23076923076923075
+Stat-Trak_Field-Tested_Five-SeveN-Flame-Test,Mil-Spec,0.22,2.2,0.5846153846153846
+Stat-Trak_Well-Worn_Five-SeveN-Flame-Test,Mil-Spec,0.36,3.5999999999999996,0.6923076923076923
+Stat-Trak_Battle-Scarred_Five-SeveN-Flame-Test,Mil-Spec,0.24,2.4,1.5384615384615383
+Factory New_Five-SeveN-Flame-Test,Mil-Spec,0.19,1.9,0.1076923076923077
+Minimal Wear_Five-SeveN-Flame-Test,Mil-Spec,0.11,1.1,0.23076923076923075
+Field-Tested_Five-SeveN-Flame-Test,Mil-Spec,0.08,0.8,0.5846153846153846
+Well-Worn_Five-SeveN-Flame-Test,Mil-Spec,0.09,0.8999999999999999,0.6923076923076923
+Battle-Scarred_Five-SeveN-Flame-Test,Mil-Spec,0.08,0.8,1.5384615384615383
+Stat-Trak_Factory New_PP-Bizon-Night-Riot,Mil-Spec,0.81,8.100000000000001,0.08750000000000001
+Stat-Trak_Minimal Wear_PP-Bizon-Night-Riot,Mil-Spec,0.31,3.1,0.18749999999999997
+Stat-Trak_Field-Tested_PP-Bizon-Night-Riot,Mil-Spec,0.18,1.7999999999999998,0.475
+Stat-Trak_Well-Worn_PP-Bizon-Night-Riot,Mil-Spec,0.24,2.4,0.5625
+Stat-Trak_Battle-Scarred_PP-Bizon-Night-Riot,Mil-Spec,0.18,1.7999999999999998,1.25
+Factory New_PP-Bizon-Night-Riot,Mil-Spec,0.22,2.2,0.08750000000000001
+Minimal Wear_PP-Bizon-Night-Riot,Mil-Spec,0.1,1.0,0.18749999999999997
+Field-Tested_PP-Bizon-Night-Riot,Mil-Spec,0.08,0.8,0.475
+Well-Worn_PP-Bizon-Night-Riot,Mil-Spec,0.08,0.8,0.5625
+Battle-Scarred_PP-Bizon-Night-Riot,Mil-Spec,0.08,0.8,1.25
+Stat-Trak_Factory New_XM1014-Oxide-Blaze,Mil-Spec,0.66,6.6000000000000005,0.10000000000000002
+Stat-Trak_Minimal Wear_XM1014-Oxide-Blaze,Mil-Spec,0.32,3.2,0.2142857142857143
+Stat-Trak_Field-Tested_XM1014-Oxide-Blaze,Mil-Spec,0.18,1.7999999999999998,0.5428571428571429
+Stat-Trak_Well-Worn_XM1014-Oxide-Blaze,Mil-Spec,0.24,2.4,0.6428571428571429
+Stat-Trak_Battle-Scarred_XM1014-Oxide-Blaze,Mil-Spec,0.19,1.9,1.4285714285714286
+Factory New_XM1014-Oxide-Blaze,Mil-Spec,0.18,1.7999999999999998,0.10000000000000002
+Minimal Wear_XM1014-Oxide-Blaze,Mil-Spec,0.1,1.0,0.2142857142857143
+Field-Tested_XM1014-Oxide-Blaze,Mil-Spec,0.08,0.8,0.5428571428571429
+Well-Worn_XM1014-Oxide-Blaze,Mil-Spec,0.09,0.8999999999999999,0.6428571428571429
+Battle-Scarred_XM1014-Oxide-Blaze,Mil-Spec,0.08,0.8,1.4285714285714286

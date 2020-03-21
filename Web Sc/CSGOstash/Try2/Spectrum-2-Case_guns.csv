@@ -1,0 +1,171 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Factory New_AK-47-The-Empress,Covert,282.24,2822.4,0.07
+Stat-Trak_Minimal Wear_AK-47-The-Empress,Covert,139.99,1399.9,0.15
+Stat-Trak_Field-Tested_AK-47-The-Empress,Covert,91.48,914.8000000000001,0.38
+Stat-Trak_Well-Worn_AK-47-The-Empress,Covert,74.26,742.6,0.45
+Stat-Trak_Battle-Scarred_AK-47-The-Empress,Covert,73.76,737.6,1.0
+Factory New_AK-47-The-Empress,Covert,87.88,878.8,0.07
+Minimal Wear_AK-47-The-Empress,Covert,50.42,504.20000000000005,0.15
+Field-Tested_AK-47-The-Empress,Covert,34.76,347.59999999999997,0.38
+Well-Worn_AK-47-The-Empress,Covert,29.97,299.7,0.45
+Battle-Scarred_AK-47-The-Empress,Covert,28.4,284.0,1.0
+Stat-Trak_Factory New_P250-See-Ya-Later,Covert,48.12,481.2,0.10000000000000002
+Stat-Trak_Minimal Wear_P250-See-Ya-Later,Covert,24.64,246.4,0.2142857142857143
+Stat-Trak_Field-Tested_P250-See-Ya-Later,Covert,12.08,120.8,0.5428571428571429
+Stat-Trak_Well-Worn_P250-See-Ya-Later,Covert,12.96,129.60000000000002,0.6428571428571429
+Stat-Trak_Battle-Scarred_P250-See-Ya-Later,Covert,10.1,101.0,1.4285714285714286
+Factory New_P250-See-Ya-Later,Covert,12.37,123.69999999999999,0.10000000000000002
+Minimal Wear_P250-See-Ya-Later,Covert,6.71,67.1,0.2142857142857143
+Field-Tested_P250-See-Ya-Later,Covert,3.94,39.4,0.5428571428571429
+Well-Worn_P250-See-Ya-Later,Covert,5.93,59.3,0.6428571428571429
+Battle-Scarred_P250-See-Ya-Later,Covert,3.67,36.7,1.4285714285714286
+Stat-Trak_Factory New_M4A1-S-Leaded-Glass,Classified,21.26,212.60000000000002,0.10000000000000002
+Stat-Trak_Minimal Wear_M4A1-S-Leaded-Glass,Classified,11.08,110.8,0.2142857142857143
+Stat-Trak_Field-Tested_M4A1-S-Leaded-Glass,Classified,7.38,73.8,0.5428571428571429
+Stat-Trak_Well-Worn_M4A1-S-Leaded-Glass,Classified,8.24,82.4,0.6428571428571429
+Stat-Trak_Battle-Scarred_M4A1-S-Leaded-Glass,Classified,7.15,71.5,1.4285714285714286
+Factory New_M4A1-S-Leaded-Glass,Classified,6.86,68.60000000000001,0.10000000000000002
+Minimal Wear_M4A1-S-Leaded-Glass,Classified,3.88,38.8,0.2142857142857143
+Field-Tested_M4A1-S-Leaded-Glass,Classified,2.78,27.799999999999997,0.5428571428571429
+Well-Worn_M4A1-S-Leaded-Glass,Classified,3.52,35.2,0.6428571428571429
+Battle-Scarred_M4A1-S-Leaded-Glass,Classified,2.6,26.0,1.4285714285714286
+Stat-Trak_Factory New_PP-Bizon-High-Roller,Classified,24.29,242.89999999999998,0.07
+Stat-Trak_Minimal Wear_PP-Bizon-High-Roller,Classified,8.32,83.2,0.15
+Stat-Trak_Field-Tested_PP-Bizon-High-Roller,Classified,5.54,55.4,0.38
+Stat-Trak_Well-Worn_PP-Bizon-High-Roller,Classified,4.08,40.8,0.45
+Stat-Trak_Battle-Scarred_PP-Bizon-High-Roller,Classified,3.47,34.7,1.0
+Factory New_PP-Bizon-High-Roller,Classified,7.27,72.69999999999999,0.07
+Minimal Wear_PP-Bizon-High-Roller,Classified,3.37,33.7,0.15
+Field-Tested_PP-Bizon-High-Roller,Classified,2.31,23.1,0.38
+Well-Worn_PP-Bizon-High-Roller,Classified,2.04,20.4,0.45
+Battle-Scarred_PP-Bizon-High-Roller,Classified,1.89,18.9,1.0
+Stat-Trak_Factory New_R8-Revolver-Llama-Cannon,Classified,23.04,230.39999999999998,0.05970149253731345
+Stat-Trak_Minimal Wear_R8-Revolver-Llama-Cannon,Classified,8.24,82.4,0.17910447761194032
+Stat-Trak_Field-Tested_R8-Revolver-Llama-Cannon,Classified,5.26,52.599999999999994,0.5223880597014926
+Stat-Trak_Well-Worn_R8-Revolver-Llama-Cannon,Classified,4.84,48.4,0.6268656716417912
+Stat-Trak_Battle-Scarred_R8-Revolver-Llama-Cannon,Classified,3.84,38.4,1.447761194029851
+Factory New_R8-Revolver-Llama-Cannon,Classified,5.96,59.6,0.05970149253731345
+Minimal Wear_R8-Revolver-Llama-Cannon,Classified,3.47,34.7,0.17910447761194032
+Field-Tested_R8-Revolver-Llama-Cannon,Classified,2.26,22.599999999999998,0.5223880597014926
+Well-Worn_R8-Revolver-Llama-Cannon,Classified,2.08,20.8,0.6268656716417912
+Battle-Scarred_R8-Revolver-Llama-Cannon,Classified,2.04,20.4,1.447761194029851
+Stat-Trak_Factory New_SG-553-Phantom,Restricted,9.54,95.39999999999999,0.11666666666666668
+Stat-Trak_Minimal Wear_SG-553-Phantom,Restricted,5.23,52.300000000000004,0.25
+Stat-Trak_Field-Tested_SG-553-Phantom,Restricted,3.05,30.5,0.6333333333333334
+Stat-Trak_Well-Worn_SG-553-Phantom,Restricted,3.66,36.6,0.75
+Stat-Trak_Battle-Scarred_SG-553-Phantom,Restricted,2.66,26.6,1.6666666666666667
+Factory New_SG-553-Phantom,Restricted,1.84,18.400000000000002,0.11666666666666668
+Minimal Wear_SG-553-Phantom,Restricted,0.88,8.8,0.25
+Field-Tested_SG-553-Phantom,Restricted,0.54,5.4,0.6333333333333334
+Well-Worn_SG-553-Phantom,Restricted,0.82,8.2,0.75
+Battle-Scarred_SG-553-Phantom,Restricted,0.5,5.0,1.6666666666666667
+Stat-Trak_Factory New_CZ75-Auto-Tacticat,Restricted,4.48,44.800000000000004,0.10000000000000002
+Stat-Trak_Minimal Wear_CZ75-Auto-Tacticat,Restricted,1.99,19.9,0.2142857142857143
+Stat-Trak_Field-Tested_CZ75-Auto-Tacticat,Restricted,0.8,8.0,0.5428571428571429
+Stat-Trak_Well-Worn_CZ75-Auto-Tacticat,Restricted,1.41,14.1,0.6428571428571429
+Stat-Trak_Battle-Scarred_CZ75-Auto-Tacticat,Restricted,0.73,7.3,1.4285714285714286
+Factory New_CZ75-Auto-Tacticat,Restricted,1.12,11.200000000000001,0.10000000000000002
+Minimal Wear_CZ75-Auto-Tacticat,Restricted,0.53,5.300000000000001,0.2142857142857143
+Field-Tested_CZ75-Auto-Tacticat,Restricted,0.32,3.2,0.5428571428571429
+Well-Worn_CZ75-Auto-Tacticat,Restricted,0.41,4.1,0.6428571428571429
+Battle-Scarred_CZ75-Auto-Tacticat,Restricted,0.31,3.1,1.4285714285714286
+Stat-Trak_Factory New_MP9-Goo,Restricted,2.71,27.1,0.11666666666666668
+Stat-Trak_Minimal Wear_MP9-Goo,Restricted,1.58,15.8,0.25
+Stat-Trak_Field-Tested_MP9-Goo,Restricted,0.8,8.0,0.6333333333333334
+Stat-Trak_Well-Worn_MP9-Goo,Restricted,1.15,11.5,0.75
+Stat-Trak_Battle-Scarred_MP9-Goo,Restricted,0.82,8.2,1.6666666666666667
+Factory New_MP9-Goo,Restricted,0.91,9.1,0.11666666666666668
+Minimal Wear_MP9-Goo,Restricted,0.48,4.8,0.25
+Field-Tested_MP9-Goo,Restricted,0.31,3.1,0.6333333333333334
+Well-Worn_MP9-Goo,Restricted,0.43,4.3,0.75
+Battle-Scarred_MP9-Goo,Restricted,0.31,3.1,1.6666666666666667
+Stat-Trak_Factory New_UMP-45-Exposure,Restricted,2.53,25.299999999999997,0.1272727272727273
+Stat-Trak_Minimal Wear_UMP-45-Exposure,Restricted,1.28,12.8,0.2727272727272727
+Stat-Trak_Field-Tested_UMP-45-Exposure,Restricted,0.86,8.6,0.6909090909090908
+Stat-Trak_Well-Worn_UMP-45-Exposure,Restricted,1.15,11.5,0.8181818181818181
+Stat-Trak_Battle-Scarred_UMP-45-Exposure,Restricted,0.9,9.0,1.8181818181818181
+Factory New_UMP-45-Exposure,Restricted,0.85,8.5,0.1272727272727273
+Minimal Wear_UMP-45-Exposure,Restricted,0.46,4.6000000000000005,0.2727272727272727
+Field-Tested_UMP-45-Exposure,Restricted,0.34,3.4000000000000004,0.6909090909090908
+Well-Worn_UMP-45-Exposure,Restricted,0.4,4.0,0.8181818181818181
+Battle-Scarred_UMP-45-Exposure,Restricted,0.32,3.2,1.8181818181818181
+Stat-Trak_Factory New_XM1014-Ziggy,Restricted,2.58,25.8,0.09722222222222224
+Stat-Trak_Minimal Wear_XM1014-Ziggy,Restricted,1.33,13.3,0.20833333333333334
+Stat-Trak_Field-Tested_XM1014-Ziggy,Restricted,0.7,7.0,0.5277777777777778
+Stat-Trak_Well-Worn_XM1014-Ziggy,Restricted,0.89,8.9,0.625
+Stat-Trak_Battle-Scarred_XM1014-Ziggy,Restricted,0.7,7.0,1.3888888888888888
+Factory New_XM1014-Ziggy,Restricted,0.88,8.8,0.09722222222222224
+Minimal Wear_XM1014-Ziggy,Restricted,0.46,4.6000000000000005,0.20833333333333334
+Field-Tested_XM1014-Ziggy,Restricted,0.3,3.0,0.5277777777777778
+Well-Worn_XM1014-Ziggy,Restricted,0.4,4.0,0.625
+Battle-Scarred_XM1014-Ziggy,Restricted,0.3,3.0,1.3888888888888888
+Stat-Trak_Factory New_Glock-18-Off-World,Mil-Spec,3.75,37.5,0.07
+Stat-Trak_Minimal Wear_Glock-18-Off-World,Mil-Spec,0.99,9.9,0.15
+Stat-Trak_Field-Tested_Glock-18-Off-World,Mil-Spec,0.65,6.5,0.38
+Stat-Trak_Well-Worn_Glock-18-Off-World,Mil-Spec,0.6,6.0,0.45
+Stat-Trak_Battle-Scarred_Glock-18-Off-World,Mil-Spec,0.6,6.0,1.0
+Factory New_Glock-18-Off-World,Mil-Spec,0.52,5.2,0.07
+Minimal Wear_Glock-18-Off-World,Mil-Spec,0.12,1.2,0.15
+Field-Tested_Glock-18-Off-World,Mil-Spec,0.1,1.0,0.38
+Well-Worn_Glock-18-Off-World,Mil-Spec,0.09,0.8999999999999999,0.45
+Battle-Scarred_Glock-18-Off-World,Mil-Spec,0.09,0.8999999999999999,1.0
+Stat-Trak_Factory New_AUG-Triqua,Mil-Spec,2.91,29.1,0.07
+Stat-Trak_Minimal Wear_AUG-Triqua,Mil-Spec,0.84,8.4,0.15
+Stat-Trak_Field-Tested_AUG-Triqua,Mil-Spec,0.49,4.9,0.38
+Stat-Trak_Well-Worn_AUG-Triqua,Mil-Spec,0.4,4.0,0.45
+Stat-Trak_Battle-Scarred_AUG-Triqua,Mil-Spec,0.39,3.9000000000000004,1.0
+Factory New_AUG-Triqua,Mil-Spec,0.64,6.4,0.07
+Minimal Wear_AUG-Triqua,Mil-Spec,0.15,1.5,0.15
+Field-Tested_AUG-Triqua,Mil-Spec,0.08,0.8,0.38
+Well-Worn_AUG-Triqua,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_AUG-Triqua,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_MAC-10-Oceanic,Mil-Spec,0.76,7.6,0.11666666666666668
+Stat-Trak_Minimal Wear_MAC-10-Oceanic,Mil-Spec,0.44,4.4,0.25
+Stat-Trak_Field-Tested_MAC-10-Oceanic,Mil-Spec,0.24,2.4,0.6333333333333334
+Stat-Trak_Well-Worn_MAC-10-Oceanic,Mil-Spec,0.36,3.5999999999999996,0.75
+Stat-Trak_Battle-Scarred_MAC-10-Oceanic,Mil-Spec,0.21,2.1,1.6666666666666667
+Factory New_MAC-10-Oceanic,Mil-Spec,0.19,1.9,0.11666666666666668
+Minimal Wear_MAC-10-Oceanic,Mil-Spec,0.11,1.1,0.25
+Field-Tested_MAC-10-Oceanic,Mil-Spec,0.08,0.8,0.6333333333333334
+Well-Worn_MAC-10-Oceanic,Mil-Spec,0.1,1.0,0.75
+Battle-Scarred_MAC-10-Oceanic,Mil-Spec,0.08,0.8,1.6666666666666667
+Stat-Trak_Factory New_G3SG1-Hunter,Mil-Spec,0.89,8.9,0.07
+Stat-Trak_Minimal Wear_G3SG1-Hunter,Mil-Spec,0.3,3.0,0.15
+Stat-Trak_Field-Tested_G3SG1-Hunter,Mil-Spec,0.18,1.7999999999999998,0.38
+Stat-Trak_Well-Worn_G3SG1-Hunter,Mil-Spec,0.17,1.7000000000000002,0.45
+Stat-Trak_Battle-Scarred_G3SG1-Hunter,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_G3SG1-Hunter,Mil-Spec,0.21,2.1,0.07
+Minimal Wear_G3SG1-Hunter,Mil-Spec,0.1,1.0,0.15
+Field-Tested_G3SG1-Hunter,Mil-Spec,0.08,0.8,0.38
+Well-Worn_G3SG1-Hunter,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_G3SG1-Hunter,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_Tec-9-Cracked-Opal,Mil-Spec,0.85,8.5,0.07
+Stat-Trak_Minimal Wear_Tec-9-Cracked-Opal,Mil-Spec,0.3,3.0,0.15
+Stat-Trak_Field-Tested_Tec-9-Cracked-Opal,Mil-Spec,0.18,1.7999999999999998,0.38
+Stat-Trak_Well-Worn_Tec-9-Cracked-Opal,Mil-Spec,0.18,1.7999999999999998,0.45
+Stat-Trak_Battle-Scarred_Tec-9-Cracked-Opal,Mil-Spec,0.18,1.7999999999999998,1.0
+Factory New_Tec-9-Cracked-Opal,Mil-Spec,0.2,2.0,0.07
+Minimal Wear_Tec-9-Cracked-Opal,Mil-Spec,0.1,1.0,0.15
+Field-Tested_Tec-9-Cracked-Opal,Mil-Spec,0.08,0.8,0.38
+Well-Worn_Tec-9-Cracked-Opal,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_Tec-9-Cracked-Opal,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_Sawed-Off-Morris,Mil-Spec,0.72,7.199999999999999,0.07
+Stat-Trak_Minimal Wear_Sawed-Off-Morris,Mil-Spec,0.3,3.0,0.15
+Stat-Trak_Field-Tested_Sawed-Off-Morris,Mil-Spec,0.18,1.7999999999999998,0.38
+Stat-Trak_Well-Worn_Sawed-Off-Morris,Mil-Spec,0.18,1.7999999999999998,0.45
+Stat-Trak_Battle-Scarred_Sawed-Off-Morris,Mil-Spec,0.17,1.7000000000000002,1.0
+Factory New_Sawed-Off-Morris,Mil-Spec,0.24,2.4,0.07
+Minimal Wear_Sawed-Off-Morris,Mil-Spec,0.1,1.0,0.15
+Field-Tested_Sawed-Off-Morris,Mil-Spec,0.08,0.8,0.38
+Well-Worn_Sawed-Off-Morris,Mil-Spec,0.08,0.8,0.45
+Battle-Scarred_Sawed-Off-Morris,Mil-Spec,0.08,0.8,1.0
+Stat-Trak_Factory New_SCAR-20-Jungle-Slipstream,Mil-Spec,0.59,5.8999999999999995,0.14
+Stat-Trak_Minimal Wear_SCAR-20-Jungle-Slipstream,Mil-Spec,0.3,3.0,0.3
+Stat-Trak_Field-Tested_SCAR-20-Jungle-Slipstream,Mil-Spec,0.18,1.7999999999999998,0.76
+Stat-Trak_Well-Worn_SCAR-20-Jungle-Slipstream,Mil-Spec,0.2,2.0,0.9
+Stat-Trak_Battle-Scarred_SCAR-20-Jungle-Slipstream,Mil-Spec,0.24,2.4,2.0
+Factory New_SCAR-20-Jungle-Slipstream,Mil-Spec,0.18,1.7999999999999998,0.14
+Minimal Wear_SCAR-20-Jungle-Slipstream,Mil-Spec,0.1,1.0,0.3
+Field-Tested_SCAR-20-Jungle-Slipstream,Mil-Spec,0.08,0.8,0.76
+Well-Worn_SCAR-20-Jungle-Slipstream,Mil-Spec,0.08,0.8,0.9
+Battle-Scarred_SCAR-20-Jungle-Slipstream,Mil-Spec,0.08,0.8,2.0

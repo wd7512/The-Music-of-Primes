@@ -142,14 +142,14 @@ def tree_save(data,case):
         ind_w = d[-1]
 
 
-        ind_w = ind_w + [k+5 for k in ind_w]
-        print(ind_w)
-        print(war)
+        ind = ind_w + [k+5 for k in ind_w]
+        ind_w = [k - ind[0] for k in ind]
   
         for a in ind_w:
             try:
                 w = war[a]
             except IndexError:
+
                 w = war[a-5]
             price = prices[a]
             
@@ -184,7 +184,7 @@ cases = f.readlines()
 f.close()
 
 cases_only = [c[c.rfind('/')+1:-1] for c in cases]
-for case in cases_only:
+for case in cases_only[1:]:
     print(case)
     data = get_data(case)
     tree_save(data,case)

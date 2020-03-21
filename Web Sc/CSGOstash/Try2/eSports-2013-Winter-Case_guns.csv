@@ -1,0 +1,89 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Factory New_M4A4-X-Ray,Covert,57.18,571.8,0.23333333333333336
+Stat-Trak_Minimal Wear_M4A4-X-Ray,Covert,31.98,319.8,0.5
+Stat-Trak_Field-Tested_M4A4-X-Ray,Covert,34.35,343.5,1.2666666666666668
+Factory New_M4A4-X-Ray,Covert,14.66,146.6,0.23333333333333336
+Minimal Wear_M4A4-X-Ray,Covert,11.33,113.3,0.5
+Field-Tested_M4A4-X-Ray,Covert,9.73,97.30000000000001,1.2666666666666668
+Stat-Trak_Factory New_Desert-Eagle-Cobalt-Disruption,Classified,72.18,721.8000000000001,0.35000000000000003
+Stat-Trak_Minimal Wear_Desert-Eagle-Cobalt-Disruption,Classified,47.43,474.3,0.7499999999999999
+Stat-Trak_Field-Tested_Desert-Eagle-Cobalt-Disruption,Classified,40.94,409.4,1.9
+Factory New_Desert-Eagle-Cobalt-Disruption,Classified,23.6,236.0,0.35000000000000003
+Minimal Wear_Desert-Eagle-Cobalt-Disruption,Classified,18.39,183.9,0.7499999999999999
+Field-Tested_Desert-Eagle-Cobalt-Disruption,Classified,16.9,169.0,1.9
+Stat-Trak_Factory New_AWP-Electric-Hive,Classified,49.55,495.5,0.17500000000000002
+Stat-Trak_Minimal Wear_AWP-Electric-Hive,Classified,38.49,384.90000000000003,0.37499999999999994
+Stat-Trak_Field-Tested_AWP-Electric-Hive,Classified,31.84,318.4,0.95
+Stat-Trak_Well-Worn_AWP-Electric-Hive,Classified,98.71,987.0999999999999,1.125
+Factory New_AWP-Electric-Hive,Classified,20.72,207.2,0.17500000000000002
+Minimal Wear_AWP-Electric-Hive,Classified,18.06,180.6,0.37499999999999994
+Field-Tested_AWP-Electric-Hive,Classified,13.37,133.7,0.95
+Well-Worn_AWP-Electric-Hive,Classified,15.94,159.4,1.125
+Stat-Trak_Factory New_FAMAS-Afterimage,Classified,21.64,216.4,0.13157894736842105
+Stat-Trak_Minimal Wear_FAMAS-Afterimage,Classified,12.01,120.1,0.34210526315789475
+Stat-Trak_Field-Tested_FAMAS-Afterimage,Classified,7.99,79.9,0.9473684210526315
+Stat-Trak_Well-Worn_FAMAS-Afterimage,Classified,13.29,132.89999999999998,1.131578947368421
+Factory New_FAMAS-Afterimage,Classified,20.57,205.7,0.13157894736842105
+Minimal Wear_FAMAS-Afterimage,Classified,10.99,109.9,0.34210526315789475
+Field-Tested_FAMAS-Afterimage,Classified,8.52,85.19999999999999,0.9473684210526315
+Well-Worn_FAMAS-Afterimage,Classified,24.18,241.8,1.131578947368421
+Stat-Trak_Factory New_AK-47-Blue-Laminate,Restricted,26.23,262.3,0.13157894736842105
+Stat-Trak_Minimal Wear_AK-47-Blue-Laminate,Restricted,18.81,188.1,0.34210526315789475
+Stat-Trak_Field-Tested_AK-47-Blue-Laminate,Restricted,17.78,177.8,0.9473684210526315
+Stat-Trak_Well-Worn_AK-47-Blue-Laminate,Restricted,18.89,188.9,1.131578947368421
+Factory New_AK-47-Blue-Laminate,Restricted,6.93,69.3,0.13157894736842105
+Minimal Wear_AK-47-Blue-Laminate,Restricted,5.99,59.900000000000006,0.34210526315789475
+Field-Tested_AK-47-Blue-Laminate,Restricted,5.62,56.2,0.9473684210526315
+Well-Worn_AK-47-Blue-Laminate,Restricted,9.8,98.0,1.131578947368421
+Stat-Trak_Factory New_P90-Blind-Spot,Restricted,5.84,58.4,0.14
+Stat-Trak_Minimal Wear_P90-Blind-Spot,Restricted,5.39,53.9,0.3
+Stat-Trak_Field-Tested_P90-Blind-Spot,Restricted,4.2,42.0,0.76
+Stat-Trak_Well-Worn_P90-Blind-Spot,Restricted,4.76,47.599999999999994,0.9
+Stat-Trak_Battle-Scarred_P90-Blind-Spot,Restricted,3.87,38.7,2.0
+Factory New_P90-Blind-Spot,Restricted,2.44,24.4,0.14
+Minimal Wear_P90-Blind-Spot,Restricted,2.22,22.200000000000003,0.3
+Field-Tested_P90-Blind-Spot,Restricted,1.8,18.0,0.76
+Well-Worn_P90-Blind-Spot,Restricted,2.1,21.0,0.9
+Battle-Scarred_P90-Blind-Spot,Restricted,1.61,16.1,2.0
+Stat-Trak_Factory New_Galil-AR-Blue-Titanium,Mil-Spec,2.54,25.4,1.7500000000000002
+Factory New_Galil-AR-Blue-Titanium,Mil-Spec,0.88,8.8,1.7500000000000002
+Stat-Trak_Factory New_Nova-Ghost-Camo,Mil-Spec,1.85,18.5,0.17500000000000002
+Stat-Trak_Minimal Wear_Nova-Ghost-Camo,Mil-Spec,1.45,14.5,0.37499999999999994
+Stat-Trak_Field-Tested_Nova-Ghost-Camo,Mil-Spec,1.45,14.5,0.95
+Stat-Trak_Well-Worn_Nova-Ghost-Camo,Mil-Spec,2.19,21.9,1.125
+Factory New_Nova-Ghost-Camo,Mil-Spec,0.63,6.3,0.17500000000000002
+Minimal Wear_Nova-Ghost-Camo,Mil-Spec,0.52,5.2,0.37499999999999994
+Field-Tested_Nova-Ghost-Camo,Mil-Spec,0.54,5.4,0.95
+Well-Worn_Nova-Ghost-Camo,Mil-Spec,0.76,7.6,1.125
+Stat-Trak_Factory New_G3SG1-Azure-Zebra,Mil-Spec,1.82,18.2,0.25
+Stat-Trak_Minimal Wear_G3SG1-Azure-Zebra,Mil-Spec,1.58,15.8,0.5357142857142857
+Stat-Trak_Field-Tested_G3SG1-Azure-Zebra,Mil-Spec,1.48,14.8,1.357142857142857
+Factory New_G3SG1-Azure-Zebra,Mil-Spec,0.62,6.2,0.25
+Minimal Wear_G3SG1-Azure-Zebra,Mil-Spec,0.45,4.5,0.5357142857142857
+Field-Tested_G3SG1-Azure-Zebra,Mil-Spec,0.54,5.4,1.357142857142857
+Stat-Trak_Factory New_P250-Steel-Disruption,Mil-Spec,1.81,18.1,0.35000000000000003
+Stat-Trak_Minimal Wear_P250-Steel-Disruption,Mil-Spec,1.64,16.4,0.7499999999999999
+Stat-Trak_Field-Tested_P250-Steel-Disruption,Mil-Spec,1.47,14.7,1.9
+Factory New_P250-Steel-Disruption,Mil-Spec,0.66,6.6000000000000005,0.35000000000000003
+Minimal Wear_P250-Steel-Disruption,Mil-Spec,0.52,5.2,0.7499999999999999
+Field-Tested_P250-Steel-Disruption,Mil-Spec,0.54,5.4,1.9
+Stat-Trak_Factory New_PP-Bizon-Water-Sigil,Mil-Spec,1.77,17.7,0.14
+Stat-Trak_Minimal Wear_PP-Bizon-Water-Sigil,Mil-Spec,1.57,15.700000000000001,0.3
+Stat-Trak_Field-Tested_PP-Bizon-Water-Sigil,Mil-Spec,1.4,14.0,0.76
+Stat-Trak_Well-Worn_PP-Bizon-Water-Sigil,Mil-Spec,1.43,14.299999999999999,0.9
+Stat-Trak_Battle-Scarred_PP-Bizon-Water-Sigil,Mil-Spec,1.48,14.8,2.0
+Factory New_PP-Bizon-Water-Sigil,Mil-Spec,0.62,6.2,0.14
+Minimal Wear_PP-Bizon-Water-Sigil,Mil-Spec,0.52,5.2,0.3
+Field-Tested_PP-Bizon-Water-Sigil,Mil-Spec,0.47,4.699999999999999,0.76
+Well-Worn_PP-Bizon-Water-Sigil,Mil-Spec,0.85,8.5,0.9
+Battle-Scarred_PP-Bizon-Water-Sigil,Mil-Spec,1.04,10.4,2.0
+Stat-Trak_Factory New_Five-SeveN-Nightshade,Mil-Spec,1.68,16.8,0.14
+Stat-Trak_Minimal Wear_Five-SeveN-Nightshade,Mil-Spec,1.52,15.2,0.3
+Stat-Trak_Field-Tested_Five-SeveN-Nightshade,Mil-Spec,1.38,13.799999999999999,0.76
+Stat-Trak_Well-Worn_Five-SeveN-Nightshade,Mil-Spec,1.31,13.100000000000001,0.9
+Stat-Trak_Battle-Scarred_Five-SeveN-Nightshade,Mil-Spec,1.34,13.4,2.0
+Factory New_Five-SeveN-Nightshade,Mil-Spec,0.64,6.4,0.14
+Minimal Wear_Five-SeveN-Nightshade,Mil-Spec,0.52,5.2,0.3
+Field-Tested_Five-SeveN-Nightshade,Mil-Spec,0.52,5.2,0.76
+Well-Worn_Five-SeveN-Nightshade,Mil-Spec,0.74,7.4,0.9
+Battle-Scarred_Five-SeveN-Nightshade,Mil-Spec,0.66,6.6000000000000005,2.0
