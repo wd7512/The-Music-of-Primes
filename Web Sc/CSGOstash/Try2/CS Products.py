@@ -70,7 +70,6 @@ def get_data(case):
                 possible_wear.append(name)
                 index_wear.append(i)
         
-
         var = len(index_wear)
 
         #Recent Price
@@ -134,11 +133,16 @@ def tree_save(data,case):
         wear_diff = wear_range[1] - wear_range[0]
         ind_w = d[-1]
 
+
+        ind_w = ind_w + [k+5 for k in ind_w]
         print(ind_w)
-        
+        print(war)
   
         for a in ind_w:
-            w = war[a]
+            try:
+                w = war[a]
+            except IndexError:
+                w = war[a-5]
             price = prices[a]
             
             
@@ -148,7 +152,7 @@ def tree_save(data,case):
             
             to_write = w + '_' + name + ',' + rarity + ',' + str(price) + ',' + str(price*10) + ',' + str(flt_input) + '\n'
 
-            if a >= 5:
+            if a < 5:
                 to_write = 'Stat-Trak_'+to_write
 
             has_write = False
