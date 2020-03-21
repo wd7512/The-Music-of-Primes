@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from bs4 import BeautifulSoup
-import pandas as pd
+from selenium.common.exceptions import WebDriverException
 import time
 
 # float value equation
@@ -28,7 +27,16 @@ def get_data(case):
 
 
     for url in urls:
-        driver = webdriver.Chrome('C:\\chromedriver_win32\\chromedriver.exe')
+
+        connection = False
+
+        while connection == False:
+            try:
+                driver = webdriver.Chrome('C:\\chromedriver_win32\\chromedriver.exe')
+                connection = True
+            except WebDriverException:
+                pass
+
         url = url[:-1]
         print(url)
         driver.get(url)
