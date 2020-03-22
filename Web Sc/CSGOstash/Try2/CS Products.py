@@ -179,12 +179,14 @@ def conv_wear(strname):
     i = wear_names.index(strname)
     return wear_ranges[i]
     
-f = open('Collections.txt','r')
+f = open('Priority.txt','r')
 cases = f.readlines()
 f.close()
 
+
 cases_only = [c[c.rfind('/')+1:-1] for c in cases]
-for case in cases_only[1:]:
+
+for case in cases_only:
     print(case)
     data = get_data(case)
     tree_save(data,case)

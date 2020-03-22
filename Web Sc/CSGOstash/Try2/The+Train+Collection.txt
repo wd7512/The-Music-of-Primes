@@ -1,8 +1,3 @@
-https://steamcommunity.com/market/listings/730/Katowice%202019%20Train%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="Katowice 2019 Train Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/Boston%202018%20Train%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="Boston 2018 Train Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/Atlanta%202017%20Train%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="Atlanta 2017 Train Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/MLG%20Columbus%202016%20Train%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="MLG Columbus 2016 Train Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/ESL%20One%20Cologne%202015%20Train%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="ESL One Cologne 2015 Train Souvenir Package" target="_blank" rel="nofollow
 https://csgostash.com/skin/216/Tec-9-Red-Quartz
 https://csgostash.com/skin/215/Desert-Eagle-Urban-Rubble
 https://csgostash.com/skin/220/Sawed-Off-Amber-Fade
