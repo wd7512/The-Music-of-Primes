@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 
 def add_data():
     while True:
@@ -23,7 +24,7 @@ def get_data():
     return data
     
 def ana_data():
-    bet = 1
+    bet = 0.01
     values = np.arange(1,10,0.1).tolist()
     profit_list = []
     data = get_data()
@@ -37,16 +38,18 @@ def ana_data():
                 win_freq = win_freq + 1
 
         win_freq = win_freq / tot
-        profit = win_freq * (bet * (val - 1)) - bet * (1 - win_freq)
+        profit = (win_freq * floor(bet*(val-1)) - bet * (1 - win_freq)) / bet
         
         profit_list.append(profit)
         win_freqs.append(win_freq)
 
     
-    plt.plot(values,win_freqs)
-    #plt.plot(values,profit_list)
+    #plt.plot(values,win_freqs)
+    plt.plot(values,profit_list)
+    plt.plot(values,[0 for i in range(len(values))],'g--')
     plt.show()
 
+def floor(a):
+    return math.floor(a * 100)/100.0
 
-
-
+add_data()
