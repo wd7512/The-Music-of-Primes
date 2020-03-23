@@ -44,7 +44,7 @@ def ana_data(bet):
         win_freqs.append(win_freq)
 
     
-    #plt.plot(values,win_freqs)
+    plt.plot(values,win_freqs)
     plt.plot(values,profit_list)
     plt.plot(values,[0 for i in range(len(values))],'g--')
     
