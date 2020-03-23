@@ -55,5 +55,5 @@ def floor(a):
 
 def bet_var():
     for i in range(10):
-        ana_data((i+1) * 0.1)
+        ana_data((i+1) * 0.01)
     plt.show()
