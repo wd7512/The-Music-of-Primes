@@ -23,8 +23,8 @@ def get_data():
 
     return data
     
-def ana_data():
-    bet = 0.01
+def ana_data(bet):
+
     values = np.arange(1,10,0.1).tolist()
     profit_list = []
     data = get_data()
@@ -47,9 +47,13 @@ def ana_data():
     #plt.plot(values,win_freqs)
     plt.plot(values,profit_list)
     plt.plot(values,[0 for i in range(len(values))],'g--')
-    plt.show()
+    
 
 def floor(a):
     return math.floor(a * 100)/100.0
 
-add_data()
+
+def bet_var():
+    for i in range(10):
+        ana_data((i+1) * 0.1)
+    plt.show()
