@@ -25,7 +25,7 @@ def get_data():
     
 def ana_data(bet):
 
-    values = np.arange(1,10,0.1).tolist()
+    values = np.arange(1,15,0.1).tolist()
     profit_list = []
     data = get_data()
     tot = len(data)
@@ -38,16 +38,20 @@ def ana_data(bet):
                 win_freq = win_freq + 1
 
         win_freq = win_freq / tot
-        profit = (win_freq * floor(bet*(val-1)) - bet * (1 - win_freq)) / bet
+        profit = (win_freq * floor(bet*(val-1))) - (bet * (1 - win_freq))
+        profit_percent = profit / bet
         
-        profit_list.append(profit)
+        profit_list.append(profit_percent)
         win_freqs.append(win_freq)
 
     
-    plt.plot(values,win_freqs)
-    plt.plot(values,profit_list)
+    #plt.plot(values,win_freqs)
+    plt.plot(values,profit_list, label = str(bet))
     plt.plot(values,[0 for i in range(len(values))],'g--')
     
+    
+
+
 
 def floor(a):
     return math.floor(a * 100)/100.0
@@ -55,5 +59,18 @@ def floor(a):
 
 def bet_var():
     ana_data(0.01)
+    ana_data(0.02)
     ana_data(0.1)
+    plt.legend()
     plt.show()
+
+def hist():
+    data = get_data()
+    std = np.std(data)
+    print(std)
+    small_data = [k for k in data if k < 10]
+    plt.hist(small_data,bins = 44,color = 'yellow',edgecolor='black')
+
+    plt.show()
+
+
