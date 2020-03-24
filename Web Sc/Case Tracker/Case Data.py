@@ -34,8 +34,15 @@ def get_data(urls):
         Volume = cut_find_text('<span class="pull-right">',Median,0)
 
         Listings = int(Listings[:Listings.find('<')])
-        Median = float(Median[:Median.find('<')].replace('£',''))
-        Volume = int(Volume[:Volume.find('<')])
+        try:
+            Median = float(Median[:Median.find('<')].replace('£',''))
+            
+        except ValueError:
+            Median = ' '
+        try:
+            Volume = int(Volume[:Volume.find('<')])
+        except ValueError:
+            Volume = ' '
 
         data.append([name,Listings,Median,Volume])
 
@@ -74,6 +81,7 @@ def update():
     f = open('Medians.csv','a')
     Medians = ','.join(str(d[2]) for d in data)
     to_write = dt + ',' + Medians + '\n'
+    print(to_write)
     f.write(to_write)
     f.close()
 
