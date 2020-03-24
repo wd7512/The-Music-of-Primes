@@ -29,6 +29,7 @@ def ana_data(bet):
     profit_list = []
     data = get_data()
     tot = len(data)
+    print(tot)
     win_freqs = []
     for val in values:
         profit = 0
@@ -45,7 +46,7 @@ def ana_data(bet):
         win_freqs.append(win_freq)
 
     
-    #plt.plot(values,win_freqs)
+    plt.plot(values,win_freqs)
     plt.plot(values,profit_list, label = str(bet))
     plt.plot(values,[0 for i in range(len(values))],'g--')
     
@@ -60,6 +61,7 @@ def floor(a):
 def bet_var():
     ana_data(0.01)
     ana_data(0.02)
+    ana_data(0.05)
     ana_data(0.1)
     plt.legend()
     plt.show()
