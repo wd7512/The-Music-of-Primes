@@ -25,7 +25,7 @@ def get_data():
     
 def ana_data(bet):
 
-    values = np.arange(1,15,0.1).tolist()
+    values = np.arange(1,30,0.1).tolist()
     profit_list = []
     data = get_data()
     tot = len(data)
