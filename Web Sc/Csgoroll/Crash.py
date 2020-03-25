@@ -23,11 +23,11 @@ def get_data():
 
     return data
     
-def ana_data(bet):
+def ana_data(bet,data):
 
-    values = np.arange(1,30,0.1).tolist()
+    values = np.arange(1,30,0.05).tolist()
     profit_list = []
-    data = get_data()
+    
     tot = len(data)
     print(tot)
     win_freqs = []
@@ -59,19 +59,39 @@ def floor(a):
 
 
 def bet_var():
-    ana_data(0.01)
-    ana_data(0.02)
-    ana_data(0.05)
-    ana_data(0.1)
+    data = get_data()
+    print('Mean : '+str(sum(data)/len(data)))
+    ana_data(0.01,data)
+    ana_data(0.02,data)
+    ana_data(0.05,data)
+    ana_data(0.1,data)
     plt.legend()
+    plt.show()
+
+def split_var():
+    data = get_data()
+    d1 = []
+    d2 = []
+    d3 = []
+    for i in range(len(data)):
+        if i % 3 == 0:
+            d1.append(data[i])
+        elif i % 3 == 1:
+            d2.append(data[i])
+        else:
+            d3.append(data[i])
+
+    ana_data(1,d1)
+    ana_data(1,d2)
+    ana_data(1,d3)
     plt.show()
 
 def hist():
     data = get_data()
     std = np.std(data)
     print(std)
-    small_data = [k for k in data if k < 10]
-    plt.hist(small_data,bins = 44,color = 'yellow',edgecolor='black')
+    small_data = [k for k in data if k < 30]
+    plt.hist(small_data,bins = 44*3,color = 'yellow',edgecolor='black')
 
     plt.show()
 
