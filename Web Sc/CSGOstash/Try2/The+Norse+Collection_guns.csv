@@ -1,87 +1,173 @@
 Name,Rarity,Price,Price x 10,Max Avg. Float input
-Factory New_AWP-Gungnir,Covert,FN,FNFNFNFNFNFNFNFNFNFN,0.116666667
+Stat-Trak_Factory New_AWP-Gungnir,Covert,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.11666666666666668
+Stat-Trak_Minimal Wear_AWP-Gungnir,Covert,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.25
+Stat-Trak_Field-Tested_AWP-Gungnir,Covert,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.6333333333333334
+Stat-Trak_Well-Worn_AWP-Gungnir,Covert,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.75
+Stat-Trak_Battle-Scarred_AWP-Gungnir,Covert,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.6666666666666667
+Factory New_AWP-Gungnir,Covert,FN,FNFNFNFNFNFNFNFNFNFN,0.11666666666666668
 Minimal Wear_AWP-Gungnir,Covert,MW,MWMWMWMWMWMWMWMWMWMW,0.25
-Field-Tested_AWP-Gungnir,Covert,FT,FTFTFTFTFTFTFTFTFTFT,0.633333333
+Field-Tested_AWP-Gungnir,Covert,FT,FTFTFTFTFTFTFTFTFTFT,0.6333333333333334
 Well-Worn_AWP-Gungnir,Covert,WW,WWWWWWWWWWWWWWWWWWWW,0.75
-Battle-Scarred_AWP-Gungnir,Covert,BS,BSBSBSBSBSBSBSBSBSBS,1.666666667
-Factory New_Negev-Mj%C3%B6lnir,Classified,470.53,4705.3,0.116666667
-Minimal Wear_Negev-Mj%C3%B6lnir,Classified,411.79,4117.9,0.25
-Field-Tested_Negev-Mj%C3%B6lnir,Classified,309.67,3096.7,0.633333333
-Well-Worn_Negev-Mj%C3%B6lnir,Classified,313.46,3134.6,0.75
-Battle-Scarred_Negev-Mj%C3%B6lnir,Classified,258.58,2585.8,1.666666667
-Factory New_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.57,635.7,0.14
-Minimal Wear_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,49.57,495.7,0.3
-Field-Tested_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,36.95,369.5,0.76
-Well-Worn_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,44.91,449.1,0.9
-Battle-Scarred_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,44.63,446.3,2
-Factory New_P90-Astral-J%C3%B6rmungandr,Restricted,52.25,522.5,0.14
-Minimal Wear_P90-Astral-J%C3%B6rmungandr,Restricted,42.2,422,0.3
-Field-Tested_P90-Astral-J%C3%B6rmungandr,Restricted,32.7,327,0.76
-Well-Worn_P90-Astral-J%C3%B6rmungandr,Restricted,33.22,332.2,0.9
-Battle-Scarred_P90-Astral-J%C3%B6rmungandr,Restricted,36.63,366.3,2
-Factory New_AUG-Flame-J%C3%B6rmungandr,Restricted,47.06,470.6,0.14
-Minimal Wear_AUG-Flame-J%C3%B6rmungandr,Restricted,42.12,421.2,0.3
-Field-Tested_AUG-Flame-J%C3%B6rmungandr,Restricted,35.41,354.1,0.76
-Well-Worn_AUG-Flame-J%C3%B6rmungandr,Restricted,36.88,368.8,0.9
-Battle-Scarred_AUG-Flame-J%C3%B6rmungandr,Restricted,33,330,2
-Factory New_MAC-10-Copper-Borre,Mil-Spec,7.72,77.2,0.14
-Minimal Wear_MAC-10-Copper-Borre,Mil-Spec,7.7,77,0.3
-Field-Tested_MAC-10-Copper-Borre,Mil-Spec,6.76,67.6,0.76
-Well-Worn_MAC-10-Copper-Borre,Mil-Spec,6.74,67.4,0.9
-Battle-Scarred_MAC-10-Copper-Borre,Mil-Spec,6.66,66.6,2
-Factory New_XM1014-Frost-Borre,Mil-Spec,7.79,77.9,0.14
-Minimal Wear_XM1014-Frost-Borre,Mil-Spec,7.57,75.7,0.3
-Field-Tested_XM1014-Frost-Borre,Mil-Spec,6.42,64.2,0.76
-Well-Worn_XM1014-Frost-Borre,Mil-Spec,6.65,66.5,0.9
-Battle-Scarred_XM1014-Frost-Borre,Mil-Spec,6.63,66.3,2
-Factory New_CZ75-Auto-Emerald-Quartz,Mil-Spec,8.34,83.4,0.1
-Minimal Wear_CZ75-Auto-Emerald-Quartz,Mil-Spec,7.89,78.9,0.214285714
-Field-Tested_CZ75-Auto-Emerald-Quartz,Mil-Spec,6.42,64.2,0.542857143
-Well-Worn_CZ75-Auto-Emerald-Quartz,Mil-Spec,6.71,67.1,0.642857143
-Battle-Scarred_CZ75-Auto-Emerald-Quartz,Mil-Spec,6.28,62.8,1.428571429
-Factory New_SCAR-20-Brass,Mil-Spec,8.16,81.6,0.07
-Minimal Wear_SCAR-20-Brass,Mil-Spec,7.22,72.2,0.15
-Field-Tested_SCAR-20-Brass,Mil-Spec,7.08,70.8,0.38
-Well-Worn_SCAR-20-Brass,Mil-Spec,6.42,64.2,0.45
-Battle-Scarred_SCAR-20-Brass,Mil-Spec,6.86,68.6,1
-Factory New_Dual-Berettas-Pyre,Industrial,1.74,17.4,0.020408163
-Minimal Wear_Dual-Berettas-Pyre,Industrial,0.83,8.3,0.183673469
-Field-Tested_Dual-Berettas-Pyre,Industrial,0.76,7.6,0.653061224
-Well-Worn_Dual-Berettas-Pyre,Industrial,0.75,7.5,0.795918367
-Battle-Scarred_Dual-Berettas-Pyre,Industrial,0.76,7.6,1.918367347
-Factory New_MAG-7-Chainmail,Industrial,0.91,9.1,0.318181818
-Minimal Wear_MAG-7-Chainmail,Industrial,0.83,8.3,0.681818182
-Field-Tested_MAG-7-Chainmail,Industrial,0.82,8.2,1.727272727
-Factory New_USP-S-Pathfinder,Industrial,0.9,9,0.2
-Minimal Wear_USP-S-Pathfinder,Industrial,0.84,8.4,0.428571429
-Field-Tested_USP-S-Pathfinder,Industrial,0.79,7.9,1.085714286
-Factory New_M4A1-S-Moss-Quartz,Industrial,0.94,9.4,0.14
-Minimal Wear_M4A1-S-Moss-Quartz,Industrial,0.84,8.4,0.3
-Field-Tested_M4A1-S-Moss-Quartz,Industrial,0.78,7.8,0.76
-Well-Worn_M4A1-S-Moss-Quartz,Industrial,0.8,8,0.9
-Battle-Scarred_M4A1-S-Moss-Quartz,Industrial,0.85,8.5,2
-Factory New_SSG-08-Red-Stone,Consumer,0.61,6.1,0.022727273
-Minimal Wear_SSG-08-Red-Stone,Consumer,0.11,1.1,0.204545455
-Field-Tested_SSG-08-Red-Stone,Consumer,0.09,0.9,0.727272727
-Well-Worn_SSG-08-Red-Stone,Consumer,0.08,0.8,0.886363636
-Battle-Scarred_SSG-08-Red-Stone,Consumer,0.08,0.8,2.136363636
-Factory New_Galil-AR-Tornado,Consumer,0.48,4.8,0.013513514
-Minimal Wear_Galil-AR-Tornado,Consumer,0.1,1,0.121621622
-Field-Tested_Galil-AR-Tornado,Consumer,0.09,0.9,0.432432432
-Well-Worn_Galil-AR-Tornado,Consumer,0.09,0.9,0.527027027
-Battle-Scarred_Galil-AR-Tornado,Consumer,0.08,0.8,1.27027027
-Factory New_MP7-Scorched,Consumer,0.3,3,0.013513514
-Minimal Wear_MP7-Scorched,Consumer,0.1,1,0.121621622
-Field-Tested_MP7-Scorched,Consumer,0.09,0.9,0.432432432
-Well-Worn_MP7-Scorched,Consumer,0.09,0.9,0.527027027
-Battle-Scarred_MP7-Scorched,Consumer,0.09,0.9,1.27027027
-Factory New_SG-553-Barricade,Consumer,0.16,1.6,0.107692308
-Minimal Wear_SG-553-Barricade,Consumer,0.1,1,0.230769231
-Field-Tested_SG-553-Barricade,Consumer,0.09,0.9,0.584615385
-Well-Worn_SG-553-Barricade,Consumer,0.09,0.9,0.692307692
-Battle-Scarred_SG-553-Barricade,Consumer,0.08,0.8,1.538461538
-Factory New_FAMAS-Night-Borre,Consumer,0.17,1.7,0.127272727
-Minimal Wear_FAMAS-Night-Borre,Consumer,0.09,0.9,0.272727273
-Field-Tested_FAMAS-Night-Borre,Consumer,0.09,0.9,0.690909091
-Well-Worn_FAMAS-Night-Borre,Consumer,0.09,0.9,0.818181818
-Battle-Scarred_FAMAS-Night-Borre,Consumer,0.08,0.8,1.818181818
+Battle-Scarred_AWP-Gungnir,Covert,BS,BSBSBSBSBSBSBSBSBSBS,1.6666666666666667
+Stat-Trak_Factory New_Negev-Mj%C3%B6lnir,Classified,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.11666666666666668
+Stat-Trak_Minimal Wear_Negev-Mj%C3%B6lnir,Classified,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.25
+Stat-Trak_Field-Tested_Negev-Mj%C3%B6lnir,Classified,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.6333333333333334
+Stat-Trak_Well-Worn_Negev-Mj%C3%B6lnir,Classified,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.75
+Stat-Trak_Battle-Scarred_Negev-Mj%C3%B6lnir,Classified,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.6666666666666667
+Factory New_Negev-Mj%C3%B6lnir,Classified,440.92,4409.2,0.11666666666666668
+Minimal Wear_Negev-Mj%C3%B6lnir,Classified,404.88,4048.8,0.25
+Field-Tested_Negev-Mj%C3%B6lnir,Classified,317.32,3173.2,0.6333333333333334
+Well-Worn_Negev-Mj%C3%B6lnir,Classified,306.14,3061.3999999999996,0.75
+Battle-Scarred_Negev-Mj%C3%B6lnir,Classified,284.71,2847.1,1.6666666666666667
+Stat-Trak_Factory New_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.14
+Stat-Trak_Minimal Wear_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.3
+Stat-Trak_Field-Tested_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.76
+Stat-Trak_Well-Worn_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.9
+Stat-Trak_Battle-Scarred_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.0
+Factory New_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,63.86,638.6,0.14
+Minimal Wear_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,44.62,446.2,0.3
+Field-Tested_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,38.01,380.09999999999997,0.76
+Well-Worn_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,36.55,365.5,0.9
+Battle-Scarred_Desert-Eagle-Emerald-J%C3%B6rmungandr,Restricted,34.42,344.20000000000005,2.0
+Stat-Trak_Factory New_P90-Astral-J%C3%B6rmungandr,Restricted,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.14
+Stat-Trak_Minimal Wear_P90-Astral-J%C3%B6rmungandr,Restricted,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.3
+Stat-Trak_Field-Tested_P90-Astral-J%C3%B6rmungandr,Restricted,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.76
+Stat-Trak_Well-Worn_P90-Astral-J%C3%B6rmungandr,Restricted,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.9
+Stat-Trak_Battle-Scarred_P90-Astral-J%C3%B6rmungandr,Restricted,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.0
+Factory New_P90-Astral-J%C3%B6rmungandr,Restricted,45.66,456.59999999999997,0.14
+Minimal Wear_P90-Astral-J%C3%B6rmungandr,Restricted,41.49,414.90000000000003,0.3
+Field-Tested_P90-Astral-J%C3%B6rmungandr,Restricted,36.75,367.5,0.76
+Well-Worn_P90-Astral-J%C3%B6rmungandr,Restricted,38.86,388.6,0.9
+Battle-Scarred_P90-Astral-J%C3%B6rmungandr,Restricted,38.39,383.9,2.0
+Stat-Trak_Factory New_AUG-Flame-J%C3%B6rmungandr,Restricted,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.14
+Stat-Trak_Minimal Wear_AUG-Flame-J%C3%B6rmungandr,Restricted,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.3
+Stat-Trak_Field-Tested_AUG-Flame-J%C3%B6rmungandr,Restricted,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.76
+Stat-Trak_Well-Worn_AUG-Flame-J%C3%B6rmungandr,Restricted,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.9
+Stat-Trak_Battle-Scarred_AUG-Flame-J%C3%B6rmungandr,Restricted,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.0
+Factory New_AUG-Flame-J%C3%B6rmungandr,Restricted,45.04,450.4,0.14
+Minimal Wear_AUG-Flame-J%C3%B6rmungandr,Restricted,42.13,421.3,0.3
+Field-Tested_AUG-Flame-J%C3%B6rmungandr,Restricted,37.08,370.79999999999995,0.76
+Well-Worn_AUG-Flame-J%C3%B6rmungandr,Restricted,37.18,371.8,0.9
+Battle-Scarred_AUG-Flame-J%C3%B6rmungandr,Restricted,36.31,363.1,2.0
+Stat-Trak_Factory New_MAC-10-Copper-Borre,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.14
+Stat-Trak_Minimal Wear_MAC-10-Copper-Borre,Mil-Spec,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.3
+Stat-Trak_Field-Tested_MAC-10-Copper-Borre,Mil-Spec,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.76
+Stat-Trak_Well-Worn_MAC-10-Copper-Borre,Mil-Spec,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.9
+Stat-Trak_Battle-Scarred_MAC-10-Copper-Borre,Mil-Spec,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.0
+Factory New_MAC-10-Copper-Borre,Mil-Spec,8.19,81.89999999999999,0.14
+Minimal Wear_MAC-10-Copper-Borre,Mil-Spec,7.78,77.8,0.3
+Field-Tested_MAC-10-Copper-Borre,Mil-Spec,7.22,72.2,0.76
+Well-Worn_MAC-10-Copper-Borre,Mil-Spec,7.58,75.8,0.9
+Battle-Scarred_MAC-10-Copper-Borre,Mil-Spec,6.47,64.7,2.0
+Stat-Trak_Factory New_XM1014-Frost-Borre,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.14
+Stat-Trak_Minimal Wear_XM1014-Frost-Borre,Mil-Spec,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.3
+Stat-Trak_Field-Tested_XM1014-Frost-Borre,Mil-Spec,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.76
+Stat-Trak_Well-Worn_XM1014-Frost-Borre,Mil-Spec,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.9
+Stat-Trak_Battle-Scarred_XM1014-Frost-Borre,Mil-Spec,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.0
+Factory New_XM1014-Frost-Borre,Mil-Spec,8.21,82.10000000000001,0.14
+Minimal Wear_XM1014-Frost-Borre,Mil-Spec,7.78,77.8,0.3
+Field-Tested_XM1014-Frost-Borre,Mil-Spec,7.07,70.7,0.76
+Well-Worn_XM1014-Frost-Borre,Mil-Spec,6.75,67.5,0.9
+Battle-Scarred_XM1014-Frost-Borre,Mil-Spec,6.16,61.6,2.0
+Stat-Trak_Factory New_CZ75-Auto-Emerald-Quartz,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.10000000000000002
+Stat-Trak_Minimal Wear_CZ75-Auto-Emerald-Quartz,Mil-Spec,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.2142857142857143
+Stat-Trak_Field-Tested_CZ75-Auto-Emerald-Quartz,Mil-Spec,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.5428571428571429
+Stat-Trak_Well-Worn_CZ75-Auto-Emerald-Quartz,Mil-Spec,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.6428571428571429
+Stat-Trak_Battle-Scarred_CZ75-Auto-Emerald-Quartz,Mil-Spec,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.4285714285714286
+Factory New_CZ75-Auto-Emerald-Quartz,Mil-Spec,8.49,84.9,0.10000000000000002
+Minimal Wear_CZ75-Auto-Emerald-Quartz,Mil-Spec,8.06,80.60000000000001,0.2142857142857143
+Field-Tested_CZ75-Auto-Emerald-Quartz,Mil-Spec,6.67,66.7,0.5428571428571429
+Well-Worn_CZ75-Auto-Emerald-Quartz,Mil-Spec,6.83,68.3,0.6428571428571429
+Battle-Scarred_CZ75-Auto-Emerald-Quartz,Mil-Spec,6.55,65.5,1.4285714285714286
+Stat-Trak_Factory New_SCAR-20-Brass,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.07
+Stat-Trak_Minimal Wear_SCAR-20-Brass,Mil-Spec,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.15
+Stat-Trak_Field-Tested_SCAR-20-Brass,Mil-Spec,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.38
+Stat-Trak_Well-Worn_SCAR-20-Brass,Mil-Spec,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.45
+Stat-Trak_Battle-Scarred_SCAR-20-Brass,Mil-Spec,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.0
+Factory New_SCAR-20-Brass,Mil-Spec,8.09,80.9,0.07
+Minimal Wear_SCAR-20-Brass,Mil-Spec,7.72,77.2,0.15
+Field-Tested_SCAR-20-Brass,Mil-Spec,7.39,73.89999999999999,0.38
+Well-Worn_SCAR-20-Brass,Mil-Spec,6.17,61.7,0.45
+Battle-Scarred_SCAR-20-Brass,Mil-Spec,6.38,63.8,1.0
+Stat-Trak_Factory New_Dual-Berettas-Pyre,Industrial,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.020408163265306138
+Stat-Trak_Minimal Wear_Dual-Berettas-Pyre,Industrial,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.18367346938775508
+Stat-Trak_Field-Tested_Dual-Berettas-Pyre,Industrial,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.6530612244897959
+Stat-Trak_Well-Worn_Dual-Berettas-Pyre,Industrial,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.7959183673469388
+Stat-Trak_Battle-Scarred_Dual-Berettas-Pyre,Industrial,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.9183673469387752
+Factory New_Dual-Berettas-Pyre,Industrial,1.62,16.200000000000003,0.020408163265306138
+Minimal Wear_Dual-Berettas-Pyre,Industrial,0.88,8.8,0.18367346938775508
+Field-Tested_Dual-Berettas-Pyre,Industrial,0.87,8.7,0.6530612244897959
+Well-Worn_Dual-Berettas-Pyre,Industrial,0.81,8.100000000000001,0.7959183673469388
+Battle-Scarred_Dual-Berettas-Pyre,Industrial,0.8,8.0,1.9183673469387752
+Stat-Trak_Factory New_MAG-7-Chainmail,Industrial,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.31818181818181823
+Stat-Trak_Minimal Wear_MAG-7-Chainmail,Industrial,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.6818181818181818
+Stat-Trak_Field-Tested_MAG-7-Chainmail,Industrial,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,1.7272727272727273
+Factory New_MAG-7-Chainmail,Industrial,0.98,9.8,0.31818181818181823
+Minimal Wear_MAG-7-Chainmail,Industrial,0.9,9.0,0.6818181818181818
+Field-Tested_MAG-7-Chainmail,Industrial,0.87,8.7,1.7272727272727273
+Stat-Trak_Factory New_USP-S-Pathfinder,Industrial,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.20000000000000004
+Stat-Trak_Minimal Wear_USP-S-Pathfinder,Industrial,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.4285714285714286
+Stat-Trak_Field-Tested_USP-S-Pathfinder,Industrial,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,1.0857142857142859
+Factory New_USP-S-Pathfinder,Industrial,0.93,9.3,0.20000000000000004
+Minimal Wear_USP-S-Pathfinder,Industrial,0.87,8.7,0.4285714285714286
+Field-Tested_USP-S-Pathfinder,Industrial,0.85,8.5,1.0857142857142859
+Stat-Trak_Factory New_M4A1-S-Moss-Quartz,Industrial,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.14
+Stat-Trak_Minimal Wear_M4A1-S-Moss-Quartz,Industrial,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.3
+Stat-Trak_Field-Tested_M4A1-S-Moss-Quartz,Industrial,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.76
+Stat-Trak_Well-Worn_M4A1-S-Moss-Quartz,Industrial,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.9
+Stat-Trak_Battle-Scarred_M4A1-S-Moss-Quartz,Industrial,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.0
+Factory New_M4A1-S-Moss-Quartz,Industrial,0.99,9.9,0.14
+Minimal Wear_M4A1-S-Moss-Quartz,Industrial,0.89,8.9,0.3
+Field-Tested_M4A1-S-Moss-Quartz,Industrial,0.87,8.7,0.76
+Well-Worn_M4A1-S-Moss-Quartz,Industrial,0.82,8.2,0.9
+Battle-Scarred_M4A1-S-Moss-Quartz,Industrial,0.81,8.100000000000001,2.0
+Stat-Trak_Factory New_SSG-08-Red-Stone,Consumer,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.02272727272727275
+Stat-Trak_Minimal Wear_SSG-08-Red-Stone,Consumer,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.20454545454545453
+Stat-Trak_Field-Tested_SSG-08-Red-Stone,Consumer,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.7272727272727273
+Stat-Trak_Well-Worn_SSG-08-Red-Stone,Consumer,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.8863636363636364
+Stat-Trak_Battle-Scarred_SSG-08-Red-Stone,Consumer,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.1363636363636362
+Factory New_SSG-08-Red-Stone,Consumer,0.59,5.8999999999999995,0.02272727272727275
+Minimal Wear_SSG-08-Red-Stone,Consumer,0.1,1.0,0.20454545454545453
+Field-Tested_SSG-08-Red-Stone,Consumer,0.09,0.8999999999999999,0.7272727272727273
+Well-Worn_SSG-08-Red-Stone,Consumer,0.09,0.8999999999999999,0.8863636363636364
+Battle-Scarred_SSG-08-Red-Stone,Consumer,0.09,0.8999999999999999,2.1363636363636362
+Stat-Trak_Factory New_Galil-AR-Tornado,Consumer,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.013513513513513526
+Stat-Trak_Minimal Wear_Galil-AR-Tornado,Consumer,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.12162162162162161
+Stat-Trak_Field-Tested_Galil-AR-Tornado,Consumer,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.43243243243243246
+Stat-Trak_Well-Worn_Galil-AR-Tornado,Consumer,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.5270270270270271
+Stat-Trak_Battle-Scarred_Galil-AR-Tornado,Consumer,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.2702702702702702
+Factory New_Galil-AR-Tornado,Consumer,0.49,4.9,0.013513513513513526
+Minimal Wear_Galil-AR-Tornado,Consumer,0.1,1.0,0.12162162162162161
+Field-Tested_Galil-AR-Tornado,Consumer,0.09,0.8999999999999999,0.43243243243243246
+Well-Worn_Galil-AR-Tornado,Consumer,0.09,0.8999999999999999,0.5270270270270271
+Battle-Scarred_Galil-AR-Tornado,Consumer,0.09,0.8999999999999999,1.2702702702702702
+Stat-Trak_Factory New_MP7-Scorched,Consumer,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.013513513513513526
+Stat-Trak_Minimal Wear_MP7-Scorched,Consumer,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.12162162162162161
+Stat-Trak_Field-Tested_MP7-Scorched,Consumer,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.43243243243243246
+Stat-Trak_Well-Worn_MP7-Scorched,Consumer,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.5270270270270271
+Stat-Trak_Battle-Scarred_MP7-Scorched,Consumer,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.2702702702702702
+Factory New_MP7-Scorched,Consumer,0.28,2.8000000000000003,0.013513513513513526
+Minimal Wear_MP7-Scorched,Consumer,0.1,1.0,0.12162162162162161
+Field-Tested_MP7-Scorched,Consumer,0.09,0.8999999999999999,0.43243243243243246
+Well-Worn_MP7-Scorched,Consumer,0.09,0.8999999999999999,0.5270270270270271
+Battle-Scarred_MP7-Scorched,Consumer,0.09,0.8999999999999999,1.2702702702702702
+Stat-Trak_Factory New_SG-553-Barricade,Consumer,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.1076923076923077
+Stat-Trak_Minimal Wear_SG-553-Barricade,Consumer,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.23076923076923075
+Stat-Trak_Field-Tested_SG-553-Barricade,Consumer,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.5846153846153846
+Stat-Trak_Well-Worn_SG-553-Barricade,Consumer,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.6923076923076923
+Stat-Trak_Battle-Scarred_SG-553-Barricade,Consumer,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.5384615384615383
+Factory New_SG-553-Barricade,Consumer,0.16,1.6,0.1076923076923077
+Minimal Wear_SG-553-Barricade,Consumer,0.1,1.0,0.23076923076923075
+Field-Tested_SG-553-Barricade,Consumer,0.09,0.8999999999999999,0.5846153846153846
+Well-Worn_SG-553-Barricade,Consumer,0.09,0.8999999999999999,0.6923076923076923
+Battle-Scarred_SG-553-Barricade,Consumer,0.09,0.8999999999999999,1.5384615384615383
+Stat-Trak_Factory New_FAMAS-Night-Borre,Consumer,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.1272727272727273
+Stat-Trak_Minimal Wear_FAMAS-Night-Borre,Consumer,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.2727272727272727
+Stat-Trak_Field-Tested_FAMAS-Night-Borre,Consumer,STFT,STFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFTSTFT,0.6909090909090908
+Stat-Trak_Well-Worn_FAMAS-Night-Borre,Consumer,STWW,STWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWWSTWW,0.8181818181818181
+Stat-Trak_Battle-Scarred_FAMAS-Night-Borre,Consumer,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,1.8181818181818181
+Factory New_FAMAS-Night-Borre,Consumer,0.16,1.6,0.1272727272727273
+Minimal Wear_FAMAS-Night-Borre,Consumer,0.1,1.0,0.2727272727272727
+Field-Tested_FAMAS-Night-Borre,Consumer,0.09,0.8999999999999999,0.6909090909090908
+Well-Worn_FAMAS-Night-Borre,Consumer,0.1,1.0,0.8181818181818181
+Battle-Scarred_FAMAS-Night-Borre,Consumer,0.09,0.8999999999999999,1.8181818181818181
