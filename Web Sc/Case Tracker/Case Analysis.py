@@ -96,7 +96,7 @@ def plot(data):
                      'Operation-Hydra-Case']
     show_names = [k for k in case_names if k not in exclude_names]
     show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
-    #show_names = case_names[:]
+    show_names = case_names[:]
     print(show_names)
     
     sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names,case_names)
