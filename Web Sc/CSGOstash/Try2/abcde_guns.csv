@@ -1,0 +1,73 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Factory New_SSG-08-Blood-in-the-Water,Covert,205.06,2050.6,0.07142857142857148
+Stat-Trak_Minimal Wear_SSG-08-Blood-in-the-Water,Covert,77.2,772.0,0.6428571428571428
+Stat-Trak_Field-Tested_SSG-08-Blood-in-the-Water,Covert,84.43,844.3000000000001,2.2857142857142856
+Factory New_SSG-08-Blood-in-the-Water,Covert,34.62,346.2,0.07142857142857148
+Minimal Wear_SSG-08-Blood-in-the-Water,Covert,27.33,273.29999999999995,0.6428571428571428
+Field-Tested_SSG-08-Blood-in-the-Water,Covert,26.4,264.0,2.2857142857142856
+Stat-Trak_Factory New_P90-Cold-Blooded,Classified,28.45,284.5,0.8750000000000001
+Stat-Trak_Minimal Wear_P90-Cold-Blooded,Classified,36.59,365.90000000000003,1.875
+Factory New_P90-Cold-Blooded,Classified,22.19,221.9,0.8750000000000001
+Minimal Wear_P90-Cold-Blooded,Classified,20.61,206.1,1.875
+Stat-Trak_Factory New_USP-S-Serum,Classified,33.96,339.6,0.28
+Stat-Trak_Minimal Wear_USP-S-Serum,Classified,19.54,195.39999999999998,0.6
+Stat-Trak_Field-Tested_USP-S-Serum,Classified,18.23,182.3,1.52
+Factory New_USP-S-Serum,Classified,22.19,221.9,0.28
+Minimal Wear_USP-S-Serum,Classified,12.32,123.2,0.6
+Field-Tested_USP-S-Serum,Classified,12.11,121.1,1.52
+Stat-Trak_Factory New_Five-SeveN-Case-Hardened,Restricted,34.33,343.29999999999995,0.07
+Stat-Trak_Minimal Wear_Five-SeveN-Case-Hardened,Restricted,14.98,149.8,0.15
+Stat-Trak_Field-Tested_Five-SeveN-Case-Hardened,Restricted,8.28,82.8,0.38
+Stat-Trak_Well-Worn_Five-SeveN-Case-Hardened,Restricted,6.89,68.89999999999999,0.45
+Stat-Trak_Battle-Scarred_Five-SeveN-Case-Hardened,Restricted,6.52,65.19999999999999,1.0
+Factory New_Five-SeveN-Case-Hardened,Restricted,9.28,92.8,0.07
+Minimal Wear_Five-SeveN-Case-Hardened,Restricted,4.35,43.5,0.15
+Field-Tested_Five-SeveN-Case-Hardened,Restricted,3.09,30.9,0.38
+Well-Worn_Five-SeveN-Case-Hardened,Restricted,2.55,25.5,0.45
+Battle-Scarred_Five-SeveN-Case-Hardened,Restricted,2.42,24.2,1.0
+Stat-Trak_Factory New_MP9-Hypnotic,Restricted,8.66,86.6,0.8750000000000001
+Stat-Trak_Minimal Wear_MP9-Hypnotic,Restricted,7.73,77.30000000000001,1.875
+Factory New_MP9-Hypnotic,Restricted,4.04,40.4,0.8750000000000001
+Minimal Wear_MP9-Hypnotic,Restricted,4.64,46.4,1.875
+Stat-Trak_Factory New_Nova-Graphite,Restricted,6.59,65.9,0.5833333333333334
+Stat-Trak_Minimal Wear_Nova-Graphite,Restricted,5.25,52.5,1.25
+Factory New_Nova-Graphite,Restricted,3.03,30.299999999999997,0.5833333333333334
+Minimal Wear_Nova-Graphite,Restricted,3.17,31.7,1.25
+Stat-Trak_Factory New_Dual-Berettas-Hemoglobin,Restricted,7.3,73.0,0.35000000000000003
+Stat-Trak_Minimal Wear_Dual-Berettas-Hemoglobin,Restricted,5.03,50.300000000000004,0.7499999999999999
+Stat-Trak_Field-Tested_Dual-Berettas-Hemoglobin,Restricted,4.92,49.2,1.9
+Factory New_Dual-Berettas-Hemoglobin,Restricted,3.25,32.5,0.35000000000000003
+Minimal Wear_Dual-Berettas-Hemoglobin,Restricted,2.99,29.900000000000002,0.7499999999999999
+Field-Tested_Dual-Berettas-Hemoglobin,Restricted,2.52,25.2,1.9
+Stat-Trak_Factory New_SCAR-20-Crimson-Web,Mil-Spec,31.99,319.9,0.013513513513513526
+Stat-Trak_Minimal Wear_SCAR-20-Crimson-Web,Mil-Spec,2.36,23.599999999999998,0.12162162162162161
+Stat-Trak_Field-Tested_SCAR-20-Crimson-Web,Mil-Spec,1.55,15.5,0.43243243243243246
+Stat-Trak_Well-Worn_SCAR-20-Crimson-Web,Mil-Spec,1.22,12.2,0.5270270270270271
+Stat-Trak_Battle-Scarred_SCAR-20-Crimson-Web,Mil-Spec,1.19,11.899999999999999,1.2702702702702702
+Factory New_SCAR-20-Crimson-Web,Mil-Spec,6.73,67.30000000000001,0.013513513513513526
+Minimal Wear_SCAR-20-Crimson-Web,Mil-Spec,1.12,11.200000000000001,0.12162162162162161
+Field-Tested_SCAR-20-Crimson-Web,Mil-Spec,0.88,8.8,0.43243243243243246
+Well-Worn_SCAR-20-Crimson-Web,Mil-Spec,0.78,7.800000000000001,0.5270270270270271
+Battle-Scarred_SCAR-20-Crimson-Web,Mil-Spec,0.78,7.800000000000001,1.2702702702702702
+Stat-Trak_Factory New_M4A1-S-Blood-Tiger,Mil-Spec,9.11,91.1,0.23333333333333336
+Stat-Trak_Minimal Wear_M4A1-S-Blood-Tiger,Mil-Spec,6.0,60.0,0.5
+Stat-Trak_Field-Tested_M4A1-S-Blood-Tiger,Mil-Spec,5.67,56.7,1.2666666666666668
+Factory New_M4A1-S-Blood-Tiger,Mil-Spec,2.25,22.5,0.23333333333333336
+Minimal Wear_M4A1-S-Blood-Tiger,Mil-Spec,1.68,16.8,0.5
+Field-Tested_M4A1-S-Blood-Tiger,Mil-Spec,1.57,15.700000000000001,1.2666666666666668
+Stat-Trak_Factory New_Tec-9-Blue-Titanium,Mil-Spec,4.04,40.4,1.7500000000000002
+Factory New_Tec-9-Blue-Titanium,Mil-Spec,1.51,15.1,1.7500000000000002
+Stat-Trak_Factory New_FAMAS-Hexane,Mil-Spec,3.44,34.4,0.17500000000000002
+Stat-Trak_Minimal Wear_FAMAS-Hexane,Mil-Spec,2.27,22.7,0.37499999999999994
+Stat-Trak_Field-Tested_FAMAS-Hexane,Mil-Spec,1.98,19.8,0.95
+Stat-Trak_Well-Worn_FAMAS-Hexane,Mil-Spec,3.49,34.900000000000006,1.125
+Factory New_FAMAS-Hexane,Mil-Spec,1.54,15.4,0.17500000000000002
+Minimal Wear_FAMAS-Hexane,Mil-Spec,1.14,11.399999999999999,0.37499999999999994
+Field-Tested_FAMAS-Hexane,Mil-Spec,0.95,9.5,0.95
+Well-Worn_FAMAS-Hexane,Mil-Spec,1.07,10.700000000000001,1.125
+Stat-Trak_Factory New_P250-Hive,Mil-Spec,3.27,32.7,0.23333333333333336
+Stat-Trak_Minimal Wear_P250-Hive,Mil-Spec,2.19,21.9,0.5
+Stat-Trak_Field-Tested_P250-Hive,Mil-Spec,1.62,16.200000000000003,1.2666666666666668
+Factory New_P250-Hive,Mil-Spec,1.43,14.299999999999999,0.23333333333333336
+Minimal Wear_P250-Hive,Mil-Spec,1.02,10.2,0.5
+Field-Tested_P250-Hive,Mil-Spec,1.16,11.6,1.2666666666666668
