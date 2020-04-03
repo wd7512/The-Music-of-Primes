@@ -1,9 +1,3 @@
-https://steamcommunity.com/market/listings/730/Katowice%202019%20Dust%20II%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="Katowice 2019 Dust II Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/Atlanta%202017%20Dust%20II%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="Atlanta 2017 Dust II Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/MLG%20Columbus%202016%20Dust%20II%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="MLG Columbus 2016 Dust II Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/ESL%20One%20Cologne%202015%20Dust%20II%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="ESL One Cologne 2015 Dust II Souvenir Package" target="_blank" rel="nofollow
-https://steamcommunity.com/market/listings/730/DreamHack%202014%20Dust%20II%20Souvenir%20Package" class="btn btn-default market-button-item" data-gaevent="DreamHack 2014 Dust II Souvenir Package" target="_blank" rel="nofollow
-https://csgostash.com/family/Amber+Fade
 https://csgostash.com/skin/143/P2000-Amber-Fade
 https://csgostash.com/skin/139/SG-553-Damascus-Steel
 https://csgostash.com/skin/150/M4A1-S-VariCamo
