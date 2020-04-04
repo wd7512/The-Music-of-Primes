@@ -46,8 +46,10 @@ def plot(data):
     Listings = data[2]
     Medians = data[3]
     Volumes = data[4]
+    
     Total_Val_Sold = [] #Medians * Volumes
     Vol_List = [] # Volumes / Listings
+    
 
     Med_List = []
     Volume_List = []
@@ -83,8 +85,11 @@ def plot(data):
         Total_Val_Sold.append(line_t)
         Vol_List.append(line_v)
 
-    
 
+        
+        
+
+    
     
     
 
@@ -96,7 +101,7 @@ def plot(data):
                      'Operation-Hydra-Case']
     show_names = [k for k in case_names if k not in exclude_names]
     show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
-    #show_names = case_names[:]
+    show_names = case_names[:]
     print(show_names)
 
 
