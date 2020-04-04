@@ -86,7 +86,7 @@ def plot(data):
     
 
     
-    fig, axs = plt.subplots(2,3)
+    
 
     x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
 
@@ -98,7 +98,9 @@ def plot(data):
     show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
     #show_names = case_names[:]
     print(show_names)
-    
+
+
+    fig, axs = plt.subplots(2,3)
     sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names,case_names)
     sub_plot(axs[0,1],x_axis,Med_List,'Median Sale Price in last 24hr',show_names,case_names)
     sub_plot(axs[1,0],x_axis,Volume_List,'Volume Sold in last 24hr',show_names,case_names)
