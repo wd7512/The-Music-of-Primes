@@ -100,7 +100,7 @@ def plot(data):
                      'CS:GO-Weapon-Case-3','Winter-Offensive-Weapon-Case','Huntsman-Weapon-Case',
                      'Operation-Hydra-Case']
     show_names = [k for k in case_names if k not in exclude_names]
-    show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
+    show_names = ['Shattered-Web-Case','Prisma-2-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
     #show_names = case_names[:]
     print(show_names)
 
@@ -111,7 +111,7 @@ def plot(data):
     sub_plot(axs[1,0],x_axis,Volume_List,'Volume Sold in last 24hr',show_names,case_names)
     sub_plot(axs[1,1],x_axis,Total_Val_Sold,'Total Value Sold in last 24hr',show_names,case_names)
     sub_plot(axs[0,2],x_axis,Vol_List,'% of Listing being Sold',show_names,case_names)
-
+    
 
     plt.show()
 
