@@ -65,3 +65,15 @@
 [0410/122954.566:ERROR:exception_snapshot_win.cc(98)] thread ID 163584 not found in process
 [0410/122954.916:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0410/122954.916:ERROR:exception_snapshot_win.cc(98)] thread ID 88552 not found in process
+[0410/143459.566:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0410/143459.567:ERROR:exception_snapshot_win.cc(98)] thread ID 174388 not found in process
+[0410/143459.731:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0410/143459.731:ERROR:exception_snapshot_win.cc(98)] thread ID 173416 not found in process
+[0410/185222.837:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0410/185222.840:ERROR:exception_snapshot_win.cc(98)] thread ID 139632 not found in process
+[0410/185222.885:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0410/185222.885:ERROR:exception_snapshot_win.cc(98)] thread ID 175796 not found in process
+[0410/185223.079:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0410/185223.079:ERROR:exception_snapshot_win.cc(98)] thread ID 169464 not found in process
+[0410/185224.397:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0410/185224.397:ERROR:exception_snapshot_win.cc(98)] thread ID 175360 not found in process
