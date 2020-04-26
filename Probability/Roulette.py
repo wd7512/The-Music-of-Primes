@@ -44,30 +44,31 @@ def fast_bet(val,bet_col):
     return out
 
 def strat_1():
-    bal = [2**6]
+    bal = [2352]
 
-    bet_val = 1
+    init_bet = 25
+    bet_val = init_bet
 
     end = False
     while end == False:
-        add = fast_bet(bet_val,1)
+        add = fast_bet(bet_val,2)
         bal.append(bal[-1] + add)
         if add < 0:
             bet_val = bet_val * 2
         else:
-            bet_val = 1
+            bet_val = init_bet
 
         if bal[-1] < 0:
             end = True
 
-    #plt.plot(bal)
-    #plt.show()
+    plt.plot(bal)
+    plt.show()
 
     return bal
 
 def ana_1():
     
-    runs = 20
+    runs = 100
     lengths = []
     maxes = []
 
