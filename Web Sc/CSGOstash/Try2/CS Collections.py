@@ -10,7 +10,7 @@ normal_prices = []
 sale_prices = []
 volume = []
 
-f = open('Collections.txt','r')
+f = open('Priority.txt','r')
 urls = f.readlines()
 
 #print(url)

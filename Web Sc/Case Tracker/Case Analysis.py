@@ -46,8 +46,10 @@ def plot(data):
     Listings = data[2]
     Medians = data[3]
     Volumes = data[4]
+    
     Total_Val_Sold = [] #Medians * Volumes
     Vol_List = [] # Volumes / Listings
+    
 
     Med_List = []
     Volume_List = []
@@ -83,10 +85,16 @@ def plot(data):
         Total_Val_Sold.append(line_t)
         Vol_List.append(line_v)
 
-    
+
+        
+        
 
     
-    fig, axs = plt.subplots(2,3)
+    Tot_Val = []
+    for i in range(len(Total_Val_Sold[0])):
+        val = sum([k[i] for k in Total_Val_Sold])
+        Tot_Val.append(val)
+    
 
     x_axis = [x_time_conv(d[0],d[1]) for d in data_times]
 
@@ -95,16 +103,21 @@ def plot(data):
                      'CS:GO-Weapon-Case-3','Winter-Offensive-Weapon-Case','Huntsman-Weapon-Case',
                      'Operation-Hydra-Case']
     show_names = [k for k in case_names if k not in exclude_names]
-    show_names = ['Shattered-Web-Case','Glove-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
-    #show_names = case_names[:]
+    show_names = ['Shattered-Web-Case','Prisma-2-Case','Operation-Breakout-Weapon-Case','Spectrum-Case']
+    show_names = case_names[:]
+    show_names.remove('Prisma-2-Case')
     print(show_names)
-    
+
+
+    fig, axs = plt.subplots(2,3)
     sub_plot(axs[0,0],x_axis,Listings,'Total Listings',show_names,case_names)
     sub_plot(axs[0,1],x_axis,Med_List,'Median Sale Price in last 24hr',show_names,case_names)
     sub_plot(axs[1,0],x_axis,Volume_List,'Volume Sold in last 24hr',show_names,case_names)
     sub_plot(axs[1,1],x_axis,Total_Val_Sold,'Total Value Sold in last 24hr',show_names,case_names)
     sub_plot(axs[0,2],x_axis,Vol_List,'% of Listing being Sold',show_names,case_names)
-
+    axs[1,2].plot(x_axis,Tot_Val)
+    axs[1,2].set_title('Total Value of Market')
+    
 
     plt.show()
 

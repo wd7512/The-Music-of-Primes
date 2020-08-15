@@ -1,0 +1,109 @@
+Name,Rarity,Price,Price x 10,Max Avg. Float input
+Stat-Trak_Field-Tested_M4A4-Asiimov,Covert,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.24390243902439024
+Stat-Trak_Well-Worn_M4A4-Asiimov,Covert,STMW,STMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMWSTMW,0.32926829268292684
+Stat-Trak_Battle-Scarred_M4A4-Asiimov,Covert,264.83,2648.2999999999997,1.0
+Field-Tested_M4A4-Asiimov,Covert,FN,FNFNFNFNFNFNFNFNFNFN,0.24390243902439024
+Well-Worn_M4A4-Asiimov,Covert,MW,MWMWMWMWMWMWMWMWMWMW,0.32926829268292684
+Battle-Scarred_M4A4-Asiimov,Covert,88.73,887.3000000000001,1.0
+Stat-Trak_Factory New_Sawed-Off-The-Kraken,Covert,31.17,311.70000000000005,0.17500000000000002
+Stat-Trak_Minimal Wear_Sawed-Off-The-Kraken,Covert,13.98,139.8,0.37499999999999994
+Stat-Trak_Field-Tested_Sawed-Off-The-Kraken,Covert,11.36,113.6,0.95
+Stat-Trak_Well-Worn_Sawed-Off-The-Kraken,Covert,62.08,620.8,1.125
+Factory New_Sawed-Off-The-Kraken,Covert,6.09,60.9,0.17500000000000002
+Minimal Wear_Sawed-Off-The-Kraken,Covert,4.63,46.3,0.37499999999999994
+Field-Tested_Sawed-Off-The-Kraken,Covert,3.9,39.0,0.95
+Well-Worn_Sawed-Off-The-Kraken,Covert,7.3,73.0,1.125
+Stat-Trak_Minimal Wear_AWP-Redline,Classified,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.1666666666666666
+Stat-Trak_Field-Tested_AWP-Redline,Classified,70.43,704.3000000000001,0.9333333333333332
+Stat-Trak_Well-Worn_AWP-Redline,Classified,32.99,329.90000000000003,1.1666666666666665
+Minimal Wear_AWP-Redline,Classified,FN,FNFNFNFNFNFNFNFNFNFN,0.1666666666666666
+Field-Tested_AWP-Redline,Classified,24.95,249.5,0.9333333333333332
+Well-Worn_AWP-Redline,Classified,14.86,148.6,1.1666666666666665
+Stat-Trak_Factory New_M4A1-S-Guardian,Classified,36.46,364.6,0.14
+Stat-Trak_Minimal Wear_M4A1-S-Guardian,Classified,27.96,279.6,0.3
+Stat-Trak_Field-Tested_M4A1-S-Guardian,Classified,21.27,212.7,0.76
+Stat-Trak_Well-Worn_M4A1-S-Guardian,Classified,19.24,192.39999999999998,0.9
+Stat-Trak_Battle-Scarred_M4A1-S-Guardian,Classified,16.64,166.4,2.0
+Factory New_M4A1-S-Guardian,Classified,10.75,107.5,0.14
+Minimal Wear_M4A1-S-Guardian,Classified,8.16,81.6,0.3
+Field-Tested_M4A1-S-Guardian,Classified,6.84,68.4,0.76
+Well-Worn_M4A1-S-Guardian,Classified,6.46,64.6,0.9
+Battle-Scarred_M4A1-S-Guardian,Classified,7.35,73.5,2.0
+Stat-Trak_Factory New_P250-Mehndi,Classified,46.34,463.40000000000003,0.07
+Stat-Trak_Minimal Wear_P250-Mehndi,Classified,25.95,259.5,0.15
+Stat-Trak_Field-Tested_P250-Mehndi,Classified,15.64,156.4,0.38
+Stat-Trak_Well-Worn_P250-Mehndi,Classified,11.98,119.80000000000001,0.45
+Stat-Trak_Battle-Scarred_P250-Mehndi,Classified,8.75,87.5,1.0
+Factory New_P250-Mehndi,Classified,10.27,102.69999999999999,0.07
+Minimal Wear_P250-Mehndi,Classified,6.91,69.1,0.15
+Field-Tested_P250-Mehndi,Classified,6.54,65.4,0.38
+Well-Worn_P250-Mehndi,Classified,5.92,59.2,0.45
+Battle-Scarred_P250-Mehndi,Classified,5.22,52.199999999999996,1.0
+Stat-Trak_Factory New_MP9-Rose-Iron,Restricted,12.61,126.1,0.23333333333333336
+Stat-Trak_Minimal Wear_MP9-Rose-Iron,Restricted,8.8,88.0,0.5
+Stat-Trak_Field-Tested_MP9-Rose-Iron,Restricted,5.48,54.800000000000004,1.2666666666666668
+Factory New_MP9-Rose-Iron,Restricted,5.71,57.1,0.23333333333333336
+Minimal Wear_MP9-Rose-Iron,Restricted,4.8,48.0,0.5
+Field-Tested_MP9-Rose-Iron,Restricted,3.63,36.3,1.2666666666666668
+Stat-Trak_Factory New_FAMAS-Pulse,Restricted,8.56,85.60000000000001,0.17500000000000002
+Stat-Trak_Minimal Wear_FAMAS-Pulse,Restricted,5.47,54.699999999999996,0.37499999999999994
+Stat-Trak_Field-Tested_FAMAS-Pulse,Restricted,4.32,43.2,0.95
+Stat-Trak_Well-Worn_FAMAS-Pulse,Restricted,5.97,59.699999999999996,1.125
+Factory New_FAMAS-Pulse,Restricted,3.74,37.400000000000006,0.17500000000000002
+Minimal Wear_FAMAS-Pulse,Restricted,2.78,27.799999999999997,0.37499999999999994
+Field-Tested_FAMAS-Pulse,Restricted,2.47,24.700000000000003,0.95
+Well-Worn_FAMAS-Pulse,Restricted,4.63,46.3,1.125
+Stat-Trak_Factory New_Dual-Berettas-Marina,Restricted,19.95,199.5,0.04444444444444445
+Stat-Trak_Minimal Wear_Dual-Berettas-Marina,Restricted,5.14,51.4,0.2222222222222222
+Stat-Trak_Field-Tested_Dual-Berettas-Marina,Restricted,3.33,33.3,0.7333333333333334
+Stat-Trak_Well-Worn_Dual-Berettas-Marina,Restricted,3.18,31.8,0.888888888888889
+Stat-Trak_Battle-Scarred_Dual-Berettas-Marina,Restricted,3.06,30.6,2.111111111111111
+Factory New_Dual-Berettas-Marina,Restricted,5.75,57.5,0.04444444444444445
+Minimal Wear_Dual-Berettas-Marina,Restricted,2.18,21.8,0.2222222222222222
+Field-Tested_Dual-Berettas-Marina,Restricted,1.79,17.9,0.7333333333333334
+Well-Worn_Dual-Berettas-Marina,Restricted,1.71,17.1,0.888888888888889
+Battle-Scarred_Dual-Berettas-Marina,Restricted,1.79,17.9,2.111111111111111
+Stat-Trak_Factory New_Nova-Rising-Skull,Restricted,5.98,59.800000000000004,0.14
+Stat-Trak_Minimal Wear_Nova-Rising-Skull,Restricted,5.26,52.599999999999994,0.3
+Stat-Trak_Field-Tested_Nova-Rising-Skull,Restricted,3.71,37.1,0.76
+Stat-Trak_Well-Worn_Nova-Rising-Skull,Restricted,3.78,37.8,0.9
+Stat-Trak_Battle-Scarred_Nova-Rising-Skull,Restricted,5.38,53.8,2.0
+Factory New_Nova-Rising-Skull,Restricted,2.6,26.0,0.14
+Minimal Wear_Nova-Rising-Skull,Restricted,2.03,20.299999999999997,0.3
+Field-Tested_Nova-Rising-Skull,Restricted,1.8,18.0,0.76
+Well-Worn_Nova-Rising-Skull,Restricted,1.78,17.8,0.9
+Battle-Scarred_Nova-Rising-Skull,Restricted,1.69,16.9,2.0
+Stat-Trak_Minimal Wear_Galil-AR-Sandstorm,Mil-Spec,STFN,STFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFNSTFN,0.09999999999999998
+Stat-Trak_Field-Tested_Galil-AR-Sandstorm,Mil-Spec,2.44,24.4,0.56
+Stat-Trak_Well-Worn_Galil-AR-Sandstorm,Mil-Spec,0.6,6.0,0.7
+Stat-Trak_Battle-Scarred_Galil-AR-Sandstorm,Mil-Spec,1.25,12.5,1.8
+Minimal Wear_Galil-AR-Sandstorm,Mil-Spec,FN,FNFNFNFNFNFNFNFNFNFN,0.09999999999999998
+Field-Tested_Galil-AR-Sandstorm,Mil-Spec,1.6,16.0,0.56
+Well-Worn_Galil-AR-Sandstorm,Mil-Spec,0.25,2.5,0.7
+Battle-Scarred_Galil-AR-Sandstorm,Mil-Spec,0.5,5.0,1.8
+Stat-Trak_Factory New_PP-Bizon-Cobalt-Halftone,Mil-Spec,3.04,30.4,0.05000000000000001
+Stat-Trak_Minimal Wear_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.74,7.4,0.24999999999999997
+Stat-Trak_Field-Tested_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.47,4.699999999999999,0.825
+Stat-Trak_Well-Worn_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.51,5.1,1.0
+Stat-Trak_Battle-Scarred_PP-Bizon-Cobalt-Halftone,Mil-Spec,STBS,STBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBSSTBS,2.3749999999999996
+Factory New_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.76,7.6,0.05000000000000001
+Minimal Wear_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.33,3.3000000000000003,0.24999999999999997
+Field-Tested_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.25,2.5,0.825
+Well-Worn_PP-Bizon-Cobalt-Halftone,Mil-Spec,0.32,3.2,1.0
+Battle-Scarred_PP-Bizon-Cobalt-Halftone,Mil-Spec,BS,BSBSBSBSBSBSBSBSBSBS,2.3749999999999996
+Stat-Trak_Factory New_Five-SeveN-Kami,Mil-Spec,1.52,15.2,0.23333333333333336
+Stat-Trak_Minimal Wear_Five-SeveN-Kami,Mil-Spec,0.88,8.8,0.5
+Stat-Trak_Field-Tested_Five-SeveN-Kami,Mil-Spec,0.69,6.8999999999999995,1.2666666666666668
+Factory New_Five-SeveN-Kami,Mil-Spec,0.57,5.699999999999999,0.23333333333333336
+Minimal Wear_Five-SeveN-Kami,Mil-Spec,0.34,3.4000000000000004,0.5
+Field-Tested_Five-SeveN-Kami,Mil-Spec,0.31,3.1,1.2666666666666668
+Stat-Trak_Factory New_M249-Magma,Mil-Spec,1.6,16.0,0.10000000000000002
+Stat-Trak_Minimal Wear_M249-Magma,Mil-Spec,0.71,7.1,0.2142857142857143
+Stat-Trak_Field-Tested_M249-Magma,Mil-Spec,0.45,4.5,0.5428571428571429
+Stat-Trak_Well-Worn_M249-Magma,Mil-Spec,0.45,4.5,0.6428571428571429
+Stat-Trak_Battle-Scarred_M249-Magma,Mil-Spec,0.43,4.3,1.4285714285714286
+Factory New_M249-Magma,Mil-Spec,0.51,5.1,0.10000000000000002
+Minimal Wear_M249-Magma,Mil-Spec,0.33,3.3000000000000003,0.2142857142857143
+Field-Tested_M249-Magma,Mil-Spec,0.24,2.4,0.5428571428571429
+Well-Worn_M249-Magma,Mil-Spec,0.5,5.0,0.6428571428571429
+Battle-Scarred_M249-Magma,Mil-Spec,0.3,3.0,1.4285714285714286
