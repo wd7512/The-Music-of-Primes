@@ -68,22 +68,26 @@ def place_bet(val,col):
 
     print('Betting: '+str(val)+' on '+col)
 
-    pag.click(pag.center(pag.locateOnScreen('clear.png')))
-    pag.moveRel(-450,0,duration = 1)
+    pag.click(pag.center(pag.locateOnScreen('clear.png',confidence = 0.6)))
+    pag.moveRel(-350,0,duration = 1)
     pag.click(pag.position())
     pag.typewrite(str(val))
 
-    pag.click(pag.center(pag.locateOnScreen(col+'.png')))
+    pag.click(pag.center(pag.locateOnScreen(col+'.png',confidence = 0.5)))
 
 def find_rolling():
 
+    try:
+        if pag.locateOnScreen('lap_rolling.png') == None:
+            print('no')
+            return False
+        else:
 
-    if pag.locateOnScreen('rolling.png') == None:
+            print('found roll')
+            return True
+    except:
+        print('NO')
         return False
-    else:
-
-        print('found roll')
-        return True
 
 
 
