@@ -79,14 +79,14 @@ def find_rolling():
 
     try:
         if pag.locateOnScreen('rolling.png') == None:
-            print('no')
+            #print('no')
             return False
         else:
 
             print('found roll')
             return True
     except:
-        print('NO')
+        #print('NO')
         return False
 
 
