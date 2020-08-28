@@ -38,7 +38,7 @@ def run(bal):
 
     while True:
 
-        start_bet = math.floor(bal / 2**9)
+        start_bet = math.floor(bal / 2**10) # change of losing is 1/2**(num-1)
         
         while find_rolling() == False:
             pass
@@ -47,7 +47,7 @@ def run(bal):
 
         time.sleep(7)
 
-        if pag.pixelMatchesColor(1064,503,red_col, tolerance = 10) == True:
+        if pag.pixelMatchesColor(1200,545,red_col, tolerance = 10) == True:
             print('win')
             bet = start_bet
         else:
@@ -68,17 +68,17 @@ def place_bet(val,col):
 
     print('Betting: '+str(val)+' on '+col)
 
-    pag.click(pag.center(pag.locateOnScreen('clear.png',confidence = 0.6)))
+    pag.click(pag.center(pag.locateOnScreen('clear.png')))
     pag.moveRel(-350,0,duration = 1)
     pag.click(pag.position())
     pag.typewrite(str(val))
 
-    pag.click(pag.center(pag.locateOnScreen(col+'.png',confidence = 0.5)))
+    pag.click(pag.center(pag.locateOnScreen(col+'.png')))
 
 def find_rolling():
 
     try:
-        if pag.locateOnScreen('rolling.png') == None:
+        if pag.locateOnScreen('lap_rolling.png') == None:
             print('no')
             return False
         else:
