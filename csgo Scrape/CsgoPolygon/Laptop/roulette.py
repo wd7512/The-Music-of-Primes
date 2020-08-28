@@ -78,7 +78,7 @@ def place_bet(val,col):
 def find_rolling():
 
     try:
-        if pag.locateOnScreen('lap_rolling.png') == None:
+        if pag.locateOnScreen('rolling.png') == None:
             print('no')
             return False
         else:
