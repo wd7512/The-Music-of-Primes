@@ -76,6 +76,9 @@ def trait_nodes(champs,traits):
 
 
 
+
+
+
     #pos = nx.kamada_kawai_layout(G)
     #pos = nx.spring_layout(G)
     nx.draw_networkx(G,node_color=colour_map)
