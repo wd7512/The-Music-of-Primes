@@ -38,7 +38,7 @@ def run(bal):
 
     while True:
 
-        start_bet = math.floor(bal / 2**9)
+        start_bet = math.floor(bal / 2**10)
         
         while find_rolling() == False:
             pass
