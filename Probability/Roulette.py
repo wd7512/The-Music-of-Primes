@@ -96,7 +96,7 @@ def strat_2():
 
     return bal
 
-def strat_3():
+def strat_3(): #csgopolygon
     bal = [5000]
 
     init_bet = math.floor(bal[0] / 2**10)
@@ -119,6 +119,8 @@ def strat_3():
 
     return bal
 
+
+
 def ana(fun):
     
     runs = 10000
@@ -133,6 +135,4 @@ def ana(fun):
 
     return [lengths,maxes]
 
-a = ana(strat_3)
-b = sum(a[0])/100
-c = sum(a[1])/100
+strat_4()
