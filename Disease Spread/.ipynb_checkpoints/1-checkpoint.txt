@@ -1,0 +1,5 @@
+Have a population N that lives in X houses
+Let there be Y buildings that people visit during the day
+
+People can spend a time t in each building
+Chance of infection depends on number of people in room and time spent
