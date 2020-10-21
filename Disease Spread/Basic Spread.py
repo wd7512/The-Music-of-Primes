@@ -22,16 +22,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-#Infection chance
-P = 0.1
+#Infection chance a day
+P = 1/10
 #Population
-N = 1_00_000
+N = 10_000
 #Households
 #avg household size in uk is 2.3
 X = int(N/2.3)
 #Workplaces or use as day contacts
 #where avg. number of contacts a day is N/Y
-Y = int(N/10)
+Y = int(N/2)
 #Days to recover
 T = 14
 
