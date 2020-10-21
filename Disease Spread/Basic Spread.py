@@ -31,9 +31,9 @@ N = 10_000
 X = int(N/2.3)
 #Workplaces or use as day contacts
 #where avg. number of contacts a day is N/Y
-Y = int(N/2)
-#Days to recover
-T = 14
+Y = int(N/5)
+#Days to recover/infectious
+T = 5
 
 def random_pop(N,X,Y):
     #need [state,house,work,days since infection]
