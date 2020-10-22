@@ -25,15 +25,15 @@ import matplotlib.pyplot as plt
 #Infection chance a day
 P = 1/10
 #Population
-N = 10_000
+N = 1000
 #Households
 #avg household size in uk is 2.3
-X = int(N/2.3)
+X = 300
 #Workplaces or use as day contacts
 #where avg. number of contacts a day is N/Y
-Y = int(N/5)
+Y = 100
 #Days to recover/infectious
-T = 5
+T = 7
 
 def random_pop(N,X,Y):
     #need [state,house,work,days since infection]
@@ -126,8 +126,14 @@ uninf,inf,rec = run_to_end(random_pop(N,X,Y),P,T)
 
 x = list(range(0,len(uninf)))
 y = np.zeros((len(uninf))) + N
-plt.plot(x,y)
-plt.stackplot(x,inf,rec)
+plt.plot(x,y,label = 'Total Population')
+plt.stackplot(x,inf,rec,labels = ['Infected','Recovered'])
+plt.legend()
+title = 'N ='+str(N)+' X ='+str(N)+' Y ='+str(Y)+' P ='+str(P)+' T ='+str(T)
+plt.title(title)
+plt.xlabel('Days Passed')
+plt.ylabel('No. of People')
+
 
 
 
