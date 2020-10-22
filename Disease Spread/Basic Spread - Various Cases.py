@@ -25,13 +25,13 @@ import matplotlib.pyplot as plt
 #Infection chance a day
 P = 1/10
 #Population
-N = 1000
+N = 10000
 #Households
 #avg household size in uk is 2.3
-X = 300
+X = int(N/2.3)
 #Workplaces or use as day contacts
 #where avg. number of contacts a day is N/Y
-Y = 500
+Y = int(N/10)
 #Days to recover/infectious
 T = 7
 
@@ -62,13 +62,19 @@ def random_pop(N,X,Y):
 
     return pop
 
-def run_day(Population,P,T):
+def control(Population,P,T):
+
+
+
+
 
     infected = np.where(Population[:,0] == 1)[0] #gets infected indexes
     chance = int(1/P)
 
     for i in infected:
         infected_person = Population[i]
+
+
         
         house = infected_person[1] #house with infected person
         housemates = np.where(Population[:,1] == house)[0]
@@ -94,8 +100,53 @@ def run_day(Population,P,T):
         infected_person[3] = infected_person[3] + 1 #add day to infected
 
     return Population
+
+def isolated(Population,P,T):
+    
+
+    days_to_notice = 2
+    chance_to_stay = 1 # actually 1/n
+
+    infected = np.where(Population[:,0] == 1)[0] #gets infected indexes
+    chance = int(1/P)
+
+    for i in infected:
+        infected_person = Population[i]
+
+        if infected_person[3] > days_to_notice and infected_person[0] == 1 and np.random.randint(0,chance_to_stay) == 0:
+            #stays at home
+            pass
+        
             
-def run_to_end(Population,P,T):
+        else: #go out
+        
+            house = infected_person[1] #house with infected person
+            housemates = np.where(Population[:,1] == house)[0]
+
+            for j in housemates:
+                person = Population[j] #housemate
+                if person[0] == 0: #if not infected
+                    if np.random.randint(0,chance) == 0: #chance to be infected
+                        person[0] = 1 #now infected        
+            
+            work = infected_person[2]
+            workmates = np.where(Population[:,2] == work)[0]
+
+            for j in workmates:
+                person = Population[j]
+                if person[0] == 0: #if not infected
+                    if np.random.randint(0,chance) == 0: #chance to be infected
+                        person[0] = 1 #now infected
+
+        if infected_person[3] > T: #if infected for 14 days
+            infected_person[0] = 2 #become non-infectious
+
+        infected_person[3] = infected_person[3] + 1 #add day to infected
+
+    return Population
+            
+def run_to_end(Population,P,T,func):
+
 
     day = 0
     uninfected = [np.sum(Population[:,0] == 0)]
@@ -109,7 +160,7 @@ def run_to_end(Population,P,T):
 
         day = day + 1
         
-        Population = run_day(Population,P,T)
+        Population = func(Population,P,T)
 
         uninfected.append(np.sum(Population[:,0] == 0))
         infected.append(np.sum(Population[:,0] == 1))
@@ -121,22 +172,43 @@ def run_to_end(Population,P,T):
         
 
 
-
-uninf,inf,rec = run_to_end(random_pop(N,X,Y),P,T)
-
-x = list(range(0,len(uninf)))
-y = np.zeros((len(uninf))) + N
-plt.plot(x,y,label = 'Total Population')
-plt.stackplot(x,inf,rec,labels = ['Infected','Recovered'])
-plt.legend()
-title = 'N ='+str(N)+' X ='+str(N)+' Y ='+str(Y)+' P ='+str(P)+' T ='+str(T)
-plt.title(title)
-plt.xlabel('Days Passed')
-plt.ylabel('No. of People')
+original_pop = random_pop(N,X,Y)
 
 
 
+cases = [control,isolated]
+no_cases = len(cases)
 
+fig, axs = plt.subplots(nrows=1, ncols=no_cases)
+
+for i in range(no_cases):
+
+    pop = np.copy(original_pop)
+
+    ax = axs[i]
+
+    case = cases[i]
+
+    uninf,inf,rec = run_to_end(pop,P,T,case)
+
+
+
+    x = list(range(0,len(uninf)))
+    y = np.zeros((len(uninf))) + N
+    ax.plot(x,y,label = 'Total Population')
+    ax.stackplot(x,inf,rec,labels = ['Infected','Recovered'])
+
+
+    ax.set_title(str(case))
+    ax.set_xlabel('Days Passed')
+    ax.set_ylabel('No. of People')
+
+
+
+
+title = 'N ='+str(N)+' X ='+str(X)+' Y ='+str(Y)+' P ='+str(P)+' T ='+str(T)
+fig.legend()
+fig.suptitle(title)
 plt.show()
 
 
