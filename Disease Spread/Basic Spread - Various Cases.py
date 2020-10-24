@@ -105,7 +105,7 @@ def isolated(Population,P,T):
     
 
     days_to_notice = 2
-    chance_to_stay = 1 # actually 1/n
+    chance_to_break = int(1/0.1) # actually 1/p where p is chance to break
 
     infected = np.where(Population[:,0] == 1)[0] #gets infected indexes
     chance = int(1/P)
@@ -113,7 +113,7 @@ def isolated(Population,P,T):
     for i in infected:
         infected_person = Population[i]
 
-        if infected_person[3] > days_to_notice and infected_person[0] == 1 and np.random.randint(0,chance_to_stay) == 0:
+        if infected_person[3] > days_to_notice and infected_person[0] == 1 and np.random.randint(0,chance_to_break) != 0:
             #stays at home
             pass
         
@@ -179,7 +179,7 @@ original_pop = random_pop(N,X,Y)
 cases = [control,isolated]
 no_cases = len(cases)
 
-fig, axs = plt.subplots(nrows=1, ncols=no_cases)
+fig, axs = plt.subplots(nrows=no_cases, ncols=1,sharex=True)
 
 for i in range(no_cases):
 
