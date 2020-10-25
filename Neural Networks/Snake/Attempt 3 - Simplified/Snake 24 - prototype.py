@@ -15,10 +15,12 @@ class Brain: #generates random brain
         self.weights = self.weights + 0.01 * np.random.randn(24,4)
         self.biases = self.biases + 0.1 * np.random.randn(1,4)
 
+#maybe need activation function
+
 
 class Board:
     def __init__(self):
-        self.size = 21
+        self.size = 27
         self.half = int(np.floor(self.size/2))
         
         board = np.zeros((self.size,self.size),dtype = int)
@@ -31,8 +33,8 @@ class Board:
         food_pos = (np.random.randint(0,self.size),np.random.randint(0,self.size))
 
 
-        while self.game[food_pos[0]][food_pos[1]] != 0:
-            food_pos = [np.random.randint(0,self.size),np.random.randint(0,self.size)]
+        while self.game[food_pos] != 0:
+            food_pos = (np.random.randint(0,self.size),np.random.randint(0,self.size))
 
         self.game[food_pos] = -10
 
@@ -72,13 +74,6 @@ class Board:
         #leading diag must scale do diff in x = diff in y
         
         #horizontal first
-
-        try:
-            if hx == fx:
-                pass
-        except:
-            print(hx)
-            print(fx)
 
 
         if hx == fx: #if horizontal plane
@@ -230,7 +225,7 @@ class Board:
                 if new_head_pos == (food_pos[0],food_pos[1]):
                     
                     moves = moves + 100
-                    self.score = self.score + 10
+                    self.score = self.score + 100
                     board = self.add_food()
                     
                 else:
@@ -240,7 +235,7 @@ class Board:
         self.game = np.copy(self.old_start)
 
 
-def show(frames): #frames may be the board states as a matrix
+def show_ani(frames): #frames may be the board states as a matrix
     fig = plt.figure()
     ims = []
     for frame in frames:
@@ -256,10 +251,14 @@ def simple_sim(Pop,Gens):
 
     top_percent = 0.2
     rand_percent = 0.1
-    
-    rand_num = int(Pop * rand_percent)
-    
 
+    top_num = int(top_percent * Pop)
+    rand_num = int(Pop * rand_percent)
+    child_num = Pop - top_num - rand_num
+
+
+    
+    best_brains = []
     
 
     brains = [Brain() for i in range(Pop)]
@@ -267,10 +266,10 @@ def simple_sim(Pop,Gens):
 
     for i in range(Gens):
 
-        score = np.zeros((1,Pop),dtype = int)[0]
+        score = np.zeros((1,Pop))[0]
         
         
-        for j in range(repeat):
+        for j in range(repeat): #uses the same map for each repeat
 
             original = Board() #the start
             original.add_food()
@@ -287,74 +286,81 @@ def simple_sim(Pop,Gens):
 
                 original.reset()
 
-
-        #need proper function to get top 20
-
-        score_ind = sorted(np.copy(score))
-
-
-        min_max = score_ind[-int(Pop * top_percent)]
-
-        tops = np.argwhere(score > min_max)
-        top_brains = [brains[int(i)] for i in tops]
-
-        top_num = len(score[tops])
-        child_num = Pop - top_num - rand_num
-        
-        top_child_ratio = int(np.floor(child_num / top_num))
-        remainder = int(child_num - top_child_ratio * top_num)
-        
-        random_brains = [Brain() for i in range(rand_num)]
+            
+        score = score / (5 * original.size)
 
         
+        # we have a list of brains
+        # we have a list of their scores
+        # dont use i,j,k
+        # find top top_num brains
+        # keep them and mutate
+        # add randoms
+        # save best brain video
+
+        Var = np.copy(score) #copy to not mess up data
+
+        best_score = max(Var)
+        best_index = np.where(Var == best_score)[0][0]
+        best_brain = brains[best_index]
+        best_brains.append(best_brain)
         
+        top_pos = [] # list of indexes of top_nums
+
+        for x in range(top_num):
+            highest = max(Var)
+            highest_pos = np.where(Var == highest)[0][0]
+            top_pos.append(highest_pos)
+
+            Var[highest_pos] = 0
+
+        top_scores = score[top_pos]
+
+        top_brains = [brains[n] for n in top_pos]
 
         
         child_brains = []
+        birthrate = int(np.floor(child_num / top_num))
+        remainder = child_num - birthrate * top_num
 
-        for top in top_brains:
-            for i in range(top_child_ratio):
-                child = Brain()
-                
-                child.weights = top.weights
-                child.biases = top.biases
-
-                child.mutate()
-                
-                child_brains.append(child)
-
-        best_score = score_ind[-1]
         
-        best_ind = np.argwhere(score == best_score)[0]
-        best_brain = brains[int(best_ind)]
-        
+        for brain in top_brains:
+            for x in range(birthrate):
+                Var = Brain() #new child
+                Var.weights = brain.weights
+                Var.biases = brain.biases
 
-        for i in range(remainder):
-            top = best_brain
+                Var.mutate()
+                child_brains.append(Var)
 
-            child = Brain()
-                
-            child.weights = top.weights
-            child.biases = top.biases
+        for x in range(remainder):
+            Var = Brain() #new child
+            Var.weights = best_brain.weights
+            Var.biases = best_brain.biases
 
-            child.mutate()
-                
-            child_brains.append(child)
+            Var.mutate()
+            child_brains.append(Var)
 
+        random_brains = [Brain() for x in range(rand_num)]
 
-        print('Best Score: '+str(best_score))
-        print('Top Scoes:  '+str(list(score[tops])))
         
 
         brains = random_brains + top_brains + child_brains
 
-        print('Population: '+str(len(brains)))
+        scores[i] = score
+
+        
+        print('\nGeneration: ',i)
+        print('Best Score: ',best_score)
+        print('Top Scores:  ',top_scores)
+        print('Population: ',len(brains))
+        
         
             
 
             
 
-    return score
+    return [scores,best_brains]
 
         
                 
@@ -368,3 +374,15 @@ def simple_sim(Pop,Gens):
 
 
 a = simple_sim(100,10)
+
+print('Complete')
+
+game = Board()
+game.add_food()
+game.run(a[1][-1])
+show_ani(game.past_states)
+plt.matshow(a[0])
+plt.colorbar()
+plt.show()
+plt.show()  
+
