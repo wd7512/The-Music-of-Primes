@@ -135,7 +135,7 @@ class Board:
         
         
         
-
+        # need to invert output
 
         self.inputs = np.asarray(wall_dist + food_dist + self_dist,dtype = float)
 
