@@ -249,8 +249,8 @@ def simple_sim(Pop,Gens):
 
     repeat = 5
 
-    top_percent = 0.2
-    rand_percent = 0.1
+    top_percent = 0.1
+    rand_percent = 0.2
 
     top_num = int(top_percent * Pop)
     rand_num = int(Pop * rand_percent)
@@ -373,7 +373,7 @@ def simple_sim(Pop,Gens):
     
 
 
-a = simple_sim(100,10)
+a = simple_sim(200,1000)
 
 print('Complete')
 
