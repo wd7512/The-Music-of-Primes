@@ -373,7 +373,7 @@ def simple_sim(Pop,Gens):
     
 
 
-a = simple_sim(200,1000)
+a = simple_sim(500,500)
 
 print('Complete')
 
