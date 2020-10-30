@@ -11,3 +11,5 @@ to build good habits
 and give insights on how you are doing
 keep you motivated to streak
 but also keep track of your mental state
+
+use android studio
