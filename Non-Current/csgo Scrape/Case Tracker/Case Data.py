@@ -64,7 +64,7 @@ def get_time():
     return dt
     
 
-def update():
+def update(): #gets data and saves ti csv
 
     urls = get_urls()
     data = get_data(urls)
