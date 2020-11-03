@@ -1,0 +1,2 @@
+EUW1
+euw1.api.riotgames.com
