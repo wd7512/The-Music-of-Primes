@@ -1,0 +1,4 @@
+Application name	Python Test
+API key	6b86e8a864f4072b7918fd93ac96809b
+Shared secret	84b4c08ff9acbb0ebcba744c08023b72
+Registered to	wd7512
