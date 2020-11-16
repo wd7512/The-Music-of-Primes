@@ -8,7 +8,7 @@ momArray = array(0, dim=c(nSim,2))
 
 for (i in 1:nSim){
   #simulate values from log-normal
-  y <- exp(rnorm(n=n, mean=mu, sd=sigma))
+  y <- exp(rnorm(n=n, mean=mu, sd=sigma^2))
   
   #calculate mom estimates and save them into the array
   m1 <- mean(y)
@@ -23,4 +23,24 @@ hist(momArray[,1], main = expression('Distribution MOM estimator of'~mu),
      xlab = expression(hat(mu)))
 
 hist(momArray[,2], main = expression('Distribution MOM estimator of'~sigma^2),
+     xlab = expression(widehat(sigma^2)))
+
+set.seed(7224)
+mleArray = array(0, dim=c(nSim,2))
+
+for (i in 1:nSim){
+  #simulate values from log-normal
+  y <- exp(rnorm(n=n, mean=mu, sd=sigma))
+  
+  #calculate MLE estimates and save them into the array
+  mle_mu <- mean(log(y))
+  mle_sigmasq <- sum((log(y)-mle_mu)^2) / n
+  mleArray[i,] <- c(mle_mu, mle_sigmasq)
+  
+}
+
+hist(mleArray[,1], main = expression('Distribution MLE estimator of'~mu),
+     xlab = expression(hat(mu)))
+
+hist(mleArray[,2], main = expression('Distribution MLE estimator of'~sigma^2),
      xlab = expression(widehat(sigma^2)))
