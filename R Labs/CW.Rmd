@@ -1,0 +1,48 @@
+---
+title: "MA20226 Coursework"
+author: "William Dennis"
+date: "19/11/2020"
+output: html_document
+---
+
+### Question 1
+
+*Suppose we have an i.i.d. sample of size n = 15 from an unknown continuous distribution. What is the critical region for a size $α=0.05$ test of the hypotheses in Equation (1) with $m_0=0$ based on the test statistic in Equation (2)?*
+
+For $m_0$ to be the median, half of the values of x must be above $m_0$ and half below $m_0$. This leads to us being able to describe each value of x as a Bernoulli distribution with a p value of 0.5, where True means it is above x and False means below. Thus from the question we can derive the equation where $m$ is the critial value and we also see that T is binomally distributed.
+$$P(T \geq m) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})$$
+and then duduce
+$$P(T \geq m) \leq 0.05 \quad = \quad P(T=m) + P(T=m+1)+ \quad ... \quad +P(T=15) \leq 0.05\\$$
+$$=\quad\binom{15}{m} \left( \frac{1}{2} \right)^{15} + \binom{15}{m+1} \left( \frac{1}{2} \right)^{15}+\quad ... \quad +\binom{15}{15} \left( \frac{1}{2} \right)^{15}$$
+
+$$=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{m}+\binom{15}{m+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05$$
+To find the critial value m we can use a R Script to find this.
+```{r}
+m_values = array(0,dim=c(16,2))
+for (i in 0:15){
+  var = 0
+  for (j in i:15){
+    var = var + choose(15,j)
+  }
+  m = var * (1/2)^15
+  m_values[i+1,1] = m
+  m_values[i+1,2] = (m <= 0.05)
+}
+
+colnames(m_values) = c('P-Value of m','Less than 0.05?')
+rownames(m_values) = 0:15
+print(m_values)
+```
+As we can see from this table, the critial value $m$ is 12 as it is the smallest value $m$ that falls in the critical region of size 	$\alpha = 0.05$
+
+
+
+
+
+
+
+
+
+
+
+
