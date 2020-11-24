@@ -419,7 +419,8 @@ summary {
 
 <div id="question-1" class="section level3">
 <h3>Question 1</h3>
-<p><em>Suppose we have an i.i.d. sample of size n = 15 from an unknown continuous distribution. What is the critical region for a size <span class="math inline">\(α=0.05\)</span> test of the hypotheses in Equation (1) with <span class="math inline">\(m_0=0\)</span> based on the test statistic in Equation (2)?</em></p>
+<p><em>Suppose we have an i.i.d. sample of size n = 15 from an unknown continuous distribution. What is the critical region for a size <span class="math inline">\(α=0.05\)</span> test of the hypotheses in Equation (1) with <span class="math inline">\(m_0=0\)</span> based on the test statistic in Equation (2)?</em><br />
+</p>
 <p>For <span class="math inline">\(m_0\)</span> to be the median, half of the values of x must be above <span class="math inline">\(m_0\)</span> and half below <span class="math inline">\(m_0\)</span>. This leads to us being able to describe each value of x as a Bernoulli distribution with a p value of 0.5, where True means it is above x and False means below. Thus from the question we can derive the equation where <span class="math inline">\(m\)</span> is the critial value and we also see that T is binomally distributed. <span class="math display">\[P(T \geq m) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})\]</span> and then duduce <span class="math display">\[P(T \geq m) \leq 0.05 \quad = \quad P(T=m) + P(T=m+1)+ \quad ... \quad +P(T=15) \leq 0.05\\\]</span> <span class="math display">\[=\quad\binom{15}{m} \left( \frac{1}{2} \right)^{15} + \binom{15}{m+1} \left( \frac{1}{2} \right)^{15}+\quad ... \quad +\binom{15}{15} \left( \frac{1}{2} \right)^{15}\]</span></p>
 <p><span class="math display">\[=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{m}+\binom{15}{m+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05\]</span> To find the critial value m we can use a R Script to find this.</p>
 <pre class="r"><code>m_values = array(0,dim=c(16,2))
@@ -454,14 +455,38 @@ print(m_values)</code></pre>
 ## 14 4.882812e-04               1
 ## 15 3.051758e-05               1</code></pre>
 <p>As we can see from this table, the critial value <span class="math inline">\(m\)</span> is 12 as it is the smallest value <span class="math inline">\(m\)</span> that falls in the critical region of size <span class="math inline">\(\alpha = 0.05\)</span></p>
+<p><br />
+</p>
 </div>
 <div id="question-2" class="section level3">
 <h3>Question 2</h3>
 <p><em>Consider the following two data sets (which differ only in the first and last values)</em></p>
 <pre class="r"><code>set_1 = c(-1.4,2.8,3,0.8,1.5,2.2,-2.5,2,1.8,3.5,2.5,0.1,-3.3,3.6,1.4)
 set_2 = c(-14,2.8,3,0.8,1.5,2.2,-2.5,2,1.8,3.5,2.5,0.1,-3.3,3.6,14)</code></pre>
-<p><em>Carry out the sign test with <span class="math inline">\(m_0=0\)</span> and the t-test with <span class="math inline">\(μ_0=0\)</span> on each data set using <span class="math inline">\(α=0.05\)</span>. Comment on any similarities or differences between the two testing procedures. For this question, you may not use the functions introduced next.</em></p>
-<p>To carry out the sign test <span class="math display">\[H_0 \ : \ m=m_0 \quad \textrm{versus} \quad H_1 \ : \ m&gt;m_0\]</span> <span class="math display">\[P(m&gt;m_0) \geq 0.05 \implies H_1 \  \textrm{is true}\]</span></p>
+<p><em>Carry out the sign test with <span class="math inline">\(m_0=0\)</span> and the t-test with <span class="math inline">\(μ_0=0\)</span> on each data set using <span class="math inline">\(α=0.05\)</span>. Comment on any similarities or differences between the two testing procedures. For this question, you may not use the functions introduced next.</em><br />
+</p>
+<p>The hypothesis for the sign test is a follows <span class="math display">\[H_0 \ : \ m=m_0 \quad \textrm{versus} \quad H_1 \ : \ m&gt;m_0\]</span> To accept <span class="math inline">\(H_0\)</span> the number of values greater than <span class="math inline">\(m=0\)</span> must be less than 12 as shown from part 1.</p>
+<pre class="r"><code>var1 = sum(set_1 &gt; 0)
+var2 = sum(set_2 &gt; 0)
+print(c(var1,var2))</code></pre>
+<pre><code>## [1] 12 12</code></pre>
+<p>As we can see from these results we reject the null hypotheses for data set 1 and data set 2 as they both have 12 values greater than the mean.</p>
+<p>The hypotheses for the t-test is as follows</p>
+<p><span class="math display">\[H_0 \ : \ μ=μ_0 \quad \textrm{versus} \quad H_1 \ : \ μ&gt;μ_0\]</span> To carry out this test we reject the null hypotheses if this statement is true <span class="math display">\[ \bar{x} \ \geq \ μ_0 + t_{1-α,n-1} \frac{s}{ \sqrt{n}} \implies \bar{x} \ \geq \ t_{1-α,n-1} \frac{s}{ \sqrt{n}}\]</span></p>
+<p><span class="math display">\[t_{1-α,n-1} \quad = \quad t_{0.95,14} \quad = \quad 1.761\]</span> We calculate the t values with the following R code</p>
+<pre class="r"><code>mean1 = mean(set_1)
+mean2 = mean(set_2)
+var1 = 1.761 * var(set_1) / sqrt(length(set_1))
+var2 = 1.761 * var(set_2) / sqrt(length(set_2))
+
+print(c(mean1 &gt;= var1,mean2 &gt;= var2))</code></pre>
+<pre><code>## [1] FALSE FALSE</code></pre>
+<p>Due to both of these values being FALSE we accept the null hypotheses for data set 1 and data set 2</p>
+<p><br />
+</p>
+</div>
+<div id="question-3" class="section level3">
+<h3>Question 3</h3>
 </div>
 
 
