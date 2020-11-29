@@ -16,6 +16,13 @@ def jsave(obj):
     with open('TEMP.json','w') as f:
         f.write(str(text))
 
+def get(url):
+    '''
+    url = url
+    response.get()
+    sort error codes etc
+    '''
+
 class tftplayer:
     def __init__(self,api_key,username):
         self.key = api_key
