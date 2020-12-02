@@ -10,14 +10,14 @@ output: html_document
 *Suppose we have an i.i.d. sample of size n = 15 from an unknown continuous distribution. What is the critical region for a size $α=0.05$ test of the hypotheses in Equation (1) with $m_0=0$ based on the test statistic in Equation (2)?*
 \
 
-For $m_0$ to be the median, half of the values of x must be above $m_0$ and half below $m_0$. This leads to us being able to describe each value of x as a Bernoulli distribution with a p value of 0.5, where True means it is above x and False means below. Thus from the question we can derive the equation where $m$ is the critial value and we also see that T is binomally distributed.
+For $m_0$ to be the median of a set $x$, half of the values in $x$ must be above $m_0$ and half below $m_0$. This leads to us being able to describe each value in $x$ as a Bernoulli distribution where $p=0.5$, with True meaning it is above x and False meaning below. Thus from the question we can derive the equation where $m$ is the critial value and we also see that T is binomally distributed.
 $$P(T \geq m) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})$$
 and then duduce
 $$P(T \geq m) \leq 0.05 \quad = \quad P(T=m) + P(T=m+1)+ \quad ... \quad +P(T=15) \leq 0.05\\$$
 $$=\quad\binom{15}{m} \left( \frac{1}{2} \right)^{15} + \binom{15}{m+1} \left( \frac{1}{2} \right)^{15}+\quad ... \quad +\binom{15}{15} \left( \frac{1}{2} \right)^{15}$$
 
 $$=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{m}+\binom{15}{m+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05$$
-To find the critial value m we can use a R Script to find this.
+To find the critial value $m$ we can use a R Script to find this.
 ```{r}
 m_values = array(0,dim=c(16,2))
 for (i in 0:15){
@@ -34,7 +34,7 @@ colnames(m_values) = c('P-Value of m','Less than 0.05?')
 rownames(m_values) = 0:15
 print(m_values)
 ```
-As we can see from this table, the critial value $m$ is 12 as it is the smallest value $m$ that falls in the critical region of size 	$\alpha = 0.05$ 
+As we can see from this table, the critial value $m$ is the 12th value in $x$ as it is the smallest value that falls in the critical region of size 	$\alpha = 0.05$ 
 
 \
 
@@ -179,3 +179,55 @@ plot(m_arr,1-arr[2,],main = 'T-Test',xlab = 'Values of m', ylab = 'Power',ylim =
 *Based on your simulation studies in Question 4 and 5, what conclusions do you draw about the relative merits of the two testing procedures?*
 
 From these
+
+### Question 7
+*Write a function that takes in a vector of data x and a significance level α and returns a confidence interval for m based on inverting the sign test. You will need to use the alternative = "two.sided" option in the sign.test function.*
+
+The two sided sign test is as such:
+
+$$
+\left\{
+	\begin{array}{ll}
+		1  & \mbox{if } \quad P(T \geq m) \leq \frac{\alpha}{2} \ or \ P(T \leq m) \leq \frac{\alpha}{2} \\
+		0 & \mbox{if } \quad else
+	\end{array}
+\right. $$
+
+From this we can define the two confidance intervals:
+
+$$C_1 < m < C_2$$
+
+$$C_1 \textrm{ is the smallest value of } m\textrm{ such that }P(T \leq m) \leq \frac{\alpha}{2}$$
+
+$$C_2 \textrm{ is the greatest value of } m\textrm{ such that }P(T \geq m) \leq \frac{\alpha}{2}$$
+```{r}
+conf_int = function(x,alpha){
+  n = length(x)
+  T1_values = c()
+  T2_values = c()
+  
+  for (i in 0:n){
+    if (pbinom(i,n,0.5, lower.tail = TRUE) <= alpha/2){
+      T1_values = c(T1_values,i)
+    }
+    if (pbinom(i,n + 1,0.5,lower.tail = FALSE) <= alpha/2){
+      T2_values = c(T2_values,i)
+    }
+  }
+  T_interval = intersect(setdiff(0:n,T1_values),setdiff(0:n,T2_values))
+  
+  x_sorted = sort(x)
+  
+  C1 = x_sorted[T_interval[1]]
+  C2 = x_sorted[tail(T_interval,1)]
+  
+  return (c(C1,C2))
+}
+```
+
+### Question 8
+
+```{r}
+print(conf_int(set_1,0.1))
+```
+
