@@ -10,14 +10,14 @@ output: html_document
 *Suppose we have an i.i.d. sample of size n = 15 from an unknown continuous distribution. What is the critical region for a size $α=0.05$ test of the hypotheses in Equation (1) with $m_0=0$ based on the test statistic in Equation (2)?*
 \
 
-For $m_0$ to be the median of a set $x$, half of the values in $x$ must be above $m_0$ and half below $m_0$. This leads to us being able to describe each value in $x$ as a Bernoulli distribution where $p=0.5$, with True meaning it is above x and False meaning below. Thus from the question we can derive the equation where $m$ is the critial value and we also see that T is binomally distributed.
-$$P(T \geq m) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})$$
-and then duduce
-$$P(T \geq m) \leq 0.05 \quad = \quad P(T=m) + P(T=m+1)+ \quad ... \quad +P(T=15) \leq 0.05\\$$
-$$=\quad\binom{15}{m} \left( \frac{1}{2} \right)^{15} + \binom{15}{m+1} \left( \frac{1}{2} \right)^{15}+\quad ... \quad +\binom{15}{15} \left( \frac{1}{2} \right)^{15}$$
+For $m_0$ to be the median of a set $x$, half of the values in $x$ must be above $m_0$ and half below $m_0$. This leads to us being able to describe each value in the test statistic as a Bernoulli distribution where $p=0.5$, with $t_i=1$ (True) meaning that $x_i$ is above $m_0$ and $t_i=0$ (False) meaning below. Thus from the question we can derive the equation where $m$ is the critical value and we also see that T is a binomial distribution.
+$$P(T \geq i) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})\quad \textrm{such that} \quad x_i = m$$
+and then deduce
+$$P(T \geq i) \leq 0.05 \quad = \quad P(T=i) + P(T=i+1)+ \quad ... \quad +P(T=15) \leq 0.05\\$$
+$$=\quad\binom{15}{i} \left( \frac{1}{2} \right)^{15} + \binom{15}{i+1} \left( \frac{1}{2} \right)^{15}+\quad ... \quad +\binom{15}{15} \left( \frac{1}{2} \right)^{15}$$
 
-$$=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{m}+\binom{15}{m+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05$$
-To find the critial value $m$ we can use a R Script to find this.
+$$=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{i}+\binom{15}{i+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05$$
+To find the critical value $m$ we can use a R Script to find this.
 ```{r}
 m_values = array(0,dim=c(16,2))
 for (i in 0:15){
@@ -34,7 +34,7 @@ colnames(m_values) = c('P-Value of m','Less than 0.05?')
 rownames(m_values) = 0:15
 print(m_values)
 ```
-As we can see from this table, the critial value $m$ is the 12th value in $x$ as it is the smallest value that falls in the critical region of size 	$\alpha = 0.05$ 
+As we can see from this table, the critical value $m$ is the 12th value in $x$ (where $x$ is ordered in ascending order) as it is the smallest value in $x$ that falls in the critical region of size 	$\alpha = 0.05$ 
 
 \
 
@@ -134,8 +134,11 @@ for (i in 1:length(mew_arr)){
     
   }
 }
-plot(mew_arr,1-arr[1,],main = 'Graph of the Power of the Sign Test for N(μ,1)',xlab = 'Values of μ', ylab = 'Power',ylim = c(0,1))
-plot(mew_arr,1-arr[2,],main = 'T-Test',xlab = 'Values of μ', ylab = 'Power',ylim = c(0,1))
+
+plot(mew_arr,1-arr[1,],main = 'Graph of the Power of the Sign Test vs T-Test for N(μ,1)',xlab = 'Values of μ', ylab = 'Power',ylim = c(0,1),col='red')
+points(mew_arr,1-arr[2,],col='blue')
+abline(h=0.95)
+legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
 
 ```
 
@@ -167,9 +170,10 @@ for (i in 1:length(m_arr)){
     
   }
 }
-plot(m_arr,1-arr[1,],main = 'Sign Test',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1))
-plot(m_arr,1-arr[2,],main = 'T-Test',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1))
-
+plot(m_arr,1-arr[1,],main = 'Sign Test',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1),col='red')
+points(m_arr,1-arr[2,],col='blue')
+abline(h=0.95)
+legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
 ```
 
 \
@@ -178,7 +182,9 @@ plot(m_arr,1-arr[2,],main = 'T-Test',xlab = 'Values of m', ylab = 'Power',ylim =
 
 *Based on your simulation studies in Question 4 and 5, what conclusions do you draw about the relative merits of the two testing procedures?*
 
-From these
+To measure the merit of each test I will be commenting on when the power > 0.95 as this means that the test will detect a deviation from the null hypotheses, given the deviation exists 95% of the time.
+
+
 
 ### Question 7
 *Write a function that takes in a vector of data x and a significance level α and returns a confidence interval for m based on inverting the sign test. You will need to use the alternative = "two.sided" option in the sign.test function.*
@@ -193,41 +199,33 @@ $$
 	\end{array}
 \right. $$
 
-From this we can define the two confidance intervals:
+From this we can define the two confidence intervals:
 
 $$C_1 < m < C_2$$
 
-$$C_1 \textrm{ is the smallest value of } m\textrm{ such that }P(T \leq m) \leq \frac{\alpha}{2}$$
+$$C_1 \textrm{ is the smallest value of } x_i\textrm{ such that }P(T \leq i) \leq \frac{\alpha}{2}$$
 
-$$C_2 \textrm{ is the greatest value of } m\textrm{ such that }P(T \geq m) \leq \frac{\alpha}{2}$$
+$$C_2 \textrm{ is the greatest value of } x_i\textrm{ such that }P(T \geq i) \leq \frac{\alpha}{2}$$
 ```{r}
 conf_int = function(x,alpha){
-  n = length(x)
-  T1_values = c()
-  T2_values = c()
-  
-  for (i in 0:n){
-    if (pbinom(i,n,0.5, lower.tail = TRUE) <= alpha/2){
-      T1_values = c(T1_values,i)
-    }
-    if (pbinom(i,n + 1,0.5,lower.tail = FALSE) <= alpha/2){
-      T2_values = c(T2_values,i)
-    }
+  x = sort(x)
+  output = array(dim=length(x))
+  for (i in 1:length(x)){
+    value = x[i]
+    output[i] = sign.test(x,m=value,alpha = alpha, alternative='two.sided')
   }
-  T_interval = intersect(setdiff(0:n,T1_values),setdiff(0:n,T2_values))
+  zeros = which(output %in% 0)
+  lower_index = zeros[1]
+  upper_index = tail(zeros,n=1) + 1
   
-  x_sorted = sort(x)
-  
-  C1 = x_sorted[T_interval[1]]
-  C2 = x_sorted[tail(T_interval,1)]
-  
-  return (c(C1,C2))
+  return (c(x[lower_index],x[upper_index]))
 }
 ```
 
 ### Question 8
 
 ```{r}
-print(conf_int(set_1,0.1))
+var = conf_int(set_1,0.1)
+print(sprintf('[%f,%f)',var[1],var[2]))
 ```
 
