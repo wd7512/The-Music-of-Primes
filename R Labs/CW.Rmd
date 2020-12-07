@@ -170,7 +170,7 @@ for (i in 1:length(m_arr)){
     
   }
 }
-plot(m_arr,1-arr[1,],main = 'Sign Test',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1),col='red')
+plot(m_arr,1-arr[1,],main = 'Graph of the Power of the Sign Test vs T-Test for Cauchy(m,1)',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1),col='red')
 points(m_arr,1-arr[2,],col='blue')
 abline(h=0.95)
 legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
@@ -182,7 +182,9 @@ legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
 
 *Based on your simulation studies in Question 4 and 5, what conclusions do you draw about the relative merits of the two testing procedures?*
 
-To measure the merit of each test I will be commenting on when the power > 0.95 as this means that the test will detect a deviation from the null hypotheses, given the deviation exists 95% of the time.
+
+
+To measure the merit of each test I will be commenting on its effectiveness when the power is greater then 0.95 as this means that the test will detect a deviation from the null hypotheses, given the deviation exists, 95% of the time. For the normal distribution we can see that the T-Test has a higher power than the Sign-Test over all values, thus meaning it is a better test. We can also say that the T-Test it is effective on values of μ greater than 0.7 and the Sign-Test is effective on values of μ greater than 1. For the cauchy distribution we can see that the Sign-Test has a significantly higher power than the T-Test as m increases, indicating it is a better test. We can also say that the Sign-Test is effective on values of m greater than 1.75 and the T-Test never reaches a power of 0.95 so it is not effective over any value between 0 and 2.
 
 
 
@@ -203,9 +205,9 @@ From this we can define the two confidence intervals:
 
 $$C_1 < m < C_2$$
 
-$$C_1 \textrm{ is the smallest value of } x_i\textrm{ such that }P(T \leq i) \leq \frac{\alpha}{2}$$
+$$C_1 \textrm{ is the greatest value of } x_i\textrm{ such that }P(T \leq i) \leq \frac{\alpha}{2}$$
 
-$$C_2 \textrm{ is the greatest value of } x_i\textrm{ such that }P(T \geq i) \leq \frac{\alpha}{2}$$
+$$C_2 \textrm{ is the smallest value of } x_i\textrm{ such that }P(T \geq i) \leq \frac{\alpha}{2}$$
 ```{r}
 conf_int = function(x,alpha){
   x = sort(x)
@@ -228,4 +230,4 @@ conf_int = function(x,alpha){
 var = conf_int(set_1,0.1)
 print(sprintf('[%f,%f)',var[1],var[2]))
 ```
-
+We can see that the function return the interval $0.1 \leq m < 2.8$. From question 2, if $m$ is the 12th value or more in $x$ the null hypotheses is rejected.$x_{12} = 2.8$ so this verifys that the function is correct.
