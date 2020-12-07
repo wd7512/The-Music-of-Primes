@@ -10,8 +10,8 @@ output: html_document
 *Suppose we have an i.i.d. sample of size n = 15 from an unknown continuous distribution. What is the critical region for a size $α=0.05$ test of the hypotheses in Equation (1) with $m_0=0$ based on the test statistic in Equation (2)?*
 \
 
-For $m_0$ to be the median of a set $x$, half of the values in $x$ must be above $m_0$ and half below $m_0$. This leads to us being able to describe each value in the test statistic as a Bernoulli distribution where $p=0.5$, with $t_i=1$ (True) meaning that $x_i$ is above $m_0$ and $t_i=0$ (False) meaning below. Thus from the question we can derive the equation where $m$ is the critical value and we also see that T is a binomial distribution.
-$$P(T \geq i) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})\quad \textrm{such that} \quad x_i = m$$
+For $m$ to be the median of a set $x$, half of the values in $x$ must be above $m$ and half below $m$. This leads to us being able to describe each value in the test statistic as a Bernoulli distribution where $p=0.5$, with True, $t_i=1$  meaning that $x_i$ is above $m$ and False, $t_i=0$  meaning below. Thus from the question we can derive the equation where $m_c$ is the critical value and we also see that T is a binomial distribution.
+$$P(T \geq i) \leq 0.05 \quad \textrm{and} \quad T \sim Bin(n = 15,p = \frac{1}{2})\quad \textrm{such that} \quad x_i = m_c$$
 and then deduce
 $$P(T \geq i) \leq 0.05 \quad = \quad P(T=i) + P(T=i+1)+ \quad ... \quad +P(T=15) \leq 0.05\\$$
 $$=\quad\binom{15}{i} \left( \frac{1}{2} \right)^{15} + \binom{15}{i+1} \left( \frac{1}{2} \right)^{15}+\quad ... \quad +\binom{15}{15} \left( \frac{1}{2} \right)^{15}$$
@@ -19,22 +19,22 @@ $$=\quad\binom{15}{i} \left( \frac{1}{2} \right)^{15} + \binom{15}{i+1} \left( \
 $$=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{i}+\binom{15}{i+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05$$
 To find the critical value $m$ we can use a R Script to find this.
 ```{r}
-m_values = array(0,dim=c(16,2))
+m_values = array(0,dim=c(16,2)) #array to store the data
 for (i in 0:15){
   var = 0
   for (j in i:15){
     var = var + choose(15,j)
   }
-  m = var * (1/2)^15
+  m = var * (1/2)^15 #calculates probability
   m_values[i+1,1] = m
-  m_values[i+1,2] = (m <= 0.05)
+  m_values[i+1,2] = (m <= 0.05) #tests if it is less than alpha
 }
 
 colnames(m_values) = c('P-Value of m','Less than 0.05?')
 rownames(m_values) = 0:15
 print(m_values)
 ```
-As we can see from this table, the critical value $m$ is the 12th value in $x$ (where $x$ is ordered in ascending order) as it is the smallest value in $x$ that falls in the critical region of size 	$\alpha = 0.05$ 
+As we can see from this table, the critical value $m_c$ is the 12th value in $x$ (where $x$ is ordered in ascending order) as it is the smallest value in $x$ that falls in the critical region of size 	$\alpha = 0.05$. Therefore the critical region is all values of $m \geq x_{12}$.
 
 \
 
@@ -50,11 +50,11 @@ set_2 = c(-14,2.8,3,0.8,1.5,2.2,-2.5,2,1.8,3.5,2.5,0.1,-3.3,3.6,14)
 *Carry out the sign test with $m_0=0$ and the t-test with $μ_0=0$ on each data set using $α=0.05$. Comment on any similarities or differences between the two testing procedures. For this question, you may not use the functions introduced next.*
 \
 
-The hypothesis for the sign test is a follows
+The hypothesis for the Sign-Test is a follows
 $$H_0 \ : \ m=m_0 \quad \textrm{versus} \quad H_1 \ : \ m>m_0$$
 To accept $H_0$ the number of values greater than $m=0$ must be less than 12 as shown from part 1.
 ```{r}
-var1 = sum(set_1 > 0)
+var1 = sum(set_1 > 0) #calculates the total number of values greater than zero
 var2 = sum(set_2 > 0)
 print(c(var1,var2))
 
@@ -62,18 +62,18 @@ print(c(var1,var2))
 As we can see from these results we reject the null hypotheses for data set 1 and data set 2 as they both have 12 values greater than the mean.
 
 
-The hypotheses for the t-test is as follows
+The hypotheses for the T-Test is as follows
 
 $$H_0 \ : \ μ=μ_0 \quad \textrm{versus} \quad H_1 \ : \ μ>μ_0$$
 To carry out this test we reject the null hypotheses if this statement is true
-$$ \bar{x} \ \geq \ μ_0 + t_{1-α,n-1} \frac{s}{ \sqrt{n}} \implies \bar{x} \ \geq \ t_{1-α,n-1} \frac{s}{ \sqrt{n}}$$
+$$ \bar{x} \ \geq \ μ_0 + t_{1-α,n-1} \frac{s}{ \sqrt{n}} \implies \bar{x} \ \geq \ t_{1-α,n-1} \frac{s}{ \sqrt{n}} \tag{*}$$
 
 $$t_{1-α,n-1} \quad = \quad t_{1-0.05,15-1} \quad = \quad t_{0.95,14} \quad = \quad 1.761$$
-We calculate the t values with the following R code
+We calculate the T-values with the following R code
 ```{r}
 mean1 = mean(set_1)
 mean2 = mean(set_2)
-var1 = 1.761 * sd(set_1) / sqrt(length(set_1))
+var1 = 1.761 * sd(set_1) / sqrt(length(set_1)) #equation *
 var2 = 1.761 * sd(set_2) / sqrt(length(set_2))
 
 print(c(mean1 >= var1,mean2 >= var2))
@@ -116,7 +116,7 @@ We can see that the significance level is less then 0.05 so we can confirm that 
 set.seed(0)
 nSim = 1000
 n = 25
-mew_arr = seq(0,2,0.05)
+mew_arr = seq(0,2,0.05) #generates array of mew values
 
 arr = array(0,dim=c(2,length(mew_arr)))
 
@@ -201,13 +201,18 @@ $$
 	\end{array}
 \right. $$
 
-From this we can define the two confidence intervals:
+From this we can define the two confidence intervals where $x$ is an ordered list in ascending order:
 
-$$C_1 < m < C_2$$
+$$C_1 \leq m < C_2$$
 
-$$C_1 \textrm{ is the greatest value of } x_i\textrm{ such that }P(T \leq i) \leq \frac{\alpha}{2}$$
+$$C_1 = x_i \textrm{ where } i\textrm{ is the largest value of } i \textrm{ such that }P(T \leq i) \leq \frac{\alpha}{2}$$
 
-$$C_2 \textrm{ is the smallest value of } x_i\textrm{ such that }P(T \geq i) \leq \frac{\alpha}{2}$$
+$$C_2 = x_{j+1} \textrm{ where } j\textrm{ is the largest value of } j \textrm{ such that }P(T \geq j) \leq \frac{\alpha}{2}$$
+The upper bound $C_2$ is non-inclusive and equivalent to the ($j+1$)th value due to the following. For a number $x_n\in x$ to be accepted as the median by the sign test, all values in the bounds $[x_n,x_{n+1})$ are also accepted. This is due to the indicator function in the test statistic being non inclusive of the median, such that:
+
+$$1_{(m,\infty)}(m)=0 \implies sign.test(x,x_n) = sign.test(x,a) \quad \forall a\in[x_n,x_{n+1})$$
+Therefore showing that we must add 1 to the j value to show that the median could also be values greater than the highest accepted value in x ($x_j$) but non-inclusive of $x_{j+1}$
+
 ```{r}
 conf_int = function(x,alpha){
   x = sort(x)
@@ -230,4 +235,16 @@ conf_int = function(x,alpha){
 var = conf_int(set_1,0.1)
 print(sprintf('[%f,%f)',var[1],var[2]))
 ```
-We can see that the function return the interval $0.1 \leq m < 2.8$. From question 2, if $m$ is the 12th value or more in $x$ the null hypotheses is rejected.$x_{12} = 2.8$ so this verifys that the function is correct.
+We can see that the function returns the interval $0.1 \leq m < 2.8$ and we can verify these results that 0.1 is inclusive and 2.8 is non-inclusive as shown in the graph below.
+
+```{r}
+med = seq(min(set_1),max(set_1),0.1)
+output = array(dim=length(med))
+for (i in 1:length(med)){
+  output[i] = sign.test(set_1,m=med[i],alpha = 0.1, alternative='two.sided')
+}
+plot(med,output,main='sign.test over a changing median in the range from data set 1',xlab='Median Value')
+abline(v=0.1)
+abline(v=2.8)
+```
+
