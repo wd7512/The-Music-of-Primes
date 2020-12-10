@@ -18,7 +18,7 @@ $$=\quad\binom{15}{i} \left( \frac{1}{2} \right)^{15} + \binom{15}{i+1} \left( \
 
 $$=\quad\left( \frac{1}{2} \right)^{15}\left( \binom{15}{i}+\binom{15}{i+1}+\quad...\quad+\binom{15}{15}\right) \leq 0.05$$
 To find the critical value $m$ we can use a R Script to find this.
-```{r}
+```{r, echo=FALSE}
 m_values = array(0,dim=c(16,2)) #array to store the data
 for (i in 0:15){
   var = 0
@@ -30,7 +30,7 @@ for (i in 0:15){
   m_values[i+1,2] = (m <= 0.05) #tests if it is less than alpha
 }
 
-colnames(m_values) = c('P-Value of m','Less than 0.05?')
+colnames(m_values) = c('Probability T>=i','Less than 0.05?')
 rownames(m_values) = 0:15
 print(m_values)
 ```
@@ -47,7 +47,7 @@ set_1 = c(-1.4,2.8,3,0.8,1.5,2.2,-2.5,2,1.8,3.5,2.5,0.1,-3.3,3.6,1.4)
 set_2 = c(-14,2.8,3,0.8,1.5,2.2,-2.5,2,1.8,3.5,2.5,0.1,-3.3,3.6,14)
 ```
 
-*Carry out the sign test with $m_0=0$ and the t-test with $μ_0=0$ on each data set using $α=0.05$. Comment on any similarities or differences between the two testing procedures. For this question, you may not use the functions introduced next.*
+*Carry out the Sign-Test with $m_0=0$ and the t-test with $μ_0=0$ on each data set using $α=0.05$. Comment on any similarities or differences between the two testing procedures. For this question, you may not use the functions introduced next.*
 \
 
 The hypothesis for the Sign-Test is a follows
@@ -56,7 +56,7 @@ To accept $H_0$ the number of values greater than $m=0$ must be less than 12 as 
 ```{r}
 var1 = sum(set_1 > 0) #calculates the total number of values greater than zero
 var2 = sum(set_2 > 0)
-print(c(var1,var2))
+print(c(var1<=12,var2<=12))
 
 ```
 As we can see from these results we reject the null hypotheses for data set 1 and data set 2 as they both have 12 values greater than the mean.
@@ -85,11 +85,13 @@ We can then see that we reject the null hypotheses for data set 1 and accept the
 
 ### Question 3
 
-*Perform a simulation study to confirm that the sign test (as coded in the function above) yields a test with the correct significance level using $nSim=10,000$ simulations of samples of size $n=100$ from a $N(μ,1)$ distribution with $α=0.05$.*
-
 ```{r}
 load(url('http://people.bath.ac.uk/trs35/tests_code.R'))
 ```
+
+*Perform a simulation study to confirm that the Sign-Test (as coded in the function above) yields a test with the correct significance level using $nSim=10,000$ simulations of samples of size $n=100$ from a $N(μ,1)$ distribution with $α=0.05$.*
+
+
 
 
 ```{r}
@@ -99,8 +101,8 @@ n = 100
 arr = array(0,dim=nSim)
 
 for (i in 1:nSim){
-  var = rnorm(n,mean = 0,sd = 1)
-  arr[i] = sign.test(var)
+  var = rnorm(n,mean = 0,sd = 1)#generates a sample from the normal distribution
+  arr[i] = sign.test(var) #the default values are correct
 }
 print(sum(arr)/length(arr))
 ```
@@ -110,7 +112,7 @@ We can see that the significance level is less then 0.05 so we can confirm that 
 
 ### Question 4
 
-*Perform a simulation study to compare the power of the sign test and the t-test using $nSim=1,000$ simulations of samples of size $n=25$ from a $N(μ,1)$ distribution. Plot the power of each test as a function of $μ$ in the interval (0, 2).*
+*Perform a simulation study to compare the power of the Sign-Test and the t-test using $nSim=1,000$ simulations of samples of size $n=25$ from a $N(μ,1)$ distribution. Plot the power of each test as a function of $μ$ in the interval (0, 2).*
 
 ```{r}
 set.seed(0)
@@ -125,17 +127,17 @@ for (i in 1:length(mew_arr)){
   arr1 = array(0,dim=nSim)
   arr2 = array(0,dim=nSim)
   for (j in 1:nSim){
-    var = rnorm(n, mean = mew_arr[i], sd = 1)
+    var = rnorm(n, mean = mew_arr[i], sd = 1) #generates a sample from the normal distribution
     arr1[j] = sign.test(x = var)
     arr2[j] = myt.test(x = var)
     
-  arr[1,i] =1 - sum(arr1) / length(arr1)
-  arr[2,i] =1 - sum(arr2) / length(arr2)
+  arr[1,i] =1 - sum(arr1) / length(arr1) #this is the probability of type 2 error for Sign-Test
+  arr[2,i] =1 - sum(arr2) / length(arr2) #this is the probability of type 2 error for T-Test
     
   }
 }
 
-plot(mew_arr,1-arr[1,],main = 'Graph of the Power of the Sign Test vs T-Test for N(μ,1)',xlab = 'Values of μ', ylab = 'Power',ylim = c(0,1),col='red')
+plot(mew_arr,1-arr[1,],main = 'Graph of the Power of the Sign-Test vs T-Test for N(μ,1)',xlab = 'Values of μ', ylab = 'Power',ylim = c(0,1),col='red')
 points(mew_arr,1-arr[2,],col='blue')
 abline(h=0.95)
 legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
@@ -146,13 +148,13 @@ legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
 
 ### Question 5
 
-*Perform a simulation study to compare the power of the sign test and the t-test using $nSim=1,000$ simulations of samples of size $n=25$ from a Cauchy distribution with location parameter $m$ and scale parameter 1. You will need to consult the help file ?rcauchy. Plot the power of each test as a function of $m$ in the interval (0, 2).*
+*Perform a simulation study to compare the power of the Sign-Test and the t-test using $nSim=1,000$ simulations of samples of size $n=25$ from a Cauchy distribution with location parameter $m$ and scale parameter 1. You will need to consult the help file ?rcauchy. Plot the power of each test as a function of $m$ in the interval (0, 2).*
 
 ```{r}
 set.seed(0)
 nSim = 1000
 n = 25
-m_arr = seq(0,2,0.05)
+m_arr = seq(0,2,0.05) #generates array of m values
 
 arr = array(0,dim=c(2,length(m_arr)))
 
@@ -161,16 +163,16 @@ for (i in 1:length(m_arr)){
   arr1 = array(0,dim=nSim)
   arr2 = array(0,dim=nSim)
   for (j in 1:nSim){
-    var = rcauchy(n, location = m_arr[i], scale = 1)
+    var = rcauchy(n, location = m_arr[i], scale = 1) #generates a sample from the cauchy distribution
     arr1[j] = sign.test(x = var)
     arr2[j] = myt.test(x = var)
     
-  arr[1,i] =1 - sum(arr1) / length(arr1)
-  arr[2,i] =1 - sum(arr2) / length(arr2)
+  arr[1,i] =1 - sum(arr1) / length(arr1) #this is the probability of type 2 error for Sign-Test
+  arr[2,i] =1 - sum(arr2) / length(arr2) #this is the probability of type 2 error for T-Test
     
   }
 }
-plot(m_arr,1-arr[1,],main = 'Graph of the Power of the Sign Test vs T-Test for Cauchy(m,1)',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1),col='red')
+plot(m_arr,1-arr[1,],main = 'Graph of the Power of the Sign-Test vs T-Test for Cauchy(m,1)',xlab = 'Values of m', ylab = 'Power',ylim = c(0,1),col='red')
 points(m_arr,1-arr[2,],col='blue')
 abline(h=0.95)
 legend('bottomright',legend=c('Sign-Test','T-Test'),col=c('red','blue'),pch=1)
@@ -189,9 +191,9 @@ To measure the merit of each test I will be commenting on its effectiveness when
 
 
 ### Question 7
-*Write a function that takes in a vector of data x and a significance level α and returns a confidence interval for m based on inverting the sign test. You will need to use the alternative = "two.sided" option in the sign.test function.*
+*Write a function that takes in a vector of data x and a significance level α and returns a confidence interval for m based on inverting the Sign-Test. You will need to use the alternative = "two.sided" option in the sign.test function.*
 
-The two sided sign test is as such:
+The two sided Sign-Test is as such:
 
 $$
 \left\{
@@ -208,22 +210,22 @@ $$C_1 \leq m < C_2$$
 $$C_1 = x_i \textrm{ where } i\textrm{ is the largest value of } i \textrm{ such that }P(T \leq i) \leq \frac{\alpha}{2}$$
 
 $$C_2 = x_{j+1} \textrm{ where } j\textrm{ is the largest value of } j \textrm{ such that }P(T \geq j) \leq \frac{\alpha}{2}$$
-The upper bound $C_2$ is non-inclusive and equivalent to the ($j+1$)th value due to the following. For a number $x_n\in x$ to be accepted as the median by the sign test, all values in the bounds $[x_n,x_{n+1})$ are also accepted. This is due to the indicator function in the test statistic being non inclusive of the median, such that:
+The upper bound $C_2$ is non-inclusive and equivalent to the ($j+1$)th value due to the following. For a number $x_n\in x$ to be accepted as the median by the Sign-Test, all values in the bounds $[x_n,x_{n+1})$ are also accepted. This is due to the indicator function in the test statistic being non inclusive of the median, such that:
 
 $$1_{(m,\infty)}(m)=0 \implies sign.test(x,x_n) = sign.test(x,a) \quad \forall a\in[x_n,x_{n+1})$$
 Therefore showing that we must add 1 to the j value to show that the median could also be values greater than the highest accepted value in x ($x_j$) but non-inclusive of $x_{j+1}$
 
 ```{r}
 conf_int = function(x,alpha){
-  x = sort(x)
+  x = sort(x) # x must be sorted
   output = array(dim=length(x))
   for (i in 1:length(x)){
     value = x[i]
     output[i] = sign.test(x,m=value,alpha = alpha, alternative='two.sided')
   }
-  zeros = which(output %in% 0)
-  lower_index = zeros[1]
-  upper_index = tail(zeros,n=1) + 1
+  zeros = which(output %in% 0) # locate the values that are accepted
+  lower_index = zeros[1] #location of the lower bound in x
+  upper_index = tail(zeros,n=1) + 1 #location of the upper bound in x
   
   return (c(x[lower_index],x[upper_index]))
 }
@@ -235,16 +237,16 @@ conf_int = function(x,alpha){
 var = conf_int(set_1,0.1)
 print(sprintf('[%f,%f)',var[1],var[2]))
 ```
-We can see that the function returns the interval $0.1 \leq m < 2.8$ and we can verify these results that 0.1 is inclusive and 2.8 is non-inclusive as shown in the graph below.
+We can see that the function returns the interval $0.1 \leq m < 2.8$ and we can verify these results that 0.1 is inclusive and 2.8 is non-inclusive as shown in the graph below where the vertical line represent the bounds.
 
-```{r}
+```{r, echo=FALSE}
 med = seq(min(set_1),max(set_1),0.1)
 output = array(dim=length(med))
 for (i in 1:length(med)){
   output[i] = sign.test(set_1,m=med[i],alpha = 0.1, alternative='two.sided')
 }
-plot(med,output,main='sign.test over a changing median in the range from data set 1',xlab='Median Value')
+plot(med,output,main='Sign-Test over a changing median in the range from data set 1',xlab='Median Value',ylab='Output')
 abline(v=0.1)
-abline(v=2.8)
+abline(v=2.8,lty=2)
 ```
 
