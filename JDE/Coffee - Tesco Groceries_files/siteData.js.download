@@ -1,1 +1,0 @@
-bertie.on("siteData",function(e){try{var siteDataObj={busSiteApplication:e.application||null,busSiteCountry:e.country||null,busSiteStoreId:e.storeId||null};dataLayer.push({siteData:siteDataObj})}catch(e){var errorsObj=gtmDataLayer.get("errors")||{};errorsObj.siteData="Unavailable",errorsObj.siteData.eMesssage=e,gtmDataLayer.set("errors",errorsObj)}});

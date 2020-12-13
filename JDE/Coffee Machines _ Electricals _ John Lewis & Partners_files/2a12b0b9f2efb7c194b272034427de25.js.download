@@ -1,1 +1,0 @@
-Bootstrapper.bindImmediate(function(){var Bootstrapper=window["Bootstrapper"];var ensightenOptions=Bootstrapper.ensightenOptions;Bootstrapper.on("click","#live-chat-btn-online .live-chat-button",function(){Bootstrapper.ensEvent.trigger("Click Live Chat",this)})},-1,-1,-1);
