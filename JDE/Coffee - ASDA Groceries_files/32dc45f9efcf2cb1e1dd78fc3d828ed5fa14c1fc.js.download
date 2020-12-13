@@ -1,0 +1,30 @@
+(function() {
+    try {
+        /*  Binding Format:
+            target - element selector
+            event_track - what native event do you want to track?
+            event_fire - what custom event do you want to fire?
+            
+            Template:
+            bindings.push({"target":"", "event_track":"", "event_fire":""});
+        */
+        var bindings = [];
+        
+        bindings.push({"target":".bannerLink", "event_track":"click", "event_fire":"BannerTap"});
+        bindings.push({"target":".taxonomy-explore__item", "event_track":"click", "event_fire":"exploreNavLink"});
+                
+        jQuery(window).on("triggerOmniture", function() {
+            BrightTag.each(bindings, function(binding) {
+                jQuery(binding.target).one(binding.event_track, function() {
+                    jQuery(window).trigger(binding.event_fire, arguments);
+                });
+            });
+        });
+        
+
+        
+    }
+    catch(e) {
+        
+    }
+})();

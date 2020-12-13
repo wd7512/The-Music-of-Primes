@@ -1,0 +1,44 @@
+(function() {
+    try {
+        /*  Binding Format:
+            target - element selector
+            event_track - what native event do you want to track?
+            event_fire - what custom event do you want to fire?
+            
+            Template:
+            bindings.push({"target":"", "event_track":"", "event_fire":""});
+        */
+        var bindings = [];
+        
+        bindings.push({"target":".bannerLink", "event_track":"click", "event_fire":"bannerTap"});
+        
+        bindings.push({"target":".delivery-pass-msg", "event_track":"click", "event_fire":"buyNewDeliveryPass"});
+        
+        bindings.push({"target":".listing .addItemToTrolley", "event_track":"click", "event_fire":"cartAdd"});
+        
+        bindings.push({"target":".listing .quantityIncrease", "event_track":"click", "event_fire":"cartAdd"});
+        
+        bindings.push({"target":".slot-item", "event_track":"click", "event_fire":"slot"});
+        
+        bindings.push({"target":"#logo", "event_track":"click", "event_fire":"headerLogoClick"});
+        
+        bindings.push({"target":".basic .need-help", "event_track":"click", "event_fire":"headerNeedHelp"});
+        
+        bindings.push({"target":".shoppinglist-icon", "event_track":"click", "event_fire":"shoppingListTap"});
+        
+        
+        jQuery(window).on("triggerOmniture", function() {
+            BrightTag.each(bindings, function(binding) {
+                jQuery(binding.target).one(binding.event_track, function() {
+                    jQuery(window).trigger(binding.event_fire, arguments);
+                });
+            });
+        });
+        
+
+        
+    }
+    catch(e) {
+        
+    }
+})();
