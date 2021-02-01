@@ -17,6 +17,7 @@ class game:
         self.turn = 1
         self.winner = 0
         self.end = False
+        self.disp = False
 
 
     def next_turn(self):
@@ -28,7 +29,8 @@ class game:
 
     def make_move(self,pos):
 
-        print(pos)
+        if self.disp == True:
+            print(pos)
         
         if type(pos) != tuple or self.board[pos] != 0 or self.winner != 0:
             print('invalid input or game is over')
@@ -45,18 +47,24 @@ class game:
                          [self.board[(0,2)],self.board[(1,1)],self.board[(2,0)]]
                 ]
 
-            print(str(self.board) + '\n')
+            if self.disp == True:
+                print(str(self.board) + '\n')
 
             if any([is_win(boole) for boole in all_lines]) == True:
                 self.winner = self.turn
                 self.end = True
-                print(str(self.winner) + ' is the winner')
+
+                if self.disp == True:
+                    print(str(self.winner) + ' is the winner')
 
             if 0 not in self.board:
                 self.end = True
-                print('Draw')
+
+                if self.disp == True:
+                    print('Draw')
 
             self.next_turn()
+
 
 def empty_spaces(board):
     spaces = []
@@ -88,28 +96,36 @@ def min_max_player(game):
 
     return best_move
             
-def minimax(board,ismax): #MAKE RECURSIVE
-    if ismax == 1:
-        next_p = -1
-    else:
-        next_p = 1
+def minimax(board,turn): #MAKE RECURSIVE, maxing if p1, mini if p2
+    possible_moves = empty_spaces(board)
+    scores_of_moves = np.zeros(len(possible_moves),dtype = int)
 
-    options = empty_spaces(board)
 
-    new_boards = []
-    for pos in options:
-        new = np.copy(board)
-        new[pos] = next_p
-        new_boards.append(new)
+    for i in range(len(possible_moves)):
+        move = possible_moves[i]
+        test_state = game()
 
-    
-    
+        test_state.disp = True
+        test_state.board = np.copy(board)
+        test_state.turn = turn
 
+        test_state.make_move(move)
+
+        if test_state.end == True:
+            scores_of_moves[i] = test_state.winner
+        else:
+            scores_of_moves[i] = minimax(test_state.board,test_state.turn)
         
-    return 1
+    print(scores_of_moves)
+    print(turn)
+    if turn == 1:
+        return max(scores_of_moves)
+    else:
+        return min(scores_of_moves)
 
 def run_game(p1,p2):
     a = game()
+    a.disp = True
     while a.end == False:
         if a.turn == 1:
             func = p1
@@ -122,7 +138,7 @@ def run_game(p1,p2):
     return a.winner
 
 out = []
-for i in range(10):
+for i in range(1):
 
     out.append(run_game(min_max_player,random_player))
 
