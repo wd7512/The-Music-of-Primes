@@ -1,5 +1,7 @@
 #tic tac toe game
 import numpy as np
+import random
+import matplotlib.pyplot as plt
 
 def is_win(arr):
     if min(arr) == max(arr) and arr[0] != 0:
@@ -12,6 +14,7 @@ class game:
         self.board = np.zeros([3,3],dtype = int)
         self.turn = 1
         self.winner = 0
+        self.end = False
 
 
     def next_turn(self):
@@ -22,6 +25,9 @@ class game:
 
 
     def make_move(self,pos):
+
+        print(pos)
+        
         if type(pos) != tuple or self.board[pos] != 0 or self.winner != 0:
             print('invalid input or game is over')
         else:
@@ -37,11 +43,66 @@ class game:
                          [self.board[(0,2)],self.board[(1,1)],self.board[(2,0)]]
                 ]
 
+            print(str(self.board) + '\n')
+
             if any([is_win(boole) for boole in all_lines]) == True:
                 self.winner = self.turn
-                print(str(self.winner) + 'is the winner')
+                self.end = True
+                print(str(self.winner) + ' is the winner')
+
+            if 0 not in self.board:
+                self.end = True
+                print('Draw')
 
             self.next_turn()
 
-        print(self.board)
+        
 
+def random_player(game):
+    empty_spaces = []
+    for i in range(3):
+        for j in range(3):
+            if game.board[i,j] == 0:
+                empty_spaces.append((i,j))
+
+    return random.choice(empty_spaces)
+
+def min_max_player(game):
+    best_score = np.NINF
+
+    for i in range(3):
+        for j in range(3):
+            if game.board[i,j] == 0:
+                
+                test_board = np.copy(game.board)
+                test_board[i,j] = game.turn
+
+                score = minimax(test_board,game.turn,0)
+                if score > best_score:
+                    best_move = (i,j)
+
+    return best_move
+            
+def minimax(board,turn,depth):
+    return 1
+
+def run_game(p1,p2):
+    a = game()
+    while a.end == False:
+        if a.turn == 1:
+            func = p1
+        else:
+            func = p2
+
+        move = func(a)
+        a.make_move(move)
+
+    return a.winner
+
+out = []
+for i in range(100):
+
+    out.append(run_game(min_max_player,random_player))
+
+plt.hist(out)
+plt.show()
