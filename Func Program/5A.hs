@@ -28,3 +28,14 @@ height (Node x left right) = max (height left) (height right) + 1
 member :: Int -> IntTree -> Bool 
 member _ Empty = False 
 member y (Node x left right) = y == x || member y left || member y right
+
+type Var = String
+
+data Term = 
+    Variable Var
+  | Lambda   Var Term
+  | Apply    Term Term
+  deriving show
+
+example :: Term
+example = Lambda "a" (Lambda "x" (Apply (Apply (Lambda "y" (Apply (Variable "a") (Variable "c"))) (Variable "x")) (Variable "b")))
