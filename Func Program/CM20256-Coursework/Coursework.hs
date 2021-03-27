@@ -117,11 +117,18 @@ s3 = ("c", At "a" :-> At "a")
 ------------------------- Assignment 2
 
 sub :: Sub -> Type -> Type
-sub = undefined
+sub (x, m) (At a)
+  | x == a    = m
+  | otherwise = At a
+sub (x, m) (a :-> b)
+  | (At x) == a = m :-> (sub (x, m) b)
+  | (At x) == b = (sub (x, m) a) :-> m
+  | otherwise   = (sub (x, m) a) :-> (sub (x, m) b)
 
 subs :: [Sub] -> Type -> Type
-subs = undefined
-
+subs [] m     = m
+subs [x] m    = sub x m
+subs (x:xs) m = sub x (subs xs m)
 
 ------------------------- Unification
 
