@@ -87,11 +87,17 @@ t3 = At "a" :-> At "c" :-> At "c"
 
 ------------------------- Assignment 1
 
+t4 :: Atom -> Type
+t4 x = At x :-> At "b"
+
 occurs :: Atom -> Type -> Bool
-occurs = undefined
+occurs x (At a)    = a == x 
+occurs x (a :-> b) = occurs x a || occurs x b
+
 
 findAtoms :: Type -> [Atom]
-findAtoms = undefined
+findAtoms (At a) = [a]
+findAtoms (a :-> b) = merge (findAtoms a) (findAtoms b)
 
 
 ------------------------- Type substitution
