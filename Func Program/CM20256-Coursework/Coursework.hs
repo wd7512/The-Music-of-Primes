@@ -154,7 +154,8 @@ st1 = ([],[u1,u2])
 ------------------------- Assignment 3
 
 sub_u :: Sub -> [Upair] -> [Upair]
-sub_u  = undefined
+sub_u x [(m,n)] = [(sub x m, sub x n)]
+sub_u x (m:ms) = (sub_u x [m]) ++ (sub_u x ms)
 
 
 step :: State -> State
