@@ -159,8 +159,13 @@ sub_u x (m:ms) = (sub_u x [m]) ++ (sub_u x ms)
 
 
 step :: State -> State
-step = undefined
-
+step ([s], x:xs)  
+  | m == n     = ([s], xs)
+  | 
+  | 
+  | otherwise  = ([s], x:xs)
+  where
+    (m,n) = x
 
 unify :: [Upair] -> [Sub]
 unify = undefined
