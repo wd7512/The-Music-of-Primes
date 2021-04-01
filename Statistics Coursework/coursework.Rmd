@@ -1,0 +1,24 @@
+---
+title: "Coursework"
+author: "William Dennis"
+date: "25/03/2021"
+output: html_document
+---
+
+Question 3
+Is the SSRI effective in treating anxiety and depression?
+
+Split data into placeobo and SSRI
+Build Linear Models predicting GAD and PHQ. Compare coeffcients and make statistically significant judgements
+
+AIC Model selection
+
+Question 4
+
+```{r data}
+load("C:/Users/wwden/Desktop/Statistics Coursework/anxdep.rda")
+df = anxdep
+hist(df$gadinit)
+hist(df$gadfinal)
+```
+
