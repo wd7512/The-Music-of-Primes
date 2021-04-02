@@ -158,15 +158,18 @@ sub_u :: Sub -> [Upair] -> [Upair]
 sub_u x [(m,n)] = [(sub x m, sub x n)]
 sub_u x (m:ms) = (sub_u x [m]) ++ (sub_u x ms)
 
-isAtom :: Type -> Bool
-isAtom (At x) = True
-isAtom _ = False
-
 step :: State -> State
-step ([s], x:xs)  
-  | m == n     = ([s], xs)
-  where
-    (m,n) = x
+step (s, (At a, At b):xs)
+  | a == b    = ([], xs)
+  | otherwise = error "atoms not matching"
+step (s, (At a, m):xs)
+  | occurs a m = error "FAIL"
+  | otherwise  = ([(a,m)], [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
+step (s, (m, At a):xs)
+  | occurs a m = error "FAIL"
+  | otherwise  = ([(a,m)], [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
+step (s, (At a :-> m, At b :-> n):xs) = (s, (At a, At b):(m ,n):xs)
+
 
 unify :: [Upair] -> [Sub]
 unify = undefined
