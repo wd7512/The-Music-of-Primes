@@ -159,21 +159,29 @@ sub_u x [(m,n)] = [(sub x m, sub x n)]
 sub_u x (m:ms) = (sub_u x [m]) ++ (sub_u x ms)
 
 step :: State -> State
-step (s, (At a, At b):xs)
-  | a == b    = ([], xs)
-  | otherwise = error "atoms not matching"
+step (s, (At a, At b):xs) 
+  | a == b    = (s,xs)
+  | otherwise = ((a,At b):s,xs)
 step (s, (At a, m):xs)
-  | occurs a m = error "FAIL"
-  | otherwise  = ([(a,m)], [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
+  | occurs a m = error "Exception: STEP: Atom Occurs in" 
+  | otherwise  = ((a,m):s, [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
 step (s, (m, At a):xs)
-  | occurs a m = error "FAIL"
-  | otherwise  = ([(a,m)], [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
-step (s, (At a :-> m, At b :-> n):xs) = (s, (At a, At b):(m ,n):xs)
+  | occurs a m = error "Exception: STEP: Atom Occurs in"
+  | otherwise  = ((a,m):s, [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
+step (s, (a :-> m,b :-> n):xs) = (s, (a, b):(m ,n):xs)
 
 
 unify :: [Upair] -> [Sub]
-unify = undefined
+unify x
+  | u == []   = s
+  | otherwise = unify' (s,u)
+    where
+      (s,u) = step ([],x)
 
+      unify' :: State -> [Sub]
+      unify' (s,u)
+        | u == []   = s
+        | otherwise = unify' (step (s,u))
 
 ------------------------- Assignment 4
 
