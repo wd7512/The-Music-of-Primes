@@ -125,6 +125,7 @@ sub (x, m) (a :-> b)
   | (At x) == b = (sub (x, m) a) :-> m
   | otherwise   = (sub (x, m) a) :-> (sub (x, m) b)
 
+
 subs :: [Sub] -> Type -> Type
 subs [] m     = m
 subs [x] m    = sub x m
@@ -157,13 +158,13 @@ sub_u :: Sub -> [Upair] -> [Upair]
 sub_u x [(m,n)] = [(sub x m, sub x n)]
 sub_u x (m:ms) = (sub_u x [m]) ++ (sub_u x ms)
 
+isAtom :: Type -> Bool
+isAtom (At x) = True
+isAtom _ = False
 
 step :: State -> State
 step ([s], x:xs)  
   | m == n     = ([s], xs)
-  | 
-  | 
-  | otherwise  = ([s], x:xs)
   where
     (m,n) = x
 
