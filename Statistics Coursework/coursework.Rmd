@@ -13,7 +13,7 @@ We built effective linear models using the step function
 Looking at the summary of the the new models the P values of SSRI are both below 5% and reduce both phq and gad scores 
 
 
-```{r test}
+```{r Question 3}
 load('anxdep.rda')
 df = na.omit(anxdep)
 lmodgad = lm(gadfinal ~ gadinit + phqinit + treatment + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = df)
@@ -26,49 +26,13 @@ print(summary(new_lmodgad))
 print(summary(new_lmodphq))
 ```
 
-```{r }
+
+```{r}
+library(ggplot2)
 load('anxdep.rda')
-df = na.omit(anxdep)
-dfSSRI = df[df$treatment == "SSRI",]
-dfPLAC = df[df$treatment == "Placebo",]
-new_lmodgadSSRI = lm(gadfinal ~ depressedinpast + gadinit, data = dfSSRI)
-new_lmodgadPLAC = lm(gadfinal ~ depressedinpast + gadinit, data = dfPLAC)
-summary(new_lmodgadSSRI)
-summary(new_lmodgadPLAC)
-
-new_lmodphqSSRI = lm(phqfinal ~ relstatus + ethnic + empstat + finance + phqinit, data = dfSSRI)
-new_lmodphqPLAC = lm(phqfinal ~ relstatus + ethnic + empstat + finance + phqinit, data = dfPLAC)
-summary(new_lmodphqSSRI)
-summary(new_lmodphqPLAC)
+anxdep$gadchg <- anxdep$gadinit - anxdep$gadfinal
+anxdep$phqchg <- anxdep$phqinit - anxdep$phqfinal
+ggplot(anxdep, aes(gadchg, phqchg,colour = factor(treatment))) + geom_point() + geom_smooth()
+ggplot(anxdep, aes(gadinit, gadfinal,colour = factor(treatment))) + geom_point() + geom_smooth()
+ggplot(anxdep, aes(phqinit, phqfinal,colour = factor(treatment))) + geom_point() + geom_smooth()
 ```
-
-Question 4
-
-```{r data}
-load('anxdep.rda')
-df = na.omit(anxdep)
-dfSSRI = df[df$treatment == "SSRI",]
-dfPLAC = df[df$treatment == "Placebo",]
-
-lmodgadSSRI = lm(gadfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfSSRI)
-lmodphqSSRI = lm(phqfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfSSRI)
-lmodgadPLAC = lm(gadfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfPLAC)
-lmodphqPLAC = lm(phqfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfPLAC)
-
-#step(lmodgadSSRI)
-#step(lmodphqSSRI)
-step(lmodgadPLAC)
-step(lmodphqPLAC)
-
-new_lmodgadSSRI = lm(gadfinal ~ depressedinpast + gadinit, data = dfSSRI)
-new_lmodphqSSRI = lm(phqfinal ~ empstat + finance + phqinit, data = dfSSRI)
-new_lmodgadPLAC = lm(gadfinal ~ depressedinpast + empstat + relstatus + education + finance + gadinit, data = dfPLAC)
-new_lmodphqPLAC = lm(phqfinal ~ empstat + relstatus + finance + ethnic + phqinit, data = dfPLAC)
-
-print(summary(new_lmodgadSSRI))
-print(summary(new_lmodphqSSRI))
-print(summary(new_lmodgadPLAC))
-print(summary(new_lmodphqPLAC))
-
-```
-
