@@ -185,14 +185,17 @@ unify x
 
 ------------------------- Assignment 4
 
-type Context   = ()
-type Judgement = ()
+type Context   = [(String,Type)]
+type Judgement = (Context,Term,Type)
 
-data Derivation
+data Derivation = Axiom Judgement | Abstraction Judgement Derivation | Application Judgement Derivation Derivation
 
+
+n1 :: Term
 n1 = Apply (Lambda "x" (Variable "x")) (Variable "y")
 
-{-
+
+d1 :: Derivation
 d1 = Application ([("y",At "a")], n1 , At "a") (
        Abstraction ([("y",At "a")],Lambda "x" (Variable "x"),At "a" :-> At "a") (
          Axiom ([("x",At "a"),("y",At "a")],Variable "x",At "a")
@@ -200,6 +203,7 @@ d1 = Application ([("y",At "a")], n1 , At "a") (
        Axiom ([("y",At "a")], Variable "y", At "a")
      )
 
+d2 :: Derivation
 d2 = Application ([("y",At "b")],Apply (Lambda "x" (Apply (Variable "x") (Variable "y"))) (Lambda "z" (Variable "z")),At "a") (
        Abstraction ([("y",At "b")],Lambda "x" (Apply (Variable "x") (Variable "y")),At "c") (
          Application ([("x",At "d"),("y",At "b")],Apply (Variable "x") (Variable "y"),At "e") (
@@ -210,7 +214,7 @@ d2 = Application ([("y",At "b")],Apply (Lambda "x" (Apply (Variable "x") (Variab
        Abstraction ([("y",At "b")],Lambda "z" (Variable "z"),At "h") (
          Axiom ([("z",At "i"),("y",At "b")],Variable "z",At "j")
      ) )
--}
+
 
 conclusion :: Derivation -> Judgement
 conclusion = undefined
@@ -228,7 +232,7 @@ subs_der = undefined
 
 ------------------------- Typesetting derivations
 
-{-
+
 instance Show Derivation where
   show d = unlines (reverse strs)
     where
@@ -270,7 +274,7 @@ instance Show Derivation where
         | length d1 > length d2 = ( l1 , m1+r1+2+l2+m2 , r2 , [ x ++ "  " ++ y | (x,y) <- zip d1 (extend (l2+m2+r2) d2)])
         | otherwise             = ( l1 , m1+r1+2+l2+m2 , r2 , [ x ++ "  " ++ y | (x,y) <- zip (extend (l1+m1+r1) d1) d2])
 
--}
+
 
 ------------------------- Assignment 5
 
