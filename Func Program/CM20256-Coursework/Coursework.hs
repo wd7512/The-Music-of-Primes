@@ -10,6 +10,7 @@
 
 ------------------------- Auxiliary functions
 
+{-# OPTIONS_GHC -Wno-deferred-type-errors #-}
 find :: (Show a,Eq a) => a -> [(a,b)] -> b
 find x [] = error ("find: " ++ show x ++ " not found")
 find x ((y,z):zs)
@@ -217,18 +218,24 @@ d2 = Application ([("y",At "b")],Apply (Lambda "x" (Apply (Variable "x") (Variab
 
 
 conclusion :: Derivation -> Judgement
-conclusion = undefined
+conclusion (Application x y z) = x
 
 
 subs_ctx :: [Sub] -> Context -> Context
-subs_ctx = undefined
+subs_ctx s c 
+  | c == []   = []
+  | otherwise = (x,subs s m):(subs_ctx s xs)
+    where
+      (x,m):xs = c
+
 
 subs_jdg :: [Sub] -> Judgement -> Judgement
-subs_jdg = undefined
+subs_jdg s (c,x,t) = (subs_ctx s c, x, subs s t)
 
 subs_der :: [Sub] -> Derivation -> Derivation
-subs_der = undefined
-
+subs_der s (Axiom x) = Axiom (subs_jdg s x)
+subs_der s (Abstraction x y) = Abstraction (subs_jdg s x) (subs_der s y)
+subs_der s (Application x y z) = Application (subs_jdg s x) (subs_der s y) (subs_der s z)
 
 ------------------------- Typesetting derivations
 
