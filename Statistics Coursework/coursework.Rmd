@@ -8,22 +8,67 @@ output: html_document
 Question 3
 Is the SSRI effective in treating anxiety and depression?
 
-Split data into placeobo and SSRI
-Build Linear Models predicting GAD and PHQ. Compare coeffcients and make statistically significant judgements
+We built effective linear models using the step function
 
-AIC Model selection
+Looking at the summary of the the new models the P values of SSRI are both below 5% and reduce both phq and gad scores 
 
-Question 4
+
 ```{r test}
-library(fastDummies)
-library(leaps)
+load('anxdep.rda')
 df = na.omit(anxdep)
-df = dummy_cols(df)
-
+lmodgad = lm(gadfinal ~ gadinit + phqinit + treatment + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = df)
+lmodphq = lm(phqfinal ~ gadinit + phqinit + treatment + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = df)
+step(lmodgad)
+step(lmodphq)
+new_lmodgad = lm(gadfinal ~ treatment + depressedinpast + gadinit, data = df)
+new_lmodphq = lm(phqfinal ~ relstatus + treatment + ethnic + empstat + finance + phqinit, data = df)
+print(summary(new_lmodgad))
+print(summary(new_lmodphq))
 ```
 
+```{r }
+load('anxdep.rda')
+df = na.omit(anxdep)
+dfSSRI = df[df$treatment == "SSRI",]
+dfPLAC = df[df$treatment == "Placebo",]
+new_lmodgadSSRI = lm(gadfinal ~ depressedinpast + gadinit, data = dfSSRI)
+new_lmodgadPLAC = lm(gadfinal ~ depressedinpast + gadinit, data = dfPLAC)
+summary(new_lmodgadSSRI)
+summary(new_lmodgadPLAC)
+
+new_lmodphqSSRI = lm(phqfinal ~ relstatus + ethnic + empstat + finance + phqinit, data = dfSSRI)
+new_lmodphqPLAC = lm(phqfinal ~ relstatus + ethnic + empstat + finance + phqinit, data = dfPLAC)
+summary(new_lmodphqSSRI)
+summary(new_lmodphqPLAC)
+```
+
+Question 4
+
 ```{r data}
-GADlmod1 = lm(formula = gadfinal ~ gadinit + treatment + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = anxdep)
-GADlmod2 = lm(formula = gadfinal ~ gadinit + treatment + depressedinpast, data = anxdep)du
+load('anxdep.rda')
+df = na.omit(anxdep)
+dfSSRI = df[df$treatment == "SSRI",]
+dfPLAC = df[df$treatment == "Placebo",]
+
+lmodgadSSRI = lm(gadfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfSSRI)
+lmodphqSSRI = lm(phqfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfSSRI)
+lmodgadPLAC = lm(gadfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfPLAC)
+lmodphqPLAC = lm(phqfinal ~ gadinit + phqinit + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = dfPLAC)
+
+#step(lmodgadSSRI)
+#step(lmodphqSSRI)
+step(lmodgadPLAC)
+step(lmodphqPLAC)
+
+new_lmodgadSSRI = lm(gadfinal ~ depressedinpast + gadinit, data = dfSSRI)
+new_lmodphqSSRI = lm(phqfinal ~ empstat + finance + phqinit, data = dfSSRI)
+new_lmodgadPLAC = lm(gadfinal ~ depressedinpast + empstat + relstatus + education + finance + gadinit, data = dfPLAC)
+new_lmodphqPLAC = lm(phqfinal ~ empstat + relstatus + finance + ethnic + phqinit, data = dfPLAC)
+
+print(summary(new_lmodgadSSRI))
+print(summary(new_lmodphqSSRI))
+print(summary(new_lmodgadPLAC))
+print(summary(new_lmodphqPLAC))
+
 ```
 
