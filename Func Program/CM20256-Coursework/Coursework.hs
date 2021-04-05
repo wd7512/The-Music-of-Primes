@@ -186,7 +186,7 @@ unify x
 
 ------------------------- Assignment 4
 
-type Context   = [(String,Type)]
+type Context   = [(Var,Type)]
 type Judgement = (Context,Term,Type)
 
 data Derivation = Axiom Judgement | Abstraction Judgement Derivation | Application Judgement Derivation Derivation
@@ -287,10 +287,10 @@ instance Show Derivation where
 
 
 derive0 :: Term -> Derivation
-derive0 = undefined
+derive0 x = aux ([("",At "")], x, At "")
   where
     aux :: Judgement -> Derivation
-    aux = undefined
+    aux (x,y,z) = Application (x,y,z) (Axiom (x,y,z)) (Axiom (x,y,z))
 
 
 derive1 :: Term -> Derivation
