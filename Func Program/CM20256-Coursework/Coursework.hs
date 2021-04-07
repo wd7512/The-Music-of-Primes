@@ -367,5 +367,5 @@ upairs (Application (c,x,t) p q) = [(aux p, aux q :-> t)] ++ upairs p ++ upairs 
 
 
 derive :: Term -> Derivation
-derive = undefined
+derive x = subs_der (unify (upairs (derive1 x))) (derive1 x)
 
