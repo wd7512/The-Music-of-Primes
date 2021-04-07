@@ -284,17 +284,47 @@ instance Show Derivation where
 
 
 ------------------------- Assignment 5
+a = (Variable "x")
+b = Lambda "x" (Variable "x")
 
+(_,c,_) = conclusion d2
+
+used :: Term -> [Var]
+used (Variable x) = [x]
+used (Lambda x y) = merge [x] (used y)
+used (Apply x y)  = merge (used x) (used y)
+
+
+free0 :: Term -> Context
+free0 x = [(a,At "") | a <- (free x)]
+
+rmdup :: Context -> Context
+rmdup [] = []
+rmdup (x:xs)
+  | elem x xs = rmdup xs
+  | otherwise = x : rmdup xs
+
+merg0 :: Context -> Term -> Context
+merg0 x y = rmdup (x ++ free0 y)
 
 derive0 :: Term -> Derivation
-derive0 x = aux ([("",At "")], x, At "")
+derive0 x = aux (free0 x,x,At "")
   where
     aux :: Judgement -> Derivation
-    aux (x,y,z) = Application (x,y,z) (Axiom (x,y,z)) (Axiom (x,y,z))
+    aux (x,Variable m,z) = Axiom (merg0 x (Variable m),Variable m,z)
+    aux (x,Lambda m n,z) = Abstraction (merg0 x (Lambda m n),Lambda m n,z) (aux (merg0 x n,n,z))
+    aux (x,Apply m n ,z) = Application (merg0 x (Apply m n),Apply m n,z) (aux (merg0 x m,m,z)) (aux (merg0 x n,n,z))
+
+free1 :: Term -> [Atom] -> Context
+free1 x y = [(a,At b) | (a,b) <- zip (free x) (y)]
+
+merg1 :: Context -> Term -> [Atom] -> Context
+merg1 x y z = rmdup (x ++ (free1 y z))
+
 
 
 derive1 :: Term -> Derivation
-derive1 = undefined
+derive1 x = aux 
   where
     aux :: [Atom] -> Judgement -> Derivation
     aux = undefined
