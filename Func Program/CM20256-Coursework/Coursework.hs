@@ -286,52 +286,77 @@ instance Show Derivation where
 ------------------------- Assignment 5
 a = (Variable "x")
 b = Lambda "x" (Variable "x")
+d = Lambda "x" (Variable "y")
 
 (_,c,_) = conclusion d2
 
-used :: Term -> [Var]
-used (Variable x) = [x]
-used (Lambda x y) = merge [x] (used y)
-used (Apply x y)  = merge (used x) (used y)
-
-
 free0 :: Term -> Context
-free0 x = [(a,At "") | a <- (free x)]
+free0 x = [(a, At "") | a <- free x]
 
-rmdup :: Context -> Context
-rmdup [] = []
-rmdup (x:xs)
-  | elem x xs = rmdup xs
-  | otherwise = x : rmdup xs
+remdup :: Eq a => [a] -> [a]
+remdup [] = []
+remdup (x:xs)
+  | elem x xs = remdup xs
+  | otherwise = x : remdup xs
 
-merg0 :: Context -> Term -> Context
-merg0 x y = rmdup (x ++ free0 y)
+cont0 :: Term -> Context -> Context
+cont0 x c = remdup (free0 x ++ c)
+
 
 derive0 :: Term -> Derivation
 derive0 x = aux (free0 x,x,At "")
   where
     aux :: Judgement -> Derivation
-    aux (x,Variable m,z) = Axiom (merg0 x (Variable m),Variable m,z)
-    aux (x,Lambda m n,z) = Abstraction (merg0 x (Lambda m n),Lambda m n,z) (aux (merg0 x n,n,z))
-    aux (x,Apply m n ,z) = Application (merg0 x (Apply m n),Apply m n,z) (aux (merg0 x m,m,z)) (aux (merg0 x n,n,z))
-
-free1 :: Term -> [Atom] -> Context
-free1 x y = [(a,At b) | (a,b) <- zip (free x) (y)]
-
-merg1 :: Context -> Term -> [Atom] -> Context
-merg1 x y z = rmdup (x ++ (free1 y z))
+    aux (c,(Variable x),_) = Axiom (c,Variable x,At "")
+    aux (c,(Lambda x y),_) = Abstraction (c,(Lambda x y), At "") (aux (cont0 y c, y, At ""))
+    aux (c,(Apply x y),_)  = Application (c,(Apply x y), At "") (aux (cont0 x c, x, At "")) (aux (cont0 y c, y, At ""))
 
 
+index :: [Atom] -> Int -> Atom
+index ats i = head [a | (a,j) <- zip ats [0..], i == j]
 
-derive1 :: Term -> Derivation
-derive1 x = aux 
+split :: [Atom] -> Int -> Int -> [Atom]
+split ats n m = [a | (a,i) <- zip ats [0..], rem i n == m]
+
+free1 :: [Atom] -> Term -> Context
+free1 ats x = [(a, At b) | (a,b) <- zip (free x) (ats)]
+
+news :: [Var] -> [Var] -> [Var]
+news old [] = []
+news old (n:ns)
+  | elem n old = news old ns
+  | otherwise  = n : news old ns
+
+merg1 :: [Atom] -> Context -> Term -> Context
+merg1 ats oldC t = oldC ++ [(a,At b) | (a,b) <- zip (news [k | (k,_) <- oldC] (free t)) ats]
+
+
+
+
+derive1 :: Term -> Derivation {-This is horrible i know but im stupid and spent way too many hours on it-}
+derive1 x = aux (split (drop 1 atoms) 2 0) (free1 (split (drop 1 atoms) 2 1) x, x, At (index atoms 0))
   where
     aux :: [Atom] -> Judgement -> Derivation
-    aux = undefined
+
+    aux l (c,Variable x,t) = Axiom (merg1 (drop 1 l) c (Variable x),Variable x,At (index l 0))
+
+    aux l (c,Lambda x y,t) = Abstraction 
+      (merg1 (split (drop 2 l) 3 0) c (Lambda x y), Lambda x y,At (index l 0)) 
+      (aux (split (drop 2 l) 3 1) (merg1 (split (drop 2 l) 3 2) c y,y,At (index l 1)))
+
+    aux l (c,Apply x y,t) = Application
+      (merg1 (split (drop 3 l) 5 0) c (Apply x y), Apply x y,At (index l 0))
+      (aux (split (drop 3 l) 5 1) (merg1 (split (drop 3 l) 5 2) c x,x,At (index l 1)))
+      (aux (split (drop 3 l) 5 3) (merg1 (split (drop 3 l) 5 4) c y,y,At (index l 2)))
+
+    
+
 
 
 upairs :: Derivation -> [Upair]
-upairs = undefined
+upairs (Axiom (c,Variable x,t)) = [(find x c,t)]
+upairs (Abstraction (c,Lambda x y,t) p) = upairs p
+upairs (Application (c,Apply x y,t) p q) = upairs p ++ upairs q
 
 
 derive :: Term -> Derivation
