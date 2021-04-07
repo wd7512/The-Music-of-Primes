@@ -284,11 +284,6 @@ instance Show Derivation where
 
 
 ------------------------- Assignment 5
-a = (Variable "x")
-b = Lambda "x" (Variable "x")
-d = Lambda "x" (Variable "y")
-
-(_,c,_) = conclusion d2
 
 free0 :: Term -> Context
 free0 x = [(a, At "") | a <- free x]
@@ -354,9 +349,21 @@ derive1 x = aux (split (drop 1 atoms) 2 0) (free1 (split (drop 1 atoms) 2 1) x, 
 
 
 upairs :: Derivation -> [Upair]
-upairs (Axiom (c,Variable x,t)) = [(find x c,t)]
-upairs (Abstraction (c,Lambda x y,t) p) = upairs p
-upairs (Application (c,Apply x y,t) p q) = upairs p ++ upairs q
+upairs (Axiom (c,Variable x,t)) = [(t,find x c)]
+
+upairs (Abstraction (c1,Lambda x1 y1,t1) (Axiom (c2,Variable x2,t2))) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Axiom (c2,Variable x2,t2))
+upairs (Abstraction (c1,Lambda x1 y1,t1) (Abstraction (c2,Apply x2 y2,t2) p )) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Abstraction (c2,Apply x2 y2,t2) p )
+upairs (Abstraction (c1,Lambda x1 y1,t1) (Application (c2,Apply x2 y2,t2) p q)) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Application (c2,Apply x2 y2,t2) p q)
+
+upairs (Application (c,x,t) p q) = [(aux p, aux q :-> t)] ++ upairs p ++ upairs q
+  where
+    aux :: Derivation -> Type
+    aux (Axiom (c,x,t))       = t
+    aux (Abstraction (c,x,t) p) = t
+    aux (Application (c,x,t) p q) = t
+
+
+
 
 
 derive :: Term -> Derivation
