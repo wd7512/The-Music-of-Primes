@@ -98,7 +98,7 @@ occurs x (a :-> b) = occurs x a || occurs x b
 
 findAtoms :: Type -> [Atom]
 findAtoms (At a) = [a]
-findAtoms (a :-> b) = merge (findAtoms a) (findAtoms b)
+findAtoms (a :-> b) = merge (findAtoms a) (findAtoms b) {-merge merges alphabetically -}
 
 
 ------------------------- Type substitution
@@ -160,14 +160,15 @@ sub_u x [(m,n)] = [(sub x m, sub x n)]
 sub_u x (m:ms) = (sub_u x [m]) ++ (sub_u x ms)
 
 step :: State -> State
-step (s, (At a, At b):xs) 
+step (s,[]) = (s,[])
+step (s, (At a, At b):xs)
   | a == b    = (s,xs)
-  | otherwise = ((a,At b):s,xs)
+  | otherwise = ((a,At b):s, [(sub (a,At b) p, sub (a,At b) q )| (p,q) <- xs])
 step (s, (At a, m):xs)
-  | occurs a m = error "Exception: STEP: Atom Occurs in" 
+  | occurs a m = error ("Exception: STEP: Atom " ++ show a ++ " Occurs in " ++ show m)
   | otherwise  = ((a,m):s, [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
 step (s, (m, At a):xs)
-  | occurs a m = error "Exception: STEP: Atom Occurs in"
+  | occurs a m = error ("Exception: STEP: Atom " ++ show a ++ " Occurs in " ++ show m)
   | otherwise  = ((a,m):s, [(sub (a,m) p, sub (a,m) q )| (p,q) <- xs])
 step (s, (a :-> m,b :-> n):xs) = (s, (a, b):(m ,n):xs)
 
