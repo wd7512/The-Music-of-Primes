@@ -9,6 +9,7 @@ void setup() {
     ypos[i] = height/2;
     dir[i] = random(TWO_PI);
   }
+
 }
 
 float trisize = 5;
@@ -17,6 +18,7 @@ float [] xpos;
 float [] ypos;
 float [] dir;
 float speed = 10;
+
 
 
 void tri(float ang, float x, float y){ // ang goes from 0 to 2*pi
@@ -28,6 +30,7 @@ void tri(float ang, float x, float y){ // ang goes from 0 to 2*pi
   float y3 = y + trisize * sin(ang + 2 * TWO_PI / 3);
   triangle(x1,y1,x2,y2,x3,y3);
 }
+
 
 
 
