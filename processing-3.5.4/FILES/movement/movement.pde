@@ -1,24 +1,22 @@
 void setup() {
-  size (800,500);
+  size (1000,1000);
   frameRate(60);
   xpos = new float[noTri];
   ypos = new float[noTri];
   dir = new float[noTri];
   for (int i = 0; i < noTri; i++){
-    xpos[i] = random(width);
-    ypos[i] = random(height);
+    xpos[i] = width/2;
+    ypos[i] = height/2;
     dir[i] = random(TWO_PI);
   }
 }
 
 float trisize = 5;
-int noTri = 100;
+int noTri = 2000;
 float [] xpos;
 float [] ypos;
 float [] dir;
-float speed = 3;
-float vision = 100;
-float turnSpeed = 0.01;
+float speed = 10;
 
 
 void tri(float ang, float x, float y){ // ang goes from 0 to 2*pi
@@ -31,33 +29,25 @@ void tri(float ang, float x, float y){ // ang goes from 0 to 2*pi
   triangle(x1,y1,x2,y2,x3,y3);
 }
 
+
+
 void draw() {
   background(255);
   for (int i = 0; i < noTri; i++){
     tri(dir[i],xpos[i],ypos[i]);
-    dir[i] = dir[i];
-    xpos[i] = xpos[i] + speed * cos(dir[i]);
-    ypos[i] = ypos[i] + speed * sin(dir[i]);
+
+    float dx = speed * cos(dir[i]);
+    float dy = speed * sin(dir[i]);
     
 
-    for (int j = 0; j < noTri; j++){
-      if (i != j){
+    
+    if (xpos[i] + dx < trisize*speed) {dir[i] = PI - dir[i];dx = speed * cos(dir[i]);}
+    if (xpos[i] + dx > width - trisize*speed) {dir[i] = PI - dir[i];dx = speed * cos(dir[i]);}
+    if (ypos[i] + dy < trisize*speed) {dir[i] = - dir[i];dy = speed * sin(dir[i]);}
+    if (ypos[i] + dy > height - trisize*speed) {dir[i] =- dir[i];dy = speed * sin(dir[i]);}
 
-        float dist = (abs(xpos[i] - xpos[j]) + abs(ypos[i] - ypos[j]));
-        if (dist < vision) {
-          float between = atan((ypos[j]-ypos[i])/(xpos[j]-xpos[i]));
-          float diff = between - dir[i];
-          if (diff <  -PI) {dir[i] = dir[i] - turnSpeed * vision / dist;} // go away anti
-          //if (diff > -PI && diff < 0) {dir[i] = dir[i] + 0.1 * turnSpeed * dist / vision;} // go towards clock
-          //if (diff > 0 && diff < PI) {dir[i] = dir[i] - 0.1 * turnSpeed * dist / vision;} // go towards anti
-          if (diff > PI) {dir[i] = dir[i] + turnSpeed * vision / dist;} // go away clock
-          
-        }
-      }
-    }
-    if (xpos[i] < 0) {xpos[i] = width;}
-    if (xpos[i] > width) {xpos[i] = 0;}
-    if (ypos[i] < 0) {ypos[i] = height;}
-    if (ypos[i] > height) {ypos[i] = 0;}
+    
+    xpos[i] = xpos[i] + dx;
+    ypos[i] = ypos[i] + dy;
   }
 }
