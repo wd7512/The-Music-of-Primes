@@ -12,7 +12,11 @@ We built effective linear models using the step function
 
 Looking at the summary of the the new models the P values of SSRI are both below 5% and reduce both phq and gad scores 
 
-```{r echo=FALSE}
+**Question 3 - Is the SSRI effective in treating anxiety and depression?**
+
+To get an initial impression of the data set, we set up 3 graphs displaying any differences the placebo group and SSRI group may have. The first graph of Change in GAD vs change in PHQ shows little variance between the placebo group and SSRI groups as both lines have overlapping smoothed conditional means. The second graph of GADINIT vs GADFINAL shows us that there may be a significant improvement in anxiety levels for SSRI patients if they have a GAD score less than 10 but above that there may be no significant difference or even the SSRI patients get worse than the placebo. The third graph of PHQINIT vs PHQFINAL shows a slight improvement of depression levels with the SSRI treatment across all initial PHQ values, however as shown, the difference may be insignificant.
+
+```{r echo=F,message=F,warning=F}
 library(ggplot2)
 load('anxdep.rda')
 anxdep = na.omit(anxdep)
@@ -24,7 +28,9 @@ ggplot(anxdep, aes(phqinit, phqfinal,colour = factor(treatment))) + geom_point()
 ```
 
 
-```{r Question 3}
+After this initial impressions we think that a linear model could be constructed to devise whether the treatment is effective or not. This process is shown in the code below. The first step was to omit any patients with missing data in the second line. I then needed to build an efficient linear model, so to do this we made linear models with all of the factors included. With this model we used the step function which removes factors based on the models AIC score and was left with a linear model for GADFINAL and PHQFINAL. Reviewing the summary of these models it showed us that the P values of the SSRI factor were both below 5% therefore implying that the SSRI was is effective in treating anxiety and depression.
+
+```{r echo=T, results='hide'}
 load('anxdep.rda')
 df = na.omit(anxdep)
 lmodgad = lm(gadfinal ~ gadinit + phqinit + treatment + sex + age + ethnic + finance + education + empstat + relstatus + depressedinpast, data = df)
@@ -33,6 +39,8 @@ step(lmodgad)
 step(lmodphq)
 new_lmodgad = lm(gadfinal ~ treatment + depressedinpast + gadinit, data = df)
 new_lmodphq = lm(phqfinal ~ relstatus + treatment + ethnic + empstat + finance + phqinit, data = df)
+```
+```{r echo=T}
 print(summary(new_lmodgad))
 print(summary(new_lmodphq))
 ```
