@@ -12,6 +12,17 @@ We built effective linear models using the step function
 
 Looking at the summary of the the new models the P values of SSRI are both below 5% and reduce both phq and gad scores 
 
+```{r echo=FALSE}
+library(ggplot2)
+load('anxdep.rda')
+anxdep = na.omit(anxdep)
+anxdep$gadchg <- anxdep$gadinit - anxdep$gadfinal
+anxdep$phqchg <- anxdep$phqinit - anxdep$phqfinal
+ggplot(anxdep, aes(gadchg, phqchg,colour = factor(treatment))) + geom_point() + geom_smooth() + ggtitle('Plot of Change in GAD vs change in PHQ')
+ggplot(anxdep, aes(gadinit, gadfinal,colour = factor(treatment))) + geom_point() + geom_smooth() + ggtitle('Plot of GADINIT vs GADFINAL')
+ggplot(anxdep, aes(phqinit, phqfinal,colour = factor(treatment))) + geom_point() + geom_smooth() + ggtitle('Plot of PHQINIT vs PHQFINAL')
+```
+
 
 ```{r Question 3}
 load('anxdep.rda')
@@ -27,12 +38,4 @@ print(summary(new_lmodphq))
 ```
 
 
-```{r}
-library(ggplot2)
-load('anxdep.rda')
-anxdep$gadchg <- anxdep$gadinit - anxdep$gadfinal
-anxdep$phqchg <- anxdep$phqinit - anxdep$phqfinal
-ggplot(anxdep, aes(gadchg, phqchg,colour = factor(treatment))) + geom_point() + geom_smooth()
-ggplot(anxdep, aes(gadinit, gadfinal,colour = factor(treatment))) + geom_point() + geom_smooth()
-ggplot(anxdep, aes(phqinit, phqfinal,colour = factor(treatment))) + geom_point() + geom_smooth()
-```
+
