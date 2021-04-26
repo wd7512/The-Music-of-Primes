@@ -1,0 +1,341 @@
+---
+title: "Statistics 2B Coursework"
+author: "Group 34"
+date: "24/04/2021"
+output: pdf_document
+---
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(broom)
+library(faraway)
+library(ggplot2)
+library(dplyr)
+library(plyr)
+library(reshape2)
+library(tinytex)
+knitr::opts_chunk$set(echo = TRUE)
+options(warn=-1)
+load("anxdep.rda")
+```
+In this study we are asked to analyze the effectiveness of selective serotonin reuptake inhibitors on treating depression and anxiety. The severity of these illnesses are categorized as followed and reported by the participants.
+
+Depression: 0-4 none, 5-9 mild, 10-14 moderate, 15-19 moderately severe, 20-27 severe.
+Anxiety: 0-4 none, 5-9 mild, 10-14 moderate, 15-21 severe.
+
+# Does the severity of illness when enrolled into the study vary according to the characteristics of the participants?
+
+In this first question we are asked to study whether the severity of illness when enrolled into the study varies according to the characteristics of participants. We first plot the data to get an initial feel for it:
+
+```{r, tidy=TRUE , fig.show="hold", out.width="50%",warning=FALSE,message=FALSE}
+anxdepJustGadInit = subset(anxdep,select = -c(gadfinal,phqinit,phqfinal,
+                                              treatment))
+ggplot(anxdepJustGadInit, aes(x=age, y=gadinit),main = "GAD for age") + 
+  geom_point()
+par(mfrow=c(1,2))
+boxplot(gadinit~sex,data=anxdepJustGadInit,main="GAD for Sex",xlab="Sex",
+        ylab="Initial GAD")
+boxplot(gadinit~ethnic,data=anxdepJustGadInit,main="GAD for Ethnicity",
+        xlab="Ethnicity",ylab="Initial GAD")
+
+boxplot(gadinit~depressedinpast,data=anxdepJustGadInit,
+main="GAD for Depression History",xlab="Depression History",ylab="Initial GAD")
+boxplot(gadinit~education,data=anxdepJustGadInit,
+main="GAD for Education",xlab="Education",ylab="Initial GAD")
+par(mfrow=c(1,1))
+boxplot(gadinit~empstat,data=anxdepJustGadInit,main="GAD for Employment Status",
+xlab="Employment Status",ylab="Initial GAD")
+boxplot(gadinit~relstatus,data=anxdepJustGadInit,
+main="GAD for Relationship Status",xlab="Relationship Status",
+ylab="Initial GAD")
+boxplot(gadinit~finance,data=anxdepJustGadInit,
+main="GAD for Financial Position",xlab="Financial Position",ylab="Initial GAD")
+
+```
+Initially, employment status, age, relationship status and financial position appear to be possible candidates 
+for affecting the severity of anxiety before the treatment.
+
+We do the same for depression:
+
+```{r, fig.show="hold", out.width="50%",warning=FALSE,message=FALSE}
+anxdepJustPHQInit = subset(anxdep,select = -c(gadinit,gadfinal,phqfinal,
+                                              treatment))
+ggplot(anxdepJustPHQInit, aes(x=age, y=phqinit),main = "PHQ for age") +
+  geom_point()
+par(mfrow=c(1,3))
+boxplot(phqinit~sex,data=anxdepJustPHQInit,main="PHQ for Sex",xlab="Sex",
+        ylab="Initial PHQ")
+boxplot(phqinit~ethnic,data=anxdepJustPHQInit,main="PHQ for Ethnicity",
+        xlab="Ethnicity",ylab="Initial PHQ")
+boxplot(phqinit~finance,data=anxdepJustPHQInit,
+main="PHQ for Financial Position",xlab="Financial Position",ylab="Initial PHQ")
+par(mfrow=c(1,2))
+boxplot(phqinit~education,data=anxdepJustPHQInit,
+main="PHQ for Education",xlab="Education",ylab="Initial PHQ")
+boxplot(phqinit~empstat,data=anxdepJustPHQInit,main="PHQ for Employment Status",
+xlab="Employment Status",ylab="Initial PHQ")
+boxplot(phqinit~relstatus,data=anxdepJustPHQInit,
+main="PHQ for Relationship Status",xlab="Relationship Status",
+ylab="Initial PHQ")
+boxplot(phqinit~depressedinpast,data=anxdepJustPHQInit,
+main="PHQ for Depression History",xlab="Depression History",ylab="Initial PHQ")
+```
+
+We get similar results for depression
+
+Moving on to building a linear model, and checking the residuals:
+```{r }
+lmodGadInit = lm(gadinit~sex+age+ethnic+finance+education+empstat+relstatus,
+                 data=anxdep)
+lmodPHQInit = lm(phqinit~sex+age+ethnic+finance+education+empstat+relstatus,
+                 data=anxdep)
+par(mfrow=c(1,2))
+plot(fitted(lmodGadInit),residuals(lmodGadInit),xlab="Fitted",ylab="Residuals",
+     title("GAD"))
+abline(h=0)
+plot(fitted(lmodPHQInit),residuals(lmodPHQInit),xlab="Fitted",ylab="Residuals",
+     title("PHQ"))
+abline(h=0)
+```
+Both models look fine, centered about 0.
+```{r}
+summary(lmodGadInit)
+```
+```{r}
+pf(5.813,5,24,lower.tail=FALSE)
+```
+We see here the F stat is significant so the predictors do have an effect on the response. As marked in the results, we see that age, financial situation and employment status have the most significant p values, and are likely the main predictors of anxiety. For age, the coefficient is negative showing that severity reduces with age, whereas with the others their presence implies an increase.
+```{r}
+summary(lmodPHQInit)
+```
+``` {r}
+pf(8.336,16,618,lower.tail=FALSE)
+```
+Once again the F statistic is significant. For depression, a poor financial situation are once again significant, but employment status less so. Instead being single is a significant indicator of depression, when considered as a linear model with all predictors involved.
+
+# Are participants liable to improve or get worse without treatment?
+```{r }
+anxdep$gadchg <- anxdep$gadinit - anxdep$gadfinal
+anxdep$phqchg <- anxdep$phqinit - anxdep$phqfinal
+anxdeplac <- anxdep[which(anxdep$treatment=='Placebo'), ]
+```
+
+
+```{r, fig.show="hold", out.width="50%",warning=FALSE,message=FALSE}
+ggplot(anxdeplac, aes(x = phqinit, y = phqchg)) + geom_point() + geom_smooth() +
+  xlab("Initial PHQ Score") + ylab("Change in PHQ Score")
+ggplot(anxdeplac, aes(x = gadinit, y = gadchg)) + geom_point() + geom_smooth() +
+  xlab("Initial GAD Score") + ylab("Change in GAD Score")
+t.test(anxdeplac$phqinit,anxdeplac$phqfinal,conf.level = 0.95,
+       alternative = c("two.sided"))
+t.test(anxdeplac$gadinit,anxdeplac$gadfinal,conf.level = 0.95,
+       alternative = c("two.sided"))
+```
+Looking at the plots for change in scores compared to initial values for the placebo group, we see that on average the change increases with the initial value. We also see that for initial scores less than 5, (in the "none" category) the change is negative. Performing a two-sided t-test on the placebo group, we see that for initial and final scores for GAD and PHQ the p-values are significant hence we conclude that there is a change in scores for the placebo group.
+
+```{r, fig.show="hold", out.width="50%",warning=FALSE,message=FALSE}
+gadscores <- anxdeplac %>% filter(gadinit>4)
+phqscores <- anxdeplac %>% filter(phqinit>4)
+gadnone <-anxdeplac %>% filter(gadinit<5)
+phqnone <- anxdeplac %>% filter(phqinit<5)
+ggplot(phqscores, aes(x = phqinit, y = phqchg)) + geom_point() + geom_smooth() +
+  xlab("Initial PHQ Score") + ylab("Change in PHQ Score")
+ggplot(gadscores, aes(x = gadinit, y = gadchg)) + geom_point() + geom_smooth() +
+  xlab("Initial GAD Score") + ylab("Change in GAD Score")
+t.test(phqscores$phqinit,phqscores$phqfinal,conf.level = 0.95,
+       alternative = c("greater"))
+t.test(gadscores$gadinit,gadscores$gadfinal,conf.level = 0.95,
+       alternative = c("greater"))
+t.test(phqnone$phqinit,phqnone$phqfinal,conf.level = 0.95,
+       alternative = c("less"))
+t.test(gadnone$gadinit,gadnone$gadfinal,conf.level = 0.95,
+       alternative = c("less"))
+```
+
+Therefore, performing a one-sided t-test for scores above 4 (alternative hypothesis of final score being greater than initial score), we see that the p-values are significant for both GAD and PHQ. For the group in the "none" category, a one-sided t-test with alternative hypothesis that final score is less than initial score returned significant p-values. Hence we can conclude that patients' conditions get worse without treatment, unless there is no condition to start with.
+
+# Is the SSRI effective in treating anxiety and depression?
+
+
+To get an initial impression of the data set, we set up 3 graphs displaying any differences the placebo group and SSRI group may have. The first graph of Change in GAD vs change in PHQ shows little variance between the placebo group and SSRI groups as both lines have overlapping smoothed conditional means. The second graph of GADINIT vs GADFINAL shows us that there may be a significant improvement in anxiety levels for SSRI patients if they have a GAD score less than 10 but above that there may be no significant difference or even the SSRI patients get worse than the placebo. The third graph of PHQINIT vs PHQFINAL shows a slight improvement of depression levels with the SSRI treatment across all initial PHQ values, however as shown, the difference may be insignificant.
+
+```{r,  fig.show="hold", out.width="33%", echo=F,message=F,warning=F }
+anxdep = na.omit(anxdep)
+anxdep$gadchg <- anxdep$gadinit - anxdep$gadfinal
+anxdep$phqchg <- anxdep$phqinit - anxdep$phqfinal
+ggplot(anxdep, aes(gadchg, phqchg,colour = factor(treatment))) + geom_point() +
+  
+geom_smooth() + ggtitle('Plot of Change in GAD vs Change in PHQ')
+ggplot(anxdep, aes(gadinit, gadfinal,colour = factor(treatment))) + 
+  
+geom_point() + geom_smooth() + ggtitle('Plot of GADINIT vs GADFINAL')
+ggplot(anxdep, aes(phqinit, phqfinal,colour = factor(treatment))) + 
+  
+geom_point() + geom_smooth() + ggtitle('Plot of PHQINIT vs PHQFINAL')
+```
+
+
+
+After these initial impressions we think that a linear model could be constructed to devise whether the treatment is effective or not. This process is shown in the code below. The first step was to omit any patients with missing data in the second line. I then needed to build an efficient linear model, so to do this we made linear models with all of the factors included. With this model we used the step function which removes factors based on the models AIC score and was left with a linear model for GADFINAL and PHQFINAL. Reviewing the summary of these models it showed us that the P values of the SSRI factor were both below 5% therefore implying that the SSRI was is effective in treating anxiety and depression.
+
+```{r echo=T, results='hide'}
+df = na.omit(anxdep)
+lmodgad = lm(gadfinal ~ gadinit + phqinit + treatment + sex + age + ethnic +
+finance + education + empstat + relstatus + depressedinpast, data = df)
+lmodphq = lm(phqfinal ~ gadinit + phqinit + treatment + sex + age + ethnic +
+finance + education + empstat + relstatus + depressedinpast, data = df)
+step(lmodgad)
+step(lmodphq)
+new_lmodgad = lm(gadfinal ~ treatment + depressedinpast + gadinit, data = df)
+new_lmodphq = lm(phqfinal ~ relstatus + treatment + ethnic + empstat + finance +
+                   phqinit, data = df)
+```
+```{r echo=T}
+print(summary(new_lmodgad))
+print(summary(new_lmodphq))
+```
+```{r echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+anxdep <- na.omit(anxdep)
+```
+# Is the treatment more (or less) effective for certain kinds of participants?
+
+We can observe the different effect that each variable has on predicted values by reviewing their coefficients and significance in the relevant linear model (this method can account for correlation between groups), or by conducting paired-samples t-tests on the initial and final metrics for different groups. However, some cohorts may be expected to change thanks to the placebo effect, which these methods would not account for.
+
+To account for this effect, we can use a linear model to predict the effects of the placebo given the characteristics of the participant. This model can then be applied to the sample who were given the SSRI treatment, and the set of predicted values and the set of values after SSRI treatment can be compared.
+
+First we need to construct a pair of linear models to predict the effect that a placebo would have on gad and phq scores of participants.
+
+```{r}
+anxdep.placebo <- anxdep[anxdep$treatment == "Placebo",]
+anxdep.SSRI <- anxdep[anxdep$treatment == "SSRI",]
+lmod.gad.placebo <- lm(gadfinal ~ gadinit + phqinit + sex + age + ethnic + 
+                         finance + education + empstat + relstatus + 
+                         depressedinpast, data = anxdep.placebo)
+lmod.phq.placebo <- lm(phqfinal ~ gadinit + phqinit + sex + age + ethnic + 
+                         finance + education + empstat + relstatus + 
+                         depressedinpast, data = anxdep.placebo)
+```
+
+We can use the step function for model specification, since exhaustive-search AIC selection will split categorical data into dummy variables.
+
+```{r}
+lmod.gad.placebo <-  step(lmod.gad.placebo, trace=FALSE)
+summary(lmod.gad.placebo)
+lmod.phq.placebo <-  step(lmod.phq.placebo, trace=FALSE)
+summary(lmod.phq.placebo)
+```
+
+We can now use these models to predict the effect that the placebo would have on those who took the SSRI treatment for the sake of acurate comparison.
+
+```{r}
+anxdep.SSRI$gadpred = predict(lmod.gad.placebo, newdata = anxdep.SSRI)
+anxdep.SSRI$phqpred = predict(lmod.phq.placebo, newdata = anxdep.SSRI)
+```
+
+The residual between the values contained in the gadpred and gadfinal columns of the dataframe anxdep.SSRI are due to the direct influence of the treatment, so we can infer the impact of the treatment by examining how the distribution of these residuals vary between cohorts.
+Some cohorts are colinear; retired employment status, for example, can be expected to carry a strong correlation with age.
+
+One way to review the inter-categorical differences is to construct a linear model that takes the placebo effect into account, by using the placebo-predicted values as an explanatory variable in predicting the SSRI-treated outcomes. We use AIC-based model selection again to prevent overfitting.
+
+```{r}
+lmod.gad.SSRI.placebo <- lm(gadfinal ~ gadpred + sex + age + ethnic + finance +
+                              education + empstat + relstatus + depressedinpast,
+                            data = anxdep.SSRI)
+lmod.gad.SSRI.placebo <- step(lmod.gad.SSRI.placebo, , trace=FALSE)
+summary(lmod.gad.SSRI.placebo)
+
+lmod.phq.SSRI.placebo <- lm(phqfinal ~ phqpred + sex + age + ethnic + finance +
+                              education + empstat + relstatus + depressedinpast,
+                            data = anxdep.SSRI)
+lmod.phq.SSRI.placebo <- step(lmod.phq.SSRI.placebo, trace=FALSE)
+summary(lmod.phq.SSRI.placebo)
+```
+
+This model indicates that the residual between the placebo effect and treatment effect is affected in a statistically significant way by an individual's demographic data. Specifically, the treatment's effect on anxiety scores was most significantly altered by difficult financial circumstances, and divorced relationship status, while changes in depression scores after treatment were most influenced by ethnicity and being employed.
+
+To gain context for further analysis, we can compare the predictions of the placebo effect model with the outcomes of the SSRI treatment
+
+```{r}
+review.group <- function(col, cat, gad.or.phq) {
+  anxdep.SSRI.filter <- anxdep.SSRI %>% filter(!!as.symbol(col) == cat)
+  
+  gad.phq.value <- c(anxdep.SSRI.filter[
+    ,paste0(gad.or.phq, "pred", sep="")], anxdep.SSRI.filter[
+      ,paste0(gad.or.phq, "final", sep="")])
+  
+  value <- c(rep("Placebo Forecast", nrow(anxdep.SSRI.filter)), 
+             rep("SSRI", nrow(anxdep.SSRI.filter)))
+  
+  df <- data.frame(gad.phq.value, value)
+  
+  
+  mu <- ddply(df, "value", summarise, grp.mean=mean(gad.phq.value))
+  
+  p <- ggplot(df, aes(x=gad.phq.value, fill=value)) +
+           geom_histogram(alpha=0.5, position='identity', binwidth = 1) +
+           geom_vline(data=mu, aes(xintercept=grp.mean, color=value),
+           linetype="dashed", alpha=0.5) +
+           theme(legend.position="top") +
+           labs(x=paste0("Predicted ", toupper(gad.or.phq), 
+                         " of Placebo vs. Actual Outcome of SSRI for '",
+                         cat, " ", col, "' Group", sep=""))
+  
+  t <- t.test(anxdep.SSRI.filter[,paste0(gad.or.phq, "pred", sep="")], 
+              anxdep.SSRI.filter[,paste0(gad.or.phq, "final", sep="")], 
+              paired=TRUE, alternative = "greater")
+  
+return(list(p, t))
+}
+```
+
+```{r,  fig.show="hold", out.width="50%"}
+review.group("treatment", "SSRI", "gad")
+review.group("treatment", "SSRI", "phq")
+```
+
+As the results from the above t-tests indicate, there is a significant reduction in depression and anxiety across the sample who took the SSRI treatment. The mean difference in both cases is in the region of 0.78 points.
+
+Our model indicated that the treatment was significantly more effective for divorced individuals, which we can demonstrate similarly:
+```{r,  fig.show="hold", out.width="70%"}
+review.group("relstatus", "Divorced", "gad")
+```
+
+For divorced people, the mean decrease in anxiety levels was 3.34, which was far higher than the general population, indicating the treatment was more effective on this group. 
+
+We can show the same for individuals with difficult financial circumstances:
+```{r,  fig.show="hold", out.width="70%"}
+review.group("finance", "vdifficult", "gad")
+```
+
+For individuals under very difficult financial circumstances, the reduction in anxiety was significantly beyond the population average (4.16 vs. 0.77). 
+
+```{r,  fig.show="hold", out.width="70%"}
+review.group("finance", "difficult", "gad")
+```
+
+For individuals with 'difficult' financial circumstances, the opposite trend occurred: the group had higher levels of anxiety than our model suggests the same group would have experienced under the placebo treatment. The mean GAD score for the latter is 1.7 points lower.
+
+Meanwhile, our model indicated that ethnicity had an impact on the SSRI treatment's effect on depression:
+
+```{r,  fig.show="hold", out.width="70%"}
+review.group("ethnic", "white", "phq")
+```
+
+While the treatment had a positive effect on depression for all ethnic groups, the decrease was observed to be less for white individuals. The mean decrease was 0.32, compared to the population average decrease of 0.79, and the results of the SSRI-treated group was not significantly different to their predicted distribution under the placebo treatment. This suggests the treatment is more effective at tackling depression for ethnic minorities than white people.
+
+The model also suggested that being employed correlated with the effectiveness of the SSRI at treating depression:
+
+```{r,  fig.show="hold", out.width="70%"}
+review.group("empstat", "employed", "phq")
+```
+
+The effect is that employed people saw a greater decrease in depression than the population, with more than twice the mean decrease in PHQ score.
+
+
+# Conclusion
+
+In our analysis we first studied whether or not the severity of illness varied according to participants characteristics prior to any treatment. Here we found that participants anxiety levels tended to be driven by worse financial and employment statuses, but that as they got older were less likely to have bad anxiety. This could partly be due to the fact older people were more likely to be retired and not "unemployed". With regards to their depression, age once again drove down severity, as well as a poor financial situation causing an increase, but being single was a bigger factor rather than employment status in heightened depression. Investigation into the placebo group showed that for both anxiety and depression, subjects with existing conditions (from mild to severe) at the start of the trial found that their conditions worsened as the change in scores increased with significance. However, subjects without existing conditions found that their scores decreased. 
+
+The next step in our analysis was to study whether the SSRI was effective in treating anxiety and depression. By investigating various factors it was found that the drug had a significant effect on the drug that improved both anxiety and depression levels. Finally, we researched whether the efficacy of the SSRI treatment differed between different types of people, and found it did in several ways. The treatment was significantly more effective at treating anxiety for divorced people and people under 'very difficult' financial circumstances, while it was less effective for those under 'difficult' financial circumstances. Meanwhile, in terms of treating depression, the SSRI was more effective for minority ethnicities than white individuals, and was very effective for employed people. 
+
