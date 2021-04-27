@@ -285,3 +285,43 @@ instance Show Derivation where
 
 
 ------------------------- Assignment 5
+
+contextOccurs :: Var -> Context -> Bool
+contextOccurs x y = aux x [a | (a,_) <- y]
+  where
+    aux :: Var -> [Var] -> Bool
+    aux x []     = False
+    aux x (y:ys) = x == y || aux x ys
+
+derive0 :: Term -> Derivation
+derive0 x = aux ([(a,At "") | a <- free x],x,At "")
+  where
+    aux :: Judgement -> Derivation
+    aux (c,Variable x,t)
+      | contextOccurs x c = Axiom (c, Variable x, At "")
+      | otherwise         = Axiom ([(x,At "")] ++ c, Variable x, At "")
+
+    aux (c,Lambda x y,t)
+      | contextOccurs x c = Abstraction (c,Lambda x y,At "") (aux ([(x,At "")] ++ [(a,b) | (a,b) <- c, a /= x],y, At ""))
+      | otherwise         = Abstraction (c,Lambda x y, At "") (aux ([(x,At"")] ++ c,y, At ""))
+
+    aux (c,Apply x y,t) = Application (c,Apply x y,t) (aux (c,x,t)) (aux (c,y,t))
+
+
+
+derive1 :: Term -> Derivation
+derive1 = undefined
+  where
+    aux :: [Atom] -> Judgement -> Derivation
+    aux = undefined
+
+
+upairs :: Derivation -> [Upair]
+upairs = undefined
+
+
+derive :: Term -> Derivation
+derive = undefined
+
+test1 = Lambda "x" (Lambda "y" (Lambda "z" (Apply(Apply(Variable "x")(Variable "z"))(Apply(Variable "y")(Variable "z")))))
+test2 = Lambda "x" (Lambda "x" (Variable "x"))
