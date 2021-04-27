@@ -305,15 +305,23 @@ derive0 x = aux ([(a,At "") | a <- free x],x,At "")
       | contextOccurs x c = Abstraction (c,Lambda x y,At "") (aux ([(x,At "")] ++ [(a,b) | (a,b) <- c, a /= x],y, At ""))
       | otherwise         = Abstraction (c,Lambda x y, At "") (aux ([(x,At"")] ++ c,y, At ""))
 
-    aux (c,Apply x y,t) = Application (c,Apply x y,t) (aux (c,x,t)) (aux (c,y,t))
+    aux (c,Apply x y,t) = Application (c,Apply x y,At "") (aux (c,x, At "")) (aux (c,y, At ""))
 
 
 
 derive1 :: Term -> Derivation
-derive1 = undefined
+derive1 x = aux (drop (1 + length (free x)) atoms) ([(a,At b) | (a,b) <- zip (free x) (tail atoms)],x, At (head atoms))
   where
     aux :: [Atom] -> Judgement -> Derivation
-    aux = undefined
+    aux ats (c,Variable x,t)
+      | contextOccurs x c = Axiom (c, Variable x, At (head ats))
+      | otherwise         = Axiom ([(x,At (head (tail ats)))] ++ c, Variable x, At (head ats))
+
+    aux ats (c,Lambda x y,t)
+      | contextOccurs x c = Abstraction (c,Lambda x y, At (head ats)) (aux (drop 3 ats) ([(x,At (head (tail ats)))] ++ [(a,b) | (a,b) <- c, a /= x],y, At (head (tail (tail ats)))))
+      | otherwise         = Abstraction (c,Lambda x y, At (head ats)) (aux (drop 3 ats) ([(x,At (head (tail ats)))] ++ c,y, At (head (tail (tail ats)))))
+
+    aux ats (c,Apply x y,t) = Application (c,Apply x y,t) (aux [a | (a,i) <- zip ats [0..], even i] (c,x,t)) (aux [a | (a,i) <- zip ats [0..], odd i] (c,y,t))
 
 
 upairs :: Derivation -> [Upair]
