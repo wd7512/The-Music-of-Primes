@@ -308,7 +308,7 @@ derive0 x = aux ([(a,At "") | a <- free x],x,At "")
     aux (c,Apply x y,t) = Application (c,Apply x y,At "") (aux (c,x, At "")) (aux (c,y, At ""))
 
 
-
+{- Maybe add t to the bottom rows? -}
 derive1 :: Term -> Derivation
 derive1 x = aux (drop (1 + length (free x)) atoms) ([(a,At b) | (a,b) <- zip (free x) (tail atoms)],x, At (head atoms))
   where
@@ -321,7 +321,10 @@ derive1 x = aux (drop (1 + length (free x)) atoms) ([(a,At b) | (a,b) <- zip (fr
       | contextOccurs x c = Abstraction (c,Lambda x y, At (head ats)) (aux (drop 3 ats) ([(x,At (head (tail ats)))] ++ [(a,b) | (a,b) <- c, a /= x],y, At (head (tail (tail ats)))))
       | otherwise         = Abstraction (c,Lambda x y, At (head ats)) (aux (drop 3 ats) ([(x,At (head (tail ats)))] ++ c,y, At (head (tail (tail ats)))))
 
-    aux ats (c,Apply x y,t) = Application (c,Apply x y,t) (aux [a | (a,i) <- zip ats [0..], even i] (c,x,t)) (aux [a | (a,i) <- zip ats [0..], odd i] (c,y,t))
+    aux ats (c,Apply x y,t) = Application 
+                              (c,Apply x y,At (head ats)) 
+                              (aux [a | (a,i) <- zip (drop 3 ats) [0..], even i] (c,x, At (head (tail ats)))) 
+                              (aux [a | (a,i) <- zip (drop 3 ats) [0..], odd i] (c,y,At (head (tail (tail ats)))))
 
 
 upairs :: Derivation -> [Upair]
