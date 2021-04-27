@@ -353,7 +353,7 @@ upairs :: Derivation -> [Upair]
 upairs (Axiom (c,Variable x,t)) = [(t,find x c)]
 
 upairs (Abstraction (c1,Lambda x1 y1,t1) (Axiom (c2,Variable x2,t2))) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Axiom (c2,Variable x2,t2))
-upairs (Abstraction (c1,Lambda x1 y1,t1) (Abstraction (c2,Apply x2 y2,t2) p )) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Abstraction (c2,Apply x2 y2,t2) p )
+upairs (Abstraction (c1,Lambda x1 y1,t1) (Abstraction (c2,Lambda x2 y2,t2) p )) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Abstraction (c2,Lambda x2 y2,t2) p )
 upairs (Abstraction (c1,Lambda x1 y1,t1) (Application (c2,Apply x2 y2,t2) p q)) = [(t1,(find x1 c2) :-> t2)] ++ upairs (Application (c2,Apply x2 y2,t2) p q)
 
 upairs (Application (c,x,t) p q) = [(aux p, aux q :-> t)] ++ upairs p ++ upairs q
@@ -363,6 +363,11 @@ upairs (Application (c,x,t) p q) = [(aux p, aux q :-> t)] ++ upairs p ++ upairs 
     aux (Abstraction (c,x,t) p) = t
     aux (Application (c,x,t) p q) = t
 
+
+
+
+test1 = Lambda "x" (Lambda "y" (Lambda "z" (Apply(Apply(Variable "x")(Variable "z"))(Apply(Variable "y")(Variable "z")))))
+test2 = Lambda "x" (Lambda "x" (Variable "x"))
 
 
 
