@@ -346,3 +346,5 @@ derive x = subs_der (unify (upairs (derive1 x))) (derive1 x)
 
 test1 = Lambda "x" (Lambda "y" (Lambda "z" (Apply(Apply(Variable "x")(Variable "z"))(Apply(Variable "y")(Variable "z")))))
 test2 = Lambda "x" (Lambda "x" (Variable "x"))
+test3 = Lambda "x" (Lambda "y" (Lambda "z" (Apply(Apply(Variable "x")(Variable "z"))(Apply(Variable "y")(Variable"z")))))
+test4 = Lambda "x" (Lambda "x" (Lambda "y" (Lambda "y" (Apply (Variable "x") (Variable "y")))))    
