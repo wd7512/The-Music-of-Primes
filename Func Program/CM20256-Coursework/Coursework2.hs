@@ -219,6 +219,8 @@ d2 = Application ([("y",At "b")],Apply (Lambda "x" (Apply (Variable "x") (Variab
 
 
 conclusion :: Derivation -> Judgement
+conclusion (Axiom x) = x
+conclusion (Abstraction x y) = x
 conclusion (Application x y z) = x
 
 
@@ -308,31 +310,39 @@ derive0 x = aux ([(a,At "") | a <- free x],x,At "")
     aux (c,Apply x y,t) = Application (c,Apply x y,At "") (aux (c,x, At "")) (aux (c,y, At ""))
 
 
-{- Maybe add t to the bottom rows? -}
 derive1 :: Term -> Derivation
 derive1 x = aux (drop (1 + length (free x)) atoms) ([(a,At b) | (a,b) <- zip (free x) (tail atoms)],x, At (head atoms))
   where
     aux :: [Atom] -> Judgement -> Derivation
     aux ats (c,Variable x,t)
-      | contextOccurs x c = Axiom (c, Variable x, At (head ats))
-      | otherwise         = Axiom ([(x,At (head (tail ats)))] ++ c, Variable x, At (head ats))
+      | contextOccurs x c = Axiom (c, Variable x, t)
+      | otherwise         = Axiom ([(x,At (head (tail ats)))] ++ c, Variable x, t)
 
     aux ats (c,Lambda x y,t)
-      | contextOccurs x c = Abstraction (c,Lambda x y, At (head ats)) (aux (drop 3 ats) ([(x,At (head (tail ats)))] ++ [(a,b) | (a,b) <- c, a /= x],y, At (head (tail (tail ats)))))
-      | otherwise         = Abstraction (c,Lambda x y, At (head ats)) (aux (drop 3 ats) ([(x,At (head (tail ats)))] ++ c,y, At (head (tail (tail ats)))))
+      | contextOccurs x c = Abstraction (c,Lambda x y, t) (aux (drop 2 ats) ([(x,At (head ats))] ++ [(a,b) | (a,b) <- c, a /= x],y, At (head (tail ats))))
+      | otherwise         = Abstraction (c,Lambda x y, t) (aux (drop 2 ats) ([(x,At (head ats))] ++ c,y, At (head (tail ats))))
 
     aux ats (c,Apply x y,t) = Application 
-                              (c,Apply x y,At (head ats)) 
-                              (aux [a | (a,i) <- zip (drop 3 ats) [0..], even i] (c,x, At (head (tail ats)))) 
-                              (aux [a | (a,i) <- zip (drop 3 ats) [0..], odd i] (c,y,At (head (tail (tail ats)))))
+                              (c,Apply x y, t) 
+                              (aux [a | (a,i) <- zip (drop 2 ats) [0..], even i] (c,x, At (head ats))) 
+                              (aux [a | (a,i) <- zip (drop 2 ats) [0..], odd i] (c,y,At (head (tail ats))))
 
 
 upairs :: Derivation -> [Upair]
-upairs = undefined
+upairs (Axiom (c,Variable x,t)) = [(t,find x c)]
+
+upairs (Abstraction (c1,Lambda x1 y1,t1) p) = [(t1, (find x1 c2) :-> t2)] ++ upairs p
+  where
+    (c2,x2,t2) = conclusion p
+
+upairs (Application (c1,Apply x1 y1,t1) p q) = [(t2,t3 :-> t1)] ++ upairs p ++ upairs q
+  where
+    (c2,x2,t2) = conclusion p
+    (c3,x3,t3) = conclusion q
 
 
 derive :: Term -> Derivation
-derive = undefined
+derive x = subs_der (unify (upairs (derive1 x))) (derive1 x)
 
 test1 = Lambda "x" (Lambda "y" (Lambda "z" (Apply(Apply(Variable "x")(Variable "z"))(Apply(Variable "y")(Variable "z")))))
 test2 = Lambda "x" (Lambda "x" (Variable "x"))
