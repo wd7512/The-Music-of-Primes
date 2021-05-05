@@ -1,0 +1,36 @@
+---
+title: "TFT set5"
+author: "William Dennis"
+date: "5/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+Champs = read.csv('Champs.csv')
+Traits = read.csv('Traits.csv')
+Comps = read.csv('Comps.csv',header=FALSE)
+```
+
+Lets try and identify the traits in the first comp
+
+```{r}
+comp1 = Comps[1,]
+traits = c()
+for (champ in comp1){
+  loc = which(Champs['Name'] == champ)
+  traits = cbind(traits,c(Champs[loc,'Traits1'],Champs[loc,'Traits2'],Champs[loc,'Traits3']))
+}
+traits = as.vector(traits)
+traits = traits[traits != '']
+traits = as.data.frame(table(traits))
+tiers = function(trait,freq){
+  loc = which(Traits['Class'] == trait)
+  if (freq < Traits[loc,'Tier1']) {return (0)}
+  if (freq < Traits[loc,'Tier2']) {return (1)} #account for NA
+  if (freq < Traits[loc,'Tier3']) {return (2)}
+  if (freq < Traits[loc,'Tier4']) {return (3)}
+  return (4)
+}
+for (a in traits){ print(a)}
+traits['Tiers'] = tiers(traits['traits'],traits['Freq'])
+```
