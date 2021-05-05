@@ -155,16 +155,11 @@ def remove_dup(badlist):
     
     
     
+if __name__ == "__main__":
 
-#a = csv_conv('Traits.csv')
-#b = csv_conv('Champs.csv')
+    people = 5
+    maxcost = 3
 
-#.write(str(','.join(example)))
+    data = main(people,maxcost)
+    save_csv(data,str(people)+'-'+str(maxcost))
 
-people = 4
-maxcost = 2
-
-data = main(people,maxcost)
-save_csv(data,str(people)+'-'+str(maxcost))
-
-end = input(':')
